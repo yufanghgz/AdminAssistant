@@ -1,0 +1,115 @@
+2025-08-23 20:32:10,380 - EmailAttachmentDownloader - INFO - get config.json
+2025-08-23 20:32:10,792 - EmailAttachmentDownloader - INFO - 成功连接到邮箱: heguangzhong@cosmosource.com
+2025-08-23 20:32:10,857 - EmailAttachmentDownloader - INFO - 搜索条件: (SINCE 16-Aug-2025) ALL
+2025-08-23 20:32:11,003 - EmailAttachmentDownloader - INFO - 找到 13 封邮件
+2025-08-23 20:32:11,003 - AttachmentExtractorExample - INFO - 开始下载附件到目录: D:\PyProject\AdminAssistent\attachments
+2025-08-23 20:32:11,305 - EmailAttachmentDownloader - INFO - 处理邮件: 人事安排通知 (ID: b'24')
+2025-08-23 20:32:11,308 - EmailAttachmentDownloader - INFO - 已下载附件: 人事安排通知.pdf 到 D:\PyProject\AdminAssistent\attachments\人事安排通知.pdf
+2025-08-23 20:32:11,411 - EmailAttachmentDownloader - INFO - 处理邮件: 到账通知——途明智能 (ID: b'25')
+2025-08-23 20:32:11,514 - EmailAttachmentDownloader - INFO - 处理邮件: Fw: 您收到新的电子票 (ID: b'26')
+2025-08-23 20:32:11,517 - EmailAttachmentDownloader - INFO - 已下载附件: 1_00060125_0060263711.PDF 到 D:\PyProject\AdminAssistent\attachments\1_00060125_0060263711_1.PDF
+2025-08-23 20:32:11,614 - EmailAttachmentDownloader - INFO - 处理邮件: Fw: 高德打车电子发票 (ID: b'27')
+2025-08-23 20:32:11,616 - EmailAttachmentDownloader - INFO - 已下载附件: 【旗妙出行-49.42元-1个行程】高德打车电子发票.pdf 到 D:\PyProject\AdminAssistent\attachments\【旗妙出行-49.42元-1个行程】高德打车电子发票_2.pdf
+2025-08-23 20:33:08,910 - EmailAttachmentDownloader - INFO - 处理邮件: 【BOSS直聘】 (ID: b'28')
+2025-08-23 20:33:08,914 - EmailAttachmentDownloader - INFO - 已下载附件: 冯彦清 | 3年，应聘 测试工程师 | 北京8-13K【BOSS直聘】.eml 到 D:\PyProject\AdminAssistent\attachments\冯彦清 _ 3年，应聘 测试工程师 _ 北京8-13K【BOSS直聘】.eml
+2025-08-23 20:33:08,916 - EmailAttachmentDownloader - INFO - 已下载附件: 曹宇 | 10年以上，应聘 测试工程师 | 北京8-13K【BOSS直聘】.eml 到 D:\PyProject\AdminAssistent\attachments\曹宇 _ 10年以上，应聘 测试工程师 _ 北京8-13K【BOSS直聘】.eml
+2025-08-23 20:33:08,920 - EmailAttachmentDownloader - INFO - 已下载附件: 肖圆圆 | 7年，应聘 测试工程师 | 北京8-13K【BOSS直聘】.eml 到 D:\PyProject\AdminAssistent\attachments\肖圆圆 _ 7年，应聘 测试工程师 _ 北京8-13K【BOSS直聘】.eml
+2025-08-23 20:33:08,922 - EmailAttachmentDownloader - INFO - 已下载附件: 王博 | 7年，应聘 测试工程师 | 北京8-13K【BOSS直聘】.eml 到 D:\PyProject\AdminAssistent\attachments\王博 _ 7年，应聘 测试工程师 _ 北京8-13K【BOSS直聘】.eml
+2025-08-23 20:33:08,925 - EmailAttachmentDownloader - INFO - 已下载附件: 王如雪 | 25年应届生，应聘 测试工程师 | 北京8-13K【BOSS直聘】.eml 到 D:\PyProject\AdminAssistent\attachments\王如雪 _ 25年应届生，应聘 测试工程师 _ 北京8-13K【BOSS直聘】.eml
+2025-08-23 20:33:08,927 - EmailAttachmentDownloader - INFO - 已下载附件: 梁琦琦 | 5年，应聘 测试工程师 | 北京8-13K【BOSS直聘】.eml 到 D:\PyProject\AdminAssistent\attachments\梁琦琦 _ 5年，应聘 测试工程师 _ 北京8-13K【BOSS直聘】.eml
+2025-08-23 20:33:08,929 - EmailAttachmentDownloader - INFO - 已下载附件: 谷峰 | 5年，应聘 测试工程师 | 北京8-13K【BOSS直聘】.eml 到 D:\PyProject\AdminAssistent\attachments\谷峰 _ 5年，应聘 测试工程师 _ 北京8-13K【BOSS直聘】.eml
+2025-08-23 20:33:08,931 - EmailAttachmentDownloader - INFO - 已下载附件: 王恕喆 | 10年以上，应聘 测试工程师 | 北京8-13K【BOSS直聘】.eml 到 D:\PyProject\AdminAssistent\attachments\王恕喆 _ 10年以上，应聘 测试工程师 _ 北京8-13K【BOSS直聘】.eml
+2025-08-23 20:33:08,934 - EmailAttachmentDownloader - INFO - 已下载附件: 李昊 | 6年，应聘 app海外运营 | 武汉10-15K【BOSS直聘】.eml 到 D:\PyProject\AdminAssistent\attachments\李昊 _ 6年，应聘 app海外运营 _ 武汉10-15K【BOSS直聘】.eml
+2025-08-23 20:33:08,942 - EmailAttachmentDownloader - INFO - 已下载附件: 张天平 | 1年，应聘 海外内容运营经理 | 武汉10-15K【BOSS直聘】.eml 到 D:\PyProject\AdminAssistent\attachments\张天平 _ 1年，应聘 海外内容运营经理 _ 武汉10-15K【BOSS直聘】.eml
+2025-08-23 20:33:08,944 - EmailAttachmentDownloader - INFO - 已下载附件: 江克宇 | 8年，应聘 海外内容运营经理 | 武汉10-15K【BOSS直聘】.eml 到 D:\PyProject\AdminAssistent\attachments\江克宇 _ 8年，应聘 海外内容运营经理 _ 武汉10-15K【BOSS直聘】.eml
+2025-08-23 20:33:08,946 - EmailAttachmentDownloader - INFO - 已下载附件: Maruko | 9年，应聘 资深插画师 | 武汉8-11K【BOSS直聘】.eml 到 D:\PyProject\AdminAssistent\attachments\Maruko _ 9年，应聘 资深插画师 _ 武汉8-11K【BOSS直聘】.eml
+2025-08-23 20:33:09,000 - EmailAttachmentDownloader - INFO - 已下载附件: Maruko | 9年，应聘 资深插画师 | 武汉8-11K【BOSS直聘】.eml 到 D:\PyProject\AdminAssistent\attachments\Maruko _ 9年，应聘 资深插画师 _ 武汉8-11K【BOSS直聘】_1.eml
+2025-08-23 20:33:09,001 - EmailAttachmentDownloader - INFO - 已下载附件: 张先生 | 10年以上，应聘 app海外运营 | 武汉10-15K【BOSS直聘】.eml 到 D:\PyProject\AdminAssistent\attachments\张先生 _ 10年以上，应聘 app海外运营 _ 武汉10-15K【BOSS直聘】.eml
+2025-08-23 20:33:09,003 - EmailAttachmentDownloader - INFO - 已下载附件: 周漫 | 5年，应聘 海外用户增长运营主管 | 武汉10-15K【BOSS直聘】.eml 到 D:\PyProject\AdminAssistent\attachments\周漫 _ 5年，应聘 海外用户增长运营主管 _ 武汉10-15K【BOSS直聘】.eml
+2025-08-23 20:33:09,011 - EmailAttachmentDownloader - INFO - 已下载附件: 张旭 | 7年，应聘 app海外运营 | 武汉10-15K【BOSS直聘】.eml 到 D:\PyProject\AdminAssistent\attachments\张旭 _ 7年，应聘 app海外运营 _ 武汉10-15K【BOSS直聘】.eml
+2025-08-23 20:33:09,032 - EmailAttachmentDownloader - INFO - 已下载附件: Annie | 5年，应聘 海外内容运营经理 | 武汉10-15K【BOSS直聘】.eml 到 D:\PyProject\AdminAssistent\attachments\Annie _ 5年，应聘 海外内容运营经理 _ 武汉10-15K【BOSS直聘】.eml
+2025-08-23 20:33:09,044 - EmailAttachmentDownloader - INFO - 已下载附件: Annie | 5年，应聘 海外内容运营经理 | 武汉10-15K【BOSS直聘】.eml 到 D:\PyProject\AdminAssistent\attachments\Annie _ 5年，应聘 海外内容运营经理 _ 武汉10-15K【BOSS直聘】_1.eml
+2025-08-23 20:33:09,048 - EmailAttachmentDownloader - INFO - 已下载附件: 郭俊 | 7年，应聘 海外用户增长运营主管 | 武汉10-15K【BOSS直聘】.eml 到 D:\PyProject\AdminAssistent\attachments\郭俊 _ 7年，应聘 海外用户增长运营主管 _ 武汉10-15K【BOSS直聘】.eml
+2025-08-23 20:33:09,050 - EmailAttachmentDownloader - INFO - 已下载附件: 刘艳琴 | 10年以上，应聘 app海外运营 | 武汉10-15K【BOSS直聘】.eml 到 D:\PyProject\AdminAssistent\attachments\刘艳琴 _ 10年以上，应聘 app海外运营 _ 武汉10-15K【BOSS直聘】.eml
+2025-08-23 20:33:09,059 - EmailAttachmentDownloader - INFO - 已下载附件: 杨庆龙 | 9年，应聘 app海外运营 | 武汉10-15K【BOSS直聘】.eml 到 D:\PyProject\AdminAssistent\attachments\杨庆龙 _ 9年，应聘 app海外运营 _ 武汉10-15K【BOSS直聘】.eml
+2025-08-23 20:33:09,064 - EmailAttachmentDownloader - INFO - 已下载附件: 何佳晟 | 1年，应聘 app海外运营 | 武汉10-15K【BOSS直聘】.eml 到 D:\PyProject\AdminAssistent\attachments\何佳晟 _ 1年，应聘 app海外运营 _ 武汉10-15K【BOSS直聘】.eml
+2025-08-23 20:33:09,073 - EmailAttachmentDownloader - INFO - 已下载附件: 刘嘉琪 | 2年，应聘 app海外运营 | 武汉10-15K【BOSS直聘】.eml 到 D:\PyProject\AdminAssistent\attachments\刘嘉琪 _ 2年，应聘 app海外运营 _ 武汉10-15K【BOSS直聘】.eml
+2025-08-23 20:33:09,076 - EmailAttachmentDownloader - INFO - 已下载附件: 杨擎钥 | 10年以上，应聘 资深内容运营经理 | 武汉9-12K【BOSS直聘】.eml 到 D:\PyProject\AdminAssistent\attachments\杨擎钥 _ 10年以上，应聘 资深内容运营经理 _ 武汉9-12K【BOSS直聘】.eml
+2025-08-23 20:33:09,079 - EmailAttachmentDownloader - INFO - 已下载附件: 高朕鸣 | 7年，应聘 资深插画师 | 武汉8-11K【BOSS直聘】.eml 到 D:\PyProject\AdminAssistent\attachments\高朕鸣 _ 7年，应聘 资深插画师 _ 武汉8-11K【BOSS直聘】.eml
+2025-08-23 20:33:09,089 - EmailAttachmentDownloader - INFO - 已下载附件: 周克赛 | 4年，应聘 海外内容运营经理 | 武汉10-15K【BOSS直聘】.eml 到 D:\PyProject\AdminAssistent\attachments\周克赛 _ 4年，应聘 海外内容运营经理 _ 武汉10-15K【BOSS直聘】.eml
+2025-08-23 20:33:09,091 - EmailAttachmentDownloader - INFO - 已下载附件: 张倩 | 1年，应聘 app海外运营 | 武汉10-15K【BOSS直聘】.eml 到 D:\PyProject\AdminAssistent\attachments\张倩 _ 1年，应聘 app海外运营 _ 武汉10-15K【BOSS直聘】.eml
+2025-08-23 20:33:09,142 - EmailAttachmentDownloader - WARNING - 跳过附件 赵冰冰 | 5年，应聘 资深插画师 | 武汉8-11K【BOSS直聘】.eml，文件大小 12.10MB 超过限制 10MB
+2025-08-23 20:33:09,144 - EmailAttachmentDownloader - INFO - 已下载附件: 汐夕乐 | 4年，应聘 海外视频后期 | 武汉9-13K【BOSS直聘】.eml 到 D:\PyProject\AdminAssistent\attachments\汐夕乐 _ 4年，应聘 海外视频后期 _ 武汉9-13K【BOSS直聘】.eml
+2025-08-23 20:33:09,190 - EmailAttachmentDownloader - WARNING - 跳过附件 余奕 | 24年应届生，应聘 资深插画师 | 武汉8-11K【BOSS直聘】.eml，文件大小 11.11MB 超过限制 10MB
+2025-08-23 20:33:09,295 - EmailAttachmentDownloader - INFO - 处理邮件: 转发：【阿里发票平台】电子发票附件查收 (ID: b'29')
+2025-08-23 20:33:09,391 - EmailAttachmentDownloader - INFO - 处理邮件: 转发：【阿里发票平台】电子发票附件查收 (ID: b'30')
+2025-08-23 20:33:09,495 - EmailAttachmentDownloader - INFO - 处理邮件: 转发：【阿里发票平台】电子发票附件查收 (ID: b'31')
+2025-08-23 20:33:09,592 - EmailAttachmentDownloader - INFO - 处理邮件: 转发：【阿里发票平台】电子发票附件查收 (ID: b'32')
+2025-08-23 20:33:09,696 - EmailAttachmentDownloader - INFO - 处理邮件: 转发：【阿里发票平台】电子发票附件查收 (ID: b'33')
+2025-08-23 20:33:11,128 - EmailAttachmentDownloader - INFO - 处理邮件: 转发：【阿里发票平台】电子发票附件查收 (ID: b'34')
+2025-08-23 20:33:12,219 - EmailAttachmentDownloader - INFO - 处理邮件: Fw: 高德打车电子发票 (ID: b'35')
+2025-08-23 20:33:12,220 - EmailAttachmentDownloader - INFO - 已下载附件: 【旗妙出行-49.42元-1个行程】高德打车电子发票.pdf 到 D:\PyProject\AdminAssistent\attachments\【旗妙出行-49.42元-1个行程】高德打车电子发票_3.pdf
+2025-08-23 20:33:12,221 - EmailAttachmentDownloader - INFO - 已下载附件: 【旗妙出行-49.42元-1个行程】高德打车电子发票.xml 到 D:\PyProject\AdminAssistent\attachments\【旗妙出行-49.42元-1个行程】高德打车电子发票.xml
+2025-08-23 20:33:12,225 - EmailAttachmentDownloader - INFO - 已下载附件: 【旗妙出行-49.42元-1个行程】高德打车电子行程单.pdf 到 D:\PyProject\AdminAssistent\attachments\【旗妙出行-49.42元-1个行程】高德打车电子行程单_1.pdf
+2025-08-23 20:33:12,604 - EmailAttachmentDownloader - INFO - 处理邮件: 转发：王如雪 | 25年应届生，应聘 测试工程师 | 北京8-13K【BOSS直聘】 (ID: b'36')
+2025-08-23 20:33:12,606 - EmailAttachmentDownloader - INFO - 已下载附件: 【测试工程师_北京_8-13K】王如雪_一年以内.pdf 到 D:\PyProject\AdminAssistent\attachments\【测试工程师_北京_8-13K】王如雪_一年以内_1.pdf
+2025-08-23 20:33:12,607 - EmailAttachmentDownloader - INFO - 共下载 35 个附件
+2025-08-23 20:33:12,607 - AttachmentExtractorExample - INFO - 附件下载完成，共下载 35 个附件
+2025-08-23 20:33:12,693 - EmailAttachmentDownloader - INFO - 已断开与邮箱服务器的连接
+2025-08-24 15:26:51,494 - EmailAttachmentDownloader - INFO - get config.json
+2025-08-24 15:26:51,495 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: 'd:\\PyProject\\AdminAssistent\\base\\config.json'
+2025-08-24 15:26:52,419 - EmailAttachmentDownloader - INFO - 成功连接到邮箱: 23512221@qq.com
+2025-08-24 15:31:37,108 - EmailAttachmentDownloader - INFO - get config.json
+2025-08-24 15:31:37,108 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: 'd:\\PyProject\\AdminAssistent\\base\\config.json'
+2025-08-24 15:31:37,976 - EmailAttachmentDownloader - INFO - 成功连接到邮箱: 23512221@qq.com
+2025-08-24 15:31:38,182 - EmailAttachmentDownloader - INFO - 搜索条件: (SINCE 22-Aug-2025) ALL
+2025-08-24 15:31:38,275 - EmailAttachmentDownloader - INFO - 找到 9 封邮件
+2025-08-24 15:31:38,277 - EmailAttachmentDownloader - INFO - 创建保存目录: D:\PyProject\AdminAssistent\attachments
+2025-08-24 15:31:38,522 - EmailAttachmentDownloader - INFO - 处理邮件: Sign in to Cursor (ID: b'1')
+2025-08-24 15:31:41,183 - EmailAttachmentDownloader - INFO - 处理邮件: 高德打车电子发票 (ID: b'2')
+2025-08-24 15:31:41,186 - EmailAttachmentDownloader - INFO - 已下载附件: 【火箭出行-471.63元-12个行程】高德打车电子发票.pdf 到 D:\PyProject\AdminAssistent\attachments\【火箭出行-471.63元-12个行程】高德打车电子发票.pdf
+2025-08-24 15:31:41,189 - EmailAttachmentDownloader - INFO - 已下载附件: 【曹操出行-104.53元-2个行程】高德打车电子发票.pdf 到 D:\PyProject\AdminAssistent\attachments\【曹操出行-104.53元-2个行程】高德打车电子发票.pdf
+2025-08-24 15:31:41,194 - EmailAttachmentDownloader - INFO - 已下载附件: 【神州专车-48.01元-1个行程】高德打车电子发票.pdf 到 D:\PyProject\AdminAssistent\attachments\【神州专车-48.01元-1个行程】高德打车电子发票.pdf
+2025-08-24 15:31:41,196 - EmailAttachmentDownloader - INFO - 已下载附件: 【火箭出行-471.63元-12个行程】高德打车电子发票.xml 到 D:\PyProject\AdminAssistent\attachments\【火箭出行-471.63元-12个行程】高德打车电子发票.xml
+2025-08-24 15:31:41,206 - EmailAttachmentDownloader - INFO - 已下载附件: 【曹操出行-104.53元-2个行程】高德打车电子发票.xml 到 D:\PyProject\AdminAssistent\attachments\【曹操出行-104.53元-2个行程】高德打车电子发票.xml
+2025-08-24 15:31:41,208 - EmailAttachmentDownloader - INFO - 已下载附件: 【神州专车-48.01元-1个行程】高德打车电子发票.xml 到 D:\PyProject\AdminAssistent\attachments\【神州专车-48.01元-1个行程】高德打车电子发票.xml
+2025-08-24 15:31:41,214 - EmailAttachmentDownloader - INFO - 已下载附件: 【火箭出行-471.63元-12个行程】高德打车电子行程单.pdf 到 D:\PyProject\AdminAssistent\attachments\【火箭出行-471.63元-12个行程】高德打车电子行程单.pdf
+2025-08-24 15:31:41,221 - EmailAttachmentDownloader - INFO - 已下载附件: 【曹操出行-104.53元-2个行程】高德打车电子行程单.pdf 到 D:\PyProject\AdminAssistent\attachments\【曹操出行-104.53元-2个行程】高德打车电子行程单.pdf
+2025-08-24 15:31:41,230 - EmailAttachmentDownloader - INFO - 已下载附件: 【神州专车-48.01元-1个行程】高德打车电子行程单.pdf 到 D:\PyProject\AdminAssistent\attachments\【神州专车-48.01元-1个行程】高德打车电子行程单.pdf
+2025-08-24 15:31:42,451 - EmailAttachmentDownloader - INFO - 处理邮件: 高德打车电子发票 (ID: b'3')
+2025-08-24 15:31:42,453 - EmailAttachmentDownloader - INFO - 已下载附件: 【飞嘀打车-54.60元-1个行程】高德打车电子发票.pdf 到 D:\PyProject\AdminAssistent\attachments\【飞嘀打车-54.60元-1个行程】高德打车电子发票.pdf
+2025-08-24 15:31:42,454 - EmailAttachmentDownloader - INFO - 已下载附件: 【星徽出行-53.63元-1个行程】高德打车电子发票.pdf 到 D:\PyProject\AdminAssistent\attachments\【星徽出行-53.63元-1个行程】高德打车电子发票.pdf
+2025-08-24 15:31:42,455 - EmailAttachmentDownloader - INFO - 已下载附件: 【飞嘀打车-54.60元-1个行程】高德打车电子发票.xml 到 D:\PyProject\AdminAssistent\attachments\【飞嘀打车-54.60元-1个行程】高德打车电子发票.xml
+2025-08-24 15:31:42,457 - EmailAttachmentDownloader - INFO - 已下载附件: 【星徽出行-53.63元-1个行程】高德打车电子发票.xml 到 D:\PyProject\AdminAssistent\attachments\【星徽出行-53.63元-1个行程】高德打车电子发票.xml
+2025-08-24 15:31:42,467 - EmailAttachmentDownloader - INFO - 已下载附件: 【飞嘀打车-54.60元-1个行程】高德打车电子行程单.pdf 到 D:\PyProject\AdminAssistent\attachments\【飞嘀打车-54.60元-1个行程】高德打车电子行程单.pdf
+2025-08-24 15:31:42,477 - EmailAttachmentDownloader - INFO - 已下载附件: 【星徽出行-53.63元-1个行程】高德打车电子行程单.pdf 到 D:\PyProject\AdminAssistent\attachments\【星徽出行-53.63元-1个行程】高德打车电子行程单.pdf
+2025-08-24 15:31:43,431 - EmailAttachmentDownloader - INFO - 处理邮件: 高德打车电子发票 (ID: b'4')
+2025-08-24 15:31:43,433 - EmailAttachmentDownloader - INFO - 已下载附件: 【AA出行-143.55元-4个行程】高德打车电子发票.pdf 到 D:\PyProject\AdminAssistent\attachments\【AA出行-143.55元-4个行程】高德打车电子发票.pdf
+2025-08-24 15:31:43,435 - EmailAttachmentDownloader - INFO - 已下载附件: 【AA出行-143.55元-4个行程】高德打车电子发票.xml 到 D:\PyProject\AdminAssistent\attachments\【AA出行-143.55元-4个行程】高德打车电子发票.xml
+2025-08-24 15:31:43,443 - EmailAttachmentDownloader - INFO - 已下载附件: 【AA出行-143.55元-4个行程】高德打车电子行程单.pdf 到 D:\PyProject\AdminAssistent\attachments\【AA出行-143.55元-4个行程】高德打车电子行程单.pdf
+2025-08-24 15:31:44,217 - EmailAttachmentDownloader - INFO - 处理邮件: 高德打车电子发票 (ID: b'5')
+2025-08-24 15:31:44,220 - EmailAttachmentDownloader - INFO - 已下载附件: 【旗妙出行-49.42元-1个行程】高德打车电子发票.pdf 到 D:\PyProject\AdminAssistent\attachments\【旗妙出行-49.42元-1个行程】高德打车电子发票.pdf
+2025-08-24 15:31:44,221 - EmailAttachmentDownloader - INFO - 已下载附件: 【旗妙出行-49.42元-1个行程】高德打车电子发票.xml 到 D:\PyProject\AdminAssistent\attachments\【旗妙出行-49.42元-1个行程】高德打车电子发票.xml
+2025-08-24 15:31:44,229 - EmailAttachmentDownloader - INFO - 已下载附件: 【旗妙出行-49.42元-1个行程】高德打车电子行程单.pdf 到 D:\PyProject\AdminAssistent\attachments\【旗妙出行-49.42元-1个行程】高德打车电子行程单.pdf
+2025-08-24 15:31:44,827 - EmailAttachmentDownloader - INFO - 处理邮件: 【京东安联】理赔通知书  被保险人：贺光忠   报案号：8611-0-P090002-25-B00152169 (ID: b'6')
+2025-08-24 15:31:44,837 - EmailAttachmentDownloader - INFO - 已下载附件: 理赔通知书.pdf 到 D:\PyProject\AdminAssistent\attachments\理赔通知书.pdf
+2025-08-24 15:31:45,240 - EmailAttachmentDownloader - INFO - 处理邮件: 您收到新的电子票 (ID: b'7')
+2025-08-24 15:31:45,244 - EmailAttachmentDownloader - INFO - 已下载附件: 1_00060125_0060263711.PDF 到 D:\PyProject\AdminAssistent\attachments\1_00060125_0060263711.PDF
+2025-08-24 15:31:45,811 - EmailAttachmentDownloader - INFO - 处理邮件: 您收到【北京湘东餐饮有限公司】开具的发票【金额：680元】 (ID: b'8')
+2025-08-24 15:31:45,815 - EmailAttachmentDownloader - INFO - 已下载附件: 25112000000177749809.pdf 到 D:\PyProject\AdminAssistent\attachments\25112000000177749809.pdf
+2025-08-24 15:31:46,039 - EmailAttachmentDownloader - INFO - 处理邮件: 更安全、更高效、更强大，尽在QQ邮箱APP (ID: b'9')
+2025-08-24 15:31:46,039 - EmailAttachmentDownloader - INFO - 共下载 24 个附件
+2025-08-24 15:31:46,223 - EmailAttachmentDownloader - INFO - 已断开与邮箱服务器的连接
+2025-08-24 16:24:14,584 - easyocr.easyocr - WARNING - Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
+2025-08-24 16:24:16,785 - EmailAttachmentDownloader - INFO - get config.json
+2025-08-24 16:24:16,785 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: 'd:\\PyProject\\AdminAssistent\\base\\config.json'
+2025-08-24 16:25:17,077 - easyocr.easyocr - WARNING - Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
+2025-08-24 16:25:19,361 - EmailAttachmentDownloader - INFO - get config.json
+2025-08-24 16:25:19,362 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: 'd:\\PyProject\\AdminAssistent\\base\\config.json'
+2025-08-24 16:37:52,840 - easyocr.easyocr - WARNING - Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
+2025-08-24 16:37:54,015 - EmailAttachmentDownloader - INFO - get config.json
+2025-08-24 16:37:54,016 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: 'd:\\PyProject\\AdminAssistent\\base\\config.json'
+2025-08-24 16:39:02,171 - easyocr.easyocr - WARNING - Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
+2025-08-24 16:39:03,305 - EmailAttachmentDownloader - INFO - get config.json
+2025-08-24 16:39:03,305 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: 'd:\\PyProject\\AdminAssistent\\base\\config.json'
+2025-08-24 16:39:03,305 - EmailAttachmentDownloader - INFO - config.json get success: imap_server=None, username=None, save_dir=None

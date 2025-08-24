@@ -1,0 +1,12 @@
+{
+    "email": {
+        "imap_server": "imap.qq.com",
+        "username": "23512221@qq.com",
+        "password": "ifqdmucfxotlbigc",
+        "port": 993,
+        "folder": "INBOX",
+        "days_ago": 7,
+        "save_dir": "D:\\PyProject\\AdminAssistent\\attachments",
+        "file_extensions": ["pdf", "jpg", "jpeg", "png", "xml", "eml"]
+    }
+}

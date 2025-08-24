@@ -97,29 +97,136 @@ class InvoiceRecognizer:
                 result['date'] = date_match.group(0)
                 break
 
-        # 提取金额（匹配常见金额格式，特别优化了"小写"字符右边的金额识别）
+        # 提取金额（匹配常见金额格式，特别优化了运输服务发票的金额识别）
         amount_patterns = [
-            r'(?:小写|金额)[\s]*[:：]?[\s]*¥?[\s]*([\d,]+\.\d{2})',  # 小写: ¥1,234.56 或 金额: 1,234.56
-            r'(?:小写|金额)[\s]*([\d,]+\.\d{2})',                    # 小写1,234.56 或 金额1,234.56
-            r'¥([\d,]+\.\d{2})',                                    # ¥1,234.56
-            r'([\d,]+\.\d{2})元'                                    # 1,234.56元
+            # 价税合计（通常是最重要的金额）
+            r'(?:价税合计|合计|总计|金额合计)[\s]*[:：]?[\s]*¥?[\s]*([\d,]+\.\d{2})',
+            r'(?:价税合计|合计|总计|金额合计)[\s]*([\d,]+\.\d{2})',
+            # 小写金额
+            r'(?:小写|金额)[\s]*[:：]?[\s]*¥?[\s]*([\d,]+\.\d{2})',
+            r'(?:小写|金额)[\s]*([\d,]+\.\d{2})',
+            # 餐饮服务特有的金额模式
+            r'(?:餐饮服务|餐饮费|餐费|消费金额)[\s]*[:：]?[\s]*¥?[\s]*([\d,]+\.\d{2})',
+            r'(?:餐饮服务|餐饮费|餐费|消费金额)[\s]*([\d,]+\.\d{2})',
+            # 运输服务特有的金额模式（优先识别）
+            r'(?:运费|运输费|服务费|车费)[\s]*[:：]?[\s]*¥?[\s]*([\d,]+\.\d{2})',
+            r'(?:运费|运输费|服务费|车费)[\s]*([\d,]+\.\d{2})',
+            # 税额
+            r'(?:税额|增值税)[\s]*[:：]?[\s]*¥?[\s]*([\d,]+\.\d{2})',
+            r'(?:税额|增值税)[\s]*([\d,]+\.\d{2})',
+            # 文件名中的金额（运输服务发票常见）
+            r'(\d+\.\d{2})元',
+            # 金额（通用）
+            r'¥([\d,]+\.\d{2})',
+            r'([\d,]+\.\d{2})元',
+            # 大写金额对应的数字（通常在发票底部）
+            r'(?:大写|金额大写)[\s]*[:：]?[\s]*[^\d]*([\d,]+\.\d{2})'
         ]
 
-        # 收集所有匹配的金额
-        amounts = []
-        for pattern in amount_patterns:
-            # 使用findall找到所有匹配项
+        # 收集所有匹配的金额及其类型
+        amounts_with_type = []
+        for i, pattern in enumerate(amount_patterns):
             matches = re.findall(pattern, text)
-            amounts.extend(matches)
+            for match in matches:
+                amounts_with_type.append((match, i))
 
-        # 找出最大金额
-        if amounts:
-            # 转换为浮点数进行比较
-            max_amount = max(float(amount.replace(',', '')) for amount in amounts)
-            # 格式化为保留2位小数的字符串
-            result['amount'] = f"{max_amount:.2f}"
-            # 保存所有找到的金额
-            result['all_amounts'] = amounts
+        # 从文件名中提取金额（运输服务发票的特殊处理）
+        filename = os.path.basename(file_path)
+        filename_amount_match = re.search(r'(\d+\.\d{2})元', filename)
+        if filename_amount_match:
+            filename_amount = filename_amount_match.group(1)
+            amounts_with_type.append((filename_amount, 10))  # 文件名金额优先级最高
+
+        # 智能选择金额：优先选择价税合计，其次是小写金额，最后是其他金额
+        if amounts_with_type:
+            # 按优先级排序：文件名金额(8) > 价税合计(0-1) > 小写金额(2-3) > 餐饮服务金额(4-5) > 运输服务金额(6-7) > 税额(8-9) > 其他(10+)
+            priority_order = []
+            
+            # 首先添加文件名中的金额
+            for amount, pattern_idx in amounts_with_type:
+                if pattern_idx == 10:  # 文件名金额
+                    priority_order.append((amount, 0))
+            
+            # 然后添加价税合计
+            for amount, pattern_idx in amounts_with_type:
+                if pattern_idx <= 1:  # 价税合计模式
+                    priority_order.append((amount, 1))
+            
+            # 然后添加小写金额
+            for amount, pattern_idx in amounts_with_type:
+                if 2 <= pattern_idx <= 3:  # 小写金额模式
+                    priority_order.append((amount, 2))
+            
+            # 然后添加餐饮服务金额
+            for amount, pattern_idx in amounts_with_type:
+                if 4 <= pattern_idx <= 5:  # 餐饮服务金额模式
+                    priority_order.append((amount, 3))
+            
+            # 然后添加运输服务金额
+            for amount, pattern_idx in amounts_with_type:
+                if 6 <= pattern_idx <= 7:  # 运输服务金额模式
+                    priority_order.append((amount, 4))
+            
+            # 然后添加税额
+            for amount, pattern_idx in amounts_with_type:
+                if 8 <= pattern_idx <= 9:  # 税额模式
+                    priority_order.append((amount, 5))
+            
+            # 最后添加其他金额
+            for amount, pattern_idx in amounts_with_type:
+                if pattern_idx >= 10:  # 其他模式
+                    priority_order.append((amount, 6))
+            
+            # 按优先级选择金额
+            if priority_order:
+                # 选择优先级最高的金额（数字越小优先级越高）
+                selected_amount, priority = min(priority_order, key=lambda x: x[1])
+                
+                # 在相同优先级的情况下，选择最大的金额
+                same_priority_amounts = [amount for amount, p in priority_order if p == priority]
+                if len(same_priority_amounts) > 1:
+                    # 转换为浮点数进行比较
+                    float_amounts = []
+                    for amount in same_priority_amounts:
+                        try:
+                            float_amounts.append(float(amount.replace(',', '')))
+                        except ValueError:
+                            continue
+                    
+                    if float_amounts:
+                        max_amount = max(float_amounts)
+                        selected_amount = f"{max_amount:.2f}"
+                        print(f"  在相同优先级({priority})中选择最大金额: {selected_amount}")
+                
+                result['amount'] = selected_amount
+                result['all_amounts'] = [amount for amount, _ in amounts_with_type]
+                result['amount_priority'] = priority  # 0=文件名, 1=价税合计, 2=小写金额, 3=餐饮服务, 4=运输服务, 5=税额, 6=其他
+                
+                # 添加调试信息
+                print(f"发票金额识别调试信息:")
+                print(f"  找到的所有金额: {result['all_amounts']}")
+                print(f"  优先级排序: {priority_order}")
+                print(f"  选择的金额: {selected_amount} (优先级: {priority})")
+                priority_names = {0: "文件名", 1: "价税合计", 2: "小写金额", 3: "餐饮服务", 4: "运输服务", 5: "税额", 6: "其他"}
+                print(f"  优先级说明: {priority_names.get(priority, '未知')}")
+                
+                # 如果没有找到高优先级金额，尝试选择最大的金额
+                if priority >= 3 and len(amounts_with_type) > 1:
+                    # 转换为浮点数进行比较
+                    float_amounts = []
+                    for amount, _ in amounts_with_type:
+                        try:
+                            float_amounts.append(float(amount.replace(',', '')))
+                        except ValueError:
+                            continue
+                    
+                    if float_amounts:
+                        max_amount = max(float_amounts)
+                        # 如果最大金额明显大于当前选择的金额，使用最大金额
+                        current_amount = float(selected_amount.replace(',', ''))
+                        if max_amount > current_amount * 1.05:  # 如果最大金额比当前金额大5%以上
+                            result['amount'] = f"{max_amount:.2f}"
+                            print(f"  调整选择最大金额: {result['amount']} (原选择: {selected_amount})")
 
         # 提取内容（优先提取以*号开头的内容）
         # 尝试提取以*号开头并以下一个*号结束的内容
@@ -205,7 +312,7 @@ class InvoiceRecognizer:
                     combined_str = f"{date_str}_{amount_str}_{content_str}{ext}"
                     
                     # 过滤文件名中的非法字符
-                    invalid_chars = '<>:/\|?*"'  # 完整的Windows文件名非法字符
+                    invalid_chars = '<>:/\\|?*"'  # 完整的Windows文件名非法字符
                     valid_filename = re.sub(f'[{re.escape(invalid_chars)}]', '', combined_str)
                     
                     # 复制文件到新目录并重命名

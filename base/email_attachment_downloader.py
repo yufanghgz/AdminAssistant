@@ -3,15 +3,80 @@ import email
 import os
 import datetime
 import json
+import logging
+import uuid
+import re
+import requests
+from bs4 import BeautifulSoup
+
+# 配置日志
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler('email_attachment_downloader.log', encoding='utf-8'),
+        logging.StreamHandler()
+    ],
+    encoding='utf-8'
+)
+logger = logging.getLogger('EmailAttachmentDownloader')
 
 class EmailAttachmentDownloader:
-    def __init__(self):
-        self.imap_server = None
-        self.username = None
-        self.password = None
-        self.connected = False
+    def __init__(self, imap_server=None, username=None, password=None, port=993, folder='INBOX', days_ago=None, save_dir=None, max_attachment_size=None):
+        logger.info("get config.json")
+        try:
+            # Read the configuration file (from the directory where the current script is located)
+            config_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'config.json')
+            with open(config_path, 'r', encoding='utf-8') as f:
+                config = json.load(f)
+                email_config = config.get('email', {})
 
-    def connect(self, imap_server, username, password, port=993):
+            # Get parameters from the configuration, use the input parameters as fallback
+            self.imap_server = imap_server if imap_server is not None else email_config.get('imap_server')
+            self.username = username if username is not None else email_config.get('username')
+            self.password = password if password is not None else email_config.get('password')
+            self.port = port if port is not None else email_config.get('port', 993)
+            self.folder = folder if folder is not None else email_config.get('folder', 'INBOX')
+            self.days_ago = days_ago if days_ago is not None else email_config.get('days_ago')
+            self.save_dir = save_dir if save_dir is not None else email_config.get('save_dir')
+            self.max_attachment_size = max_attachment_size if max_attachment_size is not None else email_config.get('max_attachment_size')
+            self.connected = False
+
+            # Validate configuration
+            if not self.validate_config():
+                logger.error("Invalid configuration, please check config.json")
+        except Exception as e:
+            logger.error(f"Error reading configuration file: {str(e)}")
+            self.imap_server = imap_server
+            self.username = username
+            self.password = password
+            self.port = port
+            self.folder = folder
+            self.days_ago = days_ago
+            self.save_dir = save_dir
+            self.max_attachment_size = max_attachment_size
+            self.connected = False
+            logger.info(f"config.json get success: imap_server={imap_server}, username={username}, save_dir={save_dir}")
+    def validate_config(self):
+        """
+        验证配置是否有效
+        :return: 配置是否有效
+        """
+        if not self.imap_server:
+            logger.error("IMAP server is not configured")
+            return False
+        if not self.username:
+            logger.error("Username is not configured")
+            return False
+        if not self.password:
+            logger.error("Password is not configured")
+            return False
+        if not self.save_dir:
+            logger.warning("Save directory is not configured, using default 'attachments'")
+            self.save_dir = 'attachments'
+        return True
+
+    def connect(self, imap_server=None, username=None, password=None, port=993):
         """
         连接到IMAP邮箱服务器
         :param imap_server: IMAP服务器地址
@@ -20,6 +85,17 @@ class EmailAttachmentDownloader:
         :param port: 服务器端口，默认993（SSL）
         :return: 是否连接成功
         """
+        # 如果没有提供参数，使用实例化时的参数
+        
+        imap_server = imap_server or self.imap_server
+        username = username or self.username
+        password = password or self.password
+        port = port or self.port
+
+        if not all([imap_server, username, password]):
+            logger.error("Missing required connection parameters")
+            return False
+
         try:
             # 连接服务器
             self.imap_server = imaplib.IMAP4_SSL(imap_server, port)
@@ -28,10 +104,10 @@ class EmailAttachmentDownloader:
             self.username = username
             self.password = password
             self.connected = True
-            print(f"成功连接到邮箱: {username}")
+            logger.info(f"成功连接到邮箱: {username}")
             return True
         except Exception as e:
-            print(f"连接邮箱失败: {str(e)}")
+            logger.error(f"连接邮箱失败: {str(e)}")
             self.connected = False
             return False
 
@@ -44,7 +120,7 @@ class EmailAttachmentDownloader:
         :return: 邮件ID列表
         """
         if not self.connected:
-            print("未连接到邮箱服务器")
+            logger.error("未连接到邮箱服务器")
             return []
 
         try:
@@ -55,38 +131,57 @@ class EmailAttachmentDownloader:
                 # 格式化日期为IMAP格式 (DD-Month-YYYY)
                 imap_date = date_since.strftime('%d-%b-%Y')
                 criteria = f'(SINCE {imap_date}) {criteria}'
-                print(f"搜索条件: {criteria}")
+                logger.info(f"搜索条件: {criteria}")
 
             # 搜索邮件
             result, data = self.imap_server.search(None, criteria)
             if result == 'OK':
                 # 提取邮件ID
                 email_ids = data[0].split()
-                print(f"找到 {len(email_ids)} 封邮件")
+                logger.info(f"找到 {len(email_ids)} 封邮件")
                 return email_ids
             else:
-                print("搜索邮件失败")
+                logger.error("搜索邮件失败")
                 return []
         except Exception as e:
-            print(f"搜索邮件时出错: {str(e)}")
+            logger.error(f"搜索邮件时出错: {str(e)}")
             return []
 
-    def download_attachments(self, email_ids, save_dir, file_extensions=None):
+    def _clean_filename(self, filename):
         """
-        下载邮件附件
+        清理文件名，移除Windows系统不支持的特殊字符
+        :param filename: 原始文件名
+        :return: 清理后的文件名
+        """
+        import re
+        # 替换Windows不支持的特殊字符为下划线
+        cleaned_filename = re.sub(r'[\\/:*?"<>|]', '_', filename)
+        # 移除多余的空格和点
+        cleaned_filename = re.sub(r'\s+', ' ', cleaned_filename).strip()
+        cleaned_filename = re.sub(r'\.+', '.', cleaned_filename)
+        return cleaned_filename
+
+    def download_attachments(self, email_ids, save_dir, file_extensions=None, include_inline=False):
+        """
+        下载指定邮件ID列表中的附件
         :param email_ids: 邮件ID列表
-        :param save_dir: 保存附件的目录
-        :param file_extensions: 要下载的文件扩展名列表，如['pdf', 'doc']，为None时下载所有附件
+        :param save_dir: 附件保存目录
+        :param file_extensions: 允许的文件扩展名列表，None表示允许所有
+        :param include_inline: 是否下载内联附件
         :return: 成功下载的附件数量
         """
         if not self.connected:
-            print("未连接到邮箱服务器")
+            logger.error("未连接到邮箱服务器")
             return 0
 
         # 确保保存目录存在
         if not os.path.exists(save_dir):
-            os.makedirs(save_dir)
-            print(f"创建保存目录: {save_dir}")
+            try:
+                os.makedirs(save_dir)
+                logger.info(f"创建保存目录: {save_dir}")
+            except Exception as e:
+                logger.error(f"创建保存目录失败: {str(e)}")
+                return 0
 
         downloaded_count = 0
 
@@ -95,7 +190,7 @@ class EmailAttachmentDownloader:
                 # 获取邮件内容
                 result, data = self.imap_server.fetch(email_id, '(RFC822)')
                 if result != 'OK':
-                    print(f"获取邮件 {email_id} 失败")
+                    logger.error(f"获取邮件 {email_id} 失败")
                     continue
 
                 # 解析邮件内容
@@ -111,12 +206,16 @@ class EmailAttachmentDownloader:
                     else:
                         subject_str += part
 
-                print(f"处理邮件: {subject_str} (ID: {email_id})")
+                logger.info(f"处理邮件: {subject_str} (ID: {email_id})")
 
                 # 遍历邮件的各个部分
                 for part in email_message.walk():
-                    # 检查是否是附件
-                    if part.get_content_disposition() == 'attachment':
+                    # 检查是否是附件或内联附件
+                    content_disposition = part.get_content_disposition()
+                    is_attachment = content_disposition == 'attachment'
+                    is_inline = content_disposition == 'inline' or (content_disposition is None and part.get('Content-ID') is not None)
+
+                    if is_attachment or (include_inline and is_inline):
                         # 获取附件文件名
                         filename = part.get_filename()
                         if filename:
@@ -133,18 +232,37 @@ class EmailAttachmentDownloader:
                             if file_extensions:
                                 ext = os.path.splitext(filename_str.lower())[1][1:]
                                 if ext not in file_extensions:
+                                    logger.debug(f"跳过附件 {filename_str}，扩展名 {ext} 不在白名单中")
                                     continue
 
-                            # 保存附件
-                            save_path = os.path.join(save_dir, filename_str)
-                            with open(save_path, 'wb') as f:
-                                f.write(part.get_payload(decode=True))
-                            print(f"已下载附件: {filename_str}")
-                            downloaded_count += 1
-            except Exception as e:
-                print(f"处理邮件 {email_id} 时出错: {str(e)}")
+                            # 检查文件大小
+                            attachment_size = len(part.get_payload(decode=True))
+                            if self.max_attachment_size and attachment_size > self.max_attachment_size * 1024 * 1024:
+                                logger.warning(f"跳过附件 {filename_str}，文件大小 {attachment_size/1024/1024:.2f}MB 超过限制 {self.max_attachment_size}MB")
+                                continue
 
-        print(f"共下载 {downloaded_count} 个附件")
+                            # 处理文件名冲突
+                            # 清理文件名
+                            cleaned_filename = self._clean_filename(filename_str)
+                            save_path = os.path.join(save_dir, cleaned_filename)
+                            base, ext = os.path.splitext(cleaned_filename)
+                            counter = 1
+                            while os.path.exists(save_path):
+                                save_path = os.path.join(save_dir, f"{base}_{counter}{ext}")
+                                counter += 1
+
+                            # 保存附件
+                            try:
+                                with open(save_path, 'wb') as f:
+                                    f.write(part.get_payload(decode=True))
+                                logger.info(f"已下载附件: {filename_str} 到 {save_path}")
+                                downloaded_count += 1
+                            except Exception as e:
+                                logger.error(f"保存附件 {filename_str} 失败: {str(e)}")
+            except Exception as e:
+                logger.error(f"处理邮件 {email_id} 时出错: {str(e)}")
+
+        logger.info(f"共下载 {downloaded_count} 个附件")
         return downloaded_count
 
     def disconnect(self):
@@ -152,57 +270,190 @@ class EmailAttachmentDownloader:
         断开与邮箱服务器的连接
         """
         if self.connected and self.imap_server:
-            self.imap_server.close()
-            self.imap_server.logout()
-            self.connected = False
-            print("已断开与邮箱服务器的连接")
+            try:
+                self.imap_server.close()
+                self.imap_server.logout()
+                self.connected = False
+                logger.info("已断开与邮箱服务器的连接")
+            except Exception as e:
+                logger.error(f"断开连接时出错: {str(e)}")
+                self.connected = False
+
+    def download_attachments_from_body(self, email_ids, save_dir, file_extensions=None):
+        """
+        从邮件正文提取链接并下载附件
+        :param email_ids: 邮件ID列表
+        :param save_dir: 附件保存目录
+        :param file_extensions: 允许的文件扩展名列表，None表示允许所有
+        :return: 成功下载的附件数量
+        """
+        if not self.connected:
+            logger.error("未连接到邮箱服务器")
+            return 0
+
+        # 确保保存目录存在
+        if not os.path.exists(save_dir):
+            try:
+                os.makedirs(save_dir)
+                logger.info(f"创建保存目录: {save_dir}")
+            except Exception as e:
+                logger.error(f"创建保存目录失败: {str(e)}")
+                return 0
+
+        downloaded_count = 0
+
+        for email_id in email_ids:
+            try:
+                # 获取邮件内容
+                result, data = self.imap_server.fetch(email_id, '(RFC822)')
+                if result != 'OK':
+                    logger.error(f"获取邮件 {email_id} 失败")
+                    continue
+
+                # 解析邮件内容
+                raw_email = data[0][1]
+                email_message = email.message_from_bytes(raw_email)
+
+                # 获取邮件主题
+                subject = email.header.decode_header(email_message['Subject'])
+                subject_str = ''
+                for part, encoding in subject:
+                    if isinstance(part, bytes):
+                        subject_str += part.decode(encoding or 'utf-8')
+                    else:
+                        subject_str += part
+
+                logger.info(f"处理邮件正文链接: {subject_str} (ID: {email_id})")
+
+                # 获取邮件正文
+                body = ""
+                if email_message.is_multipart():
+                    for part in email_message.get_payload():
+                        content_type = part.get_content_type()
+                        if content_type == 'text/plain' or content_type == 'text/html':
+                            charset = part.get_content_charset() or 'utf-8'
+                            try:
+                                body += part.get_payload(decode=True).decode(charset)
+                            except:
+                                # 如果解码失败，尝试使用utf-8
+                                body += part.get_payload(decode=True).decode('utf-8', errors='replace')
+                else:
+                    content_type = email_message.get_content_type()
+                    charset = email_message.get_content_charset() or 'utf-8'
+                    try:
+                        body += email_message.get_payload(decode=True).decode(charset)
+                    except:
+                        body += email_message.get_payload(decode=True).decode('utf-8', errors='replace')
+
+                # 提取链接
+                links = []
+                # 尝试用BeautifulSoup解析HTML
+                try:
+                    soup = BeautifulSoup(body, 'html.parser')
+                    for a_tag in soup.find_all('a', href=True):
+                        links.append(a_tag['href'])
+                except:
+                    logger.debug(f"解析HTML失败，尝试用正则表达式提取链接")
+                    # 用正则表达式提取链接
+                    url_pattern = r'https?://\S+|www\.\S+'
+                    links = re.findall(url_pattern, body)
+
+                # 过滤链接
+                for link in links:
+                    # 清理链接
+                    link = link.strip()
+                    # 跳过javascript链接
+                    if link.lower().startswith('javascript:'):
+                        continue
+
+                    # 检查文件扩展名
+                    if file_extensions:
+                        # 获取链接中的文件名
+                        filename = os.path.basename(link.split('?')[0])
+                        ext = os.path.splitext(filename.lower())[1][1:]
+                        if ext not in file_extensions:
+                            logger.debug(f"跳过链接 {link}，扩展名 {ext} 不在白名单中")
+                            continue
+
+                    try:
+                        # 下载链接内容
+                        logger.info(f"尝试下载链接: {link}")
+                        response = requests.get(link, timeout=30)
+                        if response.status_code == 200:
+                            # 提取文件名
+                            filename = os.path.basename(link.split('?')[0])
+                            if not filename:
+                                filename = f"attachment_{uuid.uuid4()}"
+
+                            # 清理文件名
+                            cleaned_filename = self._clean_filename(filename)
+                            save_path = os.path.join(save_dir, cleaned_filename)
+                            base, ext = os.path.splitext(cleaned_filename)
+                            counter = 1
+                            while os.path.exists(save_path):
+                                save_path = os.path.join(save_dir, f"{base}_{counter}{ext}")
+                                counter += 1
+
+                            # 保存文件
+                            with open(save_path, 'wb') as f:
+                                f.write(response.content)
+                            logger.info(f"已下载链接附件: {filename} 到 {save_path}")
+                            downloaded_count += 1
+                        else:
+                            logger.error(f"下载链接失败: {link}, 状态码: {response.status_code}")
+                    except Exception as e:
+                        logger.error(f"下载链接 {link} 时出错: {str(e)}")
+            except Exception as e:
+                logger.error(f"处理邮件 {email_id} 正文链接时出错: {str(e)}")
+
+        logger.info(f"共从邮件正文下载 {downloaded_count} 个附件")
+        return downloaded_count
 
 
 def main():
-    # 示例用法
+    """
+    主函数，用于演示如何使用EmailAttachmentDownloader类
+    """
     # 初始化下载器
     downloader = EmailAttachmentDownloader()
 
     try:
-        # 读取配置文件（从当前脚本所在目录）
-        config_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'config.json')
-        with open(config_path, 'r', encoding='utf-8') as f:
-            config = json.load(f)
-            email_config = config.get('email', {})
-
-        # 从配置中获取参数
-        imap_server = email_config.get('imap_server', 'imaphz.qiye.163.com')
-        username = email_config.get('username', 'heguangzhong@cosmosource.com')
-        password = email_config.get('password', 'Password01')
-        port = email_config.get('port', 993)
-        folder = email_config.get('folder', 'INBOX')
-        days_ago = email_config.get('days_ago', 7)
-        save_dir = email_config.get('save_dir', 'attachments')
-        file_extensions = email_config.get('file_extensions', ['pdf', 'jpg', 'jpeg', 'png'])
-
         # 连接到邮箱
-        if not downloader.connect(imap_server, username, password, port):
-            print("无法连接到邮箱，程序退出")
+        if not downloader.connect():
+            logger.error("无法连接到邮箱，程序退出")
             return
 
         # 计算指定天数前的日期
-        date_since = datetime.datetime.now() - datetime.timedelta(days=days_ago)
+        date_since = datetime.datetime.now() - datetime.timedelta(days=downloader.days_ago or 7)
 
         # 搜索邮件
-        email_ids = downloader.search_emails(folder=folder, date_since=date_since)
+        email_ids = downloader.search_emails(folder=downloader.folder, date_since=date_since)
 
         # 如果没有找到邮件，搜索所有邮件
         if not email_ids:
-            print(f"没有找到{days_ago}天内的邮件，搜索所有邮件")
-            email_ids = downloader.search_emails(folder=folder)
+            logger.warning(f"没有找到{(downloader.days_ago or 7)}天内的邮件，搜索所有邮件")
+            email_ids = downloader.search_emails(folder=downloader.folder)
 
         # 确保保存目录存在
-        save_dir = os.path.join(os.getcwd(), save_dir)
+        save_dir = os.path.join(os.getcwd(), downloader.save_dir)
+
+        # 从配置中获取文件扩展名过滤
+        config_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'config.json')
+        file_extensions = None
+        try:
+            with open(config_path, 'r', encoding='utf-8') as f:
+                config = json.load(f)
+                email_config = config.get('email', {})
+                file_extensions = email_config.get('file_extensions')
+        except Exception as e:
+            logger.error(f"读取配置文件失败: {str(e)}")
 
         # 下载附件
         downloader.download_attachments(email_ids, save_dir, file_extensions=file_extensions)
+        # 从邮件正文下载附件
+        downloader.download_attachments_from_body(email_ids, save_dir, file_extensions=file_extensions)
     except Exception as e:
-        print(f"程序执行出错: {str(e)}")
+        logger.error(f"程序执行出错: {str(e)}")
     finally:
         # 断开连接
         downloader.disconnect()
