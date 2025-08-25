@@ -52,7 +52,7 @@ async def list_tools() -> List[Tool]:
         ),
         Tool(
             name="ocr_invoices",
-            description="批量识别目录下的所有发票",
+            description="批量识别目录下的所有发票，并复制文件重命名（日期+金额+内容）到当前目录",
             inputSchema={
                 "type": "object",
                 "properties": {
