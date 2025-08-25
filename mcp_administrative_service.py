@@ -147,7 +147,7 @@ async def list_tools() -> List[Tool]:
                     "resolution": {
                         "type": "integer",
                         "description": "图像分辨率 (dpi)，默认为300",
-                        "default": 600
+                        "default": 300
                     },
                     "image_format": {
                         "type": "string",
@@ -348,6 +348,7 @@ async def call_tool(name: str, arguments: dict) -> List[TextContent]:
         save_dir = arguments.get("save_dir")
         days_ago = arguments.get("days_ago", 7)
         file_extensions = arguments.get("file_extensions")
+        use_precise_date = arguments.get("use_precise_date", True)  # 默认使用精准日期搜索
  
         try:
             # 连接到邮箱服务器
@@ -357,15 +358,21 @@ async def call_tool(name: str, arguments: dict) -> List[TextContent]:
                     text=f"无法连接到邮箱服务器: {imap_server}"
                 )]
 
-            # 计算指定天数前的日期
-            date_since = datetime.datetime.now() - datetime.timedelta(days=days_ago)
+            if use_precise_date and days_ago == 0:
+                # 使用精准日期搜索，只下载今天的邮件
+                today = datetime.datetime.now().date()
+                email_ids = email_downloader.search_emails_by_date(today)
+                date_info = f"今天 ({today})"
+            else:
+                # 使用传统搜索方式
+                date_since = datetime.datetime.now() - datetime.timedelta(days=days_ago)
+                email_ids = email_downloader.search_emails(date_since=date_since)
+                date_info = f"最近{days_ago}天"
 
-            # 搜索邮件
-            email_ids = email_downloader.search_emails(date_since=date_since)
             if not email_ids:
                 return [TextContent(
                     type="text",
-                    text=f"未找到{days_ago}天内的邮件"
+                    text=f"未找到{date_info}的邮件"
                 )]
 
             # 下载附件
@@ -375,7 +382,7 @@ async def call_tool(name: str, arguments: dict) -> List[TextContent]:
 
             return [TextContent(
                 type="text",
-                text=f"成功下载 {downloaded_count} 个附件到目录: {save_dir}"
+                text=f"成功下载 {downloaded_count} 个{date_info}的附件到目录: {save_dir}"
             )]
         except Exception as e:
             return [TextContent(
