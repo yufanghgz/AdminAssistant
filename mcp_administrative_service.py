@@ -91,6 +91,18 @@ async def list_tools() -> List[Tool]:
                         "description": "下载多少天前的邮件，默认为7天",
                         "default": 7
                     },
+                    "date": {
+                        "type": "string",
+                        "description": "指定单日，格式 YYYY-MM-DD，可与 days_ago 互斥"
+                    },
+                    "start_date": {
+                        "type": "string",
+                        "description": "起始日期，格式 YYYY-MM-DD"
+                    },
+                    "end_date": {
+                        "type": "string",
+                        "description": "结束日期，格式 YYYY-MM-DD（含当日）"
+                    },
                     "file_extensions": {
                         "type": "array",
                         "items": {
@@ -347,6 +359,9 @@ async def call_tool(name: str, arguments: dict) -> List[TextContent]:
         password = arguments.get("password")
         save_dir = arguments.get("save_dir")
         days_ago = arguments.get("days_ago", 7)
+        single_date = arguments.get("date")
+        start_date = arguments.get("start_date")
+        end_date = arguments.get("end_date")
         file_extensions = arguments.get("file_extensions")
         use_precise_date = arguments.get("use_precise_date", True)  # 默认使用精准日期搜索
  
@@ -358,13 +373,23 @@ async def call_tool(name: str, arguments: dict) -> List[TextContent]:
                     text=f"无法连接到邮箱服务器: {imap_server}"
                 )]
 
-            if use_precise_date and days_ago == 0:
-                # 使用精准日期搜索，只下载今天的邮件
+            # 优先级：date > (start_date/end_date) > days_ago
+            if single_date:
+                email_ids = email_downloader.search_emails_by_date(single_date)
+                date_info = f"指定日期 {single_date}"
+            elif start_date or end_date:
+                email_ids = email_downloader.search_emails_by_range(start_date, end_date)
+                if start_date and end_date:
+                    date_info = f"日期范围 {start_date} 至 {end_date}"
+                elif start_date:
+                    date_info = f"自 {start_date} 起"
+                else:
+                    date_info = f"至 {end_date} 止"
+            elif use_precise_date and days_ago == 0:
                 today = datetime.datetime.now().date()
                 email_ids = email_downloader.search_emails_by_date(today)
                 date_info = f"今天 ({today})"
             else:
-                # 使用传统搜索方式
                 date_since = datetime.datetime.now() - datetime.timedelta(days=days_ago)
                 email_ids = email_downloader.search_emails(date_since=date_since)
                 date_info = f"最近{days_ago}天"

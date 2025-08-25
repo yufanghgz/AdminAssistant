@@ -130,14 +130,24 @@ class EmailAttachmentDownloader:
             # 选择文件夹
             self.imap_server.select(folder)
             
-            # 构建搜索条件
+            # 构建搜索条件（优先组合日期范围）
             search_criteria = criteria
-            
-            # 如果提供了日期参数，添加到搜索条件
+            date_parts = []
             if date_since:
-                # 格式化日期为IMAP格式 (DD-Month-YYYY)
-                imap_date = date_since.strftime('%d-%b-%Y')
-                search_criteria = f'(SINCE {imap_date}) {search_criteria}'
+                imap_since = date_since.strftime('%d-%b-%Y')
+                date_parts.append(f'SINCE {imap_since}')
+            if date_until:
+                # IMAP 的 BEFORE 不包含当日，因此将 end_date+1 天作为 BEFORE 的参数
+                try:
+                    next_day = (date_until + datetime.timedelta(days=1)) if isinstance(date_until, datetime.datetime) else (date_until + datetime.timedelta(days=1))
+                except Exception:
+                    next_day = None
+                if next_day:
+                    imap_before = next_day.strftime('%d-%b-%Y')
+                    date_parts.append(f'BEFORE {imap_before}')
+
+            if date_parts:
+                search_criteria = f"({' '.join(date_parts)}) {search_criteria}"
                 logger.info(f"搜索条件: {search_criteria}")
 
             # 搜索邮件
@@ -150,8 +160,8 @@ class EmailAttachmentDownloader:
             email_ids = data[0].split()
             logger.info(f"初步搜索找到 {len(email_ids)} 封邮件")
             
-            # 如果指定了目标日期，进行精准过滤
-            if target_date:
+            # 如果指定了目标日期或提供了日期范围，进行精准过滤
+            if target_date or (date_since or date_until):
                 logger.info(f"开始精准过滤 {target_date} 的邮件...")
                 filtered_email_ids = []
                 
@@ -166,11 +176,20 @@ class EmailAttachmentDownloader:
                             try:
                                 from email.utils import parsedate_to_datetime
                                 email_date = parsedate_to_datetime(email_message.get('Date'))
-                                if email_date and email_date.date() == target_date:
+                                include = True
+                                if target_date:
+                                    include = include and (email_date and email_date.date() == target_date)
+                                if date_since:
+                                    include = include and (email_date and email_date >= (date_since if isinstance(date_since, datetime.datetime) else datetime.datetime.combine(date_since, datetime.datetime.min.time())))
+                                if date_until:
+                                    # 包含 end 当天
+                                    end_dt = (date_until if isinstance(date_until, datetime.datetime) else datetime.datetime.combine(date_until, datetime.datetime.max.time()))
+                                    include = include and (email_date and email_date <= end_dt)
+                                if include:
                                     filtered_email_ids.append(email_id)
-                                    logger.debug(f"邮件 {email_id} 日期匹配: {email_date.date()}")
+                                    logger.debug(f"邮件 {email_id} 日期匹配: {email_date}")
                                 else:
-                                    logger.debug(f"邮件 {email_id} 日期不匹配: {email_date.date() if email_date else 'None'}")
+                                    logger.debug(f"邮件 {email_id} 日期不匹配: {email_date}")
                             except Exception as e:
                                 logger.warning(f"无法解析邮件 {email_id} 的日期: {str(e)}")
                                 # 如果无法解析日期，暂时包含这封邮件
@@ -215,6 +234,39 @@ class EmailAttachmentDownloader:
         
         logger.info(f"搜索 {target_date} 的邮件")
         return self.search_emails(folder=folder, criteria=criteria, date_since=date_since, target_date=target_date)
+
+    def search_emails_by_range(self, start_date=None, end_date=None, folder='INBOX', criteria='ALL'):
+        """
+        按日期范围搜索邮件（包含端点）。
+        :param start_date: 开始日期，datetime/date 或 'YYYY-MM-DD' 字符串
+        :param end_date: 结束日期，datetime/date 或 'YYYY-MM-DD' 字符串
+        :param folder: 邮箱文件夹
+        :param criteria: 其他搜索条件
+        :return: 邮件ID列表
+        """
+        from datetime import datetime, date
+
+        def normalize(d, is_start=True):
+            if d is None:
+                return None
+            if isinstance(d, str):
+                d = datetime.strptime(d, '%Y-%m-%d').date()
+            if isinstance(d, datetime):
+                return d
+            if isinstance(d, date):
+                return datetime.combine(d, datetime.min.time() if is_start else datetime.max.time())
+            raise ValueError('不支持的日期类型')
+
+        start_dt = normalize(start_date, True)
+        end_dt = normalize(end_date, False)
+
+        # 如果只给了一个日期，就按单日搜索
+        if start_dt and not end_dt:
+            return self.search_emails(folder=folder, criteria=criteria, date_since=start_dt, target_date=start_dt.date())
+        if end_dt and not start_dt:
+            return self.search_emails(folder=folder, criteria=criteria, date_since=end_dt, target_date=end_dt.date())
+
+        return self.search_emails(folder=folder, criteria=criteria, date_since=start_dt, date_until=end_dt)
 
     def _clean_filename(self, filename):
         """
