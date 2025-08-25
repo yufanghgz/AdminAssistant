@@ -5,8 +5,8 @@
         "password": "ifqdmucfxotlbigc",
         "port": 993,
         "folder": "INBOX",
-        "days_ago": 7,
-        "save_dir": "D:\\PyProject\\AdminAssistent\\attachments",
+        "days_ago": 0,
+        "save_dir": "/Volumes/SD_1.5T/github/AdminAssistent/attachments",
         "file_extensions": ["pdf", "jpg", "jpeg", "png", "xml", "eml"]
     }
 }

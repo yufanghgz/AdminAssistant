@@ -27,6 +27,7 @@ class EmailAttachmentDownloader:
         try:
             # Read the configuration file (from the directory where the current script is located)
             config_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'conf/qq-email.json')
+            logger.info(f"config_path={config_path}")
             with open(config_path, 'r', encoding='utf-8') as f:
                 config = json.load(f)
                 email_config = config.get('email', {})
@@ -41,7 +42,7 @@ class EmailAttachmentDownloader:
             self.save_dir = save_dir if save_dir is not None else email_config.get('save_dir')
             self.max_attachment_size = max_attachment_size if max_attachment_size is not None else email_config.get('max_attachment_size')
             self.connected = False
-
+            logger.info(f"self.imap_server={self.imap_server}, self.username={self.username}, self.password={self.password}, self.port={self.port}, self.folder={self.folder}, self.days_ago={self.days_ago}, self.save_dir={self.save_dir}, self.max_attachment_size={self.max_attachment_size}")
             # Validate configuration
             if not self.validate_config():
                 logger.error("Invalid configuration, please check config.json")
