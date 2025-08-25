@@ -111,12 +111,15 @@ class EmailAttachmentDownloader:
             self.connected = False
             return False
 
-    def search_emails(self, folder='INBOX', criteria='ALL', date_since=None):
+    def search_emails(self, folder='INBOX', criteria='ALL', date_since=None, date_until=None, target_date=None):
         """
-        搜索邮件
+        搜索邮件，支持精准日期过滤
         :param folder: 邮箱文件夹，默认收件箱(INBOX)
         :param criteria: 搜索条件，默认所有邮件(ALL)
                         其他条件示例: 'UNSEEN'（未读）, 'FROM "example@domain.com"'（来自特定发件人）
+        :param date_since: 开始日期，datetime对象
+        :param date_until: 结束日期，datetime对象
+        :param target_date: 目标日期，datetime.date对象，只返回指定日期的邮件
         :return: 邮件ID列表
         """
         if not self.connected:
@@ -126,26 +129,92 @@ class EmailAttachmentDownloader:
         try:
             # 选择文件夹
             self.imap_server.select(folder)
+            
+            # 构建搜索条件
+            search_criteria = criteria
+            
             # 如果提供了日期参数，添加到搜索条件
             if date_since:
                 # 格式化日期为IMAP格式 (DD-Month-YYYY)
                 imap_date = date_since.strftime('%d-%b-%Y')
-                criteria = f'(SINCE {imap_date}) {criteria}'
-                logger.info(f"搜索条件: {criteria}")
+                search_criteria = f'(SINCE {imap_date}) {search_criteria}'
+                logger.info(f"搜索条件: {search_criteria}")
 
             # 搜索邮件
-            result, data = self.imap_server.search(None, criteria)
-            if result == 'OK':
-                # 提取邮件ID
-                email_ids = data[0].split()
-                logger.info(f"找到 {len(email_ids)} 封邮件")
-                return email_ids
-            else:
+            result, data = self.imap_server.search(None, search_criteria)
+            if result != 'OK':
                 logger.error("搜索邮件失败")
                 return []
+            
+            # 提取邮件ID
+            email_ids = data[0].split()
+            logger.info(f"初步搜索找到 {len(email_ids)} 封邮件")
+            
+            # 如果指定了目标日期，进行精准过滤
+            if target_date:
+                logger.info(f"开始精准过滤 {target_date} 的邮件...")
+                filtered_email_ids = []
+                
+                for email_id in email_ids:
+                    try:
+                        # 获取邮件头部信息
+                        status, data = self.imap_server.fetch(email_id, '(RFC822.HEADER)')
+                        if status == 'OK':
+                            email_message = email.message_from_bytes(data[0][1])
+                            
+                            # 解析邮件日期
+                            try:
+                                from email.utils import parsedate_to_datetime
+                                email_date = parsedate_to_datetime(email_message.get('Date'))
+                                if email_date and email_date.date() == target_date:
+                                    filtered_email_ids.append(email_id)
+                                    logger.debug(f"邮件 {email_id} 日期匹配: {email_date.date()}")
+                                else:
+                                    logger.debug(f"邮件 {email_id} 日期不匹配: {email_date.date() if email_date else 'None'}")
+                            except Exception as e:
+                                logger.warning(f"无法解析邮件 {email_id} 的日期: {str(e)}")
+                                # 如果无法解析日期，暂时包含这封邮件
+                                filtered_email_ids.append(email_id)
+                    except Exception as e:
+                        logger.warning(f"获取邮件 {email_id} 头部信息失败: {str(e)}")
+                
+                logger.info(f"精准过滤后找到 {len(filtered_email_ids)} 封 {target_date} 的邮件")
+                return filtered_email_ids
+            
+            return email_ids
+            
         except Exception as e:
             logger.error(f"搜索邮件时出错: {str(e)}")
             return []
+
+    def search_emails_by_date(self, target_date, folder='INBOX', criteria='ALL'):
+        """
+        搜索指定日期的邮件（便捷方法）
+        :param target_date: 目标日期，可以是datetime.date对象或字符串 'YYYY-MM-DD'
+        :param folder: 邮箱文件夹，默认收件箱(INBOX)
+        :param criteria: 搜索条件，默认所有邮件(ALL)
+        :return: 邮件ID列表
+        """
+        from datetime import datetime, date
+        
+        # 处理日期参数
+        if isinstance(target_date, str):
+            try:
+                target_date = datetime.strptime(target_date, '%Y-%m-%d').date()
+            except ValueError:
+                logger.error(f"日期格式错误: {target_date}，请使用 'YYYY-MM-DD' 格式")
+                return []
+        elif isinstance(target_date, datetime):
+            target_date = target_date.date()
+        elif not isinstance(target_date, date):
+            logger.error(f"不支持的日期类型: {type(target_date)}")
+            return []
+        
+        # 设置搜索范围（从目标日期开始）
+        date_since = datetime.combine(target_date, datetime.min.time())
+        
+        logger.info(f"搜索 {target_date} 的邮件")
+        return self.search_emails(folder=folder, criteria=criteria, date_since=date_since, target_date=target_date)
 
     def _clean_filename(self, filename):
         """

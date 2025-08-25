@@ -58,7 +58,7 @@ class ERPLogin:
             self.username = username or config.get('username')
             self.password = password or config.get('password')
         except Exception as e:
-            self.logger.error(f"读取配置文件失败: {str(e)}")
+            self.logger.error(f"读取配置文件失败: {str(e)}")g
             self.username = username
             self.password = password
 
