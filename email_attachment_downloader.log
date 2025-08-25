@@ -1,0 +1,20 @@
+2025-08-25 14:47:23,053 - easyocr.easyocr - WARNING - Downloading detection model, please wait. This may take several minutes depending upon your network connection.
+2025-08-25 14:47:41,409 - easyocr.easyocr - INFO - Download complete
+2025-08-25 14:47:41,409 - easyocr.easyocr - WARNING - Downloading recognition model, please wait. This may take several minutes depending upon your network connection.
+2025-08-25 14:47:44,949 - easyocr.easyocr - INFO - Download complete.
+2025-08-25 14:47:47,216 - EmailAttachmentDownloader - INFO - get config.json
+2025-08-25 14:47:47,217 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: '/Volumes/SD_1.5T/github/AdminAssistent/base/config.json'
+2025-08-25 14:47:47,217 - EmailAttachmentDownloader - INFO - config.json get success: imap_server=None, username=None, save_dir=None
+2025-08-25 14:49:49,496 - EmailAttachmentDownloader - INFO - get qq-email-config.json
+2025-08-25 14:49:49,496 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: '/Volumes/SD_1.5T/github/AdminAssistent/base/qq-email-config.json'
+2025-08-25 14:49:49,496 - EmailAttachmentDownloader - INFO - config.json get success: imap_server=None, username=None, save_dir=None
+2025-08-25 15:01:14,205 - EmailAttachmentDownloader - INFO - ./base/get qq-email-config.json
+2025-08-25 15:01:14,205 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: '/Volumes/SD_1.5T/github/AdminAssistent/base/./base/qq-email-config.json'
+2025-08-25 15:01:14,205 - EmailAttachmentDownloader - INFO - config.json get success: imap_server=None, username=None, save_dir=None
+2025-08-25 15:03:30,382 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-08-25 15:03:30,383 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: '/Volumes/SD_1.5T/github/AdminAssistent/base/./base/qq-email.json'
+2025-08-25 15:03:30,384 - EmailAttachmentDownloader - INFO - config.json get success: imap_server=None, username=None, save_dir=None
+2025-08-25 15:04:07,886 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-08-25 15:04:07,886 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: '/Volumes/SD_1.5T/github/AdminAssistent/base/qq-email.json'
+2025-08-25 15:04:07,886 - EmailAttachmentDownloader - INFO - config.json get success: imap_server=None, username=None, save_dir=None
+2025-08-25 15:05:06,263 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json

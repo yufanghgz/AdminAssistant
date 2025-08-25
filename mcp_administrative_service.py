@@ -147,7 +147,7 @@ async def list_tools() -> List[Tool]:
                     "resolution": {
                         "type": "integer",
                         "description": "图像分辨率 (dpi)，默认为300",
-                        "default": 300
+                        "default": 600
                     },
                     "image_format": {
                         "type": "string",

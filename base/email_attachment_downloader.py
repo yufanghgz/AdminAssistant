@@ -23,10 +23,10 @@ logger = logging.getLogger('EmailAttachmentDownloader')
 
 class EmailAttachmentDownloader:
     def __init__(self, imap_server=None, username=None, password=None, port=993, folder='INBOX', days_ago=None, save_dir=None, max_attachment_size=None):
-        logger.info("get config.json")
+        logger.info("./base/conf/qq-email.json")
         try:
             # Read the configuration file (from the directory where the current script is located)
-            config_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'config.json')
+            config_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'conf/qq-email.json')
             with open(config_path, 'r', encoding='utf-8') as f:
                 config = json.load(f)
                 email_config = config.get('email', {})
