@@ -36,8 +36,9 @@ def images_to_pdf(input_folder, output_file):
 
     # 每页放置两张图片（垂直排列）
     for i in range(0, len(image_files), 2):
-        # 创建新页面
-        c.showPage()
+        # 如果不是第一页，才创建新页面
+        if i > 0:
+            c.showPage()
 
         # 计算图片位置和大小
         # 页面边距
@@ -84,6 +85,7 @@ def images_to_pdf(input_folder, output_file):
                 actual_x1 = margin + (available_width - actual_width) / 2
                 # 绘制图片
                 c.drawImage(image_path, actual_x1, y1, width=actual_width, height=actual_height)
+                logger.info(f"已添加第一张图片: {image_files[i]}")
             except Exception as e:
                 logger.warning(f"无法打开图片 '{image_files[i]}': {str(e)}")
 
@@ -110,12 +112,13 @@ def images_to_pdf(input_folder, output_file):
                 actual_x2 = margin + (available_width - actual_width) / 2
                 # 绘制图片
                 c.drawImage(image_path, actual_x2, y2, width=actual_width, height=actual_height)
+                logger.info(f"已添加第二张图片: {image_files[i + 1]}")
             except Exception as e:
                 logger.warning(f"无法打开图片 '{image_files[i + 1]}': {str(e)}")
 
     # 保存PDF文件
     c.save()
-    logger.info(f"图片已合成为PDF文件 '{output_file}'")
+    logger.info(f"图片已成功合成为PDF文件 '{output_file}'，共 {len(image_files)} 张图片")
 
 
 if __name__ == '__main__':
