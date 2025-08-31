@@ -254,3 +254,294 @@
 2025-08-25 16:56:12,075 - EmailAttachmentDownloader - INFO - 已下载附件: 【AA出行-50.47元-1个行程】高德打车电子行程单.pdf 到 /Volumes/SD_1.5T/github/AdminAssistent/attachments\【AA出行-50.47元-1个行程】高德打车电子行程单.pdf
 2025-08-25 16:56:12,076 - EmailAttachmentDownloader - INFO - 共下载 39 个附件
 2025-08-25 16:56:12,210 - EmailAttachmentDownloader - INFO - 已断开与邮箱服务器的连接
+2025-08-25 17:07:57,234 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-08-25 17:07:57,234 - EmailAttachmentDownloader - INFO - config_path=C:\Users\hgz_x1\Documents\GitHub\AdminAssistent\base\conf/qq-email.json
+2025-08-25 17:07:57,235 - EmailAttachmentDownloader - INFO - self.imap_server=imap.qq.com, self.username=23512221@qq.com, self.password=ifqdmucfxotlbigc, self.port=993, self.folder=INBOX, self.days_ago=0, self.save_dir=C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments, self.max_attachment_size=None
+2025-08-25 17:07:57,777 - EmailAttachmentDownloader - INFO - 成功连接到邮箱: 23512221@qq.com
+2025-08-25 17:07:57,781 - EmailAttachmentDownloader - INFO - 搜索 2025-08-25 的邮件
+2025-08-25 17:07:57,929 - EmailAttachmentDownloader - INFO - 搜索条件: (SINCE 25-Aug-2025) ALL
+2025-08-25 17:07:58,001 - EmailAttachmentDownloader - INFO - 初步搜索找到 12 封邮件
+2025-08-25 17:07:58,002 - EmailAttachmentDownloader - INFO - 开始精准过滤 2025-08-25 的邮件...
+2025-08-25 17:07:59,412 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'10' 的日期: can't compare offset-naive and offset-aware datetimes
+2025-08-25 17:07:59,625 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'11' 的日期: can't compare offset-naive and offset-aware datetimes
+2025-08-25 17:07:59,840 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'12' 的日期: can't compare offset-naive and offset-aware datetimes
+2025-08-25 17:07:59,841 - EmailAttachmentDownloader - INFO - 精准过滤后找到 3 封 2025-08-25 的邮件
+2025-08-25 17:08:01,093 - EmailAttachmentDownloader - INFO - 处理邮件: 高德打车电子发票 (ID: b'10')
+2025-08-25 17:08:01,095 - EmailAttachmentDownloader - INFO - 已下载附件: 【火箭出行-297.80元-7个行程】高德打车电子发票.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【火箭出行-297.80元-7个行程】高德打车电子发票.pdf
+2025-08-25 17:08:01,096 - EmailAttachmentDownloader - INFO - 已下载附件: 【曹操出行-70.29元-2个行程】高德打车电子发票.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【曹操出行-70.29元-2个行程】高德打车电子发票.pdf
+2025-08-25 17:08:01,099 - EmailAttachmentDownloader - INFO - 已下载附件: 【高德打车-41.27元-1个行程】高德打车电子发票.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【高德打车-41.27元-1个行程】高德打车电子发票.pdf
+2025-08-25 17:08:01,099 - EmailAttachmentDownloader - INFO - 已下载附件: 【火箭出行-297.80元-7个行程】高德打车电子发票.xml 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【火箭出行-297.80元-7个行程】高德打车电子发票.xml
+2025-08-25 17:08:01,100 - EmailAttachmentDownloader - INFO - 已下载附件: 【曹操出行-70.29元-2个行程】高德打车电子发票.xml 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【曹操出行-70.29元-2个行程】高德打车电子发票.xml
+2025-08-25 17:08:01,100 - EmailAttachmentDownloader - INFO - 已下载附件: 【高德打车-41.27元-1个行程】高德打车电子发票.xml 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【高德打车-41.27元-1个行程】高德打车电子发票.xml
+2025-08-25 17:08:01,104 - EmailAttachmentDownloader - INFO - 已下载附件: 【火箭出行-297.80元-7个行程】高德打车电子行程单.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【火箭出行-297.80元-7个行程】高德打车电子行程单.pdf
+2025-08-25 17:08:01,108 - EmailAttachmentDownloader - INFO - 已下载附件: 【曹操出行-70.29元-2个行程】高德打车电子行程单.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【曹操出行-70.29元-2个行程】高德打车电子行程单.pdf
+2025-08-25 17:08:01,112 - EmailAttachmentDownloader - INFO - 已下载附件: 【高德打车-41.27元-1个行程】高德打车电子行程单.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【高德打车-41.27元-1个行程】高德打车电子行程单.pdf
+2025-08-25 17:08:01,637 - EmailAttachmentDownloader - INFO - 处理邮件: 高德打车电子发票 (ID: b'11')
+2025-08-25 17:08:01,639 - EmailAttachmentDownloader - INFO - 已下载附件: 【飞嘀打车-19.80元-1个行程】高德打车电子发票.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【飞嘀打车-19.80元-1个行程】高德打车电子发票.pdf
+2025-08-25 17:08:01,640 - EmailAttachmentDownloader - INFO - 已下载附件: 【飞嘀打车-19.80元-1个行程】高德打车电子发票.xml 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【飞嘀打车-19.80元-1个行程】高德打车电子发票.xml
+2025-08-25 17:08:01,644 - EmailAttachmentDownloader - INFO - 已下载附件: 【飞嘀打车-19.80元-1个行程】高德打车电子行程单.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【飞嘀打车-19.80元-1个行程】高德打车电子行程单.pdf
+2025-08-25 17:08:02,214 - EmailAttachmentDownloader - INFO - 处理邮件: 高德打车电子发票 (ID: b'12')
+2025-08-25 17:08:02,216 - EmailAttachmentDownloader - INFO - 已下载附件: 【AA出行-50.47元-1个行程】高德打车电子发票.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【AA出行-50.47元-1个行程】高德打车电子发票.pdf
+2025-08-25 17:08:02,217 - EmailAttachmentDownloader - INFO - 已下载附件: 【AA出行-50.47元-1个行程】高德打车电子发票.xml 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【AA出行-50.47元-1个行程】高德打车电子发票.xml
+2025-08-25 17:08:02,221 - EmailAttachmentDownloader - INFO - 已下载附件: 【AA出行-50.47元-1个行程】高德打车电子行程单.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【AA出行-50.47元-1个行程】高德打车电子行程单.pdf
+2025-08-25 17:08:02,221 - EmailAttachmentDownloader - INFO - 共下载 15 个附件
+2025-08-25 17:08:02,354 - EmailAttachmentDownloader - INFO - 已断开与邮箱服务器的连接
+2025-08-25 17:08:27,520 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-08-25 17:08:27,520 - EmailAttachmentDownloader - INFO - config_path=C:\Users\hgz_x1\Documents\GitHub\AdminAssistent\base\conf/qq-email.json
+2025-08-25 17:08:27,520 - EmailAttachmentDownloader - INFO - self.imap_server=imap.qq.com, self.username=23512221@qq.com, self.password=ifqdmucfxotlbigc, self.port=993, self.folder=INBOX, self.days_ago=0, self.save_dir=C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments, self.max_attachment_size=None
+2025-08-25 17:08:28,195 - EmailAttachmentDownloader - INFO - 成功连接到邮箱: 23512221@qq.com
+2025-08-25 17:08:28,315 - EmailAttachmentDownloader - INFO - 搜索条件: (SINCE 24-Aug-2025 BEFORE 26-Aug-2025) ALL
+2025-08-25 17:08:28,409 - EmailAttachmentDownloader - INFO - 初步搜索找到 12 封邮件
+2025-08-25 17:08:28,409 - EmailAttachmentDownloader - INFO - 开始精准过滤 None 的邮件...
+2025-08-25 17:08:28,533 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'1' 的日期: can't compare offset-naive and offset-aware datetimes
+2025-08-25 17:08:28,660 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'2' 的日期: can't compare offset-naive and offset-aware datetimes
+2025-08-25 17:08:28,780 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'3' 的日期: can't compare offset-naive and offset-aware datetimes
+2025-08-25 17:08:28,878 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'4' 的日期: can't compare offset-naive and offset-aware datetimes
+2025-08-25 17:08:28,984 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'5' 的日期: can't compare offset-naive and offset-aware datetimes
+2025-08-25 17:08:29,096 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'6' 的日期: can't compare offset-naive and offset-aware datetimes
+2025-08-25 17:08:29,207 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'7' 的日期: can't compare offset-naive and offset-aware datetimes
+2025-08-25 17:08:29,321 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'8' 的日期: can't compare offset-naive and offset-aware datetimes
+2025-08-25 17:08:29,516 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'9' 的日期: can't compare offset-naive and offset-aware datetimes
+2025-08-25 17:08:29,678 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'10' 的日期: can't compare offset-naive and offset-aware datetimes
+2025-08-25 17:08:29,812 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'11' 的日期: can't compare offset-naive and offset-aware datetimes
+2025-08-25 17:08:29,953 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'12' 的日期: can't compare offset-naive and offset-aware datetimes
+2025-08-25 17:08:29,954 - EmailAttachmentDownloader - INFO - 精准过滤后找到 12 封 None 的邮件
+2025-08-25 17:08:30,266 - EmailAttachmentDownloader - INFO - 处理邮件: Sign in to Cursor (ID: b'1')
+2025-08-25 17:08:31,420 - EmailAttachmentDownloader - INFO - 处理邮件: 高德打车电子发票 (ID: b'2')
+2025-08-25 17:08:31,432 - EmailAttachmentDownloader - INFO - 已下载附件: 【火箭出行-471.63元-12个行程】高德打车电子发票.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【火箭出行-471.63元-12个行程】高德打车电子发票.pdf
+2025-08-25 17:08:31,434 - EmailAttachmentDownloader - INFO - 已下载附件: 【曹操出行-104.53元-2个行程】高德打车电子发票.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【曹操出行-104.53元-2个行程】高德打车电子发票.pdf
+2025-08-25 17:08:31,436 - EmailAttachmentDownloader - INFO - 已下载附件: 【神州专车-48.01元-1个行程】高德打车电子发票.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【神州专车-48.01元-1个行程】高德打车电子发票.pdf
+2025-08-25 17:08:31,436 - EmailAttachmentDownloader - INFO - 已下载附件: 【火箭出行-471.63元-12个行程】高德打车电子发票.xml 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【火箭出行-471.63元-12个行程】高德打车电子发票.xml
+2025-08-25 17:08:31,437 - EmailAttachmentDownloader - INFO - 已下载附件: 【曹操出行-104.53元-2个行程】高德打车电子发票.xml 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【曹操出行-104.53元-2个行程】高德打车电子发票.xml
+2025-08-25 17:08:31,438 - EmailAttachmentDownloader - INFO - 已下载附件: 【神州专车-48.01元-1个行程】高德打车电子发票.xml 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【神州专车-48.01元-1个行程】高德打车电子发票.xml
+2025-08-25 17:08:31,442 - EmailAttachmentDownloader - INFO - 已下载附件: 【火箭出行-471.63元-12个行程】高德打车电子行程单.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【火箭出行-471.63元-12个行程】高德打车电子行程单.pdf
+2025-08-25 17:08:31,446 - EmailAttachmentDownloader - INFO - 已下载附件: 【曹操出行-104.53元-2个行程】高德打车电子行程单.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【曹操出行-104.53元-2个行程】高德打车电子行程单.pdf
+2025-08-25 17:08:31,449 - EmailAttachmentDownloader - INFO - 已下载附件: 【神州专车-48.01元-1个行程】高德打车电子行程单.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【神州专车-48.01元-1个行程】高德打车电子行程单.pdf
+2025-08-25 17:08:32,068 - EmailAttachmentDownloader - INFO - 处理邮件: 高德打车电子发票 (ID: b'3')
+2025-08-25 17:08:32,070 - EmailAttachmentDownloader - INFO - 已下载附件: 【飞嘀打车-54.60元-1个行程】高德打车电子发票.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【飞嘀打车-54.60元-1个行程】高德打车电子发票.pdf
+2025-08-25 17:08:32,071 - EmailAttachmentDownloader - INFO - 已下载附件: 【星徽出行-53.63元-1个行程】高德打车电子发票.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【星徽出行-53.63元-1个行程】高德打车电子发票.pdf
+2025-08-25 17:08:32,071 - EmailAttachmentDownloader - INFO - 已下载附件: 【飞嘀打车-54.60元-1个行程】高德打车电子发票.xml 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【飞嘀打车-54.60元-1个行程】高德打车电子发票.xml
+2025-08-25 17:08:32,072 - EmailAttachmentDownloader - INFO - 已下载附件: 【星徽出行-53.63元-1个行程】高德打车电子发票.xml 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【星徽出行-53.63元-1个行程】高德打车电子发票.xml
+2025-08-25 17:08:32,076 - EmailAttachmentDownloader - INFO - 已下载附件: 【飞嘀打车-54.60元-1个行程】高德打车电子行程单.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【飞嘀打车-54.60元-1个行程】高德打车电子行程单.pdf
+2025-08-25 17:08:32,088 - EmailAttachmentDownloader - INFO - 已下载附件: 【星徽出行-53.63元-1个行程】高德打车电子行程单.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【星徽出行-53.63元-1个行程】高德打车电子行程单.pdf
+2025-08-25 17:08:32,776 - EmailAttachmentDownloader - INFO - 处理邮件: 高德打车电子发票 (ID: b'4')
+2025-08-25 17:08:32,777 - EmailAttachmentDownloader - INFO - 已下载附件: 【AA出行-143.55元-4个行程】高德打车电子发票.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【AA出行-143.55元-4个行程】高德打车电子发票.pdf
+2025-08-25 17:08:32,788 - EmailAttachmentDownloader - INFO - 已下载附件: 【AA出行-143.55元-4个行程】高德打车电子发票.xml 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【AA出行-143.55元-4个行程】高德打车电子发票.xml
+2025-08-25 17:08:32,792 - EmailAttachmentDownloader - INFO - 已下载附件: 【AA出行-143.55元-4个行程】高德打车电子行程单.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【AA出行-143.55元-4个行程】高德打车电子行程单.pdf
+2025-08-25 17:08:33,411 - EmailAttachmentDownloader - INFO - 处理邮件: 高德打车电子发票 (ID: b'5')
+2025-08-25 17:08:33,422 - EmailAttachmentDownloader - INFO - 已下载附件: 【旗妙出行-49.42元-1个行程】高德打车电子发票.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【旗妙出行-49.42元-1个行程】高德打车电子发票.pdf
+2025-08-25 17:08:33,423 - EmailAttachmentDownloader - INFO - 已下载附件: 【旗妙出行-49.42元-1个行程】高德打车电子发票.xml 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【旗妙出行-49.42元-1个行程】高德打车电子发票.xml
+2025-08-25 17:08:33,427 - EmailAttachmentDownloader - INFO - 已下载附件: 【旗妙出行-49.42元-1个行程】高德打车电子行程单.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【旗妙出行-49.42元-1个行程】高德打车电子行程单.pdf
+2025-08-25 17:08:33,852 - EmailAttachmentDownloader - INFO - 处理邮件: 【京东安联】理赔通知书  被保险人：贺光忠   报案号：8611-0-P090002-25-B00152169 (ID: b'6')
+2025-08-25 17:08:33,855 - EmailAttachmentDownloader - INFO - 已下载附件: 理赔通知书.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\理赔通知书.pdf
+2025-08-25 17:08:34,152 - EmailAttachmentDownloader - INFO - 处理邮件: 您收到新的电子票 (ID: b'7')
+2025-08-25 17:08:34,156 - EmailAttachmentDownloader - INFO - 已下载附件: 1_00060125_0060263711.PDF 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\1_00060125_0060263711.PDF
+2025-08-25 17:08:34,633 - EmailAttachmentDownloader - INFO - 处理邮件: 您收到【北京湘东餐饮有限公司】开具的发票【金额：680元】 (ID: b'8')
+2025-08-25 17:08:34,636 - EmailAttachmentDownloader - INFO - 已下载附件: 25112000000177749809.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\25112000000177749809.pdf
+2025-08-25 17:08:34,854 - EmailAttachmentDownloader - INFO - 处理邮件: 更安全、更高效、更强大，尽在QQ邮箱APP (ID: b'9')
+2025-08-25 17:08:35,881 - EmailAttachmentDownloader - INFO - 处理邮件: 高德打车电子发票 (ID: b'10')
+2025-08-25 17:08:35,884 - EmailAttachmentDownloader - INFO - 已下载附件: 【火箭出行-297.80元-7个行程】高德打车电子发票.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【火箭出行-297.80元-7个行程】高德打车电子发票_1.pdf
+2025-08-25 17:08:35,885 - EmailAttachmentDownloader - INFO - 已下载附件: 【曹操出行-70.29元-2个行程】高德打车电子发票.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【曹操出行-70.29元-2个行程】高德打车电子发票_1.pdf
+2025-08-25 17:08:35,896 - EmailAttachmentDownloader - INFO - 已下载附件: 【高德打车-41.27元-1个行程】高德打车电子发票.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【高德打车-41.27元-1个行程】高德打车电子发票_1.pdf
+2025-08-25 17:08:35,897 - EmailAttachmentDownloader - INFO - 已下载附件: 【火箭出行-297.80元-7个行程】高德打车电子发票.xml 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【火箭出行-297.80元-7个行程】高德打车电子发票_1.xml
+2025-08-25 17:08:35,897 - EmailAttachmentDownloader - INFO - 已下载附件: 【曹操出行-70.29元-2个行程】高德打车电子发票.xml 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【曹操出行-70.29元-2个行程】高德打车电子发票_1.xml
+2025-08-25 17:08:35,898 - EmailAttachmentDownloader - INFO - 已下载附件: 【高德打车-41.27元-1个行程】高德打车电子发票.xml 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【高德打车-41.27元-1个行程】高德打车电子发票_1.xml
+2025-08-25 17:08:35,902 - EmailAttachmentDownloader - INFO - 已下载附件: 【火箭出行-297.80元-7个行程】高德打车电子行程单.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【火箭出行-297.80元-7个行程】高德打车电子行程单_1.pdf
+2025-08-25 17:08:35,906 - EmailAttachmentDownloader - INFO - 已下载附件: 【曹操出行-70.29元-2个行程】高德打车电子行程单.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【曹操出行-70.29元-2个行程】高德打车电子行程单_1.pdf
+2025-08-25 17:08:35,910 - EmailAttachmentDownloader - INFO - 已下载附件: 【高德打车-41.27元-1个行程】高德打车电子行程单.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【高德打车-41.27元-1个行程】高德打车电子行程单_1.pdf
+2025-08-25 17:08:36,482 - EmailAttachmentDownloader - INFO - 处理邮件: 高德打车电子发票 (ID: b'11')
+2025-08-25 17:08:36,484 - EmailAttachmentDownloader - INFO - 已下载附件: 【飞嘀打车-19.80元-1个行程】高德打车电子发票.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【飞嘀打车-19.80元-1个行程】高德打车电子发票_1.pdf
+2025-08-25 17:08:36,494 - EmailAttachmentDownloader - INFO - 已下载附件: 【飞嘀打车-19.80元-1个行程】高德打车电子发票.xml 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【飞嘀打车-19.80元-1个行程】高德打车电子发票_1.xml
+2025-08-25 17:08:36,497 - EmailAttachmentDownloader - INFO - 已下载附件: 【飞嘀打车-19.80元-1个行程】高德打车电子行程单.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【飞嘀打车-19.80元-1个行程】高德打车电子行程单_1.pdf
+2025-08-25 17:08:37,340 - EmailAttachmentDownloader - INFO - 处理邮件: 高德打车电子发票 (ID: b'12')
+2025-08-25 17:08:37,342 - EmailAttachmentDownloader - INFO - 已下载附件: 【AA出行-50.47元-1个行程】高德打车电子发票.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【AA出行-50.47元-1个行程】高德打车电子发票_1.pdf
+2025-08-25 17:08:37,351 - EmailAttachmentDownloader - INFO - 已下载附件: 【AA出行-50.47元-1个行程】高德打车电子发票.xml 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【AA出行-50.47元-1个行程】高德打车电子发票_1.xml
+2025-08-25 17:08:37,355 - EmailAttachmentDownloader - INFO - 已下载附件: 【AA出行-50.47元-1个行程】高德打车电子行程单.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【AA出行-50.47元-1个行程】高德打车电子行程单_1.pdf
+2025-08-25 17:08:37,356 - EmailAttachmentDownloader - INFO - 共下载 39 个附件
+2025-08-25 17:08:37,485 - EmailAttachmentDownloader - INFO - 已断开与邮箱服务器的连接
+2025-08-25 17:10:30,760 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-08-25 17:10:30,761 - EmailAttachmentDownloader - INFO - config_path=C:\Users\hgz_x1\Documents\GitHub\AdminAssistent\base\conf/qq-email.json
+2025-08-25 17:10:30,761 - EmailAttachmentDownloader - INFO - self.imap_server=imap.qq.com, self.username=23512221@qq.com, self.password=ifqdmucfxotlbigc, self.port=993, self.folder=INBOX, self.days_ago=0, self.save_dir=C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments, self.max_attachment_size=None
+2025-08-25 17:10:31,319 - EmailAttachmentDownloader - INFO - 成功连接到邮箱: 23512221@qq.com
+2025-08-25 17:10:31,322 - EmailAttachmentDownloader - INFO - 搜索 2025-08-24 的邮件
+2025-08-25 17:10:31,452 - EmailAttachmentDownloader - INFO - 搜索条件: (SINCE 24-Aug-2025) ALL
+2025-08-25 17:10:31,578 - EmailAttachmentDownloader - INFO - 初步搜索找到 12 封邮件
+2025-08-25 17:10:31,579 - EmailAttachmentDownloader - INFO - 开始精准过滤 2025-08-24 的邮件...
+2025-08-25 17:10:33,255 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'9' 的日期: can't compare offset-naive and offset-aware datetimes
+2025-08-25 17:10:34,180 - EmailAttachmentDownloader - INFO - 精准过滤后找到 1 封 2025-08-24 的邮件
+2025-08-25 17:10:34,313 - EmailAttachmentDownloader - INFO - 处理邮件: 更安全、更高效、更强大，尽在QQ邮箱APP (ID: b'9')
+2025-08-25 17:10:34,313 - EmailAttachmentDownloader - INFO - 共下载 0 个附件
+2025-08-25 17:10:34,526 - EmailAttachmentDownloader - INFO - 已断开与邮箱服务器的连接
+2025-08-25 17:11:07,788 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-08-25 17:11:07,789 - EmailAttachmentDownloader - INFO - config_path=C:\Users\hgz_x1\Documents\GitHub\AdminAssistent\base\conf/qq-email.json
+2025-08-25 17:11:07,789 - EmailAttachmentDownloader - INFO - self.imap_server=imap.qq.com, self.username=23512221@qq.com, self.password=ifqdmucfxotlbigc, self.port=993, self.folder=INBOX, self.days_ago=0, self.save_dir=C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments, self.max_attachment_size=None
+2025-08-25 17:11:08,381 - EmailAttachmentDownloader - INFO - 成功连接到邮箱: 23512221@qq.com
+2025-08-25 17:11:08,385 - EmailAttachmentDownloader - INFO - 搜索 2025-08-25 的邮件
+2025-08-25 17:11:08,504 - EmailAttachmentDownloader - INFO - 搜索条件: (SINCE 25-Aug-2025) ALL
+2025-08-25 17:11:08,669 - EmailAttachmentDownloader - INFO - 初步搜索找到 12 封邮件
+2025-08-25 17:11:08,670 - EmailAttachmentDownloader - INFO - 开始精准过滤 2025-08-25 的邮件...
+2025-08-25 17:11:10,768 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'10' 的日期: can't compare offset-naive and offset-aware datetimes
+2025-08-25 17:11:10,903 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'11' 的日期: can't compare offset-naive and offset-aware datetimes
+2025-08-25 17:11:11,033 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'12' 的日期: can't compare offset-naive and offset-aware datetimes
+2025-08-25 17:11:11,034 - EmailAttachmentDownloader - INFO - 精准过滤后找到 3 封 2025-08-25 的邮件
+2025-08-25 17:11:12,260 - EmailAttachmentDownloader - INFO - 处理邮件: 高德打车电子发票 (ID: b'10')
+2025-08-25 17:11:12,262 - EmailAttachmentDownloader - INFO - 已下载附件: 【火箭出行-297.80元-7个行程】高德打车电子发票.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【火箭出行-297.80元-7个行程】高德打车电子发票.pdf
+2025-08-25 17:11:12,263 - EmailAttachmentDownloader - INFO - 已下载附件: 【曹操出行-70.29元-2个行程】高德打车电子发票.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【曹操出行-70.29元-2个行程】高德打车电子发票.pdf
+2025-08-25 17:11:12,274 - EmailAttachmentDownloader - INFO - 已下载附件: 【高德打车-41.27元-1个行程】高德打车电子发票.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【高德打车-41.27元-1个行程】高德打车电子发票.pdf
+2025-08-25 17:11:12,275 - EmailAttachmentDownloader - INFO - 已下载附件: 【火箭出行-297.80元-7个行程】高德打车电子发票.xml 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【火箭出行-297.80元-7个行程】高德打车电子发票.xml
+2025-08-25 17:11:12,276 - EmailAttachmentDownloader - INFO - 已下载附件: 【曹操出行-70.29元-2个行程】高德打车电子发票.xml 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【曹操出行-70.29元-2个行程】高德打车电子发票.xml
+2025-08-25 17:11:12,277 - EmailAttachmentDownloader - INFO - 已下载附件: 【高德打车-41.27元-1个行程】高德打车电子发票.xml 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【高德打车-41.27元-1个行程】高德打车电子发票.xml
+2025-08-25 17:11:12,280 - EmailAttachmentDownloader - INFO - 已下载附件: 【火箭出行-297.80元-7个行程】高德打车电子行程单.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【火箭出行-297.80元-7个行程】高德打车电子行程单.pdf
+2025-08-25 17:11:12,284 - EmailAttachmentDownloader - INFO - 已下载附件: 【曹操出行-70.29元-2个行程】高德打车电子行程单.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【曹操出行-70.29元-2个行程】高德打车电子行程单.pdf
+2025-08-25 17:11:12,288 - EmailAttachmentDownloader - INFO - 已下载附件: 【高德打车-41.27元-1个行程】高德打车电子行程单.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【高德打车-41.27元-1个行程】高德打车电子行程单.pdf
+2025-08-25 17:11:12,929 - EmailAttachmentDownloader - INFO - 处理邮件: 高德打车电子发票 (ID: b'11')
+2025-08-25 17:11:12,940 - EmailAttachmentDownloader - INFO - 已下载附件: 【飞嘀打车-19.80元-1个行程】高德打车电子发票.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【飞嘀打车-19.80元-1个行程】高德打车电子发票.pdf
+2025-08-25 17:11:12,941 - EmailAttachmentDownloader - INFO - 已下载附件: 【飞嘀打车-19.80元-1个行程】高德打车电子发票.xml 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【飞嘀打车-19.80元-1个行程】高德打车电子发票.xml
+2025-08-25 17:11:12,945 - EmailAttachmentDownloader - INFO - 已下载附件: 【飞嘀打车-19.80元-1个行程】高德打车电子行程单.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【飞嘀打车-19.80元-1个行程】高德打车电子行程单.pdf
+2025-08-25 17:11:14,872 - EmailAttachmentDownloader - INFO - 处理邮件: 高德打车电子发票 (ID: b'12')
+2025-08-25 17:11:14,874 - EmailAttachmentDownloader - INFO - 已下载附件: 【AA出行-50.47元-1个行程】高德打车电子发票.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【AA出行-50.47元-1个行程】高德打车电子发票.pdf
+2025-08-25 17:11:14,875 - EmailAttachmentDownloader - INFO - 已下载附件: 【AA出行-50.47元-1个行程】高德打车电子发票.xml 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【AA出行-50.47元-1个行程】高德打车电子发票.xml
+2025-08-25 17:11:14,878 - EmailAttachmentDownloader - INFO - 已下载附件: 【AA出行-50.47元-1个行程】高德打车电子行程单.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【AA出行-50.47元-1个行程】高德打车电子行程单.pdf
+2025-08-25 17:11:14,878 - EmailAttachmentDownloader - INFO - 共下载 15 个附件
+2025-08-25 17:11:15,202 - EmailAttachmentDownloader - INFO - 已断开与邮箱服务器的连接
+2025-08-25 17:11:52,693 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-08-25 17:11:52,694 - EmailAttachmentDownloader - INFO - config_path=C:\Users\hgz_x1\Documents\GitHub\AdminAssistent\base\conf/qq-email.json
+2025-08-25 17:11:52,694 - EmailAttachmentDownloader - INFO - self.imap_server=imap.qq.com, self.username=23512221@qq.com, self.password=ifqdmucfxotlbigc, self.port=993, self.folder=INBOX, self.days_ago=0, self.save_dir=C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments, self.max_attachment_size=None
+2025-08-25 17:11:53,233 - EmailAttachmentDownloader - INFO - 成功连接到邮箱: 23512221@qq.com
+2025-08-25 17:11:53,347 - EmailAttachmentDownloader - INFO - 搜索条件: (SINCE 26-Jul-2025 BEFORE 26-Aug-2025) ALL
+2025-08-25 17:11:53,531 - EmailAttachmentDownloader - INFO - 初步搜索找到 12 封邮件
+2025-08-25 17:11:53,531 - EmailAttachmentDownloader - INFO - 开始精准过滤 None 的邮件...
+2025-08-25 17:11:53,727 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'1' 的日期: can't compare offset-naive and offset-aware datetimes
+2025-08-25 17:11:53,951 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'2' 的日期: can't compare offset-naive and offset-aware datetimes
+2025-08-25 17:11:54,258 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'3' 的日期: can't compare offset-naive and offset-aware datetimes
+2025-08-25 17:11:54,370 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'4' 的日期: can't compare offset-naive and offset-aware datetimes
+2025-08-25 17:11:54,514 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'5' 的日期: can't compare offset-naive and offset-aware datetimes
+2025-08-25 17:11:54,770 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'6' 的日期: can't compare offset-naive and offset-aware datetimes
+2025-08-25 17:11:54,915 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'7' 的日期: can't compare offset-naive and offset-aware datetimes
+2025-08-25 17:11:55,082 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'8' 的日期: can't compare offset-naive and offset-aware datetimes
+2025-08-25 17:11:55,320 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'9' 的日期: can't compare offset-naive and offset-aware datetimes
+2025-08-25 17:11:55,593 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'10' 的日期: can't compare offset-naive and offset-aware datetimes
+2025-08-25 17:11:55,898 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'11' 的日期: can't compare offset-naive and offset-aware datetimes
+2025-08-25 17:11:56,204 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'12' 的日期: can't compare offset-naive and offset-aware datetimes
+2025-08-25 17:11:56,204 - EmailAttachmentDownloader - INFO - 精准过滤后找到 12 封 None 的邮件
+2025-08-25 17:11:56,566 - EmailAttachmentDownloader - INFO - 处理邮件: Sign in to Cursor (ID: b'1')
+2025-08-25 17:11:57,730 - EmailAttachmentDownloader - INFO - 处理邮件: 高德打车电子发票 (ID: b'2')
+2025-08-25 17:11:57,733 - EmailAttachmentDownloader - INFO - 已下载附件: 【火箭出行-471.63元-12个行程】高德打车电子发票.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【火箭出行-471.63元-12个行程】高德打车电子发票.pdf
+2025-08-25 17:11:57,735 - EmailAttachmentDownloader - INFO - 已下载附件: 【曹操出行-104.53元-2个行程】高德打车电子发票.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【曹操出行-104.53元-2个行程】高德打车电子发票.pdf
+2025-08-25 17:11:57,736 - EmailAttachmentDownloader - INFO - 已下载附件: 【神州专车-48.01元-1个行程】高德打车电子发票.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【神州专车-48.01元-1个行程】高德打车电子发票.pdf
+2025-08-25 17:11:57,737 - EmailAttachmentDownloader - INFO - 已下载附件: 【火箭出行-471.63元-12个行程】高德打车电子发票.xml 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【火箭出行-471.63元-12个行程】高德打车电子发票.xml
+2025-08-25 17:11:57,738 - EmailAttachmentDownloader - INFO - 已下载附件: 【曹操出行-104.53元-2个行程】高德打车电子发票.xml 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【曹操出行-104.53元-2个行程】高德打车电子发票.xml
+2025-08-25 17:11:57,739 - EmailAttachmentDownloader - INFO - 已下载附件: 【神州专车-48.01元-1个行程】高德打车电子发票.xml 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【神州专车-48.01元-1个行程】高德打车电子发票.xml
+2025-08-25 17:11:57,743 - EmailAttachmentDownloader - INFO - 已下载附件: 【火箭出行-471.63元-12个行程】高德打车电子行程单.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【火箭出行-471.63元-12个行程】高德打车电子行程单.pdf
+2025-08-25 17:11:57,746 - EmailAttachmentDownloader - INFO - 已下载附件: 【曹操出行-104.53元-2个行程】高德打车电子行程单.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【曹操出行-104.53元-2个行程】高德打车电子行程单.pdf
+2025-08-25 17:11:57,750 - EmailAttachmentDownloader - INFO - 已下载附件: 【神州专车-48.01元-1个行程】高德打车电子行程单.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【神州专车-48.01元-1个行程】高德打车电子行程单.pdf
+2025-08-25 17:11:58,695 - EmailAttachmentDownloader - INFO - 处理邮件: 高德打车电子发票 (ID: b'3')
+2025-08-25 17:11:58,707 - EmailAttachmentDownloader - INFO - 已下载附件: 【飞嘀打车-54.60元-1个行程】高德打车电子发票.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【飞嘀打车-54.60元-1个行程】高德打车电子发票.pdf
+2025-08-25 17:11:58,708 - EmailAttachmentDownloader - INFO - 已下载附件: 【星徽出行-53.63元-1个行程】高德打车电子发票.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【星徽出行-53.63元-1个行程】高德打车电子发票.pdf
+2025-08-25 17:11:58,709 - EmailAttachmentDownloader - INFO - 已下载附件: 【飞嘀打车-54.60元-1个行程】高德打车电子发票.xml 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【飞嘀打车-54.60元-1个行程】高德打车电子发票.xml
+2025-08-25 17:11:58,709 - EmailAttachmentDownloader - INFO - 已下载附件: 【星徽出行-53.63元-1个行程】高德打车电子发票.xml 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【星徽出行-53.63元-1个行程】高德打车电子发票.xml
+2025-08-25 17:11:58,714 - EmailAttachmentDownloader - INFO - 已下载附件: 【飞嘀打车-54.60元-1个行程】高德打车电子行程单.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【飞嘀打车-54.60元-1个行程】高德打车电子行程单.pdf
+2025-08-25 17:11:58,719 - EmailAttachmentDownloader - INFO - 已下载附件: 【星徽出行-53.63元-1个行程】高德打车电子行程单.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【星徽出行-53.63元-1个行程】高德打车电子行程单.pdf
+2025-08-25 17:11:59,609 - EmailAttachmentDownloader - INFO - 处理邮件: 高德打车电子发票 (ID: b'4')
+2025-08-25 17:11:59,611 - EmailAttachmentDownloader - INFO - 已下载附件: 【AA出行-143.55元-4个行程】高德打车电子发票.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【AA出行-143.55元-4个行程】高德打车电子发票.pdf
+2025-08-25 17:11:59,621 - EmailAttachmentDownloader - INFO - 已下载附件: 【AA出行-143.55元-4个行程】高德打车电子发票.xml 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【AA出行-143.55元-4个行程】高德打车电子发票.xml
+2025-08-25 17:11:59,625 - EmailAttachmentDownloader - INFO - 已下载附件: 【AA出行-143.55元-4个行程】高德打车电子行程单.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【AA出行-143.55元-4个行程】高德打车电子行程单.pdf
+2025-08-25 17:12:00,164 - EmailAttachmentDownloader - INFO - 处理邮件: 高德打车电子发票 (ID: b'5')
+2025-08-25 17:12:00,175 - EmailAttachmentDownloader - INFO - 已下载附件: 【旗妙出行-49.42元-1个行程】高德打车电子发票.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【旗妙出行-49.42元-1个行程】高德打车电子发票.pdf
+2025-08-25 17:12:00,176 - EmailAttachmentDownloader - INFO - 已下载附件: 【旗妙出行-49.42元-1个行程】高德打车电子发票.xml 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【旗妙出行-49.42元-1个行程】高德打车电子发票.xml
+2025-08-25 17:12:00,180 - EmailAttachmentDownloader - INFO - 已下载附件: 【旗妙出行-49.42元-1个行程】高德打车电子行程单.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【旗妙出行-49.42元-1个行程】高德打车电子行程单.pdf
+2025-08-25 17:12:00,583 - EmailAttachmentDownloader - INFO - 处理邮件: 【京东安联】理赔通知书  被保险人：贺光忠   报案号：8611-0-P090002-25-B00152169 (ID: b'6')
+2025-08-25 17:12:00,594 - EmailAttachmentDownloader - INFO - 已下载附件: 理赔通知书.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\理赔通知书.pdf
+2025-08-25 17:12:00,947 - EmailAttachmentDownloader - INFO - 处理邮件: 您收到新的电子票 (ID: b'7')
+2025-08-25 17:12:00,950 - EmailAttachmentDownloader - INFO - 已下载附件: 1_00060125_0060263711.PDF 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\1_00060125_0060263711.PDF
+2025-08-25 17:12:01,442 - EmailAttachmentDownloader - INFO - 处理邮件: 您收到【北京湘东餐饮有限公司】开具的发票【金额：680元】 (ID: b'8')
+2025-08-25 17:12:01,444 - EmailAttachmentDownloader - INFO - 已下载附件: 25112000000177749809.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\25112000000177749809.pdf
+2025-08-25 17:12:01,737 - EmailAttachmentDownloader - INFO - 处理邮件: 更安全、更高效、更强大，尽在QQ邮箱APP (ID: b'9')
+2025-08-25 17:12:02,674 - EmailAttachmentDownloader - INFO - 处理邮件: 高德打车电子发票 (ID: b'10')
+2025-08-25 17:12:02,676 - EmailAttachmentDownloader - INFO - 已下载附件: 【火箭出行-297.80元-7个行程】高德打车电子发票.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【火箭出行-297.80元-7个行程】高德打车电子发票_1.pdf
+2025-08-25 17:12:02,686 - EmailAttachmentDownloader - INFO - 已下载附件: 【曹操出行-70.29元-2个行程】高德打车电子发票.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【曹操出行-70.29元-2个行程】高德打车电子发票_1.pdf
+2025-08-25 17:12:02,687 - EmailAttachmentDownloader - INFO - 已下载附件: 【高德打车-41.27元-1个行程】高德打车电子发票.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【高德打车-41.27元-1个行程】高德打车电子发票_1.pdf
+2025-08-25 17:12:02,688 - EmailAttachmentDownloader - INFO - 已下载附件: 【火箭出行-297.80元-7个行程】高德打车电子发票.xml 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【火箭出行-297.80元-7个行程】高德打车电子发票_1.xml
+2025-08-25 17:12:02,689 - EmailAttachmentDownloader - INFO - 已下载附件: 【曹操出行-70.29元-2个行程】高德打车电子发票.xml 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【曹操出行-70.29元-2个行程】高德打车电子发票_1.xml
+2025-08-25 17:12:02,691 - EmailAttachmentDownloader - INFO - 已下载附件: 【高德打车-41.27元-1个行程】高德打车电子发票.xml 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【高德打车-41.27元-1个行程】高德打车电子发票_1.xml
+2025-08-25 17:12:02,694 - EmailAttachmentDownloader - INFO - 已下载附件: 【火箭出行-297.80元-7个行程】高德打车电子行程单.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【火箭出行-297.80元-7个行程】高德打车电子行程单_1.pdf
+2025-08-25 17:12:02,698 - EmailAttachmentDownloader - INFO - 已下载附件: 【曹操出行-70.29元-2个行程】高德打车电子行程单.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【曹操出行-70.29元-2个行程】高德打车电子行程单_1.pdf
+2025-08-25 17:12:02,702 - EmailAttachmentDownloader - INFO - 已下载附件: 【高德打车-41.27元-1个行程】高德打车电子行程单.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【高德打车-41.27元-1个行程】高德打车电子行程单_1.pdf
+2025-08-25 17:12:03,304 - EmailAttachmentDownloader - INFO - 处理邮件: 高德打车电子发票 (ID: b'11')
+2025-08-25 17:12:03,314 - EmailAttachmentDownloader - INFO - 已下载附件: 【飞嘀打车-19.80元-1个行程】高德打车电子发票.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【飞嘀打车-19.80元-1个行程】高德打车电子发票_1.pdf
+2025-08-25 17:12:03,315 - EmailAttachmentDownloader - INFO - 已下载附件: 【飞嘀打车-19.80元-1个行程】高德打车电子发票.xml 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【飞嘀打车-19.80元-1个行程】高德打车电子发票_1.xml
+2025-08-25 17:12:03,319 - EmailAttachmentDownloader - INFO - 已下载附件: 【飞嘀打车-19.80元-1个行程】高德打车电子行程单.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【飞嘀打车-19.80元-1个行程】高德打车电子行程单_1.pdf
+2025-08-25 17:12:03,974 - EmailAttachmentDownloader - INFO - 处理邮件: 高德打车电子发票 (ID: b'12')
+2025-08-25 17:12:03,975 - EmailAttachmentDownloader - INFO - 已下载附件: 【AA出行-50.47元-1个行程】高德打车电子发票.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【AA出行-50.47元-1个行程】高德打车电子发票_1.pdf
+2025-08-25 17:12:03,985 - EmailAttachmentDownloader - INFO - 已下载附件: 【AA出行-50.47元-1个行程】高德打车电子发票.xml 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【AA出行-50.47元-1个行程】高德打车电子发票_1.xml
+2025-08-25 17:12:03,989 - EmailAttachmentDownloader - INFO - 已下载附件: 【AA出行-50.47元-1个行程】高德打车电子行程单.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【AA出行-50.47元-1个行程】高德打车电子行程单_1.pdf
+2025-08-25 17:12:03,990 - EmailAttachmentDownloader - INFO - 共下载 39 个附件
+2025-08-25 17:12:04,195 - EmailAttachmentDownloader - INFO - 已断开与邮箱服务器的连接
+2025-08-25 17:13:11,214 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-08-25 17:13:11,215 - EmailAttachmentDownloader - INFO - config_path=C:\Users\hgz_x1\Documents\GitHub\AdminAssistent\base\conf/qq-email.json
+2025-08-25 17:13:11,215 - EmailAttachmentDownloader - INFO - self.imap_server=imap.qq.com, self.username=23512221@qq.com, self.password=ifqdmucfxotlbigc, self.port=993, self.folder=INBOX, self.days_ago=0, self.save_dir=C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments, self.max_attachment_size=None
+2025-08-25 17:13:11,786 - EmailAttachmentDownloader - INFO - 成功连接到邮箱: 23512221@qq.com
+2025-08-25 17:13:11,788 - EmailAttachmentDownloader - INFO - 搜索 2025-08-25 的邮件
+2025-08-25 17:13:11,927 - EmailAttachmentDownloader - INFO - 搜索条件: (SINCE 25-Aug-2025) ALL
+2025-08-25 17:13:12,025 - EmailAttachmentDownloader - INFO - 初步搜索找到 12 封邮件
+2025-08-25 17:13:12,026 - EmailAttachmentDownloader - INFO - 开始精准过滤 2025-08-25 的邮件...
+2025-08-25 17:13:15,056 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'10' 的日期: can't compare offset-naive and offset-aware datetimes
+2025-08-25 17:13:15,362 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'11' 的日期: can't compare offset-naive and offset-aware datetimes
+2025-08-25 17:13:15,601 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'12' 的日期: can't compare offset-naive and offset-aware datetimes
+2025-08-25 17:13:15,602 - EmailAttachmentDownloader - INFO - 精准过滤后找到 3 封 2025-08-25 的邮件
+2025-08-25 17:13:16,654 - EmailAttachmentDownloader - INFO - 处理邮件: 高德打车电子发票 (ID: b'10')
+2025-08-25 17:13:16,656 - EmailAttachmentDownloader - INFO - 已下载附件: 【火箭出行-297.80元-7个行程】高德打车电子发票.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【火箭出行-297.80元-7个行程】高德打车电子发票.pdf
+2025-08-25 17:13:16,658 - EmailAttachmentDownloader - INFO - 已下载附件: 【曹操出行-70.29元-2个行程】高德打车电子发票.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【曹操出行-70.29元-2个行程】高德打车电子发票.pdf
+2025-08-25 17:13:16,668 - EmailAttachmentDownloader - INFO - 已下载附件: 【高德打车-41.27元-1个行程】高德打车电子发票.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【高德打车-41.27元-1个行程】高德打车电子发票.pdf
+2025-08-25 17:13:16,668 - EmailAttachmentDownloader - INFO - 已下载附件: 【火箭出行-297.80元-7个行程】高德打车电子发票.xml 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【火箭出行-297.80元-7个行程】高德打车电子发票.xml
+2025-08-25 17:13:16,669 - EmailAttachmentDownloader - INFO - 已下载附件: 【曹操出行-70.29元-2个行程】高德打车电子发票.xml 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【曹操出行-70.29元-2个行程】高德打车电子发票.xml
+2025-08-25 17:13:16,670 - EmailAttachmentDownloader - INFO - 已下载附件: 【高德打车-41.27元-1个行程】高德打车电子发票.xml 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【高德打车-41.27元-1个行程】高德打车电子发票.xml
+2025-08-25 17:13:16,676 - EmailAttachmentDownloader - INFO - 已下载附件: 【火箭出行-297.80元-7个行程】高德打车电子行程单.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【火箭出行-297.80元-7个行程】高德打车电子行程单.pdf
+2025-08-25 17:13:16,682 - EmailAttachmentDownloader - INFO - 已下载附件: 【曹操出行-70.29元-2个行程】高德打车电子行程单.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【曹操出行-70.29元-2个行程】高德打车电子行程单.pdf
+2025-08-25 17:13:16,686 - EmailAttachmentDownloader - INFO - 已下载附件: 【高德打车-41.27元-1个行程】高德打车电子行程单.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【高德打车-41.27元-1个行程】高德打车电子行程单.pdf
+2025-08-25 17:13:17,517 - EmailAttachmentDownloader - INFO - 处理邮件: 高德打车电子发票 (ID: b'11')
+2025-08-25 17:13:17,528 - EmailAttachmentDownloader - INFO - 已下载附件: 【飞嘀打车-19.80元-1个行程】高德打车电子发票.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【飞嘀打车-19.80元-1个行程】高德打车电子发票.pdf
+2025-08-25 17:13:17,529 - EmailAttachmentDownloader - INFO - 已下载附件: 【飞嘀打车-19.80元-1个行程】高德打车电子发票.xml 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【飞嘀打车-19.80元-1个行程】高德打车电子发票.xml
+2025-08-25 17:13:17,533 - EmailAttachmentDownloader - INFO - 已下载附件: 【飞嘀打车-19.80元-1个行程】高德打车电子行程单.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【飞嘀打车-19.80元-1个行程】高德打车电子行程单.pdf
+2025-08-25 17:13:18,181 - EmailAttachmentDownloader - INFO - 处理邮件: 高德打车电子发票 (ID: b'12')
+2025-08-25 17:13:18,183 - EmailAttachmentDownloader - INFO - 已下载附件: 【AA出行-50.47元-1个行程】高德打车电子发票.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【AA出行-50.47元-1个行程】高德打车电子发票.pdf
+2025-08-25 17:13:18,193 - EmailAttachmentDownloader - INFO - 已下载附件: 【AA出行-50.47元-1个行程】高德打车电子发票.xml 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【AA出行-50.47元-1个行程】高德打车电子发票.xml
+2025-08-25 17:13:18,197 - EmailAttachmentDownloader - INFO - 已下载附件: 【AA出行-50.47元-1个行程】高德打车电子行程单.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【AA出行-50.47元-1个行程】高德打车电子行程单.pdf
+2025-08-25 17:13:18,197 - EmailAttachmentDownloader - INFO - 共下载 15 个附件
+2025-08-25 17:13:18,369 - EmailAttachmentDownloader - INFO - 已断开与邮箱服务器的连接
+2025-08-25 17:41:22,903 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-08-25 17:41:22,904 - EmailAttachmentDownloader - INFO - config_path=C:\Users\hgz_x1\Documents\GitHub\AdminAssistent\base\conf/qq-email.json
+2025-08-25 17:41:22,904 - EmailAttachmentDownloader - INFO - self.imap_server=imap.qq.com, self.username=23512221@qq.com, self.password=ifqdmucfxotlbigc, self.port=993, self.folder=INBOX, self.days_ago=0, self.save_dir=C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments, self.max_attachment_size=None
+2025-08-25 17:41:23,460 - EmailAttachmentDownloader - INFO - 成功连接到邮箱: 23512221@qq.com
+2025-08-25 17:41:23,464 - EmailAttachmentDownloader - INFO - 搜索 2025-08-25 的邮件
+2025-08-25 17:41:23,720 - EmailAttachmentDownloader - INFO - 搜索条件: (SINCE 25-Aug-2025) ALL
+2025-08-25 17:41:23,826 - EmailAttachmentDownloader - INFO - 初步搜索找到 12 封邮件
+2025-08-25 17:41:23,827 - EmailAttachmentDownloader - INFO - 开始精准过滤 2025-08-25 的邮件...
+2025-08-25 17:41:25,142 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'10' 的日期: can't compare offset-naive and offset-aware datetimes
+2025-08-25 17:41:25,475 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'11' 的日期: can't compare offset-naive and offset-aware datetimes
+2025-08-25 17:41:25,613 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'12' 的日期: can't compare offset-naive and offset-aware datetimes
+2025-08-25 17:41:25,614 - EmailAttachmentDownloader - INFO - 精准过滤后找到 3 封 2025-08-25 的邮件
+2025-08-25 17:41:26,875 - EmailAttachmentDownloader - INFO - 处理邮件: 高德打车电子发票 (ID: b'10')
+2025-08-25 17:41:26,878 - EmailAttachmentDownloader - INFO - 已下载附件: 【火箭出行-297.80元-7个行程】高德打车电子发票.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【火箭出行-297.80元-7个行程】高德打车电子发票.pdf
+2025-08-25 17:41:26,880 - EmailAttachmentDownloader - INFO - 已下载附件: 【曹操出行-70.29元-2个行程】高德打车电子发票.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【曹操出行-70.29元-2个行程】高德打车电子发票.pdf
+2025-08-25 17:41:26,890 - EmailAttachmentDownloader - INFO - 已下载附件: 【高德打车-41.27元-1个行程】高德打车电子发票.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【高德打车-41.27元-1个行程】高德打车电子发票.pdf
+2025-08-25 17:41:26,891 - EmailAttachmentDownloader - INFO - 已下载附件: 【火箭出行-297.80元-7个行程】高德打车电子发票.xml 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【火箭出行-297.80元-7个行程】高德打车电子发票.xml
+2025-08-25 17:41:26,892 - EmailAttachmentDownloader - INFO - 已下载附件: 【曹操出行-70.29元-2个行程】高德打车电子发票.xml 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【曹操出行-70.29元-2个行程】高德打车电子发票.xml
+2025-08-25 17:41:26,893 - EmailAttachmentDownloader - INFO - 已下载附件: 【高德打车-41.27元-1个行程】高德打车电子发票.xml 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【高德打车-41.27元-1个行程】高德打车电子发票.xml
+2025-08-25 17:41:26,897 - EmailAttachmentDownloader - INFO - 已下载附件: 【火箭出行-297.80元-7个行程】高德打车电子行程单.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【火箭出行-297.80元-7个行程】高德打车电子行程单.pdf
+2025-08-25 17:41:26,901 - EmailAttachmentDownloader - INFO - 已下载附件: 【曹操出行-70.29元-2个行程】高德打车电子行程单.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【曹操出行-70.29元-2个行程】高德打车电子行程单.pdf
+2025-08-25 17:41:26,906 - EmailAttachmentDownloader - INFO - 已下载附件: 【高德打车-41.27元-1个行程】高德打车电子行程单.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【高德打车-41.27元-1个行程】高德打车电子行程单.pdf
+2025-08-25 17:41:28,983 - EmailAttachmentDownloader - INFO - 处理邮件: 高德打车电子发票 (ID: b'11')
+2025-08-25 17:41:28,985 - EmailAttachmentDownloader - INFO - 已下载附件: 【飞嘀打车-19.80元-1个行程】高德打车电子发票.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【飞嘀打车-19.80元-1个行程】高德打车电子发票.pdf
+2025-08-25 17:41:28,986 - EmailAttachmentDownloader - INFO - 已下载附件: 【飞嘀打车-19.80元-1个行程】高德打车电子发票.xml 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【飞嘀打车-19.80元-1个行程】高德打车电子发票.xml
+2025-08-25 17:41:28,989 - EmailAttachmentDownloader - INFO - 已下载附件: 【飞嘀打车-19.80元-1个行程】高德打车电子行程单.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【飞嘀打车-19.80元-1个行程】高德打车电子行程单.pdf
+2025-08-25 17:41:29,454 - EmailAttachmentDownloader - INFO - 处理邮件: 高德打车电子发票 (ID: b'12')
+2025-08-25 17:41:29,455 - EmailAttachmentDownloader - INFO - 已下载附件: 【AA出行-50.47元-1个行程】高德打车电子发票.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【AA出行-50.47元-1个行程】高德打车电子发票.pdf
+2025-08-25 17:41:29,456 - EmailAttachmentDownloader - INFO - 已下载附件: 【AA出行-50.47元-1个行程】高德打车电子发票.xml 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【AA出行-50.47元-1个行程】高德打车电子发票.xml
+2025-08-25 17:41:29,460 - EmailAttachmentDownloader - INFO - 已下载附件: 【AA出行-50.47元-1个行程】高德打车电子行程单.pdf 到 C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments\【AA出行-50.47元-1个行程】高德打车电子行程单.pdf
+2025-08-25 17:41:29,461 - EmailAttachmentDownloader - INFO - 共下载 15 个附件
+2025-08-25 17:41:29,594 - EmailAttachmentDownloader - INFO - 已断开与邮箱服务器的连接
+2025-08-30 20:13:41,115 - easyocr.easyocr - WARNING - Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
+2025-08-30 20:13:43,505 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-08-30 20:13:43,506 - EmailAttachmentDownloader - INFO - config_path=c:\Users\hgz_x1\Documents\GitHub\AdminAssistent\base\conf/qq-email.json
+2025-08-30 20:13:43,506 - EmailAttachmentDownloader - INFO - self.imap_server=imap.qq.com, self.username=23512221@qq.com, self.password=ifqdmucfxotlbigc, self.port=993, self.folder=INBOX, self.days_ago=0, self.save_dir=C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments, self.max_attachment_size=None
