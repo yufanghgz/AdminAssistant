@@ -1,8 +1,0 @@
-{
-    "username": "userName",
-    "password": "passWord",
-    "captcha": "verify",
-    "captchaImg": "code_img",
-    "loginBtn": "btn",
-    "mainContent": "content"
-}

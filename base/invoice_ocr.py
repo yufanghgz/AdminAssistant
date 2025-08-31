@@ -338,8 +338,6 @@ class InvoiceRecognizer:
         print(f"批量处理完成，共识别 {len(results)} 张发票")
         return results
 
-        return results
-
     def get_max_amount_invoice(self, invoice_results):
         """
         获取发票识别结果中金额最大的发票

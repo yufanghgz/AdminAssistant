@@ -1,4 +1,3 @@
-import imaplib
 import email
 import os
 import datetime
@@ -8,6 +7,8 @@ import uuid
 import re
 import requests
 from bs4 import BeautifulSoup
+import imaplib
+import argparse
 
 # 配置日志
 logging.basicConfig(
@@ -177,6 +178,9 @@ class EmailAttachmentDownloader:
                             try:
                                 from email.utils import parsedate_to_datetime
                                 email_date = parsedate_to_datetime(email_message.get('Date'))
+                                # 移除时区信息以进行比较
+                                if email_date.tzinfo:
+                                    email_date = email_date.astimezone(tz=None).replace(tzinfo=None)
                                 include = True
                                 if target_date:
                                     include = include and (email_date and email_date.date() == target_date)
@@ -193,8 +197,9 @@ class EmailAttachmentDownloader:
                                     logger.debug(f"邮件 {email_id} 日期不匹配: {email_date}")
                             except Exception as e:
                                 logger.warning(f"无法解析邮件 {email_id} 的日期: {str(e)}")
-                                # 如果无法解析日期，暂时包含这封邮件
-                                filtered_email_ids.append(email_id)
+                                # 只有在没有设置日期过滤条件时才包含无法解析日期的邮件
+                                if not (target_date or date_since or date_until):
+                                    filtered_email_ids.append(email_id)
                     except Exception as e:
                         logger.warning(f"获取邮件 {email_id} 头部信息失败: {str(e)}")
                 
@@ -536,29 +541,38 @@ def main():
     """
     主函数，用于演示如何使用EmailAttachmentDownloader类
     """
+    # 解析命令行参数
+    parser = argparse.ArgumentParser(description='下载邮件附件')
+    parser.add_argument('--config', type=str, help='配置文件路径')
+    parser.add_argument('--start-date', type=str, help='开始日期 (YYYY-MM-DD)')
+    parser.add_argument('--end-date', type=str, help='结束日期 (YYYY-MM-DD)')
+    args = parser.parse_args()
+
     # 初始化下载器
-    downloader = EmailAttachmentDownloader()
-
-    try:
-        # 连接到邮箱
-        if not downloader.connect():
-            logger.error("无法连接到邮箱，程序退出")
+    config = None
+    if args.config:
+        try:
+            with open(args.config, 'r', encoding='utf-8') as f:
+                config = json.load(f)
+                email_config = config.get('email', {})
+                # 使用指定配置文件的参数初始化下载器
+                downloader = EmailAttachmentDownloader(
+                    imap_server=email_config.get('imap_server'),
+                    username=email_config.get('username'),
+                    password=email_config.get('password'),
+                    port=email_config.get('port', 993),
+                    folder=email_config.get('folder', 'INBOX'),
+                    days_ago=email_config.get('days_ago'),
+                    save_dir=email_config.get('save_dir'),
+                    max_attachment_size=email_config.get('max_attachment_size')
+                )
+                file_extensions = email_config.get('file_extensions')
+        except Exception as e:
+            logger.error(f"读取指定配置文件失败: {str(e)}")
             return
-
-        # 计算指定天数前的日期
-        date_since = datetime.datetime.now() - datetime.timedelta(days=downloader.days_ago or 7)
-
-        # 搜索邮件
-        email_ids = downloader.search_emails(folder=downloader.folder, date_since=date_since)
-
-        # 如果没有找到邮件，搜索所有邮件
-        if not email_ids:
-            logger.warning(f"没有找到{(downloader.days_ago or 7)}天内的邮件，搜索所有邮件")
-            email_ids = downloader.search_emails(folder=downloader.folder)
-
-        # 确保保存目录存在
-        save_dir = os.path.join(os.getcwd(), downloader.save_dir)
-
+    else:
+        # 使用默认配置
+        downloader = EmailAttachmentDownloader()
         # 从配置中获取文件扩展名过滤
         config_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'config.json')
         file_extensions = None
@@ -569,6 +583,36 @@ def main():
                 file_extensions = email_config.get('file_extensions')
         except Exception as e:
             logger.error(f"读取配置文件失败: {str(e)}")
+
+    try:
+        # 连接到邮箱
+        if not downloader.connect():
+            logger.error("无法连接到邮箱，程序退出")
+            return
+
+        # 搜索邮件
+        if args.start_date or args.end_date:
+            # 使用命令行参数中的日期范围
+            email_ids = downloader.search_emails_by_range(start_date=args.start_date, end_date=args.end_date, folder=downloader.folder)
+        else:
+            # 计算指定天数前的日期
+            date_since = datetime.datetime.now() - datetime.timedelta(days=downloader.days_ago or 7)
+            email_ids = downloader.search_emails(folder=downloader.folder, date_since=date_since)
+
+        # 如果没有找到邮件，在非日期范围搜索模式下才搜索所有邮件
+        if not email_ids and not (args.start_date or args.end_date):
+            logger.warning(f"没有找到匹配的邮件，搜索所有邮件")
+            email_ids = downloader.search_emails(folder=downloader.folder)
+
+        # 确保保存目录存在
+        save_dir = os.path.join(os.getcwd(), downloader.save_dir) if downloader.save_dir else os.path.join(os.getcwd(), 'attachments')
+        if not os.path.exists(save_dir):
+            try:
+                os.makedirs(save_dir)
+                logger.info(f"创建保存目录: {save_dir}")
+            except Exception as e:
+                logger.error(f"创建保存目录失败: {str(e)}")
+                return
 
         # 下载附件
         downloader.download_attachments(email_ids, save_dir, file_extensions=file_extensions)
