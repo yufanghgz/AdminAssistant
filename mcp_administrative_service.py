@@ -191,8 +191,8 @@ async def list_tools() -> List[Tool]:
             }
         ),
         Tool(
-            name="merge_excel_files",
-            description="合并多个特定项目任务格式的Excel文件到一个文件中",
+            name="generate_worktime_report",
+            description="工时安排报表生成工具：合并多个Excel文件并生成工时展示图片",
             inputSchema={
                 "type": "object",
                 "properties": {
@@ -207,9 +207,18 @@ async def list_tools() -> List[Tool]:
                         "type": "string",
                         "description": "包含项目任务格式Excel文件的目录路径（与input_files互斥）"
                     },
-                    "output_file": {
+                    "merged_excel_path": {
                         "type": "string",
-                        "description": "输出合并后的Excel文件路径"
+                        "description": "合并后的Excel文件保存路径（可选，不指定则使用临时文件）"
+                    },
+                    "output_image_path": {
+                        "type": "string",
+                        "description": "输出工时展示图片文件路径"
+                    },
+                    "staff_file_path": {
+                        "type": "string",
+                        "description": "人员名单Excel文件路径（可选）",
+                        "default": "/Users/heguangzhong/Work_Doc/11.项目管理/2025/工时计划/人员列表.xlsx"
                     },
                     "sheet_name": {
                         "type": "string",
@@ -220,40 +229,72 @@ async def list_tools() -> List[Tool]:
                         "type": "boolean",
                         "description": "当指定的工作表不存在时，是否使用第一个工作表，默认为false",
                         "default": False
-                    }
-                },
-                "required": ["output_file"]
-            }
-        ),
-        Tool(
-            name="process_worktime",
-            description="处理项目任务格式的Excel文件，生成工时展示图片",
-            inputSchema={
-                "type": "object",
-                "properties": {
-                    "excel_file_path": {
-                        "type": "string",
-                        "description": "包含项目任务数据的Excel文件路径"
-                    },
-                    "output_path": {
-                        "type": "string",
-                        "description": "输出图片文件路径"
-                    },
-                    "staff_file_path": {
-                        "type": "string",
-                        "description": "人员名单Excel文件路径（可选）"
-                    },
-                    "sheet_name": {
-                        "type": "string",
-                        "description": "要读取的工作表名称，默认为'下周工作计划'",
-                        "default": "下周工作计划"
                     },
                     "title": {
                         "type": "string",
                         "description": "图表标题（可选）"
+                    },
+                    "keep_merged_file": {
+                        "type": "boolean",
+                        "description": "是否保留合并后的Excel文件，默认为false",
+                        "default": False
                     }
                 },
-                "required": ["excel_file_path", "output_path"]
+                "required": ["output_image_path"]
+            }
+        ),
+        Tool(
+            name="read_emails",
+            description="邮件阅读工具：根据日期范围读取邮件内容",
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "imap_server": {
+                        "type": "string",
+                        "description": "IMAP服务器地址"
+                    },
+                    "username": {
+                        "type": "string",
+                        "description": "邮箱用户名"
+                    },
+                    "password": {
+                        "type": "string",
+                        "description": "邮箱密码或授权码"
+                    },
+                    "days_ago": {
+                        "type": "integer",
+                        "description": "读取多少天前的邮件，默认为7天",
+                        "default": 7
+                    },
+                    "date": {
+                        "type": "string",
+                        "description": "指定单日，格式 YYYY-MM-DD，可与 days_ago 互斥"
+                    },
+                    "start_date": {
+                        "type": "string",
+                        "description": "起始日期，格式 YYYY-MM-DD"
+                    },
+                    "end_date": {
+                        "type": "string",
+                        "description": "结束日期，格式 YYYY-MM-DD（含当日）"
+                    },
+                    "max_emails": {
+                        "type": "integer",
+                        "description": "最大读取邮件数量，默认为50封",
+                        "default": 50
+                    },
+                    "include_body": {
+                        "type": "boolean",
+                        "description": "是否包含邮件正文，默认为true",
+                        "default": True
+                    },
+                    "folder": {
+                        "type": "string",
+                        "description": "邮箱文件夹，默认为INBOX",
+                        "default": "INBOX"
+                    }
+                },
+                "required": ["imap_server", "username", "password"]
             }
         )
     ]
@@ -521,17 +562,21 @@ async def call_tool(name: str, arguments: dict) -> List[TextContent]:
                 text=f"合并图片为PDF文件时出错: {str(e)}"
             )]
 
-    elif name == "merge_excel_files":
+    elif name == "generate_worktime_report":
         input_files = arguments.get("input_files")
         input_dir = arguments.get("input_dir")
-        output_file = arguments.get("output_file")
+        merged_excel_path = arguments.get("merged_excel_path")
+        output_image_path = arguments.get("output_image_path")
+        staff_file_path = arguments.get("staff_file_path", "/Users/heguangzhong/Work_Doc/11.项目管理/2025/工时计划/人员列表.xlsx")
         sheet_name = arguments.get("sheet_name", "下周工作计划")
         use_default_sheet = arguments.get("use_default_sheet", False)
+        title = arguments.get("title")
+        keep_merged_file = arguments.get("keep_merged_file", False)
 
-        if not output_file:
+        if not output_image_path:
             return [TextContent(
                 type="text",
-                text="未指定输出Excel文件路径"
+                text="未指定输出图片路径"
             )]
 
         # 确定输入文件列表
@@ -567,93 +612,170 @@ async def call_tool(name: str, arguments: dict) -> List[TextContent]:
                 text="必须指定input_files或input_dir参数之一"
             )]
 
-        try:
-            # 确保输出目录存在
-            output_dir = os.path.dirname(output_file)
-            if output_dir and not os.path.exists(output_dir):
-                os.makedirs(output_dir, exist_ok=True)
+        # 验证输入文件是否存在
+        for file_path in file_paths:
+            if not os.path.exists(file_path):
+                return [TextContent(
+                    type="text",
+                    text=f"输入文件不存在: {file_path}"
+                )]
 
-            # 检查文件是否存在，如果存在则删除
-            if os.path.exists(output_file):
+        try:
+            # 确定合并后的Excel文件路径
+            if not merged_excel_path:
+                # 使用临时文件
+                import tempfile
+                temp_dir = tempfile.gettempdir()
+                merged_excel_path = os.path.join(temp_dir, f"merged_worktime_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.xlsx")
+            else:
+                # 确保输出目录存在
+                output_dir = os.path.dirname(merged_excel_path)
+                if output_dir and not os.path.exists(output_dir):
+                    os.makedirs(output_dir, exist_ok=True)
+
+            # 确保图片输出目录存在
+            image_output_dir = os.path.dirname(output_image_path)
+            if image_output_dir and not os.path.exists(image_output_dir):
+                os.makedirs(image_output_dir, exist_ok=True)
+
+            # 检查合并文件是否存在，如果存在则删除
+            if os.path.exists(merged_excel_path):
                 try:
-                    os.remove(output_file)
+                    os.remove(merged_excel_path)
                 except Exception as e:
                     return [TextContent(
                         type="text",
-                        text=f"删除已存在的文件时出错: {str(e)}"
+                        text=f"删除已存在的合并文件时出错: {str(e)}"
                     )]
 
-            # 读取并合并文件
+            # 第一步：合并Excel文件
             merged_df = read_and_merge_files(file_paths, sheet_name=sheet_name, use_default_sheet=use_default_sheet)
-            
-            # 保存合并后的DataFrame到新文件
-            merged_df.to_excel(output_file, sheet_name=sheet_name, index=False)
-            
-            return [TextContent(
-                type="text",
-                text=f"Excel文件合并完成，结果已保存到: {output_file}\n共合并了 {len(file_paths)} 个文件，{len(merged_df)} 行数据"
-            )]
-        except Exception as e:
-            return [TextContent(
-                type="text",
-                text=f"合并Excel文件时出错: {str(e)}"
-            )]
+            merged_df.to_excel(merged_excel_path, sheet_name=sheet_name, index=False)
 
-    elif name == "process_worktime":
-        excel_file_path = arguments.get("excel_file_path")
-        output_path = arguments.get("output_path")
-        staff_file_path = arguments.get("staff_file_path")
-        sheet_name = arguments.get("sheet_name", "下周工作计划")
-        title = arguments.get("title")
-
-        if not excel_file_path:
-            return [TextContent(
-                type="text",
-                text="未指定Excel文件路径"
-            )]
-
-        if not output_path:
-            return [TextContent(
-                type="text",
-                text="未指定输出图片路径"
-            )]
-
-        if not os.path.exists(excel_file_path):
-            return [TextContent(
-                type="text",
-                text=f"Excel文件不存在: {excel_file_path}"
-            )]
-
-        try:
-            # 确保输出目录存在
-            output_dir = os.path.dirname(output_path)
-            if output_dir and not os.path.exists(output_dir):
-                os.makedirs(output_dir, exist_ok=True)
-
-            # 调用工时处理函数
+            # 第二步：生成工时展示图片
             success = process_worktime_file(
-                excel_file_path=excel_file_path,
-                output_path=output_path,
+                excel_file_path=merged_excel_path,
+                output_path=output_image_path,
                 staff_file_path=staff_file_path,
                 sheet_name=sheet_name,
                 title=title
             )
 
+            result_text = f"工时安排报表生成完成！\n\n"
+            result_text += f"📊 合并了 {len(file_paths)} 个Excel文件，共 {len(merged_df)} 行数据\n"
+            result_text += f"📈 工时展示图片已保存到: {output_image_path}\n"
+            
+            if keep_merged_file:
+                result_text += f"📁 合并后的Excel文件已保存到: {merged_excel_path}\n"
+            else:
+                # 删除临时文件
+                try:
+                    os.remove(merged_excel_path)
+                    result_text += f"🗑️ 临时合并文件已清理\n"
+                except:
+                    pass
+
             if success:
-                return [TextContent(
-                    type="text",
-                    text=f"工时处理完成，展示图片已保存到: {output_path}"
-                )]
+                return [TextContent(type="text", text=result_text)]
             else:
                 return [TextContent(
                     type="text",
-                    text="工时处理失败，请检查输入文件和参数"
+                    text=f"工时展示图片生成失败，但Excel文件合并成功。请检查输入文件和参数。\n合并文件位置: {merged_excel_path}"
                 )]
+
         except Exception as e:
             return [TextContent(
                 type="text",
-                text=f"工时处理时出错: {str(e)}"
+                text=f"工时安排报表生成时出错: {str(e)}"
             )]
+
+    elif name == "read_emails":
+        imap_server = arguments.get("imap_server")
+        username = arguments.get("username")
+        password = arguments.get("password")
+        days_ago = arguments.get("days_ago", 7)
+        single_date = arguments.get("date")
+        start_date = arguments.get("start_date")
+        end_date = arguments.get("end_date")
+        max_emails = arguments.get("max_emails", 50)
+        include_body = arguments.get("include_body", True)
+        folder = arguments.get("folder", "INBOX")
+
+        # 创建新的邮件下载器实例
+        from base.email_attachment_downloader import EmailAttachmentDownloader
+        email_reader = EmailAttachmentDownloader()
+
+        try:
+            # 连接到邮箱服务器
+            if not email_reader.connect(imap_server, username, password):
+                return [TextContent(
+                    type="text",
+                    text=f"无法连接到邮箱服务器: {imap_server}"
+                )]
+
+            # 搜索邮件
+            if single_date:
+                email_ids = email_reader.search_emails_by_date(single_date, folder)
+                date_info = f"指定日期 {single_date}"
+            elif start_date or end_date:
+                email_ids = email_reader.search_emails_by_range(start_date, end_date, folder)
+                if start_date and end_date:
+                    date_info = f"日期范围 {start_date} 至 {end_date}"
+                elif start_date:
+                    date_info = f"自 {start_date} 起"
+                else:
+                    date_info = f"至 {end_date} 止"
+            else:
+                date_since = datetime.datetime.now() - datetime.timedelta(days=days_ago)
+                email_ids = email_reader.search_emails(folder=folder, date_since=date_since)
+                date_info = f"最近{days_ago}天"
+
+            if not email_ids:
+                return [TextContent(
+                    type="text",
+                    text=f"未找到{date_info}的邮件"
+                )]
+
+            # 读取邮件内容
+            emails = email_reader.read_emails(email_ids, max_emails, include_body)
+
+            if not emails:
+                return [TextContent(
+                    type="text",
+                    text=f"成功连接到邮箱，但未能读取到邮件内容"
+                )]
+
+            # 格式化邮件信息
+            result_text = f"📧 邮件阅读结果 ({date_info})\n\n"
+            result_text += f"共找到 {len(email_ids)} 封邮件，成功读取 {len(emails)} 封\n\n"
+
+            for i, email_info in enumerate(emails, 1):
+                result_text += f"=== 邮件 {i} ===\n"
+                result_text += f"📧 主题: {email_info['subject']}\n"
+                result_text += f"👤 发件人: {email_info['sender']}\n"
+                result_text += f"📅 日期: {email_info['date']}\n"
+                result_text += f"📎 附件: {'是' if email_info['has_attachments'] else '否'}\n"
+                
+                if email_info['attachments']:
+                    result_text += f"📁 附件列表: {', '.join(email_info['attachments'])}\n"
+                
+                if include_body and email_info['body']:
+                    # 限制正文长度，避免输出过长
+                    body_preview = email_info['body'][:200] + "..." if len(email_info['body']) > 200 else email_info['body']
+                    result_text += f"📝 正文预览: {body_preview}\n"
+                
+                result_text += "\n"
+
+            return [TextContent(type="text", text=result_text)]
+
+        except Exception as e:
+            return [TextContent(
+                type="text",
+                text=f"读取邮件时出错: {str(e)}"
+            )]
+        finally:
+            # 确保断开连接
+            email_reader.disconnect()
 
     return [TextContent(type="text", text=f"未知的工具: {name}")]
 

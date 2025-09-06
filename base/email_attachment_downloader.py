@@ -536,6 +536,179 @@ class EmailAttachmentDownloader:
         logger.info(f"共从邮件正文下载 {downloaded_count} 个附件")
         return downloaded_count
 
+    def read_emails(self, email_ids, max_emails=50, include_body=True):
+        """
+        读取邮件内容
+        :param email_ids: 邮件ID列表
+        :param max_emails: 最大读取邮件数量，默认50封
+        :param include_body: 是否包含邮件正文，默认True
+        :return: 邮件信息列表
+        """
+        if not self.connected:
+            logger.error("未连接到邮箱服务器")
+            return []
+        
+        emails = []
+        try:
+            # 限制读取的邮件数量
+            email_ids = email_ids[:max_emails]
+            
+            for i, email_id in enumerate(email_ids):
+                try:
+                    logger.info(f"读取邮件 {i+1}/{len(email_ids)} (ID: {email_id})")
+                    
+                    # 获取邮件数据
+                    result, data = self.imap_server.fetch(email_id, '(RFC822)')
+                    if result != 'OK':
+                        logger.warning(f"获取邮件 {email_id} 失败")
+                        continue
+                    
+                    # 解析邮件
+                    raw_email = data[0][1]
+                    email_message = email.message_from_bytes(raw_email)
+                    
+                    # 提取邮件信息
+                    email_info = self._extract_email_info(email_message, include_body)
+                    if email_info:
+                        emails.append(email_info)
+                        
+                except Exception as e:
+                    logger.warning(f"读取邮件 {email_id} 时出错: {str(e)}")
+                    continue
+            
+            logger.info(f"成功读取 {len(emails)} 封邮件")
+            return emails
+            
+        except Exception as e:
+            logger.error(f"读取邮件时出错: {str(e)}")
+            return []
+    
+    def _extract_email_info(self, email_message, include_body=True):
+        """
+        提取邮件信息
+        :param email_message: 邮件消息对象
+        :param include_body: 是否包含邮件正文
+        :return: 邮件信息字典
+        """
+        try:
+            # 基本信息
+            subject = email_message.get('Subject', '无主题')
+            sender = email_message.get('From', '未知发件人')
+            to = email_message.get('To', '未知收件人')
+            date = email_message.get('Date', '未知日期')
+            
+            # 解码主题和发件人
+            subject = self._decode_header(subject)
+            sender = self._decode_header(sender)
+            to = self._decode_header(to)
+            
+            email_info = {
+                'subject': subject,
+                'sender': sender,
+                'to': to,
+                'date': date,
+                'has_attachments': False,
+                'attachments': [],
+                'body': ''
+            }
+            
+            # 检查是否有附件
+            if email_message.is_multipart():
+                for part in email_message.walk():
+                    if part.get_content_disposition() == 'attachment':
+                        email_info['has_attachments'] = True
+                        filename = part.get_filename()
+                        if filename:
+                            email_info['attachments'].append(self._decode_header(filename))
+            
+            # 提取邮件正文
+            if include_body:
+                body = self._extract_email_body(email_message)
+                email_info['body'] = body
+            
+            return email_info
+            
+        except Exception as e:
+            logger.warning(f"提取邮件信息时出错: {str(e)}")
+            return None
+    
+    def _decode_header(self, header):
+        """
+        解码邮件头信息
+        :param header: 邮件头字符串
+        :return: 解码后的字符串
+        """
+        try:
+            if header is None:
+                return ''
+            
+            decoded_parts = email.header.decode_header(header)
+            decoded_string = ''
+            
+            for part, encoding in decoded_parts:
+                if isinstance(part, bytes):
+                    if encoding:
+                        decoded_string += part.decode(encoding)
+                    else:
+                        decoded_string += part.decode('utf-8', errors='ignore')
+                else:
+                    decoded_string += part
+            
+            return decoded_string
+        except Exception as e:
+            logger.warning(f"解码邮件头时出错: {str(e)}")
+            return str(header)
+    
+    def _extract_email_body(self, email_message):
+        """
+        提取邮件正文
+        :param email_message: 邮件消息对象
+        :return: 邮件正文文本
+        """
+        try:
+            body = ""
+            
+            if email_message.is_multipart():
+                for part in email_message.walk():
+                    content_type = part.get_content_type()
+                    content_disposition = str(part.get("Content-Disposition"))
+                    
+                    # 跳过附件
+                    if "attachment" in content_disposition:
+                        continue
+                    
+                    # 提取文本内容
+                    if content_type == "text/plain":
+                        payload = part.get_payload(decode=True)
+                        if payload:
+                            charset = part.get_content_charset() or 'utf-8'
+                            body += payload.decode(charset, errors='ignore')
+                    elif content_type == "text/html":
+                        payload = part.get_payload(decode=True)
+                        if payload:
+                            charset = part.get_content_charset() or 'utf-8'
+                            html_content = payload.decode(charset, errors='ignore')
+                            # 简单的HTML标签清理
+                            soup = BeautifulSoup(html_content, 'html.parser')
+                            body += soup.get_text()
+            else:
+                # 单部分邮件
+                content_type = email_message.get_content_type()
+                payload = email_message.get_payload(decode=True)
+                if payload:
+                    charset = email_message.get_content_charset() or 'utf-8'
+                    if content_type == "text/plain":
+                        body = payload.decode(charset, errors='ignore')
+                    elif content_type == "text/html":
+                        soup = BeautifulSoup(payload.decode(charset, errors='ignore'), 'html.parser')
+                        body = soup.get_text()
+            
+            return body.strip()
+            
+        except Exception as e:
+            logger.warning(f"提取邮件正文时出错: {str(e)}")
+            return ""
+
 
 def main():
     """

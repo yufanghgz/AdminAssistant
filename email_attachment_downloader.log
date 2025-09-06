@@ -886,3 +886,153 @@
 2025-08-27 08:15:08,570 - EmailAttachmentDownloader - INFO - 处理邮件正文链接: Fw:内部推荐人员徐云飞 (ID: b'14')
 2025-08-27 08:15:08,570 - EmailAttachmentDownloader - INFO - 共从邮件正文下载 0 个附件
 2025-08-27 08:15:08,705 - EmailAttachmentDownloader - INFO - 已断开与邮箱服务器的连接
+2025-09-03 16:57:54,125 - numexpr.utils - INFO - Note: NumExpr detected 10 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-09-03 16:57:54,125 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-09-03 16:57:56,937 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-09-03 16:57:56,937 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistent/base/conf/qq-email.json
+2025-09-03 16:57:56,937 - EmailAttachmentDownloader - INFO - self.imap_server=imap.qq.com, self.username=23512221@qq.com, self.password=ifqdmucfxotlbigc, self.port=993, self.folder=INBOX, self.days_ago=0, self.save_dir=C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments, self.max_attachment_size=None
+2025-09-03 16:58:01,091 - numexpr.utils - INFO - Note: NumExpr detected 10 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-09-03 16:58:01,091 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-09-03 16:58:03,861 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-09-03 16:58:03,861 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistent/base/conf/qq-email.json
+2025-09-03 16:58:03,862 - EmailAttachmentDownloader - INFO - self.imap_server=imap.qq.com, self.username=23512221@qq.com, self.password=ifqdmucfxotlbigc, self.port=993, self.folder=INBOX, self.days_ago=0, self.save_dir=C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments, self.max_attachment_size=None
+2025-09-03 16:58:03,867 - root - WARNING - Failed to validate request: Received request before initialization was complete
+2025-09-03 16:58:10,765 - numexpr.utils - INFO - Note: NumExpr detected 10 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-09-03 16:58:10,765 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-09-03 16:58:13,544 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-09-03 16:58:13,544 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistent/base/conf/qq-email.json
+2025-09-03 16:58:13,544 - EmailAttachmentDownloader - INFO - self.imap_server=imap.qq.com, self.username=23512221@qq.com, self.password=ifqdmucfxotlbigc, self.port=993, self.folder=INBOX, self.days_ago=0, self.save_dir=C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments, self.max_attachment_size=None
+2025-09-03 16:58:20,494 - numexpr.utils - INFO - Note: NumExpr detected 10 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-09-03 16:58:20,495 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-09-03 16:58:23,278 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-09-03 16:58:23,278 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistent/base/conf/qq-email.json
+2025-09-03 16:58:23,278 - EmailAttachmentDownloader - INFO - self.imap_server=imap.qq.com, self.username=23512221@qq.com, self.password=ifqdmucfxotlbigc, self.port=993, self.folder=INBOX, self.days_ago=0, self.save_dir=C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments, self.max_attachment_size=None
+2025-09-03 16:58:23,284 - root - WARNING - Failed to validate request: Received request before initialization was complete
+2025-09-03 17:01:45,064 - numexpr.utils - INFO - Note: NumExpr detected 10 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-09-03 17:01:45,064 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-09-03 17:01:47,820 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-09-03 17:01:47,820 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistent/base/conf/qq-email.json
+2025-09-03 17:01:47,820 - EmailAttachmentDownloader - INFO - self.imap_server=imap.qq.com, self.username=23512221@qq.com, self.password=ifqdmucfxotlbigc, self.port=993, self.folder=INBOX, self.days_ago=0, self.save_dir=C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments, self.max_attachment_size=None
+2025-09-04 10:51:00,673 - numexpr.utils - INFO - Note: NumExpr detected 10 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-09-04 10:51:00,673 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-09-04 10:51:03,743 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-09-04 10:51:03,743 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistent/base/conf/qq-email.json
+2025-09-04 10:51:03,744 - EmailAttachmentDownloader - INFO - self.imap_server=imap.qq.com, self.username=23512221@qq.com, self.password=ifqdmucfxotlbigc, self.port=993, self.folder=INBOX, self.days_ago=0, self.save_dir=C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments, self.max_attachment_size=None
+2025-09-04 11:03:20,210 - numexpr.utils - INFO - Note: NumExpr detected 10 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-09-04 11:03:20,210 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-09-04 11:03:23,026 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-09-04 11:03:23,026 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistent/base/conf/qq-email.json
+2025-09-04 11:03:23,026 - EmailAttachmentDownloader - INFO - self.imap_server=imap.qq.com, self.username=23512221@qq.com, self.password=ifqdmucfxotlbigc, self.port=993, self.folder=INBOX, self.days_ago=0, self.save_dir=C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments, self.max_attachment_size=None
+2025-09-04 11:03:27,779 - numexpr.utils - INFO - Note: NumExpr detected 10 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-09-04 11:03:27,779 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-09-04 11:03:30,680 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-09-04 11:03:30,680 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistent/base/conf/qq-email.json
+2025-09-04 11:03:30,681 - EmailAttachmentDownloader - INFO - self.imap_server=imap.qq.com, self.username=23512221@qq.com, self.password=ifqdmucfxotlbigc, self.port=993, self.folder=INBOX, self.days_ago=0, self.save_dir=C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments, self.max_attachment_size=None
+2025-09-04 11:03:30,688 - root - WARNING - Failed to validate request: Received request before initialization was complete
+2025-09-04 11:03:39,760 - numexpr.utils - INFO - Note: NumExpr detected 10 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-09-04 11:03:39,760 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-09-04 11:03:42,703 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-09-04 11:03:42,703 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistent/base/conf/qq-email.json
+2025-09-04 11:03:42,703 - EmailAttachmentDownloader - INFO - self.imap_server=imap.qq.com, self.username=23512221@qq.com, self.password=ifqdmucfxotlbigc, self.port=993, self.folder=INBOX, self.days_ago=0, self.save_dir=C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments, self.max_attachment_size=None
+2025-09-04 11:03:49,919 - numexpr.utils - INFO - Note: NumExpr detected 10 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-09-04 11:03:49,919 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-09-04 11:03:52,848 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-09-04 11:03:52,848 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistent/base/conf/qq-email.json
+2025-09-04 11:03:52,848 - EmailAttachmentDownloader - INFO - self.imap_server=imap.qq.com, self.username=23512221@qq.com, self.password=ifqdmucfxotlbigc, self.port=993, self.folder=INBOX, self.days_ago=0, self.save_dir=C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments, self.max_attachment_size=None
+2025-09-04 11:03:52,854 - root - WARNING - Failed to validate request: Received request before initialization was complete
+2025-09-04 11:12:33,367 - numexpr.utils - INFO - Note: NumExpr detected 10 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-09-04 11:12:33,367 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-09-04 11:12:36,255 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-09-04 11:12:36,255 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistent/base/conf/qq-email.json
+2025-09-04 11:12:36,255 - EmailAttachmentDownloader - INFO - self.imap_server=imap.qq.com, self.username=23512221@qq.com, self.password=ifqdmucfxotlbigc, self.port=993, self.folder=INBOX, self.days_ago=0, self.save_dir=C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments, self.max_attachment_size=None
+2025-09-04 11:12:54,928 - numexpr.utils - INFO - Note: NumExpr detected 10 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-09-04 11:12:54,928 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-09-04 11:12:57,872 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-09-04 11:12:57,872 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistent/base/conf/qq-email.json
+2025-09-04 11:12:57,873 - EmailAttachmentDownloader - INFO - self.imap_server=imap.qq.com, self.username=23512221@qq.com, self.password=ifqdmucfxotlbigc, self.port=993, self.folder=INBOX, self.days_ago=0, self.save_dir=C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments, self.max_attachment_size=None
+2025-09-04 11:22:51,229 - numexpr.utils - INFO - Note: NumExpr detected 10 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-09-04 11:22:51,229 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-09-04 11:22:54,037 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-09-04 11:22:54,037 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistent/base/conf/qq-email.json
+2025-09-04 11:22:54,037 - EmailAttachmentDownloader - INFO - self.imap_server=imap.qq.com, self.username=23512221@qq.com, self.password=ifqdmucfxotlbigc, self.port=993, self.folder=INBOX, self.days_ago=0, self.save_dir=C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments, self.max_attachment_size=None
+2025-09-04 11:23:12,447 - numexpr.utils - INFO - Note: NumExpr detected 10 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-09-04 11:23:12,447 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-09-04 11:23:15,365 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-09-04 11:23:15,365 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistent/base/conf/qq-email.json
+2025-09-04 11:23:15,365 - EmailAttachmentDownloader - INFO - self.imap_server=imap.qq.com, self.username=23512221@qq.com, self.password=ifqdmucfxotlbigc, self.port=993, self.folder=INBOX, self.days_ago=0, self.save_dir=C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments, self.max_attachment_size=None
+2025-09-04 11:26:47,668 - numexpr.utils - INFO - Note: NumExpr detected 10 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-09-04 11:26:47,668 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-09-04 11:26:50,530 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-09-04 11:26:50,530 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistent/base/conf/qq-email.json
+2025-09-04 11:26:50,531 - EmailAttachmentDownloader - INFO - self.imap_server=imap.qq.com, self.username=23512221@qq.com, self.password=ifqdmucfxotlbigc, self.port=993, self.folder=INBOX, self.days_ago=0, self.save_dir=C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments, self.max_attachment_size=None
+2025-09-04 11:27:12,076 - numexpr.utils - INFO - Note: NumExpr detected 10 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-09-04 11:27:12,076 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-09-04 11:27:14,940 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-09-04 11:27:14,940 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistent/base/conf/qq-email.json
+2025-09-04 11:27:14,941 - EmailAttachmentDownloader - INFO - self.imap_server=imap.qq.com, self.username=23512221@qq.com, self.password=ifqdmucfxotlbigc, self.port=993, self.folder=INBOX, self.days_ago=0, self.save_dir=C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments, self.max_attachment_size=None
+2025-09-04 11:27:35,499 - numexpr.utils - INFO - Note: NumExpr detected 10 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-09-04 11:27:35,499 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-09-04 11:27:38,366 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-09-04 11:27:38,366 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistent/base/conf/qq-email.json
+2025-09-04 11:27:38,366 - EmailAttachmentDownloader - INFO - self.imap_server=imap.qq.com, self.username=23512221@qq.com, self.password=ifqdmucfxotlbigc, self.port=993, self.folder=INBOX, self.days_ago=0, self.save_dir=C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments, self.max_attachment_size=None
+2025-09-04 11:28:22,240 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-09-04 11:28:22,240 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistent/base/conf/qq-email.json
+2025-09-04 11:28:22,240 - EmailAttachmentDownloader - INFO - self.imap_server=imap.qq.com, self.username=23512221@qq.com, self.password=ifqdmucfxotlbigc, self.port=993, self.folder=INBOX, self.days_ago=0, self.save_dir=C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments, self.max_attachment_size=None
+2025-09-04 11:28:22,705 - EmailAttachmentDownloader - INFO - 成功连接到邮箱: 23512221@qq.com
+2025-09-04 11:28:22,879 - EmailAttachmentDownloader - INFO - 搜索条件: (SINCE 28-Aug-2025) ALL
+2025-09-04 11:28:23,062 - EmailAttachmentDownloader - INFO - 初步搜索找到 18 封邮件
+2025-09-04 11:28:23,062 - EmailAttachmentDownloader - INFO - 开始精准过滤 None 的邮件...
+2025-09-04 11:28:26,260 - EmailAttachmentDownloader - INFO - 精准过滤后找到 4 封 None 的邮件
+2025-09-04 11:28:26,260 - EmailAttachmentDownloader - INFO - 读取邮件 1/4 (ID: b'15')
+2025-09-04 11:28:26,260 - EmailAttachmentDownloader - WARNING - 读取邮件 b'15' 时出错: 'EmailAttachmentDownloader' object has no attribute 'mail'
+2025-09-04 11:28:26,260 - EmailAttachmentDownloader - INFO - 读取邮件 2/4 (ID: b'16')
+2025-09-04 11:28:26,260 - EmailAttachmentDownloader - WARNING - 读取邮件 b'16' 时出错: 'EmailAttachmentDownloader' object has no attribute 'mail'
+2025-09-04 11:28:26,260 - EmailAttachmentDownloader - INFO - 读取邮件 3/4 (ID: b'17')
+2025-09-04 11:28:26,261 - EmailAttachmentDownloader - WARNING - 读取邮件 b'17' 时出错: 'EmailAttachmentDownloader' object has no attribute 'mail'
+2025-09-04 11:28:26,261 - EmailAttachmentDownloader - INFO - 读取邮件 4/4 (ID: b'18')
+2025-09-04 11:28:26,261 - EmailAttachmentDownloader - WARNING - 读取邮件 b'18' 时出错: 'EmailAttachmentDownloader' object has no attribute 'mail'
+2025-09-04 11:28:26,261 - EmailAttachmentDownloader - INFO - 成功读取 0 封邮件
+2025-09-04 11:28:26,439 - EmailAttachmentDownloader - INFO - 已断开与邮箱服务器的连接
+2025-09-04 13:49:48,980 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-09-04 13:49:48,980 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistent/base/conf/qq-email.json
+2025-09-04 13:49:48,981 - EmailAttachmentDownloader - INFO - self.imap_server=imap.qq.com, self.username=23512221@qq.com, self.password=ifqdmucfxotlbigc, self.port=993, self.folder=INBOX, self.days_ago=0, self.save_dir=C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments, self.max_attachment_size=None
+2025-09-04 13:49:49,617 - EmailAttachmentDownloader - INFO - 成功连接到邮箱: 23512221@qq.com
+2025-09-04 13:49:49,781 - EmailAttachmentDownloader - INFO - 搜索条件: (SINCE 28-Aug-2025) ALL
+2025-09-04 13:49:49,897 - EmailAttachmentDownloader - INFO - 初步搜索找到 18 封邮件
+2025-09-04 13:49:49,897 - EmailAttachmentDownloader - INFO - 开始精准过滤 None 的邮件...
+2025-09-04 13:49:53,449 - EmailAttachmentDownloader - INFO - 精准过滤后找到 4 封 None 的邮件
+2025-09-04 13:49:53,449 - EmailAttachmentDownloader - INFO - 读取邮件 1/4 (ID: b'15')
+2025-09-04 13:49:54,015 - EmailAttachmentDownloader - INFO - 读取邮件 2/4 (ID: b'16')
+2025-09-04 13:49:54,696 - EmailAttachmentDownloader - INFO - 读取邮件 3/4 (ID: b'17')
+2025-09-04 13:49:55,602 - EmailAttachmentDownloader - INFO - 读取邮件 4/4 (ID: b'18')
+2025-09-04 13:49:56,148 - EmailAttachmentDownloader - INFO - 成功读取 4 封邮件
+2025-09-04 13:49:56,342 - EmailAttachmentDownloader - INFO - 已断开与邮箱服务器的连接
+2025-09-04 13:50:08,840 - numexpr.utils - INFO - Note: NumExpr detected 10 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-09-04 13:50:08,840 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-09-04 13:50:11,802 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-09-04 13:50:11,803 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistent/base/conf/qq-email.json
+2025-09-04 13:50:11,803 - EmailAttachmentDownloader - INFO - self.imap_server=imap.qq.com, self.username=23512221@qq.com, self.password=ifqdmucfxotlbigc, self.port=993, self.folder=INBOX, self.days_ago=0, self.save_dir=C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments, self.max_attachment_size=None
+2025-09-04 13:50:28,374 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-09-04 13:50:28,374 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistent/base/conf/qq-email.json
+2025-09-04 13:50:28,374 - EmailAttachmentDownloader - INFO - self.imap_server=imap.qq.com, self.username=23512221@qq.com, self.password=ifqdmucfxotlbigc, self.port=993, self.folder=INBOX, self.days_ago=0, self.save_dir=C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments, self.max_attachment_size=None
+2025-09-04 13:50:28,854 - EmailAttachmentDownloader - INFO - 成功连接到邮箱: 23512221@qq.com
+2025-09-04 13:50:28,855 - EmailAttachmentDownloader - INFO - 搜索 2025-09-04 的邮件
+2025-09-04 13:50:28,981 - EmailAttachmentDownloader - INFO - 搜索条件: (SINCE 04-Sep-2025) ALL
+2025-09-04 13:50:29,101 - EmailAttachmentDownloader - INFO - 初步搜索找到 18 封邮件
+2025-09-04 13:50:29,102 - EmailAttachmentDownloader - INFO - 开始精准过滤 2025-09-04 的邮件...
+2025-09-04 13:50:31,843 - EmailAttachmentDownloader - INFO - 精准过滤后找到 0 封 2025-09-04 的邮件
+2025-09-04 13:50:32,019 - EmailAttachmentDownloader - INFO - 已断开与邮箱服务器的连接
+2025-09-04 13:50:52,733 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-09-04 13:50:52,733 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistent/base/conf/qq-email.json
+2025-09-04 13:50:52,733 - EmailAttachmentDownloader - INFO - self.imap_server=imap.qq.com, self.username=23512221@qq.com, self.password=ifqdmucfxotlbigc, self.port=993, self.folder=INBOX, self.days_ago=0, self.save_dir=C:/Users/hgz_x1/Documents/GitHub/AdminAssistent/attachments, self.max_attachment_size=None
+2025-09-04 13:50:53,163 - EmailAttachmentDownloader - INFO - 成功连接到邮箱: 23512221@qq.com
+2025-09-04 13:50:53,281 - EmailAttachmentDownloader - INFO - 搜索条件: (SINCE 28-Aug-2025) ALL
+2025-09-04 13:50:53,386 - EmailAttachmentDownloader - INFO - 初步搜索找到 18 封邮件
+2025-09-04 13:50:53,386 - EmailAttachmentDownloader - INFO - 开始精准过滤 None 的邮件...
+2025-09-04 13:50:56,396 - EmailAttachmentDownloader - INFO - 精准过滤后找到 4 封 None 的邮件
+2025-09-04 13:50:56,396 - EmailAttachmentDownloader - INFO - 读取邮件 1/4 (ID: b'15')
+2025-09-04 13:50:56,883 - EmailAttachmentDownloader - INFO - 读取邮件 2/4 (ID: b'16')
+2025-09-04 13:50:57,393 - EmailAttachmentDownloader - INFO - 读取邮件 3/4 (ID: b'17')
+2025-09-04 13:50:57,950 - EmailAttachmentDownloader - INFO - 读取邮件 4/4 (ID: b'18')
+2025-09-04 13:50:58,357 - EmailAttachmentDownloader - INFO - 成功读取 4 封邮件
+2025-09-04 13:50:58,486 - EmailAttachmentDownloader - INFO - 已断开与邮箱服务器的连接
