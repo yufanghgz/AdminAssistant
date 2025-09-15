@@ -11,11 +11,16 @@ import imaplib
 import argparse
 
 # 配置日志
+# 确保temp目录存在
+temp_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'temp')
+os.makedirs(temp_dir, exist_ok=True)
+log_file_path = os.path.join(temp_dir, 'email_attachment_downloader.log')
+
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler('email_attachment_downloader.log', encoding='utf-8'),
+        logging.FileHandler(log_file_path, encoding='utf-8'),
         logging.StreamHandler()
     ],
     encoding='utf-8'

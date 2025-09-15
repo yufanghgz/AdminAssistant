@@ -25,6 +25,46 @@ def get_excel_files_from_dir(dir_path):
     return excel_files
 
 
+def _normalize_date_columns(df, file_name):
+    """
+    标准化日期列格式，确保所有文件的日期格式一致
+    
+    参数:
+        df: 要处理的DataFrame
+        file_name: 文件名（用于调试）
+    
+    返回:
+        处理后的DataFrame
+    """
+    date_columns = ['计划开始日期', '计划结束日期']
+    for col in date_columns:
+        if col in df.columns:
+            # 检查原始数据格式
+            sample_data = df[col].dropna().head(10)
+            if len(sample_data) == 0:
+                continue
+                
+            # 检查是否为Excel序列号格式（整数且大于1000）
+            is_excel_serial = all(isinstance(x, (int, float)) and not pd.isna(x) and x > 1000 for x in sample_data)
+            
+            # 检查是否为字符串格式的日期（如'2025.09.08'）
+            is_string_date = all(isinstance(x, str) and '.' in str(x) for x in sample_data)
+            
+            if is_excel_serial:
+                print(f"文件 {file_name} 的 {col} 列检测为Excel序列号格式，正在转换...")
+                df[col] = pd.to_datetime(df[col], origin='1899-12-30', unit='D', errors='coerce')
+            elif is_string_date:
+                print(f"文件 {file_name} 的 {col} 列检测为字符串日期格式，正在转换...")
+                # 处理 '2025.09.08' 格式
+                df[col] = df[col].astype(str).str.replace('.', '-')
+                df[col] = pd.to_datetime(df[col], errors='coerce')
+            else:
+                # 普通日期转换
+                df[col] = pd.to_datetime(df[col], errors='coerce')
+    
+    return df
+
+
 def read_and_merge_files(file_paths, sheet_name='下周工作计划', use_default_sheet=False):
     """
     读取多个Excel文件并合并成一个DataFrame
@@ -46,6 +86,9 @@ def read_and_merge_files(file_paths, sheet_name='下周工作计划', use_defaul
                 # 获取不带后缀的文件名
                 file_name = os.path.splitext(os.path.basename(file_path))[0]
                 df['项目名称'] = file_name
+                
+                # 在合并前先处理每个文件的日期格式
+                df = _normalize_date_columns(df, file_name)
                 all_dfs.append(df)
             except ValueError as e:
                 if 'not found' in str(e) and use_default_sheet:
@@ -54,6 +97,8 @@ def read_and_merge_files(file_paths, sheet_name='下周工作计划', use_defaul
                     # 添加项目名称列，值为不带后缀的文件名
                     file_name = os.path.splitext(os.path.basename(file_path))[0]
                     df['项目名称'] = file_name
+                    # 在合并前先处理每个文件的日期格式
+                    df = _normalize_date_columns(df, file_name)
                     all_dfs.append(df)
                 else:
                     raise ValueError(f"读取文件 {file_path} 失败: {str(e)}")
@@ -107,14 +152,7 @@ def read_and_merge_files(file_paths, sheet_name='下周工作计划', use_defaul
     else:
         print(f"警告: 未找到'{assignee_col}'列，跳过拆分处理")
 
-    # 统一时间列格式
-    date_columns = ['计划开始日期', '计划结束日期']
-    for col in date_columns:
-        if col in merged_df.columns:
-            # 转换为日期时间类型
-            merged_df[col] = pd.to_datetime(merged_df[col], errors='coerce')
-            # 格式化为'YYYY-MM-DD'
-            merged_df[col] = merged_df[col].dt.strftime('%Y-%m-%d')
+    # 日期格式已在合并前统一处理，这里不需要再次处理
 
     # 处理计划工时数列，如果为空则补充为8小时
     # 尝试精确匹配列名
@@ -133,9 +171,16 @@ def read_and_merge_files(file_paths, sheet_name='下周工作计划', use_defaul
         has_dates = start_date_col in merged_df.columns and end_date_col in merged_df.columns
         
         if has_dates:
-            # 转换日期列为datetime类型
-            merged_df[start_date_col] = pd.to_datetime(merged_df[start_date_col], errors='coerce')
-            merged_df[end_date_col] = pd.to_datetime(merged_df[end_date_col], errors='coerce')
+            # 转换日期列为datetime类型 - 处理Excel序列号格式
+            if pd.api.types.is_numeric_dtype(merged_df[start_date_col]):
+                merged_df[start_date_col] = pd.to_datetime(merged_df[start_date_col], origin='1899-12-30', unit='D', errors='coerce')
+            else:
+                merged_df[start_date_col] = pd.to_datetime(merged_df[start_date_col], errors='coerce')
+                
+            if pd.api.types.is_numeric_dtype(merged_df[end_date_col]):
+                merged_df[end_date_col] = pd.to_datetime(merged_df[end_date_col], origin='1899-12-30', unit='D', errors='coerce')
+            else:
+                merged_df[end_date_col] = pd.to_datetime(merged_df[end_date_col], errors='coerce')
             
             # 计算天数差 + 1
             days_diff = (merged_df[end_date_col] - merged_df[start_date_col]).dt.days + 1

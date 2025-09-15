@@ -67,8 +67,12 @@ class WorktimeProcessor:
             else:
                 # 使用任务表中的人员名单
                 if self.df is not None:
-                    self.all_staff = self.df['指派人名称'].unique().tolist()
+                    # 过滤掉空值和无效数据
+                    staff_list = self.df['指派人名称'].dropna().astype(str).str.strip()
+                    staff_list = staff_list[staff_list != '']
+                    self.all_staff = staff_list.unique().tolist()
                     logger.info(f"从任务表加载人员名单，共 {len(self.all_staff)} 人")
+                    logger.info(f"人员列表: {self.all_staff[:10]}{'...' if len(self.all_staff) > 10 else ''}")
                 else:
                     raise ValueError("没有可用的数据源来获取人员名单")
         except Exception as e:
@@ -82,9 +86,29 @@ class WorktimeProcessor:
             if self.df is None:
                 raise ValueError("数据未加载")
             
-            # 日期处理
-            self.df['计划开始日期'] = pd.to_datetime(self.df['计划开始日期']).dt.date
-            self.df['计划结束日期'] = pd.to_datetime(self.df['计划结束日期']).dt.date
+            # 日期处理 - 处理Excel序列号格式
+            # 先检查是否为数字格式（Excel序列号）
+            if pd.api.types.is_numeric_dtype(self.df['计划开始日期']):
+                # Excel序列号转日期：Excel从1900年1月1日开始，但错误地认为1900是闰年
+                self.df['计划开始日期'] = pd.to_datetime(self.df['计划开始日期'], origin='1899-12-30', unit='D')
+            else:
+                self.df['计划开始日期'] = pd.to_datetime(self.df['计划开始日期'], errors='coerce')
+                
+            if pd.api.types.is_numeric_dtype(self.df['计划结束日期']):
+                self.df['计划结束日期'] = pd.to_datetime(self.df['计划结束日期'], origin='1899-12-30', unit='D')
+            else:
+                self.df['计划结束日期'] = pd.to_datetime(self.df['计划结束日期'], errors='coerce')
+            
+            # 过滤掉日期为空的行
+            original_count = len(self.df)
+            self.df = self.df.dropna(subset=['计划开始日期', '计划结束日期'])
+            filtered_count = len(self.df)
+            if original_count != filtered_count:
+                logger.info(f"过滤掉 {original_count - filtered_count} 行日期为空的数据")
+            
+            # 转换为日期格式
+            self.df['计划开始日期'] = self.df['计划开始日期'].dt.date
+            self.df['计划结束日期'] = self.df['计划结束日期'].dt.date
             
             # 生成日期范围
             valid_dates_start = self.df['计划开始日期'].dropna()
@@ -96,8 +120,28 @@ class WorktimeProcessor:
                 start_date = (datetime.now() - pd.Timedelta(days=7)).date()
                 end_date = (datetime.now() + pd.Timedelta(days=7)).date()
             else:
-                start_date = valid_dates_start.min()
-                end_date = valid_dates_end.max()
+                # 限制日期范围在合理范围内（当前日期前后3个月）
+                today = datetime.now().date()
+                min_date = today - pd.Timedelta(days=90)  # 3个月前
+                max_date = today + pd.Timedelta(days=90)  # 3个月后
+                
+                # 过滤异常日期
+                valid_dates_start = valid_dates_start[(valid_dates_start >= min_date) & (valid_dates_start <= max_date)]
+                valid_dates_end = valid_dates_end[(valid_dates_end >= min_date) & (valid_dates_end <= max_date)]
+                
+                if valid_dates_start.empty or valid_dates_end.empty:
+                    logger.warning("过滤后没有有效的日期数据，使用默认日期范围")
+                    start_date = today - pd.Timedelta(days=7)
+                    end_date = today + pd.Timedelta(days=7)
+                else:
+                    start_date = valid_dates_start.min()
+                    end_date = valid_dates_end.max()
+                    
+                # 进一步限制日期范围不超过8周
+                if (end_date - start_date).days > 56:  # 8周 = 56天
+                    logger.warning(f"日期范围过大 ({end_date - start_date} 天)，限制为8周")
+                    start_date = max(start_date, today - pd.Timedelta(days=28))  # 最多4周前
+                    end_date = min(end_date, today + pd.Timedelta(days=28))      # 最多4周后
             
             self.date_range = pd.date_range(start=start_date, end=end_date).date.tolist()
             logger.info(f"日期范围: {start_date} 到 {end_date}")
@@ -203,6 +247,10 @@ class WorktimeProcessor:
             # 设置标题
             if title is None:
                 title = f'部门工作状态与项目分配可视化 (共{len(self.assignees)}人)'
+            else:
+                # 如果用户提供了标题，确保包含人数信息
+                if f'共{len(self.assignees)}人' not in title:
+                    title = f'{title} (共{len(self.assignees)}人)'
             
             # 创建图表
             fig, ax = plt.subplots(figsize=(20, len(self.assignees)*0.8))
@@ -216,21 +264,21 @@ class WorktimeProcessor:
                 for j in range(len(self.date_range)):
                     if self.status_data[i, j] == 1 and self.project_data[i][j]:
                         projects = '\n'.join(self.project_data[i][j])
-                        ax.text(j, i, projects, ha='center', va='center', fontsize=9,
+                        ax.text(j, i, projects, ha='center', va='center', fontsize=13,
                                 color='black', weight='bold',
                                 bbox=dict(facecolor='none', alpha=0, edgecolor='black', boxstyle='round,pad=0.3'))
                     elif self.status_data[i, j] == 0:
                         rect = plt.Rectangle((j-0.5, i-0.5), 1, 1, facecolor='white', edgecolor='none')
                         ax.add_patch(rect)
-                        ax.text(j, i, '未安排', ha='center', va='center', fontsize=8,
-                                color='gray',
+                        ax.text(j, i, '未安排', ha='center', va='center', fontsize=12,
+                                color='gray', weight='bold',
                                 bbox=dict(facecolor='none', alpha=0, edgecolor='none', boxstyle='round,pad=0.2'))
             
             # 设置坐标轴
             ax.set_xticks(np.arange(len(self.date_range)))
-            ax.set_xticklabels([d.strftime('%m-%d') for d in self.date_range], rotation=45)
+            ax.set_xticklabels([d.strftime('%m-%d') for d in self.date_range], rotation=45, fontsize=14, weight='bold')
             ax.set_yticks(np.arange(len(self.assignees)))
-            ax.set_yticklabels(self.assignees)
+            ax.set_yticklabels(self.assignees, fontsize=14, weight='bold')
             
             # 添加网格线
             ax.set_xticks(np.arange(len(self.date_range))-0.5, minor=True)
@@ -238,13 +286,13 @@ class WorktimeProcessor:
             ax.grid(which="minor", color="gray", linestyle='-', linewidth=0.5)
             ax.tick_params(which="minor", size=0)
             
-            plt.title(title, pad=20)
+            plt.title(title, pad=20, fontsize=19, weight='bold')
             
             # 添加颜色图例
             green_patch = mpatches.Patch(color='#90EE90', label='已安排工作')
             white_patch = mpatches.Patch(color='white', edgecolor='gray', label='未安排工作')
             plt.legend(handles=[green_patch, white_patch], loc='lower center', 
-                      bbox_to_anchor=(0.5, -0.05), ncol=2, fontsize=10)
+                      bbox_to_anchor=(0.5, -0.05), ncol=2, fontsize=14, prop={'weight': 'bold'})
             
             plt.tight_layout(rect=[0, 0.05, 1, 0.95])
             

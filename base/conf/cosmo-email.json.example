@@ -1,0 +1,12 @@
+{
+    "email": {
+        "imap_server": "imap.qiye.163.com",
+        "username": "your_email@company.com",
+        "password": "your_password",
+        "port": 993,
+        "folder": "INBOX",
+        "days_ago": 7,
+        "save_dir": "/path/to/save/attachments",
+        "file_extensions": ["pdf", "jpg", "jpeg", "png", "xml", "eml", "doc", "docx", "xlsx", "xls"]
+    }
+}
