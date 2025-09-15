@@ -5,3 +5,15 @@
 /test_email_download.py
 /test_mcp_server.py
 /__pycache__
+
+# 邮箱配置文件（包含敏感信息）
+base/conf/qq-email.json
+base/conf/feishu-email.json
+base/conf/cosmo-email.json
+
+# 日志文件
+*.log
+temp/
+
+# 临时文件
+temp/
