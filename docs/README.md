@@ -1,8 +1,8 @@
-# AdminAssistent - 管理助手工具集
+# AdminAssistent - 行政办公管理助手工具集
 
 ## 📋 项目概述
 
-AdminAssistent 是一个基于 MCP (Model Context Protocol) 的智能管理助手工具集，专为企业和个人用户提供发票识别、邮件处理、文档管理、工时统计和考勤分析等全方位管理功能。
+AdminAssistent 是一个基于 MCP (Model Context Protocol) 的智能行政办公管理助手工具集，专为企业和个人用户提供发票识别、邮件处理、文档管理、工时统计和考勤分析等全方位管理功能。
 
 ## ✨ 核心特性
 
