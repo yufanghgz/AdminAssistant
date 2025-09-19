@@ -1,0 +1,16 @@
+# AdminAssistant 最小依赖包
+# 仅包含项目运行必需的核心依赖
+
+pandas
+numpy
+matplotlib
+openpyxl
+Pillow
+opencv-python
+pdfplumber
+reportlab
+easyocr
+imaplib2
+beautifulsoup4
+requests
+mcp
