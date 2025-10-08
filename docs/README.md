@@ -1,17 +1,16 @@
-# AdminAssistant - 行政办公管理助手工具集
+# AdminAssistant - 行政办公智能体
 
 ## 📋 项目概述
 
-AdminAssistant 是一个基于 MCP (Model Context Protocol) 的智能行政办公管理助手工具集，专为企业和个人用户提供发票识别、邮件处理、文档管理、工时统计和考勤分析等全方位管理功能。
+AdminAssistant 是一个基于 MCP (Model Context Protocol) 的智能行政办公智能体工具集，专为中小企业和个人用户提供通过自然语言操作发票识别、邮件处理、PDF文件处理、 工时统计和考勤分析等全方位管理功能。适合公司行政人员在提交公司 OA 或 ERP 系统之前要进行的一系列信息处理工作。
 
 ## ✨ 核心特性
 
-- 🧾 **智能发票识别** - 支持OCR识别和批量处理
-- 📧 **邮件自动化** - 智能下载和阅读邮件附件
-- 📊 **工时管理** - 可视化工时统计和报表生成
-- 👥 **考勤分析** - 员工考勤数据处理和报告
-- 📄 **文档处理** - PDF转图片、图片合并等
-- 🔧 **MCP集成** - 标准MCP协议，支持多种客户端
+- 🧾 **智能发票识别** 与统计 - 支持单张发票OCR识别和批量识别处理并生成一个汇总EXCEL 表，便于核对；
+- 📊 **工时管理** - 针对小规模团队，进行可视化工时统计和报表生成；
+- 👥 **考勤分析** - 员工考勤数据处理和报告；
+- 📄 **文档处理** - PDF转图片、图片合并PDF功能，适合处理PDF 合并的场景；
+- 🔧 **MCP集成** - 标准MCP协议，支持多种客户端（Cursor，TRAE，Cheery)
 
 ## 🛠️ 功能模块
 
@@ -80,83 +79,48 @@ AdminAssistent/
 
 ## 🚀 快速开始
 
-### 1. 环境要求
+### 1. 安装TRAE，按提示注册 TRAE 账号
 
-- Python 3.7+
-- 依赖包：pandas, matplotlib, openpyxl, Pillow, reportlab, easyocr, imaplib2
+https://www.trae.cn/
 
-### 2. 安装依赖
+### 2. 通过自然语言安装 Python3.13
 
-```bash
-pip install pandas matplotlib openpyxl Pillow reportlab easyocr imaplib2
-```
+在TRAE 中使用以下自然语言安装 Python3.12（Windows):
+	使用 winget命令安装 Python 3.13，（如果有提示是否运行，请运行命令。中间在终端窗口中回答 Y，以确认安装。
+      使用 winget 命令安装git。（如果有提示是否运行，请运行命令。中间在终端窗口中回答 Y，以确认安装。）
 
-### 3. 配置邮箱
+    用 git克隆https://github.com/yufanghgz/AdminAssistant.git 到当前目录下 （如果网络不好，可以通过 TRAE 多次重试)
 
-复制示例配置文件并编辑 `base/conf/` 目录下的邮箱配置文件：
+   通过 requirement.txt安装所有依赖   (时间会比较长)
 
-```bash
-# 复制示例配置文件
-cp base/conf/qq-email.json.example base/conf/qq-email.json
-cp base/conf/feishu-email.json.example base/conf/feishu-email.json
-cp base/conf/cosmo-email.json.example base/conf/cosmo-email.json
-```
+### 3. 配置TARE 中的 MCP Server
 
-然后编辑相应的配置文件：
+{
 
-- `qq-email.json` - QQ邮箱配置
-- `feishu-email.json` - 飞书邮箱配置
-- `cosmo-email.json` - 企业邮箱配置
+"mcpServers": {
 
-**注意**: 这些配置文件包含敏感信息，不会被提交到Git仓库中。
+"行政助手": {
 
-### 4. 启动服务
+"command": "python",
 
-#### 方式一：直接启动
+"args": [
 
-```bash
-python mcp_administrative_service.py
-```
+"{文件路径}/mcp_administrative_service.py"
 
-#### 方式二：在Cursor中配置MCP服务器
+    ],
 
-1. **打开Cursor设置**
+"disabled": false
 
-   - 按 `Cmd+,` (Mac) 或 `Ctrl+,` (Windows/Linux) 打开设置
-   - 搜索 "MCP" 或 "Model Context Protocol"
-2. **添加MCP服务器配置**
-   在Cursor的MCP配置中添加以下配置(具体目录根据实际情况而定)：
+    }
 
-   ```json
-   {
-     "mcpServers": {
-       "admin-assistent": {
-         "command": "python",
-         "args": ["/Volumes/SD_1.5T/github/AdminAssistent/mcp_administrative_service.py"],
-         "env": {
-           "PYTHONPATH": "/Volumes/SD_1.5T/github/AdminAssistent"
-         }
-       }
-     }
-   }
-   ```
-3. **配置说明**
+  }
 
-   - `command`: 使用Python解释器
-   - `args`: 指向MCP服务文件的完整路径
-   - `env`: 设置Python路径环境变量
-   - 请根据实际安装路径调整路径
-4. **重启Cursor**
+}
 
-   - 保存配置后重启Cursor
-   - MCP服务器将自动启动并连接
-5. **验证连接**
+### 4. 在 TRAE 中启动服务
 
-   - 在Cursor中打开AI聊天面板
-   - 查看是否显示可用的MCP工具
-   - 工具列表应包含：发票识别、邮件下载、文档处理等
 
-## 📖 使用指南
+## 📖 使用指
 
 ### 在Cursor中使用MCP工具
 

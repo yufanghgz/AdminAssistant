@@ -17,13 +17,14 @@ from base.email_attachment_downloader import EmailAttachmentDownloader
 from base.image_to_pdf import images_to_pdf
 from base.worktime.excel_merger import read_and_merge_files, get_excel_files_from_dir
 from base.worktime.worktime_processor import process_worktime_file
+from base.attendance_processor import AttendanceProcessor
 
 # 设置默认编码为UTF-8
 sys.stdout.reconfigure(encoding='utf-8')
 sys.stderr.reconfigure(encoding='utf-8')
 
 # 创建 Server 实例
-server = Server("invoice-ocr-server")
+server = Server("administrative-server")
 
 # 初始化发票识别器、邮件下载器和添加PDF转图像所需的导入
 from base.batch_pdf_to_image import pdf_to_images
@@ -295,6 +296,20 @@ async def list_tools() -> List[Tool]:
                     }
                 },
                 "required": ["imap_server", "username", "password"]
+            }
+        ),
+        Tool(
+            name="process_attendance",
+            description="考勤处理工具：自动化处理考勤表数据，包括复制文件、更新字段、处理请假记录、添加入职离职人员等",
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "work_dir": {
+                        "type": "string",
+                        "description": "包含考勤相关Excel文件的工作目录路径"
+                    }
+                },
+                "required": ["work_dir"]
             }
         )
     ]
@@ -776,6 +791,93 @@ async def call_tool(name: str, arguments: dict) -> List[TextContent]:
         finally:
             # 确保断开连接
             email_reader.disconnect()
+
+    elif name == "process_attendance":
+        work_dir = arguments.get("work_dir")
+        
+        if not work_dir or not os.path.exists(work_dir):
+            return [TextContent(
+                type="text",
+                text=f"工作目录不存在: {work_dir}"
+            )]
+        
+        try:
+            # 创建考勤处理器实例
+            processor = AttendanceProcessor(work_dir)
+            
+            # 执行考勤处理流程
+            result_text = "📊 考勤处理开始...\n\n"
+            
+            # 1. 复制文件
+            processor.copy_attendance_file()
+            result_text += "✅ 1. 复制上月考勤表为当月考勤表\n"
+            
+            # 2. 修改应出勤天数字段为22天
+            processor.update_attendance_days()
+            result_text += "✅ 2. 修改应出勤天数字段为22天\n"
+            
+            # 3. 去掉人员字段前的@符号
+            processor.remove_at_symbols()
+            result_text += "✅ 3. 去掉人员字段前的@符号\n"
+            
+            # 4. 重置各种假期字段为0
+            processor.reset_leave_fields()
+            result_text += "✅ 4. 重置各种假期字段为0\n"
+            
+            # 5. 删除备注字段里包含"离职"的人员记录
+            processor.remove_departure_records()
+            result_text += "✅ 5. 删除离职人员记录\n"
+            
+            # 6. 处理当月请假记录
+            processor.process_leave_records()
+            result_text += "✅ 6. 处理当月请假记录\n"
+            
+            # 7. 更新实际出勤天数字段
+            processor.update_actual_attendance()
+            result_text += "✅ 7. 更新实际出勤天数字段\n"
+            
+            # 8. 更新实际发工资天数字段
+            processor.update_actual_salary_days()
+            result_text += "✅ 8. 更新实际发工资天数字段\n"
+            
+            # 9. 清除备注、银行账号字段中的信息
+            processor.clear_remarks_and_bank()
+            result_text += "✅ 9. 清除备注、银行账号字段信息\n"
+            
+            # 10. 处理病假信息，添加待核查病假条备注
+            processor.add_sick_leave_verification()
+            result_text += "✅ 10. 处理病假信息\n"
+            
+            # 11. 处理离职人员信息
+            processor.process_departure_info()
+            result_text += "✅ 11. 处理离职人员信息\n"
+            
+            # 12. 添加入职人员信息
+            processor.add_new_employees()
+            result_text += "✅ 12. 添加入职人员信息\n"
+            
+            # 13. 修改月份字段为当月字段
+            processor.update_month_field()
+            result_text += "✅ 13. 修改月份字段为当月字段\n"
+            
+            result_text += "\n🎉 考勤处理完成！所有数据处理步骤已成功执行。"
+            result_text += f"\n📁 处理结果保存在: {work_dir}/当月考勤表.xlsx"
+            
+            # 安全地获取日志文件路径
+            try:
+                if processor.logger.handlers and len(processor.logger.handlers) > 0:
+                    log_file = processor.logger.handlers[0].baseFilename
+                    result_text += f"\n📋 详细日志保存在: {log_file}"
+            except:
+                result_text += "\n📋 详细日志已记录到系统日志"
+            
+            return [TextContent(type="text", text=result_text)]
+            
+        except Exception as e:
+            return [TextContent(
+                type="text",
+                text=f"考勤处理失败: {str(e)}"
+            )]
 
     return [TextContent(type="text", text=f"未知的工具: {name}")]
 

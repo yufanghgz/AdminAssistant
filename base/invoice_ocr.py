@@ -8,17 +8,49 @@ import numpy as np
 import easyocr
 import datetime
 import shutil
+import logging
+import pandas as pd
+import os
 
 # 设置默认编码为UTF-8
 sys.stdout.reconfigure(encoding='utf-8')
 sys.stderr.reconfigure(encoding='utf-8')
 
+# 设置日志记录器，避免调试信息输出到标准输出
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
+
+# 创建用户logs目录
+user_home = os.path.expanduser("~")
+logs_dir = os.path.join(user_home, "logs")
+os.makedirs(logs_dir, exist_ok=True)
+
+# 创建文件处理器，将日志写入用户logs目录
+if not logger.handlers:
+    log_file = os.path.join(logs_dir, 'invoice_ocr.log')
+    handler = logging.FileHandler(log_file, encoding='utf-8')
+    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    handler.setFormatter(formatter)
+    logger.addHandler(handler)
+
 class InvoiceRecognizer:
     def __init__(self):
-        # 初始化EasyOCR读取器
-        self.reader = easyocr.Reader(['ch_sim', 'en'])  # 中文简体和英文
+        # 延迟初始化EasyOCR读取器，避免启动时卡住
+        self.reader = None
         # 确保文件路径使用UTF-8编码
         self.file_path_encoding = 'utf-8'
+    
+    def _get_reader(self):
+        """延迟初始化EasyOCR读取器"""
+        if self.reader is None:
+            try:
+                logger.info("正在初始化EasyOCR读取器...")
+                self.reader = easyocr.Reader(['ch_sim', 'en'], gpu=False)  # 禁用GPU加速，避免兼容性问题
+                logger.info("EasyOCR读取器初始化完成")
+            except Exception as e:
+                logger.error(f"EasyOCR初始化失败: {str(e)}")
+                raise e
+        return self.reader
 
     def extract_text_from_pdf(self, pdf_path):
         """
@@ -46,17 +78,44 @@ class InvoiceRecognizer:
         :param image_path: 图片文件路径
         :return: 提取的文本
         """
+        import signal
+        import time
+        
+        def timeout_handler(signum, frame):
+            raise TimeoutError("OCR处理超时")
+        
         try:
             # 确保文件路径使用UTF-8编码
             image_path = str(image_path)
+            logger.info(f"开始处理图片: {image_path}")
+            
+            # 设置超时机制（60秒）
+            signal.signal(signal.SIGALRM, timeout_handler)
+            signal.alarm(60)
+            
+            # 获取EasyOCR读取器
+            reader = self._get_reader()
+            
             # 使用EasyOCR识别文本
-            result = self.reader.readtext(image_path)
+            result = reader.readtext(image_path)
+            
+            # 取消超时
+            signal.alarm(0)
+            
             # 合并识别结果
             text = ' '.join([item[1] for item in result])
+            logger.info(f"图片处理完成，识别到 {len(result)} 个文本块")
             return text
-        except Exception as e:
-            print(f"从图片提取文本时出错: {str(e)}")
+            
+        except TimeoutError:
+            logger.error(f"图片OCR处理超时: {image_path}")
             return ''
+        except Exception as e:
+            logger.error(f"从图片提取文本时出错: {str(e)}")
+            return ''
+        finally:
+            # 确保取消超时
+            signal.alarm(0)
 
     def recognize_invoice(self, file_path):
         """
@@ -267,18 +326,21 @@ class InvoiceRecognizer:
 
         # 确保目录路径使用UTF-8编码
         input_dir = str(input_dir)
-        print(f"处理目录: {input_dir}")
+        logger.info(f"处理目录: {input_dir}")
+        logger.info(f"开始处理目录: {input_dir}")
         
         # 检查输入目录是否存在
         if not os.path.exists(input_dir):
-            print(f"错误: 目录 '{input_dir}' 不存在。")
+            error_msg = f"错误: 目录 '{input_dir}' 不存在。"
+            logger.error(error_msg)
+            logger.error(error_msg)
             return results
 
         # 创建以当前时间命名的文件夹
         current_time = datetime.datetime.now().strftime('%Y%m%d_%H%M%S')
         output_dir = os.path.join(input_dir, current_time)
         os.makedirs(output_dir, exist_ok=True)
-        print(f"已创建输出目录: {output_dir}")
+        logger.info(f"已创建输出目录: {output_dir}")
 
         # 获取目录中的所有文件（确保正确处理中文文件名）
         try:
@@ -286,23 +348,45 @@ class InvoiceRecognizer:
             with os.scandir(input_dir) as entries:
                 files = [entry.name for entry in entries if entry.is_file()]
         except Exception as e:
-            print(f"获取目录文件时出错: {str(e)}")
+            logger.error(f"获取目录文件时出错: {str(e)}")
             # 回退到listdir
             files = os.listdir(input_dir)
 
-        print(f"找到 {len(files)} 个文件")
+        logger.info(f"找到 {len(files)} 个文件")
 
+        processed_count = 0
+        total_files = len([f for f in files if os.path.splitext(f.lower())[1] in ['.pdf', '.jpg', '.jpeg', '.png', '.bmp']])
+        
         for file in files:
             file_path = os.path.join(input_dir, file)
             # 只处理PDF和图片文件
             ext = os.path.splitext(file.lower())[1]
             if ext in ['.pdf', '.jpg', '.jpeg', '.png', '.bmp']:
-                print(f"识别发票: {file}")
-                result = self.recognize_invoice(file_path)
-                results.append(result)
+                processed_count += 1
+                logger.info(f"识别发票 ({processed_count}/{total_files}): {file}")
+                # 使用logger而不是print，避免MCP客户端JSON解析错误
+                logger.info(f"Processing ({processed_count}/{total_files}): {file}")
+                
+                result = None
+                try:
+                    result = self.recognize_invoice(file_path)
+                    results.append(result)
+                    logger.info(f"发票识别完成: {file}")
+                except Exception as e:
+                    logger.error(f"识别发票失败 {file}: {str(e)}")
+                    # 添加失败的结果
+                    result = {
+                        'file_path': file_path,
+                        'date': '',
+                        'amount': '',
+                        'all_amounts': [],
+                        'content': '',
+                        'error': str(e)
+                    }
+                    results.append(result)
                 
                 # 连接识别信息作为新文件名
-                if result and 'date' in result and 'amount' in result and 'content' in result:
+                if result and 'date' in result and 'amount' in result and 'content' in result and 'error' not in result:
                     # 构建新文件名，去掉特殊字符
                     date_str = result['date'].replace('/', '').replace('年', '').replace('月', '').replace('日', '')
                     amount_str = str(result['amount']).replace(',', '')
@@ -318,24 +402,44 @@ class InvoiceRecognizer:
                     # 复制文件到新目录并重命名
                     new_file_path = os.path.join(output_dir, valid_filename)
                     try:
-                        print(f"准备复制文件: {file_path} -> {new_file_path}")
+                        logger.info(f"准备复制文件: {file_path} -> {new_file_path}")
                         shutil.copy2(file_path, new_file_path)
-                        print(f"已复制并重命名文件: {new_file_path}")
+                        logger.info(f"已复制并重命名文件: {new_file_path}")
                     except Exception as e:
-                        print(f"复制文件时出错: {str(e)}")
+                        logger.error(f"复制文件时出错: {str(e)}")
                         # 尝试使用shutil.copy作为备选
                         try:
-                            print(f"尝试使用备用方法复制文件...")
+                            logger.info(f"尝试使用备用方法复制文件...")
                             shutil.copy(file_path, new_file_path)
-                            print(f"已使用备用方法复制文件: {new_file_path}")
+                            logger.info(f"已使用备用方法复制文件: {new_file_path}")
                         except Exception as e2:
-                            print(f"备用方法也失败: {str(e2)}")
+                            logger.error(f"备用方法也失败: {str(e2)}")
                 else:
-                    print(f"发票识别结果不完整，跳过文件复制: {file}")
+                    logger.warning(f"发票识别结果不完整，跳过文件复制: {file}")
             else:
-                print(f"跳过非支持文件类型: {file}")
+                logger.info(f"跳过非支持文件类型: {file}")
 
-        print(f"批量处理完成，共识别 {len(results)} 张发票")
+        success_count = len([r for r in results if 'error' not in r])
+        error_count = len([r for r in results if 'error' in r])
+        
+        completion_msg = f"批量处理完成！共处理 {len(results)} 张发票，成功 {success_count} 张，失败 {error_count} 张"
+        logger.info(completion_msg)
+        logger.info(completion_msg)
+        
+        if error_count > 0:
+            logger.warning("失败的文件已记录在日志中，请查看 ~/logs/invoice_ocr.log")
+        
+        # 生成Excel统计表
+        try:
+            excel_file_path = self.generate_excel_report(results, output_dir)
+            if excel_file_path:
+                logger.info(f"发票统计Excel表已生成: {excel_file_path}")
+                print(f"发票统计Excel表已生成: {excel_file_path}")
+            else:
+                logger.warning("无法生成发票统计Excel表")
+        except Exception as e:
+            logger.error(f"生成Excel表时发生异常: {str(e)}")
+        
         return results
 
     def get_max_amount_invoice(self, invoice_results):
@@ -402,13 +506,116 @@ class InvoiceRecognizer:
             except Exception as e:
                 print(f"复制文件时出错: {str(e)}")
 
+    def generate_excel_report(self, invoice_results, output_dir=None):
+        """
+        生成Excel统计表，记录每张发票的相关信息并统计总金额
+        :param invoice_results: 发票识别结果列表
+        :param output_dir: 输出目录路径，如果为None则使用当前时间文件夹
+        :return: 生成的Excel文件路径
+        """
+        if not invoice_results:
+            logger.warning("没有发票识别结果，无法生成Excel报表")
+            return None
+            
+        # 准备数据
+        data = []
+        total_amount = 0.0
+        
+        for i, result in enumerate(invoice_results, 1):
+            # 跳过处理失败的发票
+            if 'error' in result:
+                continue
+                
+            # 提取发票信息
+            invoice_id = f"发票{i}"
+            date = result.get('date', '')
+            amount = result.get('amount', '')
+            content = result.get('content', '')
+            file_path = result.get('file_path', '')
+            file_name = os.path.basename(file_path)
+            
+            # 添加到数据列表
+            data.append({
+                '发票号码': invoice_id,
+                '日期': date,
+                '内容': content,
+                '金额': amount,
+                '文件名': file_name,
+                '文件路径': file_path
+            })
+            
+            # 累加总金额
+            try:
+                if amount:
+                    total_amount += float(amount.replace(',', ''))
+            except ValueError:
+                logger.warning(f"无法将金额 '{amount}' 转换为数字")
+                
+        # 如果没有成功识别的发票，返回None
+        if not data:
+            logger.warning("没有成功识别的发票，无法生成Excel报表")
+            return None
+            
+        # 创建DataFrame
+        df = pd.DataFrame(data)
+        
+        # 添加总计行
+        total_row = pd.DataFrame({
+            '发票号码': ['总计'],
+            '日期': [''],
+            '内容': [''],
+            '金额': [f"{total_amount:.2f}"],
+            '文件名': [''],
+            '文件路径': ['']
+        })
+        df = pd.concat([df, total_row], ignore_index=True)
+        
+        # 确定输出目录
+        if output_dir is None:
+            # 使用当前时间创建文件夹
+            current_time = datetime.datetime.now().strftime('%Y%m%d_%H%M%S')
+            # 获取第一个发票的目录作为基础目录
+            base_dir = os.path.dirname(invoice_results[0]['file_path'])
+            output_dir = os.path.join(base_dir, current_time)
+            os.makedirs(output_dir, exist_ok=True)
+        
+        # 创建Excel文件路径
+        excel_file_name = f"发票统计_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.xlsx"
+        excel_file_path = os.path.join(output_dir, excel_file_name)
+        
+        try:
+            # 将DataFrame写入Excel文件
+            with pd.ExcelWriter(excel_file_path, engine='openpyxl') as writer:
+                df.to_excel(writer, index=False, sheet_name='发票统计')
+                
+                # 格式化工作表
+                worksheet = writer.sheets['发票统计']
+                
+                # 设置列宽
+                worksheet.column_dimensions['A'].width = 10  # 发票ID
+                worksheet.column_dimensions['B'].width = 20  # 日期
+                worksheet.column_dimensions['C'].width = 30  # 内容
+                worksheet.column_dimensions['D'].width = 15  # 金额
+                worksheet.column_dimensions['E'].width = 30  # 文件名
+                worksheet.column_dimensions['F'].width = 50  # 文件路径
+                
+                # 高亮总计行
+                for cell in worksheet[f'{worksheet.dimensions.split(":")[0].split("1")[0]}{len(df)}']:
+                    cell.font = cell.font.copy(bold=True)
+                
+            logger.info(f"已生成Excel统计表: {excel_file_path}")
+            return excel_file_path
+        except Exception as e:
+            logger.error(f"生成Excel统计表时出错: {str(e)}")
+            return None
+
 
 
 def main():
     # 示例用法
     recognizer = InvoiceRecognizer()
 
-    # 批量识别
+    # 批量识别（注意：实际使用时请修改为您的发票目录路径）
     input_dir = r'd:\PyProject\NounParse\yufang发票'
     results = recognizer.batch_recognize_invoices(input_dir)
 
@@ -429,6 +636,9 @@ def main():
 
     # 复制并重命名发票到目标文件夹
     recognizer.copy_and_rename_invoices(results, target_folder)
+    
+    # 注意：由于batch_recognize_invoices方法已经自动调用generate_excel_report生成Excel表，
+    # 所以这里不需要再次调用。Excel表会保存在与发票重命名后的文件相同的时间戳文件夹中。
 
 if __name__ == '__main__':
     main()
