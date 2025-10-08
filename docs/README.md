@@ -81,7 +81,7 @@ AdminAssistent/
 
 ## 🚀 快速开始
 
-### 1. 通过 TRAE 使用，安装TRAE，按提示注册 TRAE 账号，后续会推出独立的
+### 1. 通过 TRAE 使用，安装TRAE，按提示注册 TRAE 账号，后续会推出独立的客户端软件
 
 https://www.trae.cn/
 
