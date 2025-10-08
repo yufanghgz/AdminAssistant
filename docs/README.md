@@ -81,17 +81,16 @@ AdminAssistent/
 
 ## 🚀 快速开始
 
-### 1. 安装TRAE，按提示注册 TRAE 账号
+### 1. 通过 TRAE 使用，安装TRAE，按提示注册 TRAE 账号，后续会推出独立的
 
 https://www.trae.cn/
 
-### 2. 通过自然语言安装 Python3.13
+### 2. 在 TRAE中通过自然语言安装 Python3.13，git和相关依赖
 
 在TRAE 中使用以下自然语言安装 Python3.12（Windows):
-	"使用 winget命令安装 Python 3.13"（如果有提示是否运行，请运行命令。中间在终端窗口中回答 Y，以确认安装。
-      "使用 winget 命令安装git" （如果有提示是否运行，请运行命令。中间在终端窗口中回答 Y，以确认安装。）"用 git克隆https://github.com/yufanghgz/AdminAssistant.git 到当前目录下" （如果网络不好，可以通过 TRAE 多次重试)  "通过 requirement.txt安装所有依赖"   (时间会比较长，如果出错，需要重复执行)
+"使用 winget命令安装 Python 3.13"（如果有提示是否运行，请运行命令。中间在终端窗口中回答 Y，以确认安装。"使用 winget 命令安装git" （如果有提示是否运行，请运行命令。中间在终端窗口中回答 Y，以确认安装。）"用 git克隆https://github.com/yufanghgz/AdminAssistant.git 到当前目录下" （如果网络不好，可以通过 TRAE 多次重试)  "通过 requirement.txt安装所有依赖"   (时间会比较长，如果出错，需要重复执行)
 
-### 3. 配置TARE 中的 MCP Server
+### 3. 配置TRAE 中的 MCP Server
 
 {
 
@@ -142,7 +141,7 @@ https://www.trae.cn/
 
 ### 典型工作流程
 
-#### 1. 项目管理流程
+#### 1. 工时统计和可视化展示流程（工时文件加微信获取，可根据需求定制)
 
 ```
 数据准备 → Excel合并 → 工时处理 → 报表生成 → 结果查看
@@ -154,7 +153,7 @@ https://www.trae.cn/
 配置邮箱 → 下载附件 → 文档处理 → 发票识别 → 结果整理
 ```
 
-#### 3. 考勤管理流程
+#### 3. 考勤管理流程（数据文件格式加微信获取，可根据需求定制)
 
 ```
 数据导入 → 数据处理 → 信息补充 → 报告生成 → 结果分析
