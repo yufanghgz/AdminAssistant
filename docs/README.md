@@ -30,7 +30,7 @@ AdminAssistant 是一个基于 MCP (Model Context Protocol) 的智能行政办�
 ### 📧 邮件处理类
 
 - **邮件附件下载** - 下载指定日期范围内的邮件附件，支持按日期、天数、文件类型筛选
-- **邮件内容阅读** - 读取邮件内容，支持多种筛选条件和日期范围
+- **邮件内容阅读** - 读取邮件内容，并进行总结
 
 ### 🖼️ 图片处理类
 
@@ -43,41 +43,6 @@ AdminAssistant 是一个基于 MCP (Model Context Protocol) 的智能行政办�
 - **考勤报告生成** - 生成考勤统计报告
 - **员工信息管理** - 添加和管理员工信息
 - **离职数据处理** - 处理离职员工相关数据
-
-## 📁 项目结构
-
-```
-AdminAssistent/
-├── base/                          # 核心功能模块
-│   ├── conf/                      # 配置文件
-│   │   ├── qq-email.json         # QQ邮箱配置
-│   │   ├── feishu-email.json     # 飞书邮箱配置
-│   │   └── cosmo-email.json      # 企业邮箱配置
-│   ├── worktime/                  # 工时处理模块
-│   │   ├── attendance/           # 考勤管理
-│   │   │   ├── add_departure_info.py
-│   │   │   ├── attendance_analyzer.py
-│   │   │   ├── attendance_processor.py
-│   │   │   ├── attendance_report_generator.py
-│   │   │   └── attendance_visualizer.py
-│   │   ├── excel_merger.py       # Excel合并功能
-│   │   ├── process.py            # 工时处理主程序
-│   │   └── worktime_processor.py # 工时处理器
-│   ├── batch_pdf_to_image.py     # PDF转图片工具
-│   ├── email_attachment_downloader.py # 邮件下载工具
-│   ├── image_to_pdf.py           # 图片合并PDF工具
-│   └── invoice_ocr.py            # 发票识别工具
-├── docs/                          # 文档目录
-│   ├── INDEX.md                  # 文档索引
-│   ├── README.md                 # 项目说明
-│   ├── Excel合并MCP工具使用说明.md
-│   ├── 工时处理MCP工具使用说明.md
-│   ├── 工时安排报表生成工具使用说明.md
-│   └── 邮件阅读工具使用说明.md
-├── temp/                          # 临时文件目录
-├── mcp_administrative_service.py  # MCP服务主文件
-└── email_attachment_downloader.log # 邮件下载日志
-```
 
 ## 🚀 快速开始
 
