@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-发票OCR和邮件下载 MCP 服务器示例
+行政办公工具集MCP服务器
 """
 import asyncio
 import json
@@ -18,6 +18,7 @@ from base.image_to_pdf import images_to_pdf
 from base.worktime.excel_merger import read_and_merge_files, get_excel_files_from_dir
 from base.worktime.worktime_processor import process_worktime_file
 from base.attendance_processor import AttendanceProcessor
+from base.app_launcher.open_app_tool import initialize_apps, list_apps, search_app, open_app, reload_apps
 
 # 设置默认编码为UTF-8
 sys.stdout.reconfigure(encoding='utf-8')
@@ -310,6 +311,58 @@ async def list_tools() -> List[Tool]:
                     }
                 },
                 "required": ["work_dir"]
+            }
+        ),
+        Tool(
+            name="initialize_apps",
+            description="初始化本地应用智能打开工具，扫描并加载已安装应用",
+            inputSchema={
+                "type": "object",
+                "properties": {}
+            }
+        ),
+        Tool(
+            name="list_apps",
+            description="返回已检测到的所有应用信息",
+            inputSchema={
+                "type": "object",
+                "properties": {}
+            }
+        ),
+        Tool(
+            name="search_app",
+            description="根据自然语言查找目标应用",
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "query": {
+                        "type": "string",
+                        "description": "自然语言查询，如'打开浏览器'、'启动Word'"
+                    }
+                },
+                "required": ["query"]
+            }
+        ),
+        Tool(
+            name="open_app",
+            description="执行打开目标应用",
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "app_name": {
+                        "type": "string",
+                        "description": "应用名称或关键词"
+                    }
+                },
+                "required": ["app_name"]
+            }
+        ),
+        Tool(
+            name="reload_apps",
+            description="手动刷新扫描结果，重新生成应用索引表",
+            inputSchema={
+                "type": "object",
+                "properties": {}
             }
         )
     ]
@@ -878,11 +931,120 @@ async def call_tool(name: str, arguments: dict) -> List[TextContent]:
                 type="text",
                 text=f"考勤处理失败: {str(e)}"
             )]
+    elif name == "initialize_apps":
+        try:
+            # 初始化应用列表
+            result = initialize_apps()
+            return [TextContent(
+                type="text",
+                text=f"应用初始化结果: {result}"
+            )]
+        except Exception as e:
+            return [TextContent(
+                type="text",
+                text=f"应用初始化失败: {str(e)}"
+            )]
+    elif name == "list_apps":
+        try:
+            # 获取应用列表
+            apps = list_apps()
+            # 格式化应用列表为易读文本
+            if isinstance(apps, list):
+                text_result = "已检测到的应用列表:\n\n"
+                for i, app in enumerate(apps, 1):
+                    if isinstance(app, dict):
+                        app_name = app.get('name', '未知应用')
+                        app_path = app.get('path', '未知路径')
+                        text_result += f"{i}. {app_name} - {app_path}\n"
+                    else:
+                        text_result += f"{i}. {app}\n"
+                return [TextContent(type="text", text=text_result)]
+            else:
+                return [TextContent(
+                    type="text",
+                    text=f"获取应用列表成功: {apps}"
+                )]
+        except Exception as e:
+            return [TextContent(
+                type="text",
+                text=f"获取应用列表失败: {str(e)}"
+            )]
+    elif name == "search_app":
+        try:
+            query = arguments.get("query")
+            if not query:
+                return [TextContent(
+                    type="text",
+                    text="请提供查询关键词"
+                )]
+            # 搜索应用
+            results = search_app(query)
+            # 格式化搜索结果
+            if isinstance(results, list) and results:
+                text_result = f"搜索 '{query}' 的结果:\n\n"
+                for i, app in enumerate(results, 1):
+                    if isinstance(app, dict):
+                        app_name = app.get('name', '未知应用')
+                        confidence = app.get('confidence', 0)
+                        text_result += f"{i}. {app_name} (相似度: {confidence:.2f})\n"
+                    else:
+                        text_result += f"{i}. {app}\n"
+                return [TextContent(type="text", text=text_result)]
+            else:
+                return [TextContent(
+                    type="text",
+                    text=f"未找到匹配 '{query}' 的应用"
+                )]
+        except Exception as e:
+            return [TextContent(
+                type="text",
+                text=f"搜索应用失败: {str(e)}"
+            )]
+    elif name == "open_app":
+        try:
+            app_name = arguments.get("app_name")
+            if not app_name:
+                return [TextContent(
+                    type="text",
+                    text="请提供要打开的应用名称"
+                )]
+            # 打开应用
+            result = open_app(app_name)
+            return [TextContent(
+                type="text",
+                text=f"应用打开结果: {result}"
+            )]
+        except Exception as e:
+            return [TextContent(
+                type="text",
+                text=f"打开应用失败: {str(e)}"
+            )]
+    elif name == "reload_apps":
+        try:
+            # 重新加载应用列表
+            result = reload_apps()
+            return [TextContent(
+                type="text",
+                text=f"应用重新加载结果: {result}"
+            )]
+        except Exception as e:
+            return [TextContent(
+                type="text",
+                text=f"应用重新加载失败: {str(e)}"
+            )]
 
     return [TextContent(type="text", text=f"未知的工具: {name}")]
 
 async def main():
     """主函数"""
+    # 初始化本地应用智能打开工具
+    try:
+        print("正在初始化本地应用智能打开工具...")
+        init_result = initialize_apps()
+        print(f"本地应用初始化结果: {init_result}")
+    except Exception as e:
+        print(f"本地应用初始化失败: {str(e)}")
+        
     # 使用 stdio 传输层创建服务器
     async with stdio_server() as (read_stream, write_stream):
         # 运行服务器

@@ -41,3 +41,11 @@ base/worktime/__pycache__/excel_merger.cpython-313.pyc
 base/worktime/__pycache__/worktime_processor.cpython-310.pyc
 base/worktime/__pycache__/worktime_processor.cpython-312.pyc
 base/worktime/__pycache__/worktime_processor.cpython-313.pyc
+base/conf/cosmo-email.json.example
+base/conf/cosmo-email.json.example
+base/conf/cosmo-email.json.example
+base/conf/feishu-email.json.example
+base/conf/qq-email.json.example
+base/conf/cosmo-email.json.example
+base/conf/feishu-email.json.example
+base/conf/qq-email.json.example
