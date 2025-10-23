@@ -50,3 +50,6 @@ base/app_launcher/__pycache__/open_app_tool.cpython-312.pyc
 sample/email/conf/cosmo-email.json
 sample/email/conf/feishu-email.json
 sample/email/conf/qq-email.json
+sample/email/cosmo-email.json
+sample/email/feishu-email.json
+sample/email/qq-email.json
