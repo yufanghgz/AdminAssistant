@@ -1,0 +1,183 @@
+[
+  {
+    "id": "9e309395-6efc-41b7-8965-cd91c8f657cf",
+    "title": "给余芳转账",
+    "description": "完成给余芳的转账操作",
+    "status": "done",
+    "start_time": null,
+    "end_time": null,
+    "is_recurring": false,
+    "recurrence_rule": null,
+    "tags": [
+      "财务",
+      "转账"
+    ],
+    "created_at": "2025-10-13T22:20:36.299471",
+    "updated_at": "2025-10-13T22:25:25.671495"
+  },
+  {
+    "id": "0041fbb2-167b-416d-b5fc-2b17dc0f34d3",
+    "title": "每月25号报销",
+    "description": "进行月度报销操作",
+    "status": "pending",
+    "start_time": null,
+    "end_time": null,
+    "is_recurring": true,
+    "recurrence_rule": "monthly",
+    "tags": [
+      "财务",
+      "报销",
+      "定期"
+    ],
+    "created_at": "2025-10-13T22:21:54.941708",
+    "updated_at": "2025-10-13T22:21:54.941722"
+  },
+  {
+    "id": "1892543c-88ec-4e4e-b07d-f0352dd7218b",
+    "title": "每月29号进行生日会",
+    "description": "组织月度生日会活动",
+    "status": "pending",
+    "start_time": null,
+    "end_time": null,
+    "is_recurring": true,
+    "recurrence_rule": "monthly",
+    "tags": [
+      "活动",
+      "生日会",
+      "定期"
+    ],
+    "created_at": "2025-10-13T22:26:49.679299",
+    "updated_at": "2025-10-13T22:26:49.679311"
+  },
+  {
+    "id": "77605e52-d974-40c2-8e96-ede48c49ec48",
+    "title": "每月28号进行考勤处理",
+    "description": "处理月度考勤数据",
+    "status": "pending",
+    "start_time": null,
+    "end_time": null,
+    "is_recurring": true,
+    "recurrence_rule": "monthly",
+    "tags": [
+      "考勤",
+      "定期",
+      "行政"
+    ],
+    "created_at": "2025-10-13T22:34:35.409154",
+    "updated_at": "2025-10-13T22:34:35.409158"
+  },
+  {
+    "id": "b4294c6d-68e2-4d26-b41f-d3280e472454",
+    "title": "给余芳转账",
+    "description": "完成给余芳的转账操作",
+    "status": "cancelled",
+    "start_time": "2025-10-14T00:00:00",
+    "end_time": "2025-10-15T23:59:59",
+    "is_recurring": false,
+    "recurrence_rule": null,
+    "tags": [
+      "财务",
+      "转账"
+    ],
+    "created_at": "2025-10-13T22:35:46.809807",
+    "updated_at": "2025-10-21T11:44:21.391322"
+  },
+  {
+    "id": "14775268-f079-4c2e-924a-6d318f213f2f",
+    "title": "做宣武医院的检查",
+    "description": "前往宣武医院进行身体检查",
+    "status": "pending",
+    "start_time": "2025-10-27T00:00:00",
+    "end_time": "2025-10-27T23:59:59",
+    "is_recurring": false,
+    "recurrence_rule": null,
+    "tags": [
+      "医疗",
+      "检查"
+    ],
+    "created_at": "2025-10-14T07:41:40.421828",
+    "updated_at": "2025-10-14T07:41:40.421839"
+  },
+  {
+    "id": "76a55b41-a2c7-4b36-91cf-b89dd9108796",
+    "title": "到协和医院看病",
+    "description": "前往协和医院就诊",
+    "status": "pending",
+    "start_time": "2025-10-23T00:00:00",
+    "end_time": "2025-10-23T23:59:59",
+    "is_recurring": false,
+    "recurrence_rule": null,
+    "tags": [
+      "医疗",
+      "就诊"
+    ],
+    "created_at": "2025-10-14T07:42:16.804675",
+    "updated_at": "2025-10-14T07:42:16.804684"
+  },
+  {
+    "id": "b7b84edd-4adb-47d0-9ac8-72bfe33bbb71",
+    "title": "每周二进行日报整理",
+    "description": "整理本周工作日报",
+    "status": "pending",
+    "start_time": null,
+    "end_time": null,
+    "is_recurring": true,
+    "recurrence_rule": "weekly",
+    "tags": [
+      "日报",
+      "定期",
+      "工作"
+    ],
+    "created_at": "2025-10-14T21:45:56.326189",
+    "updated_at": "2025-10-14T21:45:56.326195"
+  },
+  {
+    "id": "0bb09c26-4dac-4cbd-8ee8-d8aed09ef8e6",
+    "title": "每季度进行季度汇报",
+    "description": "撰写和提交季度工作总结汇报",
+    "status": "pending",
+    "start_time": null,
+    "end_time": null,
+    "is_recurring": true,
+    "recurrence_rule": "custom",
+    "tags": [
+      "季度汇报",
+      "定期",
+      "工作"
+    ],
+    "created_at": "2025-10-14T21:47:20.293189",
+    "updated_at": "2025-10-14T21:47:20.293193"
+  },
+  {
+    "id": "45ac66ff-f54d-4630-ae3e-a02d78afd7fd",
+    "title": "给老婆买羽绒服衣服",
+    "description": "为老婆购买一件羽绒服外套",
+    "status": "pending",
+    "start_time": "2025-10-21T00:00:00",
+    "end_time": "2025-10-28T23:59:59",
+    "is_recurring": false,
+    "recurrence_rule": null,
+    "tags": [
+      "购物",
+      "家庭"
+    ],
+    "created_at": "2025-10-21T11:42:22.272931",
+    "updated_at": "2025-10-21T11:42:22.272942"
+  },
+  {
+    "id": "52d6434a-7bf4-4cd8-a999-53c22cc6d1c8",
+    "title": "给南哥约航天院所吃饭",
+    "description": "安排与南哥一起前往航天院所的晚餐会面",
+    "status": "done",
+    "start_time": "2025-10-21T00:00:00",
+    "end_time": "2025-10-28T23:59:59",
+    "is_recurring": false,
+    "recurrence_rule": null,
+    "tags": [
+      "商务",
+      "会议"
+    ],
+    "created_at": "2025-10-21T11:43:04.892397",
+    "updated_at": "2025-10-21T12:03:59.835695"
+  }
+]

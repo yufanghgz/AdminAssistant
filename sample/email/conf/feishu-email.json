@@ -1,0 +1,12 @@
+{
+    "email": {
+        "imap_server": "imap.feishu.cn",
+        "username": "fang.yu@zthd.io",
+        "password": "jOd19Aqbdf1Ydagg",
+        "port": 993,
+        "folder": "INBOX",
+        "days_ago": 7,
+        "save_dir": "attachments",
+        "file_extensions": ["pdf", "jpg", "jpeg", "png"]
+    }
+}

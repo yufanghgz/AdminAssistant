@@ -1,0 +1,17 @@
+2025-10-23 15:47:27,722 - mcp_tool_app_scanner - INFO - MCP工具 'app_scanner' 日志系统已启动
+2025-10-23 15:47:27,723 - mcp_tool_app_cache - INFO - MCP工具 'app_cache' 日志系统已启动
+2025-10-23 15:47:27,723 - mcp_tool_nlp_parser - INFO - MCP工具 'nlp_parser' 日志系统已启动
+2025-10-23 15:47:27,724 - mcp_tool_app_executor - INFO - MCP工具 'app_executor' 日志系统已启动
+2025-10-23 15:47:27,724 - mcp_tool_app_usage - INFO - MCP工具 'app_usage' 日志系统已启动
+2025-10-23 15:47:27,724 - mcp_tool_app_usage - INFO - [app_usage] 尝试加载使用记录文件: /Users/heguangzhong/.mcp/app_usage.json
+2025-10-23 15:47:27,724 - mcp_tool_app_usage - INFO - [app_usage] 成功加载使用记录，包含 17 个应用的使用记录
+2025-10-23 15:47:27,724 - mcp_tool_open_app_tool - INFO - MCP工具 'open_app_tool' 日志系统已启动
+2025-10-23 15:47:27,725 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-10-23 15:47:27,725 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json
+2025-10-23 15:47:27,725 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: '/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json'
+2025-10-23 15:47:27,725 - EmailAttachmentDownloader - INFO - config.json get success: imap_server=None, username=None, save_dir=None
+2025-10-23 15:47:27,725 - mcp_tool_open_app_tool - INFO - [open_app_tool] 开始初始化应用索引
+2025-10-23 15:47:27,726 - mcp_tool_app_cache - INFO - [app_cache] 尝试加载缓存文件: /Users/heguangzhong/.mcp/apps_cache.json
+2025-10-23 15:47:27,726 - mcp_tool_app_cache - INFO - [app_cache] 缓存加载成功，包含 389 个应用
+2025-10-23 15:47:27,726 - mcp_tool_open_app_tool - INFO - [open_app_tool] 应用索引初始化成功（从缓存加载），共 389 个应用，耗时 0.00 秒
+2025-10-23 15:47:27,733 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest

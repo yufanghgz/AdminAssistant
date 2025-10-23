@@ -19,6 +19,7 @@ from base.worktime.excel_merger import read_and_merge_files, get_excel_files_fro
 from base.worktime.worktime_processor import process_worktime_file
 from base.attendance_processor import AttendanceProcessor
 from base.app_launcher.open_app_tool import initialize_apps, list_apps, search_app, open_app, reload_apps
+from base.task_manager.task_tools import create_task, update_task, query_tasks, export_tasks
 
 # 设置默认编码为UTF-8
 sys.stdout.reconfigure(encoding='utf-8')
@@ -90,15 +91,7 @@ async def list_tools() -> List[Tool]:
                         "type": "string",
                         "description": "保存附件的目录路径"
                     },
-                    "days_ago": {
-                        "type": "integer",
-                        "description": "下载多少天前的邮件，默认为7天",
-                        "default": 7
-                    },
-                    "date": {
-                        "type": "string",
-                        "description": "指定单日，格式 YYYY-MM-DD，可与 days_ago 互斥"
-                    },
+
                     "start_date": {
                         "type": "string",
                         "description": "起始日期，格式 YYYY-MM-DD"
@@ -113,6 +106,16 @@ async def list_tools() -> List[Tool]:
                             "type": "string"
                         },
                         "description": "要下载的文件扩展名列表，如['pdf', 'doc']，为None时下载所有附件"
+                    },
+                    "include_inline": {
+                        "type": "boolean",
+                        "description": "是否下载内联附件，默认为false",
+        "default": False
+                    },
+                    "download_from_body": {
+                        "type": "boolean",
+                        "description": "是否从邮件正文链接下载，默认为false",
+        "default": False
                     }
                 },
                 "required": ["imap_server", "username", "password", "save_dir"]
@@ -263,15 +266,7 @@ async def list_tools() -> List[Tool]:
                         "type": "string",
                         "description": "邮箱密码或授权码"
                     },
-                    "days_ago": {
-                        "type": "integer",
-                        "description": "读取多少天前的邮件，默认为7天",
-                        "default": 7
-                    },
-                    "date": {
-                        "type": "string",
-                        "description": "指定单日，格式 YYYY-MM-DD，可与 days_ago 互斥"
-                    },
+
                     "start_date": {
                         "type": "string",
                         "description": "起始日期，格式 YYYY-MM-DD"
@@ -289,6 +284,11 @@ async def list_tools() -> List[Tool]:
                         "type": "boolean",
                         "description": "是否包含邮件正文，默认为true",
                         "default": True
+                    },
+                    "include_attachments": {
+                        "type": "boolean",
+                        "description": "是否包含附件信息，默认为false",
+                        "default": False
                     },
                     "folder": {
                         "type": "string",
@@ -363,6 +363,241 @@ async def list_tools() -> List[Tool]:
             inputSchema={
                 "type": "object",
                 "properties": {}
+            }
+        ),
+        Tool(
+            name="create_task",
+            description="创建待办任务",
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "type": "string",
+                        "description": "任务标题"
+                    },
+                    "description": {
+                        "type": "string",
+                        "description": "任务描述"
+                    },
+                    "status": {
+                        "type": "string",
+                        "description": "任务状态 (pending/in_progress/done/cancelled)",
+                        "default": "pending"
+                    },
+                    "start_time": {
+                        "type": "string",
+                        "description": "开始时间，格式为ISO 8601字符串"
+                    },
+                    "end_time": {
+                        "type": "string",
+                        "description": "结束时间，格式为ISO 8601字符串"
+                    },
+                    "is_recurring": {
+                        "type": "boolean",
+                        "description": "是否为定期任务",
+                        "default": False
+                    },
+                    "recurrence_rule": {
+                        "type": "string",
+                        "description": "定期任务规则 (daily/weekly/monthly/custom)"
+                    },
+                    "tags": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "description": "任务标签列表"
+                    }
+                },
+                "required": ["title"]
+            }
+        ),
+        Tool(
+            name="update_task",
+            description="更新任务信息（支持语义可寻址）",
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "description": "任务ID（可选，如果提供则直接更新该任务）"
+                    },
+                    "target": {
+                        "type": "object",
+                        "description": "目标任务选择条件",
+                        "properties": {
+                            "filters": {
+                                "type": "object",
+                                "description": "任务过滤条件（用于语义寻址）",
+                                "properties": {
+                                    "keywords": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string"
+                                        },
+                                        "description": "关键词列表（在标题或描述中）"
+                                    },
+                                    "date_field": {
+                                        "type": "string",
+                                        "description": "日期字段 (start_time/end_time)",
+                                        "default": "start_time"
+                                    },
+                                    "date_range": {
+                                        "type": "object",
+                                        "description": "日期范围",
+                                        "properties": {
+                                            "start": {
+                                                "type": "string",
+                                                "description": "开始日期"
+                                            },
+                                            "end": {
+                                                "type": "string",
+                                                "description": "结束日期"
+                                            }
+                                        }
+                                    },
+                                    "status": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string"
+                                        },
+                                        "description": "任务状态列表"
+                                    },
+                                    "tags": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string"
+                                        },
+                                        "description": "标签列表"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "update_fields": {
+                        "type": "object",
+                        "description": "要更新的字段和值",
+                        "properties": {
+                            "title": {
+                                "type": "string"
+                            },
+                            "description": {
+                                "type": "string"
+                            },
+                            "status": {
+                                "type": "string"
+                            },
+                            "start_time": {
+                                "type": "string"
+                            },
+                            "end_time": {
+                                "type": "string"
+                            },
+                            "is_recurring": {
+                                "type": "boolean"
+                            },
+                            "recurrence_rule": {
+                                "type": "string"
+                            },
+                            "tags": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                },
+                "required": ["update_fields"]
+            }
+        ),
+        Tool(
+            name="query_tasks",
+            description="查询任务列表",
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "filters": {
+                        "type": "object",
+                        "description": "查询过滤条件",
+                        "properties": {
+                            "logic": {
+                                "type": "string",
+                                "description": "逻辑操作符 (and/or)",
+                                "default": "and"
+                            },
+                            "status": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                },
+                                "description": "任务状态列表"
+                            },
+                            "date_field": {
+                                "type": "string",
+                                "description": "日期字段 (start_time/end_time)",
+                                "default": "start_time"
+                            },
+                            "date_range": {
+                                "type": "object",
+                                "description": "日期范围",
+                                "properties": {
+                                    "start": {
+                                        "type": "string"
+                                    },
+                                    "end": {
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "relative_date": {
+                                "type": "string",
+                                "description": "相对日期 (今天/昨天/本周/上周/本月/上月)"
+                            },
+                            "keywords": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                },
+                                "description": "关键词列表（在标题或描述中）"
+                            },
+                            "tags": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                },
+                                "description": "标签列表"
+                            },
+                            "limit": {
+                                "type": "integer",
+                                "description": "返回结果的最大数量",
+                                "default": 100
+                            }
+                        }
+                    }
+                }
+            }
+        ),
+        Tool(
+            name="export_tasks",
+            description="导出任务数据",
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "filters": {
+                        "type": "object",
+                        "description": "查询过滤条件（与query_tasks相同）"
+                    },
+                    "format": {
+                        "type": "string",
+                        "description": "导出格式 (json/csv/markdown)",
+                        "default": "json"
+                    },
+                    "filename": {
+                        "type": "string",
+                        "description": "输出文件名"
+                    }
+                }
             }
         )
     ]
@@ -535,12 +770,11 @@ async def call_tool(name: str, arguments: dict) -> List[TextContent]:
         username = arguments.get("username")
         password = arguments.get("password")
         save_dir = arguments.get("save_dir")
-        days_ago = arguments.get("days_ago", 7)
-        single_date = arguments.get("date")
         start_date = arguments.get("start_date")
         end_date = arguments.get("end_date")
         file_extensions = arguments.get("file_extensions")
-        use_precise_date = arguments.get("use_precise_date", True)  # 默认使用精准日期搜索
+        include_inline = arguments.get("include_inline", False)
+        download_from_body = arguments.get("download_from_body", False)
  
         try:
             # 连接到邮箱服务器
@@ -550,26 +784,20 @@ async def call_tool(name: str, arguments: dict) -> List[TextContent]:
                     text=f"无法连接到邮箱服务器: {imap_server}"
                 )]
 
-            # 优先级：date > (start_date/end_date) > days_ago
-            if single_date:
-                email_ids = email_downloader.search_emails_by_date(single_date)
-                date_info = f"指定日期 {single_date}"
-            elif start_date or end_date:
-                email_ids = email_downloader.search_emails_by_range(start_date, end_date)
-                if start_date and end_date:
-                    date_info = f"日期范围 {start_date} 至 {end_date}"
-                elif start_date:
-                    date_info = f"自 {start_date} 起"
-                else:
-                    date_info = f"至 {end_date} 止"
-            elif use_precise_date and days_ago == 0:
-                today = datetime.datetime.now().date()
-                email_ids = email_downloader.search_emails_by_date(today)
-                date_info = f"今天 ({today})"
+            # 仅支持日期范围搜索
+            if not start_date and not end_date:
+                return [TextContent(
+                    type="text",
+                    text="请指定日期范围（start_date 和/或 end_date）"
+                )]
+            
+            email_ids = email_downloader.search_emails_by_range(start_date, end_date)
+            if start_date and end_date:
+                date_info = f"日期范围 {start_date} 至 {end_date}"
+            elif start_date:
+                date_info = f"自 {start_date} 起"
             else:
-                date_since = datetime.datetime.now() - datetime.timedelta(days=days_ago)
-                email_ids = email_downloader.search_emails(date_since=date_since)
-                date_info = f"最近{days_ago}天"
+                date_info = f"至 {end_date} 止"
 
             if not email_ids:
                 return [TextContent(
@@ -577,14 +805,32 @@ async def call_tool(name: str, arguments: dict) -> List[TextContent]:
                     text=f"未找到{date_info}的邮件"
                 )]
 
-            # 下载附件
-            downloaded_count = email_downloader.download_attachments(
-                email_ids, save_dir, file_extensions
+            # 下载附件统计
+            downloaded_attachments_count = 0
+            downloaded_body_links_count = 0
+            
+            # 下载标准附件（可选包含内联附件）
+            downloaded_attachments_count = email_downloader.download_attachments(
+                email_ids, save_dir, file_extensions, include_inline
             )
+            
+            # 从邮件正文下载附件（如果启用）
+            if download_from_body:
+                downloaded_body_links_count = email_downloader.download_attachments_from_body(
+                    email_ids, save_dir, file_extensions
+                )
+            
+            total_downloaded = downloaded_attachments_count + downloaded_body_links_count
+            result_text = f"成功下载 {downloaded_attachments_count} 个{date_info}的标准附件"
+            
+            if download_from_body:
+                result_text += f"，从邮件正文下载 {downloaded_body_links_count} 个附件"
+            
+            result_text += f"到目录: {save_dir}"
 
             return [TextContent(
                 type="text",
-                text=f"成功下载 {downloaded_count} 个{date_info}的附件到目录: {save_dir}"
+                text=result_text
             )]
         except Exception as e:
             return [TextContent(
@@ -761,12 +1007,11 @@ async def call_tool(name: str, arguments: dict) -> List[TextContent]:
         imap_server = arguments.get("imap_server")
         username = arguments.get("username")
         password = arguments.get("password")
-        days_ago = arguments.get("days_ago", 7)
-        single_date = arguments.get("date")
         start_date = arguments.get("start_date")
         end_date = arguments.get("end_date")
         max_emails = arguments.get("max_emails", 50)
         include_body = arguments.get("include_body", True)
+        include_attachments = arguments.get("include_attachments", False)
         folder = arguments.get("folder", "INBOX")
 
         # 创建新的邮件下载器实例
@@ -782,21 +1027,19 @@ async def call_tool(name: str, arguments: dict) -> List[TextContent]:
                 )]
 
             # 搜索邮件
-            if single_date:
-                email_ids = email_reader.search_emails_by_date(single_date, folder)
-                date_info = f"指定日期 {single_date}"
-            elif start_date or end_date:
-                email_ids = email_reader.search_emails_by_range(start_date, end_date, folder)
-                if start_date and end_date:
-                    date_info = f"日期范围 {start_date} 至 {end_date}"
-                elif start_date:
-                    date_info = f"自 {start_date} 起"
-                else:
-                    date_info = f"至 {end_date} 止"
+            if not start_date and not end_date:
+                return [TextContent(
+                    type="text",
+                    text="请指定日期范围（start_date 和/或 end_date）"
+                )]
+                
+            email_ids = email_reader.search_emails_by_range(start_date, end_date, folder)
+            if start_date and end_date:
+                date_info = f"日期范围 {start_date} 至 {end_date}"
+            elif start_date:
+                date_info = f"自 {start_date} 起"
             else:
-                date_since = datetime.datetime.now() - datetime.timedelta(days=days_ago)
-                email_ids = email_reader.search_emails(folder=folder, date_since=date_since)
-                date_info = f"最近{days_ago}天"
+                date_info = f"至 {end_date} 止"
 
             if not email_ids:
                 return [TextContent(
@@ -822,10 +1065,13 @@ async def call_tool(name: str, arguments: dict) -> List[TextContent]:
                 result_text += f"📧 主题: {email_info['subject']}\n"
                 result_text += f"👤 发件人: {email_info['sender']}\n"
                 result_text += f"📅 日期: {email_info['date']}\n"
-                result_text += f"📎 附件: {'是' if email_info['has_attachments'] else '否'}\n"
                 
-                if email_info['attachments']:
-                    result_text += f"📁 附件列表: {', '.join(email_info['attachments'])}\n"
+                # 根据include_attachments参数决定是否显示附件信息
+                if include_attachments:
+                    result_text += f"📎 附件: {'是' if email_info['has_attachments'] else '否'}\n"
+                    
+                    if email_info['attachments']:
+                        result_text += f"📁 附件列表: {', '.join(email_info['attachments'])}\n"
                 
                 if include_body and email_info['body']:
                     # 限制正文长度，避免输出过长
@@ -1031,6 +1277,39 @@ async def call_tool(name: str, arguments: dict) -> List[TextContent]:
             return [TextContent(
                 type="text",
                 text=f"应用重新加载失败: {str(e)}"
+            )]
+    # 任务管理工具
+    elif name == "create_task":
+        try:
+            return create_task(arguments)
+        except Exception as e:
+            return [TextContent(
+                type="text",
+                text=f"创建任务失败: {str(e)}"
+            )]
+    elif name == "update_task":
+        try:
+            return update_task(arguments)
+        except Exception as e:
+            return [TextContent(
+                type="text",
+                text=f"更新任务失败: {str(e)}"
+            )]
+    elif name == "query_tasks":
+        try:
+            return query_tasks(arguments)
+        except Exception as e:
+            return [TextContent(
+                type="text",
+                text=f"查询任务失败: {str(e)}"
+            )]
+    elif name == "export_tasks":
+        try:
+            return export_tasks(arguments)
+        except Exception as e:
+            return [TextContent(
+                type="text",
+                text=f"导出任务失败: {str(e)}"
             )]
 
     return [TextContent(type="text", text=f"未知的工具: {name}")]
