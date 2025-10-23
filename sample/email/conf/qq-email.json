@@ -5,7 +5,6 @@
         "password": "ifqdmucfxotlbigc",
         "port": 993,
         "folder": "INBOX",
-        "days_ago": 0,
         "save_dir": "attachments",
         "file_extensions": ["pdf", "jpg", "jpeg", "png", "xml", "eml"]
     }

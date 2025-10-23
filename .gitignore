@@ -47,3 +47,6 @@ base/app_launcher/__pycache__/app_usage.cpython-312.pyc
 base/app_launcher/__pycache__/config.cpython-312.pyc
 base/app_launcher/__pycache__/nlp_parser.cpython-312.pyc
 base/app_launcher/__pycache__/open_app_tool.cpython-312.pyc
+sample/email/conf/cosmo-email.json
+sample/email/conf/feishu-email.json
+sample/email/conf/qq-email.json
