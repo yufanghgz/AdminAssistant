@@ -49,25 +49,15 @@ https://www.trae.cn/
 ### 3. 配置TRAE 中的 MCP Server
 
 {
-
 "mcpServers": {
-
     "行政助手": {
-
     "command": "python",
-
     "args": [
-
     "{文件路径}/mcp_administrative_service.py"
-
     ],
-
     "disabled": false
-
     }
-
   }
-
 }
 
 ### 4. 在 TRAE 中启动服务
