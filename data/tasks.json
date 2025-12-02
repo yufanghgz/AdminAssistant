@@ -86,7 +86,7 @@
     "id": "14775268-f079-4c2e-924a-6d318f213f2f",
     "title": "做宣武医院的检查",
     "description": "前往宣武医院进行身体检查",
-    "status": "pending",
+    "status": "done",
     "start_time": "2025-10-27T00:00:00",
     "end_time": "2025-10-27T23:59:59",
     "is_recurring": false,
@@ -96,13 +96,13 @@
       "检查"
     ],
     "created_at": "2025-10-14T07:41:40.421828",
-    "updated_at": "2025-10-14T07:41:40.421839"
+    "updated_at": "2025-10-27T18:51:21.211887"
   },
   {
     "id": "76a55b41-a2c7-4b36-91cf-b89dd9108796",
     "title": "到协和医院看病",
     "description": "前往协和医院就诊",
-    "status": "pending",
+    "status": "done",
     "start_time": "2025-10-23T00:00:00",
     "end_time": "2025-10-23T23:59:59",
     "is_recurring": false,
@@ -112,7 +112,7 @@
       "就诊"
     ],
     "created_at": "2025-10-14T07:42:16.804675",
-    "updated_at": "2025-10-14T07:42:16.804684"
+    "updated_at": "2025-10-27T18:51:16.312980"
   },
   {
     "id": "b7b84edd-4adb-47d0-9ac8-72bfe33bbb71",
@@ -152,7 +152,7 @@
     "id": "45ac66ff-f54d-4630-ae3e-a02d78afd7fd",
     "title": "给老婆买羽绒服衣服",
     "description": "为老婆购买一件羽绒服外套",
-    "status": "pending",
+    "status": "done",
     "start_time": "2025-10-21T00:00:00",
     "end_time": "2025-10-28T23:59:59",
     "is_recurring": false,
@@ -162,7 +162,7 @@
       "家庭"
     ],
     "created_at": "2025-10-21T11:42:22.272931",
-    "updated_at": "2025-10-21T11:42:22.272942"
+    "updated_at": "2025-10-27T18:46:19.315620"
   },
   {
     "id": "52d6434a-7bf4-4cd8-a999-53c22cc6d1c8",
@@ -179,5 +179,38 @@
     ],
     "created_at": "2025-10-21T11:43:04.892397",
     "updated_at": "2025-10-21T12:03:59.835695"
+  },
+  {
+    "id": "3d96f7f4-c0c6-482a-b2c8-66942fa85b5a",
+    "title": "看病",
+    "description": "下午去医院看病",
+    "status": "done",
+    "start_time": "2025-11-03T14:00:00+08:00",
+    "end_time": "2025-11-03T17:00:00+08:00",
+    "is_recurring": false,
+    "recurrence_rule": null,
+    "tags": [
+      "医疗",
+      "健康"
+    ],
+    "created_at": "2025-10-27T18:45:24.457827",
+    "updated_at": "2025-11-17T08:47:23.646360"
+  },
+  {
+    "id": "dbfb9b8a-0b15-465d-88e2-73d323f057c8",
+    "title": "到协和医院看病",
+    "description": "前往协和医院就诊（2026年4月）",
+    "status": "done",
+    "start_time": "2026-04-01T00:00:00",
+    "end_time": "2026-04-30T23:59:59",
+    "is_recurring": false,
+    "recurrence_rule": null,
+    "tags": [
+      "医疗",
+      "就诊",
+      "协和医院"
+    ],
+    "created_at": "2025-11-13T09:20:15.760423",
+    "updated_at": "2025-11-17T08:47:03.917140"
   }
 ]

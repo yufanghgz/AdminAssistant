@@ -53,3 +53,7 @@ sample/email/conf/qq-email.json
 sample/email/cosmo-email.json
 sample/email/feishu-email.json
 sample/email/qq-email.json
+/temp
+/sample/email
+/sample/email
+/sample/email/conf

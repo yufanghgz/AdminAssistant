@@ -15,3 +15,1646 @@
 2025-10-23 15:47:27,726 - mcp_tool_app_cache - INFO - [app_cache] 缓存加载成功，包含 389 个应用
 2025-10-23 15:47:27,726 - mcp_tool_open_app_tool - INFO - [open_app_tool] 应用索引初始化成功（从缓存加载），共 389 个应用，耗时 0.00 秒
 2025-10-23 15:47:27,733 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-10-23 16:55:18,744 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-10-23 16:55:18,745 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-10-23 16:55:19,360 - EmailAttachmentDownloader - INFO - 成功连接到邮箱: 23512221@qq.com
+2025-10-23 16:55:19,516 - EmailAttachmentDownloader - INFO - 搜索条件: (SINCE 23-Oct-2025 BEFORE 24-Oct-2025) ALL
+2025-10-23 16:55:19,643 - EmailAttachmentDownloader - INFO - 初步搜索找到 14 封邮件
+2025-10-23 16:55:19,644 - EmailAttachmentDownloader - INFO - 开始精准过滤 None 的邮件...
+2025-10-23 16:55:20,376 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'3' 的日期: Invalid date value or format "None"
+2025-10-23 16:55:20,566 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'4' 的日期: Invalid date value or format "None"
+2025-10-23 16:55:21,303 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'8' 的日期: Invalid date value or format "None"
+2025-10-23 16:55:21,431 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'9' 的日期: Invalid date value or format "None"
+2025-10-23 16:55:22,329 - EmailAttachmentDownloader - INFO - 精准过滤后找到 1 封 None 的邮件
+2025-10-23 16:55:22,943 - EmailAttachmentDownloader - INFO - 处理邮件: 您收到【北京湘东餐饮有限公司】开具的发票【金额：427元】 (ID: b'14')
+2025-10-23 16:55:22,948 - EmailAttachmentDownloader - INFO - 已下载附件: 25112000000227864181.ofd 到 /Volumes/SD_1.5T/github/AdminAssistant/temp/25112000000227864181.ofd
+2025-10-23 16:55:22,955 - EmailAttachmentDownloader - INFO - 已下载附件: 25112000000227864181.pdf 到 /Volumes/SD_1.5T/github/AdminAssistant/temp/25112000000227864181.pdf
+2025-10-23 16:55:22,955 - EmailAttachmentDownloader - INFO - 已下载附件: 25112000000227864181.zip 到 /Volumes/SD_1.5T/github/AdminAssistant/temp/25112000000227864181.zip
+2025-10-23 16:55:22,955 - EmailAttachmentDownloader - INFO - 共下载 3 个附件
+2025-10-23 16:55:23,124 - EmailAttachmentDownloader - INFO - 已断开与邮箱服务器的连接
+2025-10-24 21:19:25,529 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-10-24 21:19:25,534 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-10-24 21:19:25,537 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-10-24 21:19:25,538 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json
+2025-10-24 21:19:25,538 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: '/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json'
+2025-10-24 21:19:25,538 - EmailAttachmentDownloader - INFO - config.json get success: imap_server=None, username=None, save_dir=None
+2025-10-24 21:19:26,237 - EmailAttachmentDownloader - INFO - 成功连接到邮箱: 23512221@qq.com
+2025-10-24 21:19:26,384 - EmailAttachmentDownloader - INFO - 搜索条件: (SINCE 23-Oct-2025 BEFORE 24-Oct-2025) ALL
+2025-10-24 21:19:26,457 - EmailAttachmentDownloader - INFO - 初步搜索找到 14 封邮件
+2025-10-24 21:19:26,457 - EmailAttachmentDownloader - INFO - 开始精准过滤 None 的邮件...
+2025-10-24 21:19:27,060 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'3' 的日期: Invalid date value or format "None"
+2025-10-24 21:19:27,252 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'4' 的日期: Invalid date value or format "None"
+2025-10-24 21:19:27,751 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'8' 的日期: Invalid date value or format "None"
+2025-10-24 21:19:27,879 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'9' 的日期: Invalid date value or format "None"
+2025-10-24 21:19:28,376 - EmailAttachmentDownloader - INFO - 精准过滤后找到 1 封 None 的邮件
+2025-10-24 21:19:28,376 - EmailAttachmentDownloader - INFO - 读取邮件 1/1 (ID: b'14')
+2025-10-24 21:19:29,074 - EmailAttachmentDownloader - INFO - 成功读取 1 封邮件
+2025-10-24 21:19:29,203 - EmailAttachmentDownloader - INFO - 已断开与邮箱服务器的连接
+2025-10-25 21:38:00,546 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-10-25 21:38:00,550 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-10-25 21:38:00,553 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-10-25 21:38:00,554 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json
+2025-10-25 21:38:00,554 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: '/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json'
+2025-10-25 21:38:00,554 - EmailAttachmentDownloader - INFO - config.json get success: imap_server=None, username=None, save_dir=None
+2025-10-25 21:38:01,230 - EmailAttachmentDownloader - INFO - 成功连接到邮箱: 23512221@qq.com
+2025-10-25 21:38:01,378 - EmailAttachmentDownloader - INFO - 搜索条件: (SINCE 25-Oct-2025 BEFORE 26-Oct-2025) ALL
+2025-10-25 21:38:01,462 - EmailAttachmentDownloader - INFO - 初步搜索找到 13 封邮件
+2025-10-25 21:38:01,462 - EmailAttachmentDownloader - INFO - 开始精准过滤 None 的邮件...
+2025-10-25 21:38:01,700 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'2' 的日期: Invalid date value or format "None"
+2025-10-25 21:38:01,881 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'3' 的日期: Invalid date value or format "None"
+2025-10-25 21:38:02,421 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'7' 的日期: Invalid date value or format "None"
+2025-10-25 21:38:02,626 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'8' 的日期: Invalid date value or format "None"
+2025-10-25 21:38:03,361 - EmailAttachmentDownloader - INFO - 精准过滤后找到 0 封 None 的邮件
+2025-10-25 21:38:03,507 - EmailAttachmentDownloader - INFO - 已断开与邮箱服务器的连接
+2025-10-26 17:13:05,901 - mcp_tool_app_scanner - INFO - MCP工具 'app_scanner' 日志系统已启动
+2025-10-26 17:13:05,903 - mcp_tool_app_cache - INFO - MCP工具 'app_cache' 日志系统已启动
+2025-10-26 17:13:05,904 - mcp_tool_nlp_parser - INFO - MCP工具 'nlp_parser' 日志系统已启动
+2025-10-26 17:13:05,905 - mcp_tool_app_executor - INFO - MCP工具 'app_executor' 日志系统已启动
+2025-10-26 17:13:05,906 - mcp_tool_app_usage - INFO - MCP工具 'app_usage' 日志系统已启动
+2025-10-26 17:13:05,907 - mcp_tool_app_usage - INFO - [app_usage] 尝试加载使用记录文件: /Users/heguangzhong/.mcp/app_usage.json
+2025-10-26 17:13:05,907 - mcp_tool_app_usage - INFO - [app_usage] 成功加载使用记录，包含 17 个应用的使用记录
+2025-10-26 17:13:05,907 - mcp_tool_open_app_tool - INFO - MCP工具 'open_app_tool' 日志系统已启动
+2025-10-26 17:13:05,918 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-10-26 17:13:05,918 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json
+2025-10-26 17:13:05,918 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: '/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json'
+2025-10-26 17:13:05,918 - EmailAttachmentDownloader - INFO - config.json get success: imap_server=None, username=None, save_dir=None
+2025-10-26 17:13:05,918 - mcp_tool_open_app_tool - INFO - [open_app_tool] 开始初始化应用索引
+2025-10-26 17:13:05,918 - mcp_tool_app_cache - INFO - [app_cache] 尝试加载缓存文件: /Users/heguangzhong/.mcp/apps_cache.json
+2025-10-26 17:13:05,919 - mcp_tool_app_cache - INFO - [app_cache] 缓存已过期
+2025-10-26 17:13:05,919 - mcp_tool_open_app_tool - INFO - [open_app_tool] 缓存加载失败或应用数量不足，执行应用扫描
+2025-10-26 17:13:05,919 - mcp_tool_app_cache - INFO - [app_cache] 开始更新缓存
+2025-10-26 17:13:05,919 - mcp_tool_app_scanner - INFO - [app_scanner] 开始扫描系统已安装应用
+2025-10-26 17:13:06,035 - mcp_tool_app_scanner - INFO - [app_scanner] 扫描完成，共发现 386 个应用
+2025-10-26 17:13:06,035 - mcp_tool_app_cache - INFO - [app_cache] 尝试保存缓存到文件: /Users/heguangzhong/.mcp/apps_cache.json
+2025-10-26 17:13:06,037 - mcp_tool_app_cache - INFO - [app_cache] 缓存保存成功，共保存 386 个应用
+2025-10-26 17:13:06,037 - mcp_tool_open_app_tool - INFO - [open_app_tool] 应用索引初始化成功（执行扫描），共 386 个应用，耗时 0.12 秒
+2025-10-26 17:13:06,047 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-10-26 17:13:33,231 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-10-26 17:13:33,233 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-10-26 17:13:33,390 - base.worktime.worktime_processor - INFO - 成功加载Excel文件: /Volumes/SD_1.5T/github/AdminAssistant/temp/合并工时表.xlsx
+2025-10-26 17:13:33,390 - base.worktime.worktime_processor - INFO - 数据行数: 25
+2025-10-26 17:13:33,390 - base.worktime.worktime_processor - INFO - 列名: ['任务名称', '父级任务名称', '指派人名称', '计划开始日期', '计划结束日期', ' 计划工时数（h）', '任务描述', '项目名称']
+2025-10-26 17:13:33,397 - base.worktime.worktime_processor - INFO - 从文件加载人员名单，共 22 人
+2025-10-26 17:13:33,399 - base.worktime.worktime_processor - INFO - 日期范围: 2025-10-20 到 2025-10-31
+2025-10-26 17:13:33,401 - base.worktime.worktime_processor - INFO - 按项目分组的人员列表:
+2025-10-26 17:13:33,401 - base.worktime.worktime_processor - INFO - 项目 'HS业务支撑系统项目': 刘恩杰, 钱盼东, 王珊, 宫瑞丰
+2025-10-26 17:13:33,402 - base.worktime.worktime_processor - INFO - 项目 'MX项目': 李志鹏, 王磊东
+2025-10-26 17:13:33,402 - base.worktime.worktime_processor - INFO - 项目 'SDFS项目': 鲍红建, 邓梦伟, 关晓灵
+2025-10-26 17:13:33,402 - base.worktime.worktime_processor - INFO - 项目 'zz数据标准项目': 郝晓园, 亢宏毅, 李明, 彭星杰, 石清云, 王玉欣, 朱睿哲, 徐云飞
+2025-10-26 17:13:33,402 - base.worktime.worktime_processor - INFO - 项目 '党建项目': 蒋智
+2025-10-26 17:13:33,402 - base.worktime.worktime_processor - INFO - 无项目人员: 贺光忠, 李玉毫, 李玉民, 宋桂荣
+2025-10-26 17:13:33,406 - base.worktime.worktime_processor - INFO - 状态数据生成完成: 81 个已安排, 183 个未安排
+2025-10-26 17:13:35,712 - base.worktime.worktime_processor - INFO - 工时展示图片已保存到: /Volumes/SD_1.5T/github/AdminAssistant/temp/工时计划.png
+2025-10-26 17:13:35,712 - base.worktime.worktime_processor - INFO - 工时处理完成
+2025-10-26 17:18:11,913 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-10-26 17:18:11,917 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-10-26 17:18:12,001 - base.worktime.worktime_processor - INFO - 成功加载Excel文件: /Users/heguangzhong/Work_Doc/11.项目管理/2025/工时计划/10月4周/合并工时表.xlsx
+2025-10-26 17:18:12,001 - base.worktime.worktime_processor - INFO - 数据行数: 25
+2025-10-26 17:18:12,001 - base.worktime.worktime_processor - INFO - 列名: ['任务名称', '父级任务名称', '指派人名称', '计划开始日期', '计划结束日期', ' 计划工时数（h）', '任务描述', '项目名称']
+2025-10-26 17:18:12,008 - base.worktime.worktime_processor - INFO - 从文件加载人员名单，共 20 人
+2025-10-26 17:18:12,010 - base.worktime.worktime_processor - INFO - 日期范围: 2025-10-27 到 2025-10-31
+2025-10-26 17:18:12,012 - base.worktime.worktime_processor - INFO - 按项目分组的人员列表:
+2025-10-26 17:18:12,012 - base.worktime.worktime_processor - INFO - 项目 'HS业务支撑系统项目': 刘恩杰, 钱盼东, 王珊, 宫瑞丰
+2025-10-26 17:18:12,012 - base.worktime.worktime_processor - INFO - 项目 'MX项目': 李志鹏, 王磊东
+2025-10-26 17:18:12,012 - base.worktime.worktime_processor - INFO - 项目 'SDFS项目': 鲍红建, 邓梦伟, 关晓灵
+2025-10-26 17:18:12,012 - base.worktime.worktime_processor - INFO - 项目 'zz数据标准项目': 郝晓园, 亢宏毅, 彭星杰, 石清云, 王玉欣, 朱睿哲, 徐云飞
+2025-10-26 17:18:12,012 - base.worktime.worktime_processor - INFO - 项目 '党建项目': 蒋智
+2025-10-26 17:18:12,012 - base.worktime.worktime_processor - INFO - 无项目人员: 贺光忠, 李玉民, 宋桂荣
+2025-10-26 17:18:12,016 - base.worktime.worktime_processor - INFO - 状态数据生成完成: 80 个已安排, 20 个未安排
+2025-10-26 17:18:13,781 - base.worktime.worktime_processor - INFO - 工时展示图片已保存到: /Users/heguangzhong/Work_Doc/11.项目管理/2025/工时计划/10月4周/工时计划.png
+2025-10-26 17:18:13,781 - base.worktime.worktime_processor - INFO - 工时处理完成
+2025-10-26 17:21:13,930 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-10-26 17:21:13,934 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-10-26 17:21:14,010 - base.worktime.worktime_processor - INFO - 成功加载Excel文件: /Users/heguangzhong/Work_Doc/11.项目管理/2025/工时计划/10月4周/合并工时表.xlsx
+2025-10-26 17:21:14,010 - base.worktime.worktime_processor - INFO - 数据行数: 25
+2025-10-26 17:21:14,010 - base.worktime.worktime_processor - INFO - 列名: ['任务名称', '父级任务名称', '指派人名称', '计划开始日期', '计划结束日期', ' 计划工时数（h）', '任务描述', '项目名称']
+2025-10-26 17:21:14,017 - base.worktime.worktime_processor - INFO - 从文件加载人员名单，共 20 人
+2025-10-26 17:21:14,018 - base.worktime.worktime_processor - INFO - 日期范围: 2025-10-27 到 2025-10-31
+2025-10-26 17:21:14,020 - base.worktime.worktime_processor - INFO - 按项目分组的人员列表:
+2025-10-26 17:21:14,020 - base.worktime.worktime_processor - INFO - 项目 'HS业务支撑系统项目': 刘恩杰, 钱盼东, 王珊, 宫瑞丰
+2025-10-26 17:21:14,020 - base.worktime.worktime_processor - INFO - 项目 'MX项目': 李志鹏, 王磊东
+2025-10-26 17:21:14,020 - base.worktime.worktime_processor - INFO - 项目 'SDFS项目': 鲍红建, 邓梦伟, 关晓灵
+2025-10-26 17:21:14,020 - base.worktime.worktime_processor - INFO - 项目 'zz数据标准项目': 郝晓园, 亢宏毅, 彭星杰, 石清云, 王玉欣, 朱睿哲, 徐云飞
+2025-10-26 17:21:14,020 - base.worktime.worktime_processor - INFO - 项目 '党建项目': 蒋智
+2025-10-26 17:21:14,020 - base.worktime.worktime_processor - INFO - 无项目人员: 贺光忠, 李玉民, 宋桂荣
+2025-10-26 17:21:14,024 - base.worktime.worktime_processor - INFO - 状态数据生成完成: 85 个已安排, 15 个未安排
+2025-10-26 17:21:15,735 - base.worktime.worktime_processor - INFO - 工时展示图片已保存到: /Users/heguangzhong/Work_Doc/11.项目管理/2025/工时计划/10月4周/工时计划.png
+2025-10-26 17:21:15,735 - base.worktime.worktime_processor - INFO - 工时处理完成
+2025-10-26 17:36:06,709 - mcp_tool_app_scanner - INFO - MCP工具 'app_scanner' 日志系统已启动
+2025-10-26 17:36:06,709 - mcp_tool_app_scanner - INFO - MCP工具 'app_scanner' 日志系统已启动
+2025-10-26 17:36:06,710 - mcp_tool_app_cache - INFO - MCP工具 'app_cache' 日志系统已启动
+2025-10-26 17:36:06,710 - mcp_tool_app_cache - INFO - MCP工具 'app_cache' 日志系统已启动
+2025-10-26 17:36:06,712 - mcp_tool_nlp_parser - INFO - MCP工具 'nlp_parser' 日志系统已启动
+2025-10-26 17:36:06,712 - mcp_tool_nlp_parser - INFO - MCP工具 'nlp_parser' 日志系统已启动
+2025-10-26 17:36:06,713 - mcp_tool_app_executor - INFO - MCP工具 'app_executor' 日志系统已启动
+2025-10-26 17:36:06,713 - mcp_tool_app_executor - INFO - MCP工具 'app_executor' 日志系统已启动
+2025-10-26 17:36:06,714 - mcp_tool_app_usage - INFO - MCP工具 'app_usage' 日志系统已启动
+2025-10-26 17:36:06,714 - mcp_tool_app_usage - INFO - MCP工具 'app_usage' 日志系统已启动
+2025-10-26 17:36:06,714 - mcp_tool_app_usage - INFO - [app_usage] 尝试加载使用记录文件: /Users/heguangzhong/.mcp/app_usage.json
+2025-10-26 17:36:06,714 - mcp_tool_app_usage - INFO - [app_usage] 尝试加载使用记录文件: /Users/heguangzhong/.mcp/app_usage.json
+2025-10-26 17:36:06,715 - mcp_tool_app_usage - INFO - [app_usage] 成功加载使用记录，包含 17 个应用的使用记录
+2025-10-26 17:36:06,715 - mcp_tool_app_usage - INFO - [app_usage] 成功加载使用记录，包含 17 个应用的使用记录
+2025-10-26 17:36:06,715 - mcp_tool_open_app_tool - INFO - MCP工具 'open_app_tool' 日志系统已启动
+2025-10-26 17:36:06,715 - mcp_tool_open_app_tool - INFO - MCP工具 'open_app_tool' 日志系统已启动
+2025-10-26 17:36:06,720 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-10-26 17:36:06,720 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-10-26 17:36:06,720 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json
+2025-10-26 17:36:06,720 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json
+2025-10-26 17:36:06,720 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: '/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json'
+2025-10-26 17:36:06,720 - EmailAttachmentDownloader - INFO - config.json get success: imap_server=None, username=None, save_dir=None
+2025-10-26 17:36:06,720 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: '/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json'
+2025-10-26 17:36:06,720 - EmailAttachmentDownloader - INFO - config.json get success: imap_server=None, username=None, save_dir=None
+2025-10-26 17:36:06,721 - mcp_tool_open_app_tool - INFO - [open_app_tool] 开始初始化应用索引
+2025-10-26 17:36:06,721 - mcp_tool_open_app_tool - INFO - [open_app_tool] 开始初始化应用索引
+2025-10-26 17:36:06,721 - mcp_tool_app_cache - INFO - [app_cache] 尝试加载缓存文件: /Users/heguangzhong/.mcp/apps_cache.json
+2025-10-26 17:36:06,721 - mcp_tool_app_cache - INFO - [app_cache] 尝试加载缓存文件: /Users/heguangzhong/.mcp/apps_cache.json
+2025-10-26 17:36:06,722 - mcp_tool_app_cache - INFO - [app_cache] 缓存加载成功，包含 386 个应用
+2025-10-26 17:36:06,722 - mcp_tool_app_cache - INFO - [app_cache] 缓存加载成功，包含 386 个应用
+2025-10-26 17:36:06,722 - mcp_tool_open_app_tool - INFO - [open_app_tool] 应用索引初始化成功（从缓存加载），共 386 个应用，耗时 0.00 秒
+2025-10-26 17:36:06,722 - mcp_tool_open_app_tool - INFO - [open_app_tool] 应用索引初始化成功（从缓存加载），共 386 个应用，耗时 0.00 秒
+2025-10-26 17:36:06,740 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-10-26 17:36:06,742 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-10-26 17:36:06,749 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-10-26 17:36:06,751 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-10-26 17:36:06,752 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-10-26 19:53:13,121 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-10-26 19:53:13,123 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-10-26 19:53:13,124 - AttendanceProcessor - INFO - 考勤处理器启动 - 工作目录: /Volumes/SD_1.5T/github/AdminAssistant/sample/attendance
+2025-10-26 19:53:13,124 - AttendanceProcessor - INFO - 日志文件: /Users/heguangzhong/attendance_processor_20251026.log
+2025-10-26 19:53:13,124 - AttendanceProcessor - INFO - 开始复制上月考勤表为当月考勤表
+2025-10-26 19:53:13,138 - AttendanceProcessor - INFO - 文件复制成功: /Volumes/SD_1.5T/github/AdminAssistant/sample/attendance/当月考勤表.xlsx
+2025-10-26 19:53:13,138 - AttendanceProcessor - INFO - 文件复制验证成功，文件大小: 15815 字节
+2025-10-26 19:53:13,138 - AttendanceProcessor - INFO - 开始修改应出勤天数字段为22天
+2025-10-26 19:53:13,268 - AttendanceProcessor - INFO - 读取考勤表成功，共 69 条记录
+2025-10-26 19:53:13,268 - AttendanceProcessor - INFO - 已更新字段 '应出勤天数' 为22天，原值: [20.  22.   6.   9.5 16.  19.  21.  20.5 11.5  7.  17.  15.  12.  10. ]
+2025-10-26 19:53:13,283 - AttendanceProcessor - INFO - 应出勤天数字段修改完成并已保存
+2025-10-26 19:53:13,283 - AttendanceProcessor - INFO - 开始去掉人员字段前的@符号
+2025-10-26 19:53:13,297 - AttendanceProcessor - INFO - 字段 '人员' 中包含@符号的记录数: 0
+2025-10-26 19:53:13,298 - AttendanceProcessor - INFO - 修改后剩余@符号数量: 0
+2025-10-26 19:53:13,311 - AttendanceProcessor - INFO - 人员字段@符号去除完成并已保存
+2025-10-26 19:53:13,311 - AttendanceProcessor - INFO - 开始重置各种假期字段为0
+2025-10-26 19:53:13,330 - AttendanceProcessor - INFO - 字段 '年假' 重置为0，修改前统计: {'非零值数量': 21, '唯一值': [0.0, 1.0, 0.5, 1.5, 2.0, 3.0, 2.5]}
+2025-10-26 19:53:13,330 - AttendanceProcessor - INFO - 字段 '多休年假天数' 重置为0，修改前统计: {'非零值数量': 0, '唯一值': [0]}
+2025-10-26 19:53:13,330 - AttendanceProcessor - INFO - 字段 '事假' 重置为0，修改前统计: {'非零值数量': 5, '唯一值': [0.0, 1.0, 0.5, 2.0]}
+2025-10-26 19:53:13,330 - AttendanceProcessor - INFO - 字段 '病假' 重置为0，修改前统计: {'非零值数量': 0, '唯一值': [0]}
+2025-10-26 19:53:13,330 - AttendanceProcessor - INFO - 字段 '产检假' 重置为0，修改前统计: {'非零值数量': 0, '唯一值': [0]}
+2025-10-26 19:53:13,331 - AttendanceProcessor - INFO - 字段 '婚假' 重置为0，修改前统计: {'非零值数量': 0, '唯一值': [0]}
+2025-10-26 19:53:13,331 - AttendanceProcessor - INFO - 字段 '育儿假' 重置为0，修改前统计: {'非零值数量': 1, '唯一值': [0, 2]}
+2025-10-26 19:53:13,331 - AttendanceProcessor - INFO - 字段 '丧假' 重置为0，修改前统计: {'非零值数量': 0, '唯一值': [0]}
+2025-10-26 19:53:13,331 - AttendanceProcessor - INFO - 字段 '陪产假' 重置为0，修改前统计: {'非零值数量': 0, '唯一值': [0]}
+2025-10-26 19:53:13,331 - AttendanceProcessor - INFO - 字段 '请假天数' 重置为0，修改前统计: {'非零值数量': 25, '唯一值': [0.0, 1.0, 0.5, 2.0, 1.5, 5.0, 2.5]}
+2025-10-26 19:53:13,345 - AttendanceProcessor - INFO - 假期字段重置完成并已保存，共处理 10 个字段
+2025-10-26 19:53:13,345 - AttendanceProcessor - INFO - 开始删除备注字段里包含'离职'的人员记录
+2025-10-26 19:53:13,358 - AttendanceProcessor - INFO - 读取考勤表成功，共 69 条记录
+2025-10-26 19:53:13,359 - AttendanceProcessor - INFO - 找到 5 条包含'离职'的记录
+2025-10-26 19:53:13,359 - AttendanceProcessor - INFO - 即将删除的离职人员记录:
+2025-10-26 19:53:13,359 - AttendanceProcessor - INFO -   111 - C1: 8.8离职
+2025-10-26 19:53:13,359 - AttendanceProcessor - INFO -   175 - U1: 8.15离职
+2025-10-26 19:53:13,359 - AttendanceProcessor - INFO -   181 - V1: 8.28离职
+2025-10-26 19:53:13,359 - AttendanceProcessor - INFO -   196 - G2: 8.18离职
+2025-10-26 19:53:13,359 - AttendanceProcessor - INFO -   202 - K2: 8.4入职8.12离职
+2025-10-26 19:53:13,373 - AttendanceProcessor - INFO - 已删除 5 条离职人员记录，剩余 64 条记录
+2025-10-26 19:53:13,373 - AttendanceProcessor - INFO - 开始处理当月请假记录
+2025-10-26 19:53:13,407 - AttendanceProcessor - INFO - 读取考勤表成功，共 64 条记录
+2025-10-26 19:53:13,407 - AttendanceProcessor - INFO - 读取请假记录表成功，共 58 条记录
+2025-10-26 19:53:13,410 - AttendanceProcessor - INFO - 请假记录汇总完成，涉及 31 个员工
+2025-10-26 19:53:13,410 - AttendanceProcessor - INFO - 请假记录中的工号: [7, 9, 11, 16, 51, 58, 60, 66, 73, 88]
+2025-10-26 19:53:13,410 - AttendanceProcessor - INFO - 员工 7 - F 请假信息: {'年假': 1.0}
+2025-10-26 19:53:13,410 - AttendanceProcessor - INFO -     更新字段 '年假': 0 -> 1.0
+2025-10-26 19:53:13,410 - AttendanceProcessor - INFO -     更新总请假天数 '请假天数': 0 -> 1.0
+2025-10-26 19:53:13,410 - AttendanceProcessor - INFO - 员工 9 - H 请假信息: {'年假': 1.5}
+2025-10-26 19:53:13,410 - AttendanceProcessor - INFO -     更新字段 '年假': 0 -> 1.5
+2025-10-26 19:53:13,411 - AttendanceProcessor - INFO -     更新总请假天数 '请假天数': 0 -> 1.5
+2025-10-26 19:53:13,411 - AttendanceProcessor - INFO - 员工 11 - J 请假信息: {'年假': 0.5}
+2025-10-26 19:53:13,411 - AttendanceProcessor - INFO -     更新字段 '年假': 0.0 -> 0.5
+2025-10-26 19:53:13,411 - AttendanceProcessor - INFO -     更新总请假天数 '请假天数': 0.0 -> 0.5
+2025-10-26 19:53:13,411 - AttendanceProcessor - INFO - 员工 16 - K 请假信息: {'育儿假': 1.0}
+2025-10-26 19:53:13,411 - AttendanceProcessor - INFO -     更新字段 '育儿假': 0 -> 1.0
+2025-10-26 19:53:13,411 - AttendanceProcessor - INFO -     更新总请假天数 '请假天数': 0.0 -> 1.0
+2025-10-26 19:53:13,411 - AttendanceProcessor - INFO - 员工 51 - O 请假信息: {'年假': 3.0}
+2025-10-26 19:53:13,411 - AttendanceProcessor - INFO -     更新字段 '年假': 0.0 -> 3.0
+2025-10-26 19:53:13,411 - AttendanceProcessor - INFO -     更新总请假天数 '请假天数': 0.0 -> 3.0
+2025-10-26 19:53:13,411 - AttendanceProcessor - INFO - 员工 58 - P 请假信息: {'年假': 1.0}
+2025-10-26 19:53:13,411 - AttendanceProcessor - INFO -     更新字段 '年假': 0.0 -> 1.0
+2025-10-26 19:53:13,411 - AttendanceProcessor - INFO -     更新总请假天数 '请假天数': 0.0 -> 1.0
+2025-10-26 19:53:13,411 - AttendanceProcessor - INFO - 员工 60 - Q 请假信息: {'年假': 1.0}
+2025-10-26 19:53:13,411 - AttendanceProcessor - INFO -     更新字段 '年假': 0.0 -> 1.0
+2025-10-26 19:53:13,411 - AttendanceProcessor - INFO -     更新总请假天数 '请假天数': 0.0 -> 1.0
+2025-10-26 19:53:13,411 - AttendanceProcessor - INFO - 员工 66 - S 请假信息: {'年假': 0.5}
+2025-10-26 19:53:13,411 - AttendanceProcessor - INFO -     更新字段 '年假': 0.0 -> 0.5
+2025-10-26 19:53:13,411 - AttendanceProcessor - INFO -     更新总请假天数 '请假天数': 0.0 -> 0.5
+2025-10-26 19:53:13,411 - AttendanceProcessor - INFO - 员工 73 - U 请假信息: {'事假': 0.5}
+2025-10-26 19:53:13,412 - AttendanceProcessor - INFO -     更新字段 '事假': 0 -> 0.5
+2025-10-26 19:53:13,412 - AttendanceProcessor - INFO -     更新总请假天数 '请假天数': 0.0 -> 0.5
+2025-10-26 19:53:13,412 - AttendanceProcessor - INFO - 员工 88 - Z 请假信息: {'年假': 1.0}
+2025-10-26 19:53:13,412 - AttendanceProcessor - INFO -     更新字段 '年假': 0.0 -> 1.0
+2025-10-26 19:53:13,412 - AttendanceProcessor - INFO -     更新总请假天数 '请假天数': 0.0 -> 1.0
+2025-10-26 19:53:13,412 - AttendanceProcessor - INFO - 员工 94 - A1 请假信息: {'年假': 0.5}
+2025-10-26 19:53:13,412 - AttendanceProcessor - INFO -     更新字段 '年假': 0.0 -> 0.5
+2025-10-26 19:53:13,412 - AttendanceProcessor - INFO -     更新总请假天数 '请假天数': 0.0 -> 0.5
+2025-10-26 19:53:13,412 - AttendanceProcessor - INFO - 员工 115 - D1 请假信息: {'年假': 0.5}
+2025-10-26 19:53:13,412 - AttendanceProcessor - INFO -     更新字段 '年假': 0.0 -> 0.5
+2025-10-26 19:53:13,412 - AttendanceProcessor - INFO -     更新总请假天数 '请假天数': 0.0 -> 0.5
+2025-10-26 19:53:13,412 - AttendanceProcessor - INFO - 员工 120 - E1 请假信息: {'事假': 1.0}
+2025-10-26 19:53:13,412 - AttendanceProcessor - INFO -     更新字段 '事假': 0.0 -> 1.0
+2025-10-26 19:53:13,412 - AttendanceProcessor - INFO -     更新总请假天数 '请假天数': 0.0 -> 1.0
+2025-10-26 19:53:13,413 - AttendanceProcessor - INFO - 员工 124 - F1 请假信息: {'事假': 0.5}
+2025-10-26 19:53:13,413 - AttendanceProcessor - INFO -     更新字段 '事假': 0.0 -> 0.5
+2025-10-26 19:53:13,413 - AttendanceProcessor - INFO -     更新总请假天数 '请假天数': 0.0 -> 0.5
+2025-10-26 19:53:13,413 - AttendanceProcessor - INFO - 员工 131 - H1 请假信息: {'年假': 1.5}
+2025-10-26 19:53:13,413 - AttendanceProcessor - INFO -     更新字段 '年假': 0.0 -> 1.5
+2025-10-26 19:53:13,413 - AttendanceProcessor - INFO -     更新总请假天数 '请假天数': 0.0 -> 1.5
+2025-10-26 19:53:13,413 - AttendanceProcessor - INFO - 员工 138 - J1 请假信息: {'年假': 2.5}
+2025-10-26 19:53:13,413 - AttendanceProcessor - INFO -     更新字段 '年假': 0.0 -> 2.5
+2025-10-26 19:53:13,413 - AttendanceProcessor - INFO -     更新总请假天数 '请假天数': 0.0 -> 2.5
+2025-10-26 19:53:13,413 - AttendanceProcessor - INFO - 员工 154 - L1 请假信息: {'年假': 2.5}
+2025-10-26 19:53:13,413 - AttendanceProcessor - INFO -     更新字段 '年假': 0.0 -> 2.5
+2025-10-26 19:53:13,413 - AttendanceProcessor - INFO -     更新总请假天数 '请假天数': 0.0 -> 2.5
+2025-10-26 19:53:13,413 - AttendanceProcessor - INFO - 员工 158 - M1 请假信息: {'事假': 1.0}
+2025-10-26 19:53:13,413 - AttendanceProcessor - INFO -     更新字段 '事假': 0.0 -> 1.0
+2025-10-26 19:53:13,413 - AttendanceProcessor - INFO -     更新总请假天数 '请假天数': 0.0 -> 1.0
+2025-10-26 19:53:13,413 - AttendanceProcessor - INFO - 员工 160 - N1 请假信息: {'事假': 1.0, '年假': 1.0}
+2025-10-26 19:53:13,413 - AttendanceProcessor - INFO -     更新字段 '事假': 0.0 -> 1.0
+2025-10-26 19:53:13,413 - AttendanceProcessor - INFO -     更新字段 '年假': 0.0 -> 1.0
+2025-10-26 19:53:13,413 - AttendanceProcessor - INFO -     更新总请假天数 '请假天数': 0.0 -> 2.0
+2025-10-26 19:53:13,413 - AttendanceProcessor - INFO - 员工 168 - Q1 请假信息: {'年假': 1.5}
+2025-10-26 19:53:13,413 - AttendanceProcessor - INFO -     更新字段 '年假': 0.0 -> 1.5
+2025-10-26 19:53:13,413 - AttendanceProcessor - INFO -     更新总请假天数 '请假天数': 0.0 -> 1.5
+2025-10-26 19:53:13,414 - AttendanceProcessor - INFO - 员工 172 - S1 请假信息: {'年假': 1.0}
+2025-10-26 19:53:13,414 - AttendanceProcessor - INFO -     更新字段 '年假': 0.0 -> 1.0
+2025-10-26 19:53:13,414 - AttendanceProcessor - INFO -     更新总请假天数 '请假天数': 0.0 -> 1.0
+2025-10-26 19:53:13,414 - AttendanceProcessor - INFO - 员工 174 - T1 请假信息: {'年假': 3.5}
+2025-10-26 19:53:13,414 - AttendanceProcessor - INFO -     更新字段 '年假': 0.0 -> 3.5
+2025-10-26 19:53:13,414 - AttendanceProcessor - INFO -     更新总请假天数 '请假天数': 0.0 -> 3.5
+2025-10-26 19:53:13,414 - AttendanceProcessor - INFO - 员工 184 - X1 请假信息: {'事假': 5.0}
+2025-10-26 19:53:13,414 - AttendanceProcessor - INFO -     更新字段 '事假': 0.0 -> 5.0
+2025-10-26 19:53:13,414 - AttendanceProcessor - INFO -     更新总请假天数 '请假天数': 0.0 -> 5.0
+2025-10-26 19:53:13,414 - AttendanceProcessor - INFO - 员工 185 - Y1 请假信息: {'事假': 1.0}
+2025-10-26 19:53:13,414 - AttendanceProcessor - INFO -     更新字段 '事假': 0.0 -> 1.0
+2025-10-26 19:53:13,414 - AttendanceProcessor - INFO -     更新总请假天数 '请假天数': 0.0 -> 1.0
+2025-10-26 19:53:13,414 - AttendanceProcessor - INFO - 员工 186 - Z1 请假信息: {'事假': 10.0}
+2025-10-26 19:53:13,414 - AttendanceProcessor - INFO -     更新字段 '事假': 0.0 -> 10.0
+2025-10-26 19:53:13,414 - AttendanceProcessor - INFO -     更新总请假天数 '请假天数': 0.0 -> 10.0
+2025-10-26 19:53:13,414 - AttendanceProcessor - INFO - 员工 187 - A2 请假信息: {'事假': 1.0}
+2025-10-26 19:53:13,414 - AttendanceProcessor - INFO -     更新字段 '事假': 0.0 -> 1.0
+2025-10-26 19:53:13,414 - AttendanceProcessor - INFO -     更新总请假天数 '请假天数': 0.0 -> 1.0
+2025-10-26 19:53:13,414 - AttendanceProcessor - INFO - 员工 190 - C2 请假信息: {'事假': 5.5}
+2025-10-26 19:53:13,414 - AttendanceProcessor - INFO -     更新字段 '事假': 0.0 -> 5.5
+2025-10-26 19:53:13,414 - AttendanceProcessor - INFO -     更新总请假天数 '请假天数': 0.0 -> 5.5
+2025-10-26 19:53:13,415 - AttendanceProcessor - INFO - 员工 198 - H2 请假信息: {'事假': 8.0}
+2025-10-26 19:53:13,415 - AttendanceProcessor - INFO -     更新字段 '事假': 0.0 -> 8.0
+2025-10-26 19:53:13,415 - AttendanceProcessor - INFO -     更新总请假天数 '请假天数': 0.0 -> 8.0
+2025-10-26 19:53:13,415 - AttendanceProcessor - INFO - 员工 197 - I2 请假信息: {'事假': 1.0}
+2025-10-26 19:53:13,415 - AttendanceProcessor - INFO -     更新字段 '事假': 0.0 -> 1.0
+2025-10-26 19:53:13,415 - AttendanceProcessor - INFO -     更新总请假天数 '请假天数': 0.0 -> 1.0
+2025-10-26 19:53:13,415 - AttendanceProcessor - INFO - 员工 206 - N2 请假信息: {'事假': 2.5}
+2025-10-26 19:53:13,415 - AttendanceProcessor - INFO -     更新字段 '事假': 0.0 -> 2.5
+2025-10-26 19:53:13,415 - AttendanceProcessor - INFO -     更新总请假天数 '请假天数': 0.0 -> 2.5
+2025-10-26 19:53:13,415 - AttendanceProcessor - INFO - 员工 207 - O2 请假信息: {'事假': 0.5}
+2025-10-26 19:53:13,415 - AttendanceProcessor - INFO -     更新字段 '事假': 0.0 -> 0.5
+2025-10-26 19:53:13,415 - AttendanceProcessor - INFO -     更新总请假天数 '请假天数': 0.0 -> 0.5
+2025-10-26 19:53:13,429 - AttendanceProcessor - INFO - 请假记录处理完成，共更新 31 名员工
+2025-10-26 19:53:13,429 - AttendanceProcessor - INFO - 开始更新实际出勤天数字段
+2025-10-26 19:53:13,443 - AttendanceProcessor - INFO - 读取考勤表成功，共 64 条记录
+2025-10-26 19:53:13,443 - AttendanceProcessor - INFO - 更新前统计: {'应出勤天数范围': '22 - 22', '请假天数范围': '0.0 - 10.0', '实际出勤天数范围': '7.0 - 22.0'}
+2025-10-26 19:53:13,443 - AttendanceProcessor - INFO - 更新后统计: {'实际出勤天数范围': '12.0 - 22.0', '实际出勤天数平均值': '21.01'}
+2025-10-26 19:53:13,457 - AttendanceProcessor - INFO - 实际出勤天数字段更新完成并已保存
+2025-10-26 19:53:13,457 - AttendanceProcessor - INFO - 开始更新实际发工资天数字段
+2025-10-26 19:53:13,471 - AttendanceProcessor - INFO - 读取考勤表成功，共 64 条记录
+2025-10-26 19:53:13,472 - AttendanceProcessor - INFO - 更新前统计: {'应出勤天数范围': '22 - 22', '事假天数范围': '0.0 - 10.0', '病假天数范围': '0 - 0', '多休年假天数范围': '0 - 0', '应发工资天数范围': '7.0 - 22.0'}
+2025-10-26 19:53:13,472 - AttendanceProcessor - INFO - 更新后统计: {'应发工资天数范围': '12.0 - 22.0', '应发工资天数平均值': '21.40'}
+2025-10-26 19:53:13,485 - AttendanceProcessor - INFO - 实际发工资天数字段更新完成并已保存
+2025-10-26 19:53:13,485 - AttendanceProcessor - INFO - 开始清除备注、银行账号字段中的信息
+2025-10-26 19:53:13,500 - AttendanceProcessor - INFO - 字段 '备注' 清除前非空记录数: 7
+2025-10-26 19:53:13,500 - AttendanceProcessor - INFO - 字段 '银行卡号' 清除前非空记录数: 0
+2025-10-26 19:53:13,514 - AttendanceProcessor - INFO - 备注和银行账号字段清除完成并已保存，共处理 2 个字段
+2025-10-26 19:53:13,514 - AttendanceProcessor - INFO - 开始处理病假信息，添加待核查病假条备注
+2025-10-26 19:53:13,527 - AttendanceProcessor - INFO - 读取考勤表成功，共 64 条记录
+2025-10-26 19:53:13,527 - AttendanceProcessor - INFO - 找到 0 名员工有病假记录
+2025-10-26 19:53:13,527 - AttendanceProcessor - INFO - 没有员工有病假记录，跳过此步骤
+2025-10-26 19:53:13,528 - AttendanceProcessor - INFO - 开始处理离职人员信息
+2025-10-26 19:53:13,547 - AttendanceProcessor - INFO - 读取考勤表成功，共 64 条记录
+2025-10-26 19:53:13,547 - AttendanceProcessor - INFO - 读取离职人员信息表成功，共 6 条记录
+2025-10-26 19:53:13,548 - AttendanceProcessor - INFO - 离职人员信息汇总完成，涉及 6 个员工
+2025-10-26 19:53:13,548 - AttendanceProcessor - INFO - 员工 79 - W 离职日期: 2025-09-18，已添加离职备注
+2025-10-26 19:53:13,549 - AttendanceProcessor - INFO - 员工 120 - E1 离职日期: 2025-09-10，已添加离职备注
+2025-10-26 19:53:13,549 - AttendanceProcessor - INFO - 员工 124 - F1 离职日期: 2025-09-23，已添加离职备注
+2025-10-26 19:53:13,549 - AttendanceProcessor - INFO - 员工 184 - X1 离职日期: 2025-09-09，已添加离职备注
+2025-10-26 19:53:13,549 - AttendanceProcessor - INFO - 员工 185 - Y1 离职日期: 2025-09-10，已添加离职备注
+2025-10-26 19:53:13,549 - AttendanceProcessor - INFO - 员工 203 - L2 离职日期: 2025-09-05，已添加离职备注
+2025-10-26 19:53:13,563 - AttendanceProcessor - INFO - 离职人员信息处理完成，共更新 6 名员工
+2025-10-26 19:53:13,563 - AttendanceProcessor - INFO - 开始添加入职人员信息
+2025-10-26 19:53:13,587 - AttendanceProcessor - INFO - 读取考勤表成功，共 64 条记录
+2025-10-26 19:53:13,587 - AttendanceProcessor - INFO - 读取入职人员信息表成功，共 4 条记录
+2025-10-26 19:53:13,588 - AttendanceProcessor - INFO - 添加新员工: 214 - new1
+2025-10-26 19:53:13,589 - AttendanceProcessor - INFO - 添加新员工: 213 - new2
+2025-10-26 19:53:13,589 - AttendanceProcessor - INFO - 添加新员工: 212 - new3
+2025-10-26 19:53:13,590 - AttendanceProcessor - INFO - 添加新员工: 211 - new4
+2025-10-26 19:53:13,604 - AttendanceProcessor - INFO - 入职人员信息添加完成，共添加 4 名新员工
+2025-10-26 19:53:13,604 - AttendanceProcessor - INFO - 开始修改月份字段为当月字段
+2025-10-26 19:53:13,623 - AttendanceProcessor - INFO - 读取考勤表成功，共 68 条记录
+2025-10-26 19:53:13,623 - AttendanceProcessor - INFO - 字段 '月份' 修改前值: ['2025-8' nan]
+2025-10-26 19:53:13,624 - AttendanceProcessor - INFO - 字段 '月份' 已更新为: 2025-10
+2025-10-26 19:53:13,644 - AttendanceProcessor - INFO - 月份字段修改完成并已保存
+2025-10-26 19:54:56,224 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-10-26 19:54:56,227 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-10-26 19:54:56,229 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-10-26 19:54:56,229 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json
+2025-10-26 19:54:56,230 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: '/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json'
+2025-10-26 19:54:56,230 - EmailAttachmentDownloader - INFO - config.json get success: imap_server=None, username=None, save_dir=None
+2025-10-26 19:54:56,230 - EmailAttachmentDownloader - ERROR - Missing required connection parameters
+2025-10-26 19:55:12,320 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-10-26 19:55:12,323 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-10-26 19:55:12,325 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-10-26 19:55:12,325 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json
+2025-10-26 19:55:12,326 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: '/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json'
+2025-10-26 19:55:12,326 - EmailAttachmentDownloader - INFO - config.json get success: imap_server=None, username=None, save_dir=None
+2025-10-26 19:55:12,326 - EmailAttachmentDownloader - ERROR - Missing required connection parameters
+2025-10-26 19:55:21,978 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-10-26 19:55:21,980 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-10-26 19:55:21,981 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-10-26 19:55:21,982 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json
+2025-10-26 19:55:21,982 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: '/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json'
+2025-10-26 19:55:21,982 - EmailAttachmentDownloader - INFO - config.json get success: imap_server=None, username=None, save_dir=None
+2025-10-26 20:03:41,829 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-10-26 20:03:41,829 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json
+2025-10-26 20:03:41,830 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: '/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json'
+2025-10-26 20:03:41,830 - EmailAttachmentDownloader - INFO - config.json get success: imap_server=imap.qiye.163.com, username=heguangzhong@cosmosource.com, save_dir=None
+2025-10-26 20:03:42,189 - EmailAttachmentDownloader - INFO - 成功连接到邮箱: heguangzhong@cosmosource.com
+2025-10-26 20:03:42,284 - EmailAttachmentDownloader - INFO - 初步搜索找到 10 封邮件
+2025-10-26 20:03:42,284 - EmailAttachmentDownloader - INFO - 开始精准过滤 2025-10-26 的邮件...
+2025-10-26 20:03:43,640 - EmailAttachmentDownloader - INFO - 精准过滤后找到 0 封 2025-10-26 的邮件
+2025-10-26 20:03:43,727 - EmailAttachmentDownloader - INFO - 已断开与邮箱服务器的连接
+2025-10-26 20:03:59,802 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-10-26 20:03:59,802 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json
+2025-10-26 20:03:59,802 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: '/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json'
+2025-10-26 20:03:59,802 - EmailAttachmentDownloader - INFO - config.json get success: imap_server=imap.qiye.163.com, username=heguangzhong@cosmosource.com, save_dir=None
+2025-10-26 20:04:00,084 - EmailAttachmentDownloader - INFO - 成功连接到邮箱: heguangzhong@cosmosource.com
+2025-10-26 20:04:00,126 - EmailAttachmentDownloader - INFO - 搜索条件: (SINCE 19-Oct-2025 BEFORE 27-Oct-2025) ALL
+2025-10-26 20:04:00,214 - EmailAttachmentDownloader - INFO - 初步搜索找到 3 封邮件
+2025-10-26 20:04:00,214 - EmailAttachmentDownloader - INFO - 开始精准过滤 None 的邮件...
+2025-10-26 20:04:00,541 - EmailAttachmentDownloader - INFO - 精准过滤后找到 3 封 None 的邮件
+2025-10-26 20:04:00,541 - EmailAttachmentDownloader - INFO - 读取邮件 1/3 (ID: b'8')
+2025-10-26 20:04:00,650 - EmailAttachmentDownloader - INFO - 读取邮件 2/3 (ID: b'9')
+2025-10-26 20:04:00,736 - EmailAttachmentDownloader - INFO - 读取邮件 3/3 (ID: b'10')
+2025-10-26 20:04:00,805 - EmailAttachmentDownloader - INFO - 成功读取 3 封邮件
+2025-10-26 20:04:00,890 - EmailAttachmentDownloader - INFO - 已断开与邮箱服务器的连接
+2025-10-26 20:05:35,460 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-10-26 20:05:35,461 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json
+2025-10-26 20:05:35,461 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: '/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json'
+2025-10-26 20:05:35,461 - EmailAttachmentDownloader - INFO - config.json get success: imap_server=/Volumes/SD_1.5T/github/AdminAssistant/sample/email/cosmo-email.json, username=None, save_dir=None
+2025-10-26 20:05:35,461 - EmailAttachmentDownloader - ERROR - Missing required connection parameters
+2025-10-26 20:05:43,204 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-10-26 20:05:43,204 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json
+2025-10-26 20:05:43,204 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: '/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json'
+2025-10-26 20:05:43,204 - EmailAttachmentDownloader - INFO - config.json get success: imap_server=None, username=None, save_dir=attachments
+2025-10-26 20:05:43,204 - EmailAttachmentDownloader - ERROR - Missing required connection parameters
+2025-10-26 20:05:51,719 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-10-26 20:05:51,719 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json
+2025-10-26 20:05:51,719 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: '/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json'
+2025-10-26 20:05:51,719 - EmailAttachmentDownloader - INFO - config.json get success: imap_server=None, username=None, save_dir=None
+2025-10-26 20:05:51,719 - EmailAttachmentDownloader - ERROR - Missing required connection parameters
+2025-10-26 20:10:22,049 - EmailAttachmentDownloader - ERROR - 连接邮箱失败: [Errno 60] Operation timed out
+2025-10-26 20:10:22,051 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-10-27 17:47:05,140 - mcp_tool_app_scanner - INFO - MCP工具 'app_scanner' 日志系统已启动
+2025-10-27 17:47:05,141 - mcp_tool_app_cache - INFO - MCP工具 'app_cache' 日志系统已启动
+2025-10-27 17:47:05,148 - mcp_tool_nlp_parser - INFO - MCP工具 'nlp_parser' 日志系统已启动
+2025-10-27 17:47:05,149 - mcp_tool_app_executor - INFO - MCP工具 'app_executor' 日志系统已启动
+2025-10-27 17:47:05,156 - mcp_tool_app_usage - INFO - MCP工具 'app_usage' 日志系统已启动
+2025-10-27 17:47:05,156 - mcp_tool_app_usage - INFO - [app_usage] 尝试加载使用记录文件: /Users/heguangzhong/.mcp/app_usage.json
+2025-10-27 17:47:05,156 - mcp_tool_app_usage - INFO - [app_usage] 成功加载使用记录，包含 17 个应用的使用记录
+2025-10-27 17:47:05,157 - mcp_tool_open_app_tool - INFO - MCP工具 'open_app_tool' 日志系统已启动
+2025-10-27 17:47:05,162 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-10-27 17:47:05,162 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json
+2025-10-27 17:47:05,162 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: '/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json'
+2025-10-27 17:47:05,162 - EmailAttachmentDownloader - INFO - config.json get success: imap_server=None, username=None, save_dir=None
+2025-10-27 17:47:05,162 - mcp_tool_open_app_tool - INFO - [open_app_tool] 开始初始化应用索引
+2025-10-27 17:47:05,162 - mcp_tool_app_cache - INFO - [app_cache] 尝试加载缓存文件: /Users/heguangzhong/.mcp/apps_cache.json
+2025-10-27 17:47:05,163 - mcp_tool_app_cache - INFO - [app_cache] 缓存已过期
+2025-10-27 17:47:05,163 - mcp_tool_open_app_tool - INFO - [open_app_tool] 缓存加载失败或应用数量不足，执行应用扫描
+2025-10-27 17:47:05,163 - mcp_tool_app_cache - INFO - [app_cache] 开始更新缓存
+2025-10-27 17:47:05,163 - mcp_tool_app_scanner - INFO - [app_scanner] 开始扫描系统已安装应用
+2025-10-27 17:47:05,236 - mcp_tool_app_scanner - INFO - [app_scanner] 扫描完成，共发现 386 个应用
+2025-10-27 17:47:05,236 - mcp_tool_app_cache - INFO - [app_cache] 尝试保存缓存到文件: /Users/heguangzhong/.mcp/apps_cache.json
+2025-10-27 17:47:05,238 - mcp_tool_app_cache - INFO - [app_cache] 缓存保存成功，共保存 386 个应用
+2025-10-27 17:47:05,238 - mcp_tool_open_app_tool - INFO - [open_app_tool] 应用索引初始化成功（执行扫描），共 386 个应用，耗时 0.08 秒
+2025-10-27 17:47:05,246 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-10-27 17:47:24,246 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-10-27 17:47:24,249 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-10-27 17:47:24,254 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-10-27 17:47:24,254 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json
+2025-10-27 17:47:24,254 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: '/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json'
+2025-10-27 17:47:24,254 - EmailAttachmentDownloader - INFO - config.json get success: imap_server=None, username=None, save_dir=None
+2025-10-27 17:47:24,793 - EmailAttachmentDownloader - INFO - 成功连接到邮箱: 23512221@qq.com
+2025-10-27 17:47:24,889 - EmailAttachmentDownloader - INFO - 搜索条件: (SINCE 27-Oct-2025 BEFORE 28-Oct-2025) ALL
+2025-10-27 17:47:24,992 - EmailAttachmentDownloader - INFO - 初步搜索找到 12 封邮件
+2025-10-27 17:47:24,992 - EmailAttachmentDownloader - INFO - 开始精准过滤 None 的邮件...
+2025-10-27 17:47:25,114 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'1' 的日期: Invalid date value or format "None"
+2025-10-27 17:47:25,267 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'2' 的日期: Invalid date value or format "None"
+2025-10-27 17:47:25,944 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'6' 的日期: Invalid date value or format "None"
+2025-10-27 17:47:26,076 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'7' 的日期: Invalid date value or format "None"
+2025-10-27 17:47:26,920 - EmailAttachmentDownloader - INFO - 精准过滤后找到 0 封 None 的邮件
+2025-10-27 17:47:27,054 - EmailAttachmentDownloader - INFO - 已断开与邮箱服务器的连接
+2025-10-27 17:47:35,548 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-10-27 17:47:35,551 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-10-27 17:47:35,553 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-10-27 17:47:35,553 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json
+2025-10-27 17:47:35,553 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: '/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json'
+2025-10-27 17:47:35,553 - EmailAttachmentDownloader - INFO - config.json get success: imap_server=None, username=None, save_dir=None
+2025-10-27 17:47:36,054 - EmailAttachmentDownloader - INFO - 成功连接到邮箱: 23512221@qq.com
+2025-10-27 17:47:36,128 - EmailAttachmentDownloader - INFO - 搜索条件: (SINCE 25-Oct-2025 BEFORE 28-Oct-2025) ALL
+2025-10-27 17:47:36,204 - EmailAttachmentDownloader - INFO - 初步搜索找到 12 封邮件
+2025-10-27 17:47:36,204 - EmailAttachmentDownloader - INFO - 开始精准过滤 None 的邮件...
+2025-10-27 17:47:36,326 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'1' 的日期: Invalid date value or format "None"
+2025-10-27 17:47:36,406 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'2' 的日期: Invalid date value or format "None"
+2025-10-27 17:47:36,827 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'6' 的日期: Invalid date value or format "None"
+2025-10-27 17:47:36,901 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'7' 的日期: Invalid date value or format "None"
+2025-10-27 17:47:37,474 - EmailAttachmentDownloader - INFO - 精准过滤后找到 0 封 None 的邮件
+2025-10-27 17:47:37,622 - EmailAttachmentDownloader - INFO - 已断开与邮箱服务器的连接
+2025-10-27 17:47:40,835 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-10-27 17:47:40,838 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-10-27 17:47:40,842 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-10-27 17:47:40,842 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json
+2025-10-27 17:47:40,842 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: '/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json'
+2025-10-27 17:47:40,842 - EmailAttachmentDownloader - INFO - config.json get success: imap_server=None, username=None, save_dir=None
+2025-10-27 17:47:41,401 - EmailAttachmentDownloader - INFO - 成功连接到邮箱: 23512221@qq.com
+2025-10-27 17:47:41,488 - EmailAttachmentDownloader - INFO - 搜索条件: (SINCE 20-Oct-2025 BEFORE 28-Oct-2025) ALL
+2025-10-27 17:47:41,562 - EmailAttachmentDownloader - INFO - 初步搜索找到 12 封邮件
+2025-10-27 17:47:41,562 - EmailAttachmentDownloader - INFO - 开始精准过滤 None 的邮件...
+2025-10-27 17:47:41,658 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'1' 的日期: Invalid date value or format "None"
+2025-10-27 17:47:41,777 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'2' 的日期: Invalid date value or format "None"
+2025-10-27 17:47:42,289 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'6' 的日期: Invalid date value or format "None"
+2025-10-27 17:47:42,390 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'7' 的日期: Invalid date value or format "None"
+2025-10-27 17:47:42,868 - EmailAttachmentDownloader - INFO - 精准过滤后找到 4 封 None 的邮件
+2025-10-27 17:47:42,868 - EmailAttachmentDownloader - INFO - 读取邮件 1/4 (ID: b'9')
+2025-10-27 17:47:44,675 - EmailAttachmentDownloader - INFO - 读取邮件 2/4 (ID: b'10')
+2025-10-27 17:47:45,221 - EmailAttachmentDownloader - INFO - 读取邮件 3/4 (ID: b'11')
+2025-10-27 17:47:46,000 - EmailAttachmentDownloader - INFO - 读取邮件 4/4 (ID: b'12')
+2025-10-27 17:47:49,776 - EmailAttachmentDownloader - INFO - 成功读取 4 封邮件
+2025-10-27 17:47:49,895 - EmailAttachmentDownloader - INFO - 已断开与邮箱服务器的连接
+2025-10-27 18:45:24,452 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-10-27 18:45:24,455 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-10-27 18:45:52,873 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-10-27 18:45:52,876 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-10-27 18:46:19,305 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-10-27 18:46:19,308 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-10-27 18:46:47,893 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-10-27 18:46:47,897 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-10-27 18:47:45,074 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-10-27 18:47:45,078 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-10-27 18:47:51,915 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-10-27 18:47:51,918 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-10-27 18:47:57,824 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-10-27 18:47:57,826 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-10-27 18:48:03,225 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-10-27 18:48:03,227 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-10-27 18:49:12,492 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-10-27 18:49:12,495 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-10-27 18:49:33,634 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-10-27 18:49:33,637 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-10-27 18:51:16,301 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-10-27 18:51:16,305 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-10-27 18:51:21,206 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-10-27 18:51:21,207 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-10-27 18:52:26,844 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-10-27 18:52:26,845 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-10-27 18:52:27,407 - EmailAttachmentDownloader - INFO - 成功连接到邮箱: 23512221@qq.com
+2025-10-27 18:52:27,563 - EmailAttachmentDownloader - INFO - 搜索条件: (SINCE 01-Oct-2025 BEFORE 01-Nov-2025) ALL
+2025-10-27 18:52:27,652 - EmailAttachmentDownloader - INFO - 初步搜索找到 13 封邮件
+2025-10-27 18:52:27,652 - EmailAttachmentDownloader - INFO - 开始精准过滤 None 的邮件...
+2025-10-27 18:52:27,848 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'1' 的日期: Invalid date value or format "None"
+2025-10-27 18:52:28,010 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'2' 的日期: Invalid date value or format "None"
+2025-10-27 18:52:28,604 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'6' 的日期: Invalid date value or format "None"
+2025-10-27 18:52:28,786 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'7' 的日期: Invalid date value or format "None"
+2025-10-27 18:52:29,564 - EmailAttachmentDownloader - INFO - 精准过滤后找到 9 封 None 的邮件
+2025-10-27 18:52:30,578 - EmailAttachmentDownloader - INFO - 处理邮件: 高德打车电子发票 (ID: b'3')
+2025-10-27 18:52:30,580 - EmailAttachmentDownloader - INFO - 已下载附件: 【火箭出行-732.32元-15个行程】高德打车电子发票.pdf 到 /Users/heguangzhong/attachments/【火箭出行-732.32元-15个行程】高德打车电子发票.pdf
+2025-10-27 18:52:30,580 - EmailAttachmentDownloader - INFO - 已下载附件: 【阳光出行-65.32元-1个行程】高德打车电子发票.pdf 到 /Users/heguangzhong/attachments/【阳光出行-65.32元-1个行程】高德打车电子发票_1.pdf
+2025-10-27 18:52:30,582 - EmailAttachmentDownloader - INFO - 已下载附件: 【首汽约车-85.51元-2个行程】高德打车电子发票.pdf 到 /Users/heguangzhong/attachments/【首汽约车-85.51元-2个行程】高德打车电子发票_1.pdf
+2025-10-27 18:52:30,582 - EmailAttachmentDownloader - INFO - 已下载附件: 【火箭出行-732.32元-15个行程】高德打车电子发票.xml 到 /Users/heguangzhong/attachments/【火箭出行-732.32元-15个行程】高德打车电子发票.xml
+2025-10-27 18:52:30,582 - EmailAttachmentDownloader - INFO - 已下载附件: 【阳光出行-65.32元-1个行程】高德打车电子发票.xml 到 /Users/heguangzhong/attachments/【阳光出行-65.32元-1个行程】高德打车电子发票.xml
+2025-10-27 18:52:30,583 - EmailAttachmentDownloader - INFO - 已下载附件: 【首汽约车-85.51元-2个行程】高德打车电子发票.xml 到 /Users/heguangzhong/attachments/【首汽约车-85.51元-2个行程】高德打车电子发票.xml
+2025-10-27 18:52:30,587 - EmailAttachmentDownloader - INFO - 已下载附件: 【火箭出行-732.32元-15个行程】高德打车电子行程单.pdf 到 /Users/heguangzhong/attachments/【火箭出行-732.32元-15个行程】高德打车电子行程单.pdf
+2025-10-27 18:52:30,591 - EmailAttachmentDownloader - INFO - 已下载附件: 【阳光出行-65.32元-1个行程】高德打车电子行程单.pdf 到 /Users/heguangzhong/attachments/【阳光出行-65.32元-1个行程】高德打车电子行程单_1.pdf
+2025-10-27 18:52:30,596 - EmailAttachmentDownloader - INFO - 已下载附件: 【首汽约车-85.51元-2个行程】高德打车电子行程单.pdf 到 /Users/heguangzhong/attachments/【首汽约车-85.51元-2个行程】高德打车电子行程单_1.pdf
+2025-10-27 18:52:31,089 - EmailAttachmentDownloader - INFO - 处理邮件: 高德打车电子发票 (ID: b'4')
+2025-10-27 18:52:31,090 - EmailAttachmentDownloader - INFO - 已下载附件: 【星徽出行-62.53元-2个行程】高德打车电子发票.pdf 到 /Users/heguangzhong/attachments/【星徽出行-62.53元-2个行程】高德打车电子发票_1.pdf
+2025-10-27 18:52:31,091 - EmailAttachmentDownloader - INFO - 已下载附件: 【星徽出行-62.53元-2个行程】高德打车电子发票.xml 到 /Users/heguangzhong/attachments/【星徽出行-62.53元-2个行程】高德打车电子发票.xml
+2025-10-27 18:52:31,097 - EmailAttachmentDownloader - INFO - 已下载附件: 【星徽出行-62.53元-2个行程】高德打车电子行程单.pdf 到 /Users/heguangzhong/attachments/【星徽出行-62.53元-2个行程】高德打车电子行程单_1.pdf
+2025-10-27 18:52:31,538 - EmailAttachmentDownloader - INFO - 处理邮件: 高德打车电子发票 (ID: b'5')
+2025-10-27 18:52:31,540 - EmailAttachmentDownloader - INFO - 已下载附件: 【AA出行-86.36元-2个行程】高德打车电子发票.pdf 到 /Users/heguangzhong/attachments/【AA出行-86.36元-2个行程】高德打车电子发票_1.pdf
+2025-10-27 18:52:31,540 - EmailAttachmentDownloader - INFO - 已下载附件: 【AA出行-86.36元-2个行程】高德打车电子发票.xml 到 /Users/heguangzhong/attachments/【AA出行-86.36元-2个行程】高德打车电子发票.xml
+2025-10-27 18:52:31,547 - EmailAttachmentDownloader - INFO - 已下载附件: 【AA出行-86.36元-2个行程】高德打车电子行程单.pdf 到 /Users/heguangzhong/attachments/【AA出行-86.36元-2个行程】高德打车电子行程单_1.pdf
+2025-10-27 18:52:31,711 - EmailAttachmentDownloader - INFO - 处理邮件: 您收到一张【北京老夏卤煮餐饮有限责任公司】开具的发票【发票号码: 25112000000220106066】 (ID: b'8')
+2025-10-27 18:52:32,252 - EmailAttachmentDownloader - INFO - 处理邮件: 高德打车电子发票 (ID: b'9')
+2025-10-27 18:52:32,255 - EmailAttachmentDownloader - INFO - 已下载附件: 【曹操出行-102.71元-2个行程】高德打车电子发票.pdf 到 /Users/heguangzhong/attachments/【曹操出行-102.71元-2个行程】高德打车电子发票.pdf
+2025-10-27 18:52:32,256 - EmailAttachmentDownloader - INFO - 已下载附件: 【曹操出行-102.71元-2个行程】高德打车电子发票.xml 到 /Users/heguangzhong/attachments/【曹操出行-102.71元-2个行程】高德打车电子发票.xml
+2025-10-27 18:52:32,262 - EmailAttachmentDownloader - INFO - 已下载附件: 【曹操出行-102.71元-2个行程】高德打车电子行程单.pdf 到 /Users/heguangzhong/attachments/【曹操出行-102.71元-2个行程】高德打车电子行程单.pdf
+2025-10-27 18:52:32,625 - EmailAttachmentDownloader - INFO - 处理邮件: 网上购票系统-电子发票通知 (ID: b'10')
+2025-10-27 18:52:32,627 - EmailAttachmentDownloader - INFO - 已下载附件: 25419165773005149376.pdf 到 /Users/heguangzhong/attachments/25419165773005149376.pdf
+2025-10-27 18:52:32,990 - EmailAttachmentDownloader - INFO - 处理邮件: 网上购票系统-电子发票通知 (ID: b'11')
+2025-10-27 18:52:32,992 - EmailAttachmentDownloader - INFO - 已下载附件: 25119121152004372984.pdf 到 /Users/heguangzhong/attachments/25119121152004372984.pdf
+2025-10-27 18:52:33,442 - EmailAttachmentDownloader - INFO - 处理邮件: 您收到【北京湘东餐饮有限公司】开具的发票【金额：427元】 (ID: b'12')
+2025-10-27 18:52:33,444 - EmailAttachmentDownloader - INFO - 已下载附件: 25112000000227864181.pdf 到 /Users/heguangzhong/attachments/25112000000227864181.pdf
+2025-10-27 18:52:34,008 - EmailAttachmentDownloader - INFO - 处理邮件: 高德打车电子发票 (ID: b'13')
+2025-10-27 18:52:34,010 - EmailAttachmentDownloader - INFO - 已下载附件: 【火箭出行-220.29元-5个行程】高德打车电子发票.pdf 到 /Users/heguangzhong/attachments/【火箭出行-220.29元-5个行程】高德打车电子发票.pdf
+2025-10-27 18:52:34,012 - EmailAttachmentDownloader - INFO - 已下载附件: 【阳光出行-24.44元-1个行程】高德打车电子发票.pdf 到 /Users/heguangzhong/attachments/【阳光出行-24.44元-1个行程】高德打车电子发票.pdf
+2025-10-27 18:52:34,012 - EmailAttachmentDownloader - INFO - 已下载附件: 【火箭出行-220.29元-5个行程】高德打车电子发票.xml 到 /Users/heguangzhong/attachments/【火箭出行-220.29元-5个行程】高德打车电子发票.xml
+2025-10-27 18:52:34,012 - EmailAttachmentDownloader - INFO - 已下载附件: 【阳光出行-24.44元-1个行程】高德打车电子发票.xml 到 /Users/heguangzhong/attachments/【阳光出行-24.44元-1个行程】高德打车电子发票.xml
+2025-10-27 18:52:34,016 - EmailAttachmentDownloader - INFO - 已下载附件: 【火箭出行-220.29元-5个行程】高德打车电子行程单.pdf 到 /Users/heguangzhong/attachments/【火箭出行-220.29元-5个行程】高德打车电子行程单.pdf
+2025-10-27 18:52:34,021 - EmailAttachmentDownloader - INFO - 已下载附件: 【阳光出行-24.44元-1个行程】高德打车电子行程单.pdf 到 /Users/heguangzhong/attachments/【阳光出行-24.44元-1个行程】高德打车电子行程单.pdf
+2025-10-27 18:52:34,021 - EmailAttachmentDownloader - INFO - 共下载 27 个附件
+2025-10-27 18:52:34,177 - EmailAttachmentDownloader - INFO - 已断开与邮箱服务器的连接
+2025-10-27 18:55:24,668 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-10-27 18:55:24,670 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-10-27 18:55:25,219 - EmailAttachmentDownloader - INFO - 成功连接到邮箱: 23512221@qq.com
+2025-10-27 18:55:25,358 - EmailAttachmentDownloader - INFO - 搜索条件: (SINCE 27-Oct-2025 BEFORE 28-Oct-2025) ALL
+2025-10-27 18:55:25,563 - EmailAttachmentDownloader - INFO - 初步搜索找到 13 封邮件
+2025-10-27 18:55:25,563 - EmailAttachmentDownloader - INFO - 开始精准过滤 None 的邮件...
+2025-10-27 18:55:25,700 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'1' 的日期: Invalid date value or format "None"
+2025-10-27 18:55:25,901 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'2' 的日期: Invalid date value or format "None"
+2025-10-27 18:55:26,600 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'6' 的日期: Invalid date value or format "None"
+2025-10-27 18:55:26,786 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'7' 的日期: Invalid date value or format "None"
+2025-10-27 18:55:27,866 - EmailAttachmentDownloader - INFO - 精准过滤后找到 1 封 None 的邮件
+2025-10-27 18:55:28,714 - EmailAttachmentDownloader - INFO - 处理邮件: 高德打车电子发票 (ID: b'13')
+2025-10-27 18:55:28,716 - EmailAttachmentDownloader - INFO - 已下载附件: 【火箭出行-220.29元-5个行程】高德打车电子发票.pdf 到 /Users/heguangzhong/attachments/【火箭出行-220.29元-5个行程】高德打车电子发票.pdf
+2025-10-27 18:55:28,717 - EmailAttachmentDownloader - INFO - 已下载附件: 【阳光出行-24.44元-1个行程】高德打车电子发票.pdf 到 /Users/heguangzhong/attachments/【阳光出行-24.44元-1个行程】高德打车电子发票.pdf
+2025-10-27 18:55:28,717 - EmailAttachmentDownloader - INFO - 已下载附件: 【火箭出行-220.29元-5个行程】高德打车电子发票.xml 到 /Users/heguangzhong/attachments/【火箭出行-220.29元-5个行程】高德打车电子发票.xml
+2025-10-27 18:55:28,718 - EmailAttachmentDownloader - INFO - 已下载附件: 【阳光出行-24.44元-1个行程】高德打车电子发票.xml 到 /Users/heguangzhong/attachments/【阳光出行-24.44元-1个行程】高德打车电子发票.xml
+2025-10-27 18:55:28,723 - EmailAttachmentDownloader - INFO - 已下载附件: 【火箭出行-220.29元-5个行程】高德打车电子行程单.pdf 到 /Users/heguangzhong/attachments/【火箭出行-220.29元-5个行程】高德打车电子行程单.pdf
+2025-10-27 18:55:28,727 - EmailAttachmentDownloader - INFO - 已下载附件: 【阳光出行-24.44元-1个行程】高德打车电子行程单.pdf 到 /Users/heguangzhong/attachments/【阳光出行-24.44元-1个行程】高德打车电子行程单.pdf
+2025-10-27 18:55:28,727 - EmailAttachmentDownloader - INFO - 共下载 6 个附件
+2025-10-27 18:55:28,898 - EmailAttachmentDownloader - INFO - 已断开与邮箱服务器的连接
+2025-10-27 18:57:15,594 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-10-27 18:57:15,596 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-10-27 18:57:22,856 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-10-27 18:57:22,859 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-10-27 18:57:23,007 - base.image_to_pdf - INFO - 已添加第一张图片: 【AA出行-86.36元-2个行程】高德打车电子发票.png
+2025-10-27 18:57:23,220 - base.image_to_pdf - INFO - 已添加第二张图片: 【AA出行-86.36元-2个行程】高德打车电子行程单.png
+2025-10-27 18:57:23,351 - base.image_to_pdf - INFO - 已添加第一张图片: 【星徽出行-62.53元-2个行程】高德打车电子发票.png
+2025-10-27 18:57:23,565 - base.image_to_pdf - INFO - 已添加第二张图片: 【星徽出行-62.53元-2个行程】高德打车电子行程单.png
+2025-10-27 18:57:23,681 - base.image_to_pdf - INFO - 已添加第一张图片: 【火箭出行-220.29元-5个行程】高德打车电子发票.png
+2025-10-27 18:57:23,901 - base.image_to_pdf - INFO - 已添加第二张图片: 【火箭出行-220.29元-5个行程】高德打车电子行程单.png
+2025-10-27 18:57:24,000 - base.image_to_pdf - INFO - 已添加第一张图片: 【阳光出行-24.44元-1个行程】高德打车电子发票.png
+2025-10-27 18:57:24,209 - base.image_to_pdf - INFO - 已添加第二张图片: 【阳光出行-24.44元-1个行程】高德打车电子行程单.png
+2025-10-27 18:57:24,311 - base.image_to_pdf - INFO - 已添加第一张图片: 【阳光出行-65.32元-1个行程】高德打车电子发票.png
+2025-10-27 18:57:24,526 - base.image_to_pdf - INFO - 已添加第二张图片: 【阳光出行-65.32元-1个行程】高德打车电子行程单.png
+2025-10-27 18:57:24,644 - base.image_to_pdf - INFO - 已添加第一张图片: 【首汽约车-85.51元-2个行程】高德打车电子发票.png
+2025-10-27 18:57:24,857 - base.image_to_pdf - INFO - 已添加第二张图片: 【首汽约车-85.51元-2个行程】高德打车电子行程单.png
+2025-10-27 18:57:24,888 - base.image_to_pdf - INFO - 图片已成功合成为PDF文件 '/Users/heguangzhong/attachments/合并文件.pdf'，共 12 张图片
+2025-10-27 18:58:17,431 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-10-27 18:58:17,434 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-10-27 18:58:17,435 - base.invoice_ocr - INFO - 处理目录: /Users/heguangzhong/attachments
+2025-10-27 18:58:17,435 - base.invoice_ocr - INFO - 开始处理目录: /Users/heguangzhong/attachments
+2025-10-27 18:58:17,436 - base.invoice_ocr - INFO - 已创建输出目录: /Users/heguangzhong/attachments/20251027_185817
+2025-10-27 18:58:17,436 - base.invoice_ocr - INFO - 找到 14 个文件
+2025-10-27 18:58:17,436 - base.invoice_ocr - INFO - 识别发票 (1/13): 【阳光出行-24.44元-1个行程】高德打车电子行程单.pdf
+2025-10-27 18:58:17,436 - base.invoice_ocr - INFO - Processing (1/13): 【阳光出行-24.44元-1个行程】高德打车电子行程单.pdf
+2025-10-27 18:58:17,454 - base.invoice_ocr - INFO - 发票识别完成: 【阳光出行-24.44元-1个行程】高德打车电子行程单.pdf
+2025-10-27 18:58:17,454 - base.invoice_ocr - INFO - 准备复制文件: /Users/heguangzhong/attachments/【阳光出行-24.44元-1个行程】高德打车电子行程单.pdf -> /Users/heguangzhong/attachments/20251027_185817/2025-10-27_24.44_高德地图—打车——行.pdf
+2025-10-27 18:58:17,455 - base.invoice_ocr - INFO - 已复制并重命名文件: /Users/heguangzhong/attachments/20251027_185817/2025-10-27_24.44_高德地图—打车——行.pdf
+2025-10-27 18:58:17,455 - base.invoice_ocr - INFO - 识别发票 (2/13): 【AA出行-86.36元-2个行程】高德打车电子发票.pdf
+2025-10-27 18:58:17,455 - base.invoice_ocr - INFO - Processing (2/13): 【AA出行-86.36元-2个行程】高德打车电子发票.pdf
+2025-10-27 18:58:17,482 - base.invoice_ocr - INFO - 发票识别完成: 【AA出行-86.36元-2个行程】高德打车电子发票.pdf
+2025-10-27 18:58:17,483 - base.invoice_ocr - INFO - 准备复制文件: /Users/heguangzhong/attachments/【AA出行-86.36元-2个行程】高德打车电子发票.pdf -> /Users/heguangzhong/attachments/20251027_185817/20251008_86.36_运输服务.pdf
+2025-10-27 18:58:17,484 - base.invoice_ocr - INFO - 已复制并重命名文件: /Users/heguangzhong/attachments/20251027_185817/20251008_86.36_运输服务.pdf
+2025-10-27 18:58:17,484 - base.invoice_ocr - INFO - 跳过非支持文件类型: .DS_Store
+2025-10-27 18:58:17,484 - base.invoice_ocr - INFO - 识别发票 (3/13): 【星徽出行-62.53元-2个行程】高德打车电子行程单.pdf
+2025-10-27 18:58:17,484 - base.invoice_ocr - INFO - Processing (3/13): 【星徽出行-62.53元-2个行程】高德打车电子行程单.pdf
+2025-10-27 18:58:17,496 - base.invoice_ocr - INFO - 发票识别完成: 【星徽出行-62.53元-2个行程】高德打车电子行程单.pdf
+2025-10-27 18:58:17,497 - base.invoice_ocr - INFO - 准备复制文件: /Users/heguangzhong/attachments/【星徽出行-62.53元-2个行程】高德打车电子行程单.pdf -> /Users/heguangzhong/attachments/20251027_185817/2025-10-08_62.53_高德地图—打车——行.pdf
+2025-10-27 18:58:17,497 - base.invoice_ocr - INFO - 已复制并重命名文件: /Users/heguangzhong/attachments/20251027_185817/2025-10-08_62.53_高德地图—打车——行.pdf
+2025-10-27 18:58:17,497 - base.invoice_ocr - INFO - 识别发票 (4/13): 【阳光出行-24.44元-1个行程】高德打车电子发票.pdf
+2025-10-27 18:58:17,497 - base.invoice_ocr - INFO - Processing (4/13): 【阳光出行-24.44元-1个行程】高德打车电子发票.pdf
+2025-10-27 18:58:17,511 - base.invoice_ocr - INFO - 发票识别完成: 【阳光出行-24.44元-1个行程】高德打车电子发票.pdf
+2025-10-27 18:58:17,511 - base.invoice_ocr - INFO - 准备复制文件: /Users/heguangzhong/attachments/【阳光出行-24.44元-1个行程】高德打车电子发票.pdf -> /Users/heguangzhong/attachments/20251027_185817/20251027_24.44_运输服务.pdf
+2025-10-27 18:58:17,512 - base.invoice_ocr - INFO - 已复制并重命名文件: /Users/heguangzhong/attachments/20251027_185817/20251027_24.44_运输服务.pdf
+2025-10-27 18:58:17,512 - base.invoice_ocr - INFO - 识别发票 (5/13): 【首汽约车-85.51元-2个行程】高德打车电子发票.pdf
+2025-10-27 18:58:17,512 - base.invoice_ocr - INFO - Processing (5/13): 【首汽约车-85.51元-2个行程】高德打车电子发票.pdf
+2025-10-27 18:58:17,527 - base.invoice_ocr - INFO - 发票识别完成: 【首汽约车-85.51元-2个行程】高德打车电子发票.pdf
+2025-10-27 18:58:17,527 - base.invoice_ocr - INFO - 准备复制文件: /Users/heguangzhong/attachments/【首汽约车-85.51元-2个行程】高德打车电子发票.pdf -> /Users/heguangzhong/attachments/20251027_185817/20251008_85.51_运输服务.pdf
+2025-10-27 18:58:17,527 - base.invoice_ocr - INFO - 已复制并重命名文件: /Users/heguangzhong/attachments/20251027_185817/20251008_85.51_运输服务.pdf
+2025-10-27 18:58:17,527 - base.invoice_ocr - INFO - 识别发票 (6/13): 【火箭出行-220.29元-5个行程】高德打车电子行程单.pdf
+2025-10-27 18:58:17,527 - base.invoice_ocr - INFO - Processing (6/13): 【火箭出行-220.29元-5个行程】高德打车电子行程单.pdf
+2025-10-27 18:58:17,548 - base.invoice_ocr - INFO - 发票识别完成: 【火箭出行-220.29元-5个行程】高德打车电子行程单.pdf
+2025-10-27 18:58:17,548 - base.invoice_ocr - INFO - 准备复制文件: /Users/heguangzhong/attachments/【火箭出行-220.29元-5个行程】高德打车电子行程单.pdf -> /Users/heguangzhong/attachments/20251027_185817/2025-10-27_220.29_高德地图—打车——行.pdf
+2025-10-27 18:58:17,548 - base.invoice_ocr - INFO - 已复制并重命名文件: /Users/heguangzhong/attachments/20251027_185817/2025-10-27_220.29_高德地图—打车——行.pdf
+2025-10-27 18:58:17,548 - base.invoice_ocr - INFO - 识别发票 (7/13): 【阳光出行-65.32元-1个行程】高德打车电子发票.pdf
+2025-10-27 18:58:17,549 - base.invoice_ocr - INFO - Processing (7/13): 【阳光出行-65.32元-1个行程】高德打车电子发票.pdf
+2025-10-27 18:58:17,563 - base.invoice_ocr - INFO - 发票识别完成: 【阳光出行-65.32元-1个行程】高德打车电子发票.pdf
+2025-10-27 18:58:17,563 - base.invoice_ocr - INFO - 准备复制文件: /Users/heguangzhong/attachments/【阳光出行-65.32元-1个行程】高德打车电子发票.pdf -> /Users/heguangzhong/attachments/20251027_185817/20251008_65.32_运输服务.pdf
+2025-10-27 18:58:17,564 - base.invoice_ocr - INFO - 已复制并重命名文件: /Users/heguangzhong/attachments/20251027_185817/20251008_65.32_运输服务.pdf
+2025-10-27 18:58:17,564 - base.invoice_ocr - INFO - 识别发票 (8/13): 【AA出行-86.36元-2个行程】高德打车电子行程单.pdf
+2025-10-27 18:58:17,564 - base.invoice_ocr - INFO - Processing (8/13): 【AA出行-86.36元-2个行程】高德打车电子行程单.pdf
+2025-10-27 18:58:17,577 - base.invoice_ocr - INFO - 发票识别完成: 【AA出行-86.36元-2个行程】高德打车电子行程单.pdf
+2025-10-27 18:58:17,577 - base.invoice_ocr - INFO - 准备复制文件: /Users/heguangzhong/attachments/【AA出行-86.36元-2个行程】高德打车电子行程单.pdf -> /Users/heguangzhong/attachments/20251027_185817/2025-10-08_86.36_高德地图—打车——行.pdf
+2025-10-27 18:58:17,578 - base.invoice_ocr - INFO - 已复制并重命名文件: /Users/heguangzhong/attachments/20251027_185817/2025-10-08_86.36_高德地图—打车——行.pdf
+2025-10-27 18:58:17,578 - base.invoice_ocr - INFO - 识别发票 (9/13): 【火箭出行-220.29元-5个行程】高德打车电子发票.pdf
+2025-10-27 18:58:17,578 - base.invoice_ocr - INFO - Processing (9/13): 【火箭出行-220.29元-5个行程】高德打车电子发票.pdf
+2025-10-27 18:58:17,593 - base.invoice_ocr - INFO - 发票识别完成: 【火箭出行-220.29元-5个行程】高德打车电子发票.pdf
+2025-10-27 18:58:17,593 - base.invoice_ocr - INFO - 准备复制文件: /Users/heguangzhong/attachments/【火箭出行-220.29元-5个行程】高德打车电子发票.pdf -> /Users/heguangzhong/attachments/20251027_185817/20251027_220.29_运输服务.pdf
+2025-10-27 18:58:17,593 - base.invoice_ocr - INFO - 已复制并重命名文件: /Users/heguangzhong/attachments/20251027_185817/20251027_220.29_运输服务.pdf
+2025-10-27 18:58:17,593 - base.invoice_ocr - INFO - 识别发票 (10/13): 【首汽约车-85.51元-2个行程】高德打车电子行程单.pdf
+2025-10-27 18:58:17,593 - base.invoice_ocr - INFO - Processing (10/13): 【首汽约车-85.51元-2个行程】高德打车电子行程单.pdf
+2025-10-27 18:58:17,606 - base.invoice_ocr - INFO - 发票识别完成: 【首汽约车-85.51元-2个行程】高德打车电子行程单.pdf
+2025-10-27 18:58:17,606 - base.invoice_ocr - INFO - 准备复制文件: /Users/heguangzhong/attachments/【首汽约车-85.51元-2个行程】高德打车电子行程单.pdf -> /Users/heguangzhong/attachments/20251027_185817/2025-10-08_85.51_高德地图—打车——行.pdf
+2025-10-27 18:58:17,607 - base.invoice_ocr - INFO - 已复制并重命名文件: /Users/heguangzhong/attachments/20251027_185817/2025-10-08_85.51_高德地图—打车——行.pdf
+2025-10-27 18:58:17,607 - base.invoice_ocr - INFO - 识别发票 (11/13): 【阳光出行-65.32元-1个行程】高德打车电子行程单.pdf
+2025-10-27 18:58:17,607 - base.invoice_ocr - INFO - Processing (11/13): 【阳光出行-65.32元-1个行程】高德打车电子行程单.pdf
+2025-10-27 18:58:17,617 - base.invoice_ocr - INFO - 发票识别完成: 【阳光出行-65.32元-1个行程】高德打车电子行程单.pdf
+2025-10-27 18:58:17,617 - base.invoice_ocr - INFO - 准备复制文件: /Users/heguangzhong/attachments/【阳光出行-65.32元-1个行程】高德打车电子行程单.pdf -> /Users/heguangzhong/attachments/20251027_185817/2025-10-08_65.32_高德地图—打车——行.pdf
+2025-10-27 18:58:17,617 - base.invoice_ocr - INFO - 已复制并重命名文件: /Users/heguangzhong/attachments/20251027_185817/2025-10-08_65.32_高德地图—打车——行.pdf
+2025-10-27 18:58:17,617 - base.invoice_ocr - INFO - 识别发票 (12/13): 合并文件.pdf
+2025-10-27 18:58:17,617 - base.invoice_ocr - INFO - Processing (12/13): 合并文件.pdf
+2025-10-27 18:58:17,622 - base.invoice_ocr - INFO - 发票识别完成: 合并文件.pdf
+2025-10-27 18:58:17,622 - base.invoice_ocr - INFO - 准备复制文件: /Users/heguangzhong/attachments/合并文件.pdf -> /Users/heguangzhong/attachments/20251027_185817/__.pdf
+2025-10-27 18:58:17,623 - base.invoice_ocr - INFO - 已复制并重命名文件: /Users/heguangzhong/attachments/20251027_185817/__.pdf
+2025-10-27 18:58:17,623 - base.invoice_ocr - INFO - 识别发票 (13/13): 【星徽出行-62.53元-2个行程】高德打车电子发票.pdf
+2025-10-27 18:58:17,623 - base.invoice_ocr - INFO - Processing (13/13): 【星徽出行-62.53元-2个行程】高德打车电子发票.pdf
+2025-10-27 18:58:17,639 - base.invoice_ocr - INFO - 发票识别完成: 【星徽出行-62.53元-2个行程】高德打车电子发票.pdf
+2025-10-27 18:58:17,639 - base.invoice_ocr - INFO - 准备复制文件: /Users/heguangzhong/attachments/【星徽出行-62.53元-2个行程】高德打车电子发票.pdf -> /Users/heguangzhong/attachments/20251027_185817/20251008_62.53_运输服务.pdf
+2025-10-27 18:58:17,639 - base.invoice_ocr - INFO - 已复制并重命名文件: /Users/heguangzhong/attachments/20251027_185817/20251008_62.53_运输服务.pdf
+2025-10-27 18:58:17,639 - base.invoice_ocr - INFO - 批量处理完成！共处理 13 张发票，成功 13 张，失败 0 张
+2025-10-27 18:58:17,639 - base.invoice_ocr - INFO - 批量处理完成！共处理 13 张发票，成功 13 张，失败 0 张
+2025-10-27 18:58:17,717 - base.invoice_ocr - ERROR - 生成Excel统计表时出错: 'Cell' object is not iterable
+2025-10-27 18:58:17,717 - base.invoice_ocr - WARNING - 无法生成发票统计Excel表
+2025-10-27 18:59:58,728 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-10-27 18:59:58,730 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-10-27 19:00:08,225 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-10-27 19:00:08,228 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-10-27 20:58:14,092 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-10-27 20:58:14,096 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-10-27 20:58:14,707 - EmailAttachmentDownloader - INFO - 成功连接到邮箱: 23512221@qq.com
+2025-10-27 20:58:14,864 - EmailAttachmentDownloader - INFO - 搜索条件: (SINCE 27-Oct-2025 BEFORE 28-Oct-2025) ALL
+2025-10-27 20:58:14,957 - EmailAttachmentDownloader - INFO - 初步搜索找到 15 封邮件
+2025-10-27 20:58:14,958 - EmailAttachmentDownloader - INFO - 开始精准过滤 None 的邮件...
+2025-10-27 20:58:15,089 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'1' 的日期: Invalid date value or format "None"
+2025-10-27 20:58:15,253 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'2' 的日期: Invalid date value or format "None"
+2025-10-27 20:58:15,997 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'6' 的日期: Invalid date value or format "None"
+2025-10-27 20:58:16,125 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'7' 的日期: Invalid date value or format "None"
+2025-10-27 20:58:17,098 - EmailAttachmentDownloader - INFO - 精准过滤后找到 3 封 None 的邮件
+2025-10-27 20:58:17,852 - EmailAttachmentDownloader - INFO - 处理邮件: 高德打车电子发票 (ID: b'13')
+2025-10-27 20:58:17,854 - EmailAttachmentDownloader - INFO - 已下载附件: 【火箭出行-220.29元-5个行程】高德打车电子发票.pdf 到 /Volumes/SD_1.5T/github/AdminAssistant/temp/20251027/【火箭出行-220.29元-5个行程】高德打车电子发票.pdf
+2025-10-27 20:58:17,856 - EmailAttachmentDownloader - INFO - 已下载附件: 【阳光出行-24.44元-1个行程】高德打车电子发票.pdf 到 /Volumes/SD_1.5T/github/AdminAssistant/temp/20251027/【阳光出行-24.44元-1个行程】高德打车电子发票.pdf
+2025-10-27 20:58:17,856 - EmailAttachmentDownloader - INFO - 已下载附件: 【火箭出行-220.29元-5个行程】高德打车电子发票.xml 到 /Volumes/SD_1.5T/github/AdminAssistant/temp/20251027/【火箭出行-220.29元-5个行程】高德打车电子发票.xml
+2025-10-27 20:58:17,856 - EmailAttachmentDownloader - INFO - 已下载附件: 【阳光出行-24.44元-1个行程】高德打车电子发票.xml 到 /Volumes/SD_1.5T/github/AdminAssistant/temp/20251027/【阳光出行-24.44元-1个行程】高德打车电子发票.xml
+2025-10-27 20:58:17,860 - EmailAttachmentDownloader - INFO - 已下载附件: 【火箭出行-220.29元-5个行程】高德打车电子行程单.pdf 到 /Volumes/SD_1.5T/github/AdminAssistant/temp/20251027/【火箭出行-220.29元-5个行程】高德打车电子行程单.pdf
+2025-10-27 20:58:17,865 - EmailAttachmentDownloader - INFO - 已下载附件: 【阳光出行-24.44元-1个行程】高德打车电子行程单.pdf 到 /Volumes/SD_1.5T/github/AdminAssistant/temp/20251027/【阳光出行-24.44元-1个行程】高德打车电子行程单.pdf
+2025-10-27 20:58:18,265 - EmailAttachmentDownloader - INFO - 处理邮件: 高德打车电子发票 (ID: b'14')
+2025-10-27 20:58:18,267 - EmailAttachmentDownloader - INFO - 已下载附件: 【星徽出行-22.35元-1个行程】高德打车电子发票.pdf 到 /Volumes/SD_1.5T/github/AdminAssistant/temp/20251027/【星徽出行-22.35元-1个行程】高德打车电子发票.pdf
+2025-10-27 20:58:18,267 - EmailAttachmentDownloader - INFO - 已下载附件: 【星徽出行-22.35元-1个行程】高德打车电子发票.xml 到 /Volumes/SD_1.5T/github/AdminAssistant/temp/20251027/【星徽出行-22.35元-1个行程】高德打车电子发票.xml
+2025-10-27 20:58:18,288 - EmailAttachmentDownloader - INFO - 已下载附件: 【星徽出行-22.35元-1个行程】高德打车电子行程单.pdf 到 /Volumes/SD_1.5T/github/AdminAssistant/temp/20251027/【星徽出行-22.35元-1个行程】高德打车电子行程单.pdf
+2025-10-27 20:58:18,673 - EmailAttachmentDownloader - INFO - 处理邮件: 高德打车电子发票 (ID: b'15')
+2025-10-27 20:58:18,674 - EmailAttachmentDownloader - INFO - 已下载附件: 【AA出行-34.75元-2个行程】高德打车电子发票.pdf 到 /Volumes/SD_1.5T/github/AdminAssistant/temp/20251027/【AA出行-34.75元-2个行程】高德打车电子发票.pdf
+2025-10-27 20:58:18,675 - EmailAttachmentDownloader - INFO - 已下载附件: 【AA出行-34.75元-2个行程】高德打车电子发票.xml 到 /Volumes/SD_1.5T/github/AdminAssistant/temp/20251027/【AA出行-34.75元-2个行程】高德打车电子发票.xml
+2025-10-27 20:58:18,680 - EmailAttachmentDownloader - INFO - 已下载附件: 【AA出行-34.75元-2个行程】高德打车电子行程单.pdf 到 /Volumes/SD_1.5T/github/AdminAssistant/temp/20251027/【AA出行-34.75元-2个行程】高德打车电子行程单.pdf
+2025-10-27 20:58:18,680 - EmailAttachmentDownloader - INFO - 共下载 12 个附件
+2025-10-27 20:58:18,822 - EmailAttachmentDownloader - INFO - 已断开与邮箱服务器的连接
+2025-10-27 21:00:53,434 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-10-27 21:00:53,436 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-10-27 21:01:32,430 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-10-27 21:01:32,432 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-10-27 21:01:32,572 - base.image_to_pdf - INFO - 已添加第一张图片: 【AA出行-34.75元-2个行程】高德打车电子发票.png
+2025-10-27 21:01:32,785 - base.image_to_pdf - INFO - 已添加第二张图片: 【AA出行-34.75元-2个行程】高德打车电子行程单.png
+2025-10-27 21:01:32,918 - base.image_to_pdf - INFO - 已添加第一张图片: 【AA出行-86.36元-2个行程】高德打车电子发票.png
+2025-10-27 21:01:33,132 - base.image_to_pdf - INFO - 已添加第二张图片: 【AA出行-86.36元-2个行程】高德打车电子行程单.png
+2025-10-27 21:01:33,262 - base.image_to_pdf - INFO - 已添加第一张图片: 【星徽出行-22.35元-1个行程】高德打车电子发票.png
+2025-10-27 21:01:33,478 - base.image_to_pdf - INFO - 已添加第二张图片: 【星徽出行-22.35元-1个行程】高德打车电子行程单.png
+2025-10-27 21:01:33,611 - base.image_to_pdf - INFO - 已添加第一张图片: 【星徽出行-62.53元-2个行程】高德打车电子发票.png
+2025-10-27 21:01:33,832 - base.image_to_pdf - INFO - 已添加第二张图片: 【星徽出行-62.53元-2个行程】高德打车电子行程单.png
+2025-10-27 21:01:33,951 - base.image_to_pdf - INFO - 已添加第一张图片: 【火箭出行-220.29元-5个行程】高德打车电子发票.png
+2025-10-27 21:01:34,173 - base.image_to_pdf - INFO - 已添加第二张图片: 【火箭出行-220.29元-5个行程】高德打车电子行程单.png
+2025-10-27 21:01:34,274 - base.image_to_pdf - INFO - 已添加第一张图片: 【阳光出行-24.44元-1个行程】高德打车电子发票.png
+2025-10-27 21:01:34,491 - base.image_to_pdf - INFO - 已添加第二张图片: 【阳光出行-24.44元-1个行程】高德打车电子行程单.png
+2025-10-27 21:01:34,594 - base.image_to_pdf - INFO - 已添加第一张图片: 【阳光出行-65.32元-1个行程】高德打车电子发票.png
+2025-10-27 21:01:34,809 - base.image_to_pdf - INFO - 已添加第二张图片: 【阳光出行-65.32元-1个行程】高德打车电子行程单.png
+2025-10-27 21:01:34,931 - base.image_to_pdf - INFO - 已添加第一张图片: 【首汽约车-85.51元-2个行程】高德打车电子发票.png
+2025-10-27 21:01:35,148 - base.image_to_pdf - INFO - 已添加第二张图片: 【首汽约车-85.51元-2个行程】高德打车电子行程单.png
+2025-10-27 21:01:35,191 - base.image_to_pdf - INFO - 图片已成功合成为PDF文件 '/Volumes/SD_1.5T/github/AdminAssistant/temp/20251027/合并文件.pdf'，共 16 张图片
+2025-10-27 21:04:56,247 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-10-27 21:04:56,249 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-10-27 21:04:56,250 - base.invoice_ocr - INFO - 处理目录: /Volumes/SD_1.5T/github/AdminAssistant/temp/20251027/pdf
+2025-10-27 21:04:56,250 - base.invoice_ocr - INFO - 开始处理目录: /Volumes/SD_1.5T/github/AdminAssistant/temp/20251027/pdf
+2025-10-27 21:04:56,250 - base.invoice_ocr - INFO - 已创建输出目录: /Volumes/SD_1.5T/github/AdminAssistant/temp/20251027/pdf/20251027_210456
+2025-10-27 21:04:56,251 - base.invoice_ocr - INFO - 找到 8 个文件
+2025-10-27 21:04:56,251 - base.invoice_ocr - INFO - 识别发票 (1/8): 【AA出行-34.75元-2个行程】高德打车电子发票.pdf
+2025-10-27 21:04:56,251 - base.invoice_ocr - INFO - Processing (1/8): 【AA出行-34.75元-2个行程】高德打车电子发票.pdf
+2025-10-27 21:04:56,269 - base.invoice_ocr - INFO - 发票识别完成: 【AA出行-34.75元-2个行程】高德打车电子发票.pdf
+2025-10-27 21:04:56,269 - base.invoice_ocr - INFO - 准备复制文件: /Volumes/SD_1.5T/github/AdminAssistant/temp/20251027/pdf/【AA出行-34.75元-2个行程】高德打车电子发票.pdf -> /Volumes/SD_1.5T/github/AdminAssistant/temp/20251027/pdf/20251027_210456/20251027_34.75_运输服务.pdf
+2025-10-27 21:04:56,270 - base.invoice_ocr - INFO - 已复制并重命名文件: /Volumes/SD_1.5T/github/AdminAssistant/temp/20251027/pdf/20251027_210456/20251027_34.75_运输服务.pdf
+2025-10-27 21:04:56,270 - base.invoice_ocr - INFO - 识别发票 (2/8): 【AA出行-86.36元-2个行程】高德打车电子发票.pdf
+2025-10-27 21:04:56,270 - base.invoice_ocr - INFO - Processing (2/8): 【AA出行-86.36元-2个行程】高德打车电子发票.pdf
+2025-10-27 21:04:56,286 - base.invoice_ocr - INFO - 发票识别完成: 【AA出行-86.36元-2个行程】高德打车电子发票.pdf
+2025-10-27 21:04:56,286 - base.invoice_ocr - INFO - 准备复制文件: /Volumes/SD_1.5T/github/AdminAssistant/temp/20251027/pdf/【AA出行-86.36元-2个行程】高德打车电子发票.pdf -> /Volumes/SD_1.5T/github/AdminAssistant/temp/20251027/pdf/20251027_210456/20251008_86.36_运输服务.pdf
+2025-10-27 21:04:56,286 - base.invoice_ocr - INFO - 已复制并重命名文件: /Volumes/SD_1.5T/github/AdminAssistant/temp/20251027/pdf/20251027_210456/20251008_86.36_运输服务.pdf
+2025-10-27 21:04:56,286 - base.invoice_ocr - INFO - 识别发票 (3/8): 【星徽出行-22.35元-1个行程】高德打车电子发票.pdf
+2025-10-27 21:04:56,286 - base.invoice_ocr - INFO - Processing (3/8): 【星徽出行-22.35元-1个行程】高德打车电子发票.pdf
+2025-10-27 21:04:56,300 - base.invoice_ocr - INFO - 发票识别完成: 【星徽出行-22.35元-1个行程】高德打车电子发票.pdf
+2025-10-27 21:04:56,300 - base.invoice_ocr - INFO - 准备复制文件: /Volumes/SD_1.5T/github/AdminAssistant/temp/20251027/pdf/【星徽出行-22.35元-1个行程】高德打车电子发票.pdf -> /Volumes/SD_1.5T/github/AdminAssistant/temp/20251027/pdf/20251027_210456/20251027_22.35_运输服务.pdf
+2025-10-27 21:04:56,301 - base.invoice_ocr - INFO - 已复制并重命名文件: /Volumes/SD_1.5T/github/AdminAssistant/temp/20251027/pdf/20251027_210456/20251027_22.35_运输服务.pdf
+2025-10-27 21:04:56,301 - base.invoice_ocr - INFO - 识别发票 (4/8): 【星徽出行-62.53元-2个行程】高德打车电子发票.pdf
+2025-10-27 21:04:56,301 - base.invoice_ocr - INFO - Processing (4/8): 【星徽出行-62.53元-2个行程】高德打车电子发票.pdf
+2025-10-27 21:04:56,315 - base.invoice_ocr - INFO - 发票识别完成: 【星徽出行-62.53元-2个行程】高德打车电子发票.pdf
+2025-10-27 21:04:56,315 - base.invoice_ocr - INFO - 准备复制文件: /Volumes/SD_1.5T/github/AdminAssistant/temp/20251027/pdf/【星徽出行-62.53元-2个行程】高德打车电子发票.pdf -> /Volumes/SD_1.5T/github/AdminAssistant/temp/20251027/pdf/20251027_210456/20251008_62.53_运输服务.pdf
+2025-10-27 21:04:56,316 - base.invoice_ocr - INFO - 已复制并重命名文件: /Volumes/SD_1.5T/github/AdminAssistant/temp/20251027/pdf/20251027_210456/20251008_62.53_运输服务.pdf
+2025-10-27 21:04:56,316 - base.invoice_ocr - INFO - 识别发票 (5/8): 【火箭出行-220.29元-5个行程】高德打车电子发票.pdf
+2025-10-27 21:04:56,316 - base.invoice_ocr - INFO - Processing (5/8): 【火箭出行-220.29元-5个行程】高德打车电子发票.pdf
+2025-10-27 21:04:56,331 - base.invoice_ocr - INFO - 发票识别完成: 【火箭出行-220.29元-5个行程】高德打车电子发票.pdf
+2025-10-27 21:04:56,331 - base.invoice_ocr - INFO - 准备复制文件: /Volumes/SD_1.5T/github/AdminAssistant/temp/20251027/pdf/【火箭出行-220.29元-5个行程】高德打车电子发票.pdf -> /Volumes/SD_1.5T/github/AdminAssistant/temp/20251027/pdf/20251027_210456/20251027_220.29_运输服务.pdf
+2025-10-27 21:04:56,331 - base.invoice_ocr - INFO - 已复制并重命名文件: /Volumes/SD_1.5T/github/AdminAssistant/temp/20251027/pdf/20251027_210456/20251027_220.29_运输服务.pdf
+2025-10-27 21:04:56,331 - base.invoice_ocr - INFO - 识别发票 (6/8): 【阳光出行-24.44元-1个行程】高德打车电子发票.pdf
+2025-10-27 21:04:56,331 - base.invoice_ocr - INFO - Processing (6/8): 【阳光出行-24.44元-1个行程】高德打车电子发票.pdf
+2025-10-27 21:04:56,346 - base.invoice_ocr - INFO - 发票识别完成: 【阳光出行-24.44元-1个行程】高德打车电子发票.pdf
+2025-10-27 21:04:56,346 - base.invoice_ocr - INFO - 准备复制文件: /Volumes/SD_1.5T/github/AdminAssistant/temp/20251027/pdf/【阳光出行-24.44元-1个行程】高德打车电子发票.pdf -> /Volumes/SD_1.5T/github/AdminAssistant/temp/20251027/pdf/20251027_210456/20251027_24.44_运输服务.pdf
+2025-10-27 21:04:56,346 - base.invoice_ocr - INFO - 已复制并重命名文件: /Volumes/SD_1.5T/github/AdminAssistant/temp/20251027/pdf/20251027_210456/20251027_24.44_运输服务.pdf
+2025-10-27 21:04:56,346 - base.invoice_ocr - INFO - 识别发票 (7/8): 【阳光出行-65.32元-1个行程】高德打车电子发票.pdf
+2025-10-27 21:04:56,346 - base.invoice_ocr - INFO - Processing (7/8): 【阳光出行-65.32元-1个行程】高德打车电子发票.pdf
+2025-10-27 21:04:56,363 - base.invoice_ocr - INFO - 发票识别完成: 【阳光出行-65.32元-1个行程】高德打车电子发票.pdf
+2025-10-27 21:04:56,363 - base.invoice_ocr - INFO - 准备复制文件: /Volumes/SD_1.5T/github/AdminAssistant/temp/20251027/pdf/【阳光出行-65.32元-1个行程】高德打车电子发票.pdf -> /Volumes/SD_1.5T/github/AdminAssistant/temp/20251027/pdf/20251027_210456/20251008_65.32_运输服务.pdf
+2025-10-27 21:04:56,364 - base.invoice_ocr - INFO - 已复制并重命名文件: /Volumes/SD_1.5T/github/AdminAssistant/temp/20251027/pdf/20251027_210456/20251008_65.32_运输服务.pdf
+2025-10-27 21:04:56,364 - base.invoice_ocr - INFO - 识别发票 (8/8): 【首汽约车-85.51元-2个行程】高德打车电子发票.pdf
+2025-10-27 21:04:56,364 - base.invoice_ocr - INFO - Processing (8/8): 【首汽约车-85.51元-2个行程】高德打车电子发票.pdf
+2025-10-27 21:04:56,377 - base.invoice_ocr - INFO - 发票识别完成: 【首汽约车-85.51元-2个行程】高德打车电子发票.pdf
+2025-10-27 21:04:56,377 - base.invoice_ocr - INFO - 准备复制文件: /Volumes/SD_1.5T/github/AdminAssistant/temp/20251027/pdf/【首汽约车-85.51元-2个行程】高德打车电子发票.pdf -> /Volumes/SD_1.5T/github/AdminAssistant/temp/20251027/pdf/20251027_210456/20251008_85.51_运输服务.pdf
+2025-10-27 21:04:56,377 - base.invoice_ocr - INFO - 已复制并重命名文件: /Volumes/SD_1.5T/github/AdminAssistant/temp/20251027/pdf/20251027_210456/20251008_85.51_运输服务.pdf
+2025-10-27 21:04:56,377 - base.invoice_ocr - INFO - 批量处理完成！共处理 8 张发票，成功 8 张，失败 0 张
+2025-10-27 21:04:56,377 - base.invoice_ocr - INFO - 批量处理完成！共处理 8 张发票，成功 8 张，失败 0 张
+2025-10-27 21:04:56,384 - base.invoice_ocr - ERROR - 生成Excel统计表时出错: 'Cell' object is not iterable
+2025-10-27 21:04:56,384 - base.invoice_ocr - WARNING - 无法生成发票统计Excel表
+2025-10-31 08:49:25,990 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-10-31 08:49:25,992 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-10-31 08:49:25,994 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-10-31 08:49:25,994 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json
+2025-10-31 08:49:25,994 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: '/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json'
+2025-10-31 08:49:25,994 - EmailAttachmentDownloader - INFO - config.json get success: imap_server=None, username=None, save_dir=None
+2025-10-31 08:49:26,638 - EmailAttachmentDownloader - INFO - 成功连接到邮箱: 23512221@qq.com
+2025-10-31 08:49:26,764 - EmailAttachmentDownloader - INFO - 搜索条件: (SINCE 20-Oct-2025 BEFORE 28-Oct-2025) ALL
+2025-10-31 08:49:26,896 - EmailAttachmentDownloader - INFO - 初步搜索找到 15 封邮件
+2025-10-31 08:49:26,896 - EmailAttachmentDownloader - INFO - 开始精准过滤 None 的邮件...
+2025-10-31 08:49:27,012 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'1' 的日期: Invalid date value or format "None"
+2025-10-31 08:49:27,128 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'2' 的日期: Invalid date value or format "None"
+2025-10-31 08:49:27,645 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'6' 的日期: Invalid date value or format "None"
+2025-10-31 08:49:27,821 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'7' 的日期: Invalid date value or format "None"
+2025-10-31 08:49:28,787 - EmailAttachmentDownloader - INFO - 精准过滤后找到 7 封 None 的邮件
+2025-10-31 08:49:28,787 - EmailAttachmentDownloader - INFO - 读取邮件 1/7 (ID: b'9')
+2025-10-31 08:49:29,505 - EmailAttachmentDownloader - INFO - 读取邮件 2/7 (ID: b'10')
+2025-10-31 08:49:29,885 - EmailAttachmentDownloader - INFO - 读取邮件 3/7 (ID: b'11')
+2025-10-31 08:49:30,227 - EmailAttachmentDownloader - INFO - 读取邮件 4/7 (ID: b'12')
+2025-10-31 08:49:30,610 - EmailAttachmentDownloader - INFO - 读取邮件 5/7 (ID: b'13')
+2025-10-31 08:49:31,752 - EmailAttachmentDownloader - INFO - 读取邮件 6/7 (ID: b'14')
+2025-10-31 08:49:32,223 - EmailAttachmentDownloader - INFO - 读取邮件 7/7 (ID: b'15')
+2025-10-31 08:49:32,712 - EmailAttachmentDownloader - INFO - 成功读取 7 封邮件
+2025-10-31 08:49:32,855 - EmailAttachmentDownloader - INFO - 已断开与邮箱服务器的连接
+2025-11-01 08:53:44,168 - mcp_tool_app_scanner - INFO - MCP工具 'app_scanner' 日志系统已启动
+2025-11-01 08:53:44,177 - mcp_tool_app_cache - INFO - MCP工具 'app_cache' 日志系统已启动
+2025-11-01 08:53:44,178 - mcp_tool_nlp_parser - INFO - MCP工具 'nlp_parser' 日志系统已启动
+2025-11-01 08:53:44,179 - mcp_tool_app_executor - INFO - MCP工具 'app_executor' 日志系统已启动
+2025-11-01 08:53:44,180 - mcp_tool_app_usage - INFO - MCP工具 'app_usage' 日志系统已启动
+2025-11-01 08:53:44,180 - mcp_tool_app_usage - INFO - [app_usage] 尝试加载使用记录文件: /Users/heguangzhong/.mcp/app_usage.json
+2025-11-01 08:53:44,181 - mcp_tool_app_usage - INFO - [app_usage] 成功加载使用记录，包含 17 个应用的使用记录
+2025-11-01 08:53:44,181 - mcp_tool_open_app_tool - INFO - MCP工具 'open_app_tool' 日志系统已启动
+2025-11-01 08:53:44,185 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-11-01 08:53:44,185 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json
+2025-11-01 08:53:44,185 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: '/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json'
+2025-11-01 08:53:44,185 - EmailAttachmentDownloader - INFO - config.json get success: imap_server=None, username=None, save_dir=None
+2025-11-01 08:53:44,186 - mcp_tool_open_app_tool - INFO - [open_app_tool] 开始初始化应用索引
+2025-11-01 08:53:44,186 - mcp_tool_app_cache - INFO - [app_cache] 尝试加载缓存文件: /Users/heguangzhong/.mcp/apps_cache.json
+2025-11-01 08:53:44,186 - mcp_tool_app_cache - INFO - [app_cache] 缓存已过期
+2025-11-01 08:53:44,187 - mcp_tool_open_app_tool - INFO - [open_app_tool] 缓存加载失败或应用数量不足，执行应用扫描
+2025-11-01 08:53:44,187 - mcp_tool_app_cache - INFO - [app_cache] 开始更新缓存
+2025-11-01 08:53:44,187 - mcp_tool_app_scanner - INFO - [app_scanner] 开始扫描系统已安装应用
+2025-11-01 08:53:44,262 - mcp_tool_app_scanner - INFO - [app_scanner] 扫描完成，共发现 386 个应用
+2025-11-01 08:53:44,262 - mcp_tool_app_cache - INFO - [app_cache] 尝试保存缓存到文件: /Users/heguangzhong/.mcp/apps_cache.json
+2025-11-01 08:53:44,264 - mcp_tool_app_cache - INFO - [app_cache] 缓存保存成功，共保存 386 个应用
+2025-11-01 08:53:44,264 - mcp_tool_open_app_tool - INFO - [open_app_tool] 应用索引初始化成功（执行扫描），共 386 个应用，耗时 0.08 秒
+2025-11-01 08:53:44,275 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-01 08:54:15,883 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-01 08:54:15,892 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-11-01 08:54:16,430 - EmailAttachmentDownloader - INFO - 成功连接到邮箱: 23512221@qq.com
+2025-11-01 08:54:16,568 - EmailAttachmentDownloader - INFO - 搜索条件: (SINCE 31-Oct-2025 BEFORE 02-Nov-2025) ALL
+2025-11-01 08:54:16,636 - EmailAttachmentDownloader - INFO - 初步搜索找到 16 封邮件
+2025-11-01 08:54:16,637 - EmailAttachmentDownloader - INFO - 开始精准过滤 None 的邮件...
+2025-11-01 08:54:16,758 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'1' 的日期: Invalid date value or format "None"
+2025-11-01 08:54:16,861 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'2' 的日期: Invalid date value or format "None"
+2025-11-01 08:54:17,260 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'6' 的日期: Invalid date value or format "None"
+2025-11-01 08:54:17,372 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'7' 的日期: Invalid date value or format "None"
+2025-11-01 08:54:18,217 - EmailAttachmentDownloader - INFO - 精准过滤后找到 1 封 None 的邮件
+2025-11-01 08:54:18,827 - EmailAttachmentDownloader - INFO - 处理邮件: 个人信用报告 (ID: b'16')
+2025-11-01 08:54:18,853 - EmailAttachmentDownloader - INFO - 已下载附件: 个人信用报告.zip 到 /Volumes/SD_1.5T/github/AdminAssistant/temp/20251101/个人信用报告.zip
+2025-11-01 08:54:18,853 - EmailAttachmentDownloader - INFO - 共下载 1 个附件
+2025-11-01 08:54:18,996 - EmailAttachmentDownloader - INFO - 已断开与邮箱服务器的连接
+2025-11-01 11:26:53,761 - mcp_tool_app_scanner - INFO - MCP工具 'app_scanner' 日志系统已启动
+2025-11-01 11:26:53,761 - mcp_tool_app_scanner - INFO - MCP工具 'app_scanner' 日志系统已启动
+2025-11-01 11:26:53,761 - mcp_tool_app_scanner - INFO - MCP工具 'app_scanner' 日志系统已启动
+2025-11-01 11:26:53,761 - mcp_tool_app_scanner - INFO - MCP工具 'app_scanner' 日志系统已启动
+2025-11-01 11:26:53,764 - mcp_tool_app_cache - INFO - MCP工具 'app_cache' 日志系统已启动
+2025-11-01 11:26:53,764 - mcp_tool_app_cache - INFO - MCP工具 'app_cache' 日志系统已启动
+2025-11-01 11:26:53,764 - mcp_tool_app_cache - INFO - MCP工具 'app_cache' 日志系统已启动
+2025-11-01 11:26:53,764 - mcp_tool_app_cache - INFO - MCP工具 'app_cache' 日志系统已启动
+2025-11-01 11:26:53,772 - mcp_tool_nlp_parser - INFO - MCP工具 'nlp_parser' 日志系统已启动
+2025-11-01 11:26:53,772 - mcp_tool_nlp_parser - INFO - MCP工具 'nlp_parser' 日志系统已启动
+2025-11-01 11:26:53,772 - mcp_tool_nlp_parser - INFO - MCP工具 'nlp_parser' 日志系统已启动
+2025-11-01 11:26:53,772 - mcp_tool_nlp_parser - INFO - MCP工具 'nlp_parser' 日志系统已启动
+2025-11-01 11:26:53,773 - mcp_tool_app_executor - INFO - MCP工具 'app_executor' 日志系统已启动
+2025-11-01 11:26:53,773 - mcp_tool_app_executor - INFO - MCP工具 'app_executor' 日志系统已启动
+2025-11-01 11:26:53,773 - mcp_tool_app_executor - INFO - MCP工具 'app_executor' 日志系统已启动
+2025-11-01 11:26:53,773 - mcp_tool_app_executor - INFO - MCP工具 'app_executor' 日志系统已启动
+2025-11-01 11:26:53,780 - mcp_tool_app_usage - INFO - MCP工具 'app_usage' 日志系统已启动
+2025-11-01 11:26:53,780 - mcp_tool_app_usage - INFO - MCP工具 'app_usage' 日志系统已启动
+2025-11-01 11:26:53,780 - mcp_tool_app_usage - INFO - MCP工具 'app_usage' 日志系统已启动
+2025-11-01 11:26:53,780 - mcp_tool_app_usage - INFO - MCP工具 'app_usage' 日志系统已启动
+2025-11-01 11:26:53,780 - mcp_tool_app_usage - INFO - [app_usage] 尝试加载使用记录文件: /Users/heguangzhong/.mcp/app_usage.json
+2025-11-01 11:26:53,780 - mcp_tool_app_usage - INFO - [app_usage] 尝试加载使用记录文件: /Users/heguangzhong/.mcp/app_usage.json
+2025-11-01 11:26:53,780 - mcp_tool_app_usage - INFO - [app_usage] 尝试加载使用记录文件: /Users/heguangzhong/.mcp/app_usage.json
+2025-11-01 11:26:53,780 - mcp_tool_app_usage - INFO - [app_usage] 尝试加载使用记录文件: /Users/heguangzhong/.mcp/app_usage.json
+2025-11-01 11:26:53,781 - mcp_tool_app_usage - INFO - [app_usage] 成功加载使用记录，包含 17 个应用的使用记录
+2025-11-01 11:26:53,781 - mcp_tool_app_usage - INFO - [app_usage] 成功加载使用记录，包含 17 个应用的使用记录
+2025-11-01 11:26:53,781 - mcp_tool_app_usage - INFO - [app_usage] 成功加载使用记录，包含 17 个应用的使用记录
+2025-11-01 11:26:53,781 - mcp_tool_app_usage - INFO - [app_usage] 成功加载使用记录，包含 17 个应用的使用记录
+2025-11-01 11:26:53,781 - mcp_tool_open_app_tool - INFO - MCP工具 'open_app_tool' 日志系统已启动
+2025-11-01 11:26:53,781 - mcp_tool_open_app_tool - INFO - MCP工具 'open_app_tool' 日志系统已启动
+2025-11-01 11:26:53,781 - mcp_tool_open_app_tool - INFO - MCP工具 'open_app_tool' 日志系统已启动
+2025-11-01 11:26:53,781 - mcp_tool_open_app_tool - INFO - MCP工具 'open_app_tool' 日志系统已启动
+2025-11-01 11:26:53,787 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-11-01 11:26:53,787 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-11-01 11:26:53,787 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-11-01 11:26:53,787 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-11-01 11:26:53,787 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json
+2025-11-01 11:26:53,787 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json
+2025-11-01 11:26:53,787 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json
+2025-11-01 11:26:53,787 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json
+2025-11-01 11:26:53,787 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: '/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json'
+2025-11-01 11:26:53,787 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: '/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json'
+2025-11-01 11:26:53,787 - EmailAttachmentDownloader - INFO - config.json get success: imap_server=None, username=None, save_dir=None
+2025-11-01 11:26:53,787 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: '/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json'
+2025-11-01 11:26:53,787 - EmailAttachmentDownloader - INFO - config.json get success: imap_server=None, username=None, save_dir=None
+2025-11-01 11:26:53,787 - EmailAttachmentDownloader - INFO - config.json get success: imap_server=None, username=None, save_dir=None
+2025-11-01 11:26:53,787 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: '/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json'
+2025-11-01 11:26:53,788 - EmailAttachmentDownloader - INFO - config.json get success: imap_server=None, username=None, save_dir=None
+2025-11-01 11:26:53,788 - mcp_tool_open_app_tool - INFO - [open_app_tool] 开始初始化应用索引
+2025-11-01 11:26:53,788 - mcp_tool_open_app_tool - INFO - [open_app_tool] 开始初始化应用索引
+2025-11-01 11:26:53,788 - mcp_tool_open_app_tool - INFO - [open_app_tool] 开始初始化应用索引
+2025-11-01 11:26:53,788 - mcp_tool_app_cache - INFO - [app_cache] 尝试加载缓存文件: /Users/heguangzhong/.mcp/apps_cache.json
+2025-11-01 11:26:53,788 - mcp_tool_app_cache - INFO - [app_cache] 尝试加载缓存文件: /Users/heguangzhong/.mcp/apps_cache.json
+2025-11-01 11:26:53,788 - mcp_tool_open_app_tool - INFO - [open_app_tool] 开始初始化应用索引
+2025-11-01 11:26:53,788 - mcp_tool_app_cache - INFO - [app_cache] 尝试加载缓存文件: /Users/heguangzhong/.mcp/apps_cache.json
+2025-11-01 11:26:53,788 - mcp_tool_app_cache - INFO - [app_cache] 尝试加载缓存文件: /Users/heguangzhong/.mcp/apps_cache.json
+2025-11-01 11:26:53,789 - mcp_tool_app_cache - INFO - [app_cache] 缓存加载成功，包含 386 个应用
+2025-11-01 11:26:53,789 - mcp_tool_app_cache - INFO - [app_cache] 缓存加载成功，包含 386 个应用
+2025-11-01 11:26:53,789 - mcp_tool_app_cache - INFO - [app_cache] 缓存加载成功，包含 386 个应用
+2025-11-01 11:26:53,789 - mcp_tool_open_app_tool - INFO - [open_app_tool] 应用索引初始化成功（从缓存加载），共 386 个应用，耗时 0.00 秒
+2025-11-01 11:26:53,789 - mcp_tool_open_app_tool - INFO - [open_app_tool] 应用索引初始化成功（从缓存加载），共 386 个应用，耗时 0.00 秒
+2025-11-01 11:26:53,789 - mcp_tool_app_cache - INFO - [app_cache] 缓存加载成功，包含 386 个应用
+2025-11-01 11:26:53,789 - mcp_tool_open_app_tool - INFO - [open_app_tool] 应用索引初始化成功（从缓存加载），共 386 个应用，耗时 0.00 秒
+2025-11-01 11:26:53,789 - mcp_tool_open_app_tool - INFO - [open_app_tool] 应用索引初始化成功（从缓存加载），共 386 个应用，耗时 0.00 秒
+2025-11-01 11:26:53,800 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-01 11:26:53,801 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-01 11:26:53,803 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-01 11:26:53,803 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-01 11:26:53,804 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-01 11:26:53,805 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-01 11:26:53,805 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-01 11:26:53,806 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-01 11:26:53,806 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-01 11:26:53,807 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-01 11:30:56,585 - mcp_tool_app_scanner - INFO - MCP工具 'app_scanner' 日志系统已启动
+2025-11-01 11:30:56,587 - mcp_tool_app_cache - INFO - MCP工具 'app_cache' 日志系统已启动
+2025-11-01 11:30:56,587 - mcp_tool_nlp_parser - INFO - MCP工具 'nlp_parser' 日志系统已启动
+2025-11-01 11:30:56,588 - mcp_tool_app_executor - INFO - MCP工具 'app_executor' 日志系统已启动
+2025-11-01 11:30:56,588 - mcp_tool_app_usage - INFO - MCP工具 'app_usage' 日志系统已启动
+2025-11-01 11:30:56,588 - mcp_tool_app_usage - INFO - [app_usage] 尝试加载使用记录文件: /Users/heguangzhong/.mcp/app_usage.json
+2025-11-01 11:30:56,588 - mcp_tool_app_usage - INFO - [app_usage] 成功加载使用记录，包含 17 个应用的使用记录
+2025-11-01 11:30:56,588 - mcp_tool_open_app_tool - INFO - MCP工具 'open_app_tool' 日志系统已启动
+2025-11-01 11:30:56,589 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-11-01 11:30:56,590 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json
+2025-11-01 11:30:56,590 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: '/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json'
+2025-11-01 11:30:56,590 - EmailAttachmentDownloader - INFO - config.json get success: imap_server=None, username=None, save_dir=None
+2025-11-01 11:30:56,590 - mcp_tool_open_app_tool - INFO - [open_app_tool] 开始初始化应用索引
+2025-11-01 11:30:56,590 - mcp_tool_app_cache - INFO - [app_cache] 尝试加载缓存文件: /Users/heguangzhong/.mcp/apps_cache.json
+2025-11-01 11:30:56,590 - mcp_tool_app_cache - INFO - [app_cache] 缓存加载成功，包含 386 个应用
+2025-11-01 11:30:56,590 - mcp_tool_open_app_tool - INFO - [open_app_tool] 应用索引初始化成功（从缓存加载），共 386 个应用，耗时 0.00 秒
+2025-11-01 11:30:56,598 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-01 11:31:20,377 - mcp_tool_app_scanner - INFO - MCP工具 'app_scanner' 日志系统已启动
+2025-11-01 11:31:20,378 - mcp_tool_app_cache - INFO - MCP工具 'app_cache' 日志系统已启动
+2025-11-01 11:31:20,378 - mcp_tool_nlp_parser - INFO - MCP工具 'nlp_parser' 日志系统已启动
+2025-11-01 11:31:20,379 - mcp_tool_app_executor - INFO - MCP工具 'app_executor' 日志系统已启动
+2025-11-01 11:31:20,379 - mcp_tool_app_usage - INFO - MCP工具 'app_usage' 日志系统已启动
+2025-11-01 11:31:20,379 - mcp_tool_app_usage - INFO - [app_usage] 尝试加载使用记录文件: /Users/heguangzhong/.mcp/app_usage.json
+2025-11-01 11:31:20,379 - mcp_tool_app_usage - INFO - [app_usage] 成功加载使用记录，包含 17 个应用的使用记录
+2025-11-01 11:31:20,380 - mcp_tool_open_app_tool - INFO - MCP工具 'open_app_tool' 日志系统已启动
+2025-11-01 11:31:20,381 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-11-01 11:31:20,381 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json
+2025-11-01 11:31:20,381 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: '/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json'
+2025-11-01 11:31:20,381 - EmailAttachmentDownloader - INFO - config.json get success: imap_server=None, username=None, save_dir=None
+2025-11-01 11:31:20,381 - mcp_tool_open_app_tool - INFO - [open_app_tool] 开始初始化应用索引
+2025-11-01 11:31:20,381 - mcp_tool_app_cache - INFO - [app_cache] 尝试加载缓存文件: /Users/heguangzhong/.mcp/apps_cache.json
+2025-11-01 11:31:20,382 - mcp_tool_app_cache - INFO - [app_cache] 缓存加载成功，包含 386 个应用
+2025-11-01 11:31:20,382 - mcp_tool_open_app_tool - INFO - [open_app_tool] 应用索引初始化成功（从缓存加载），共 386 个应用，耗时 0.00 秒
+2025-11-01 11:31:20,389 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-01 11:32:30,031 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-01 11:32:30,034 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-11-01 11:32:30,663 - EmailAttachmentDownloader - INFO - 成功连接到邮箱: 23512221@qq.com
+2025-11-01 11:32:30,810 - EmailAttachmentDownloader - INFO - 搜索条件: (SINCE 25-Oct-2025 BEFORE 02-Nov-2025) ALL
+2025-11-01 11:32:30,934 - EmailAttachmentDownloader - INFO - 初步搜索找到 16 封邮件
+2025-11-01 11:32:30,934 - EmailAttachmentDownloader - INFO - 开始精准过滤 None 的邮件...
+2025-11-01 11:32:31,178 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'1' 的日期: Invalid date value or format "None"
+2025-11-01 11:32:31,306 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'2' 的日期: Invalid date value or format "None"
+2025-11-01 11:32:32,079 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'6' 的日期: Invalid date value or format "None"
+2025-11-01 11:32:32,315 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'7' 的日期: Invalid date value or format "None"
+2025-11-01 11:32:33,742 - EmailAttachmentDownloader - INFO - 精准过滤后找到 4 封 None 的邮件
+2025-11-01 11:32:34,758 - EmailAttachmentDownloader - INFO - 处理邮件: 高德打车电子发票 (ID: b'13')
+2025-11-01 11:32:34,760 - EmailAttachmentDownloader - INFO - 已下载附件: 【火箭出行-220.29元-5个行程】高德打车电子发票.pdf 到 /Volumes/SD_1.5T/github/AdminAssistant/temp/20251101_weekly/【火箭出行-220.29元-5个行程】高德打车电子发票.pdf
+2025-11-01 11:32:34,761 - EmailAttachmentDownloader - INFO - 已下载附件: 【阳光出行-24.44元-1个行程】高德打车电子发票.pdf 到 /Volumes/SD_1.5T/github/AdminAssistant/temp/20251101_weekly/【阳光出行-24.44元-1个行程】高德打车电子发票.pdf
+2025-11-01 11:32:34,767 - EmailAttachmentDownloader - INFO - 已下载附件: 【火箭出行-220.29元-5个行程】高德打车电子行程单.pdf 到 /Volumes/SD_1.5T/github/AdminAssistant/temp/20251101_weekly/【火箭出行-220.29元-5个行程】高德打车电子行程单.pdf
+2025-11-01 11:32:34,772 - EmailAttachmentDownloader - INFO - 已下载附件: 【阳光出行-24.44元-1个行程】高德打车电子行程单.pdf 到 /Volumes/SD_1.5T/github/AdminAssistant/temp/20251101_weekly/【阳光出行-24.44元-1个行程】高德打车电子行程单.pdf
+2025-11-01 11:32:35,542 - EmailAttachmentDownloader - INFO - 处理邮件: 高德打车电子发票 (ID: b'14')
+2025-11-01 11:32:35,543 - EmailAttachmentDownloader - INFO - 已下载附件: 【星徽出行-22.35元-1个行程】高德打车电子发票.pdf 到 /Volumes/SD_1.5T/github/AdminAssistant/temp/20251101_weekly/【星徽出行-22.35元-1个行程】高德打车电子发票.pdf
+2025-11-01 11:32:35,547 - EmailAttachmentDownloader - INFO - 已下载附件: 【星徽出行-22.35元-1个行程】高德打车电子行程单.pdf 到 /Volumes/SD_1.5T/github/AdminAssistant/temp/20251101_weekly/【星徽出行-22.35元-1个行程】高德打车电子行程单.pdf
+2025-11-01 11:32:36,232 - EmailAttachmentDownloader - INFO - 处理邮件: 高德打车电子发票 (ID: b'15')
+2025-11-01 11:32:36,234 - EmailAttachmentDownloader - INFO - 已下载附件: 【AA出行-34.75元-2个行程】高德打车电子发票.pdf 到 /Volumes/SD_1.5T/github/AdminAssistant/temp/20251101_weekly/【AA出行-34.75元-2个行程】高德打车电子发票.pdf
+2025-11-01 11:32:36,238 - EmailAttachmentDownloader - INFO - 已下载附件: 【AA出行-34.75元-2个行程】高德打车电子行程单.pdf 到 /Volumes/SD_1.5T/github/AdminAssistant/temp/20251101_weekly/【AA出行-34.75元-2个行程】高德打车电子行程单.pdf
+2025-11-01 11:32:36,623 - EmailAttachmentDownloader - INFO - 处理邮件: 个人信用报告 (ID: b'16')
+2025-11-01 11:32:36,625 - EmailAttachmentDownloader - INFO - 已下载附件: 个人信用报告.zip 到 /Volumes/SD_1.5T/github/AdminAssistant/temp/20251101_weekly/个人信用报告.zip
+2025-11-01 11:32:36,625 - EmailAttachmentDownloader - INFO - 共下载 9 个附件
+2025-11-01 11:32:36,784 - EmailAttachmentDownloader - INFO - 已断开与邮箱服务器的连接
+2025-11-01 16:29:03,278 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-01 16:29:03,284 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-11-01 16:29:03,928 - EmailAttachmentDownloader - INFO - 成功连接到邮箱: 23512221@qq.com
+2025-11-01 16:29:04,077 - EmailAttachmentDownloader - INFO - 搜索条件: (SINCE 01-Nov-2025 BEFORE 02-Nov-2025) ALL
+2025-11-01 16:29:04,144 - EmailAttachmentDownloader - INFO - 初步搜索找到 17 封邮件
+2025-11-01 16:29:04,145 - EmailAttachmentDownloader - INFO - 开始精准过滤 None 的邮件...
+2025-11-01 16:29:04,305 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'1' 的日期: Invalid date value or format "None"
+2025-11-01 16:29:04,459 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'2' 的日期: Invalid date value or format "None"
+2025-11-01 16:29:05,026 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'6' 的日期: Invalid date value or format "None"
+2025-11-01 16:29:05,272 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'7' 的日期: Invalid date value or format "None"
+2025-11-01 16:29:06,834 - EmailAttachmentDownloader - INFO - 精准过滤后找到 1 封 None 的邮件
+2025-11-01 16:29:07,040 - EmailAttachmentDownloader - INFO - 处理邮件: 智云发票 (ID: b'17')
+2025-11-01 16:29:07,040 - EmailAttachmentDownloader - INFO - 共下载 0 个附件
+2025-11-01 16:29:07,207 - EmailAttachmentDownloader - INFO - 已断开与邮箱服务器的连接
+2025-11-01 16:30:30,955 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-01 16:30:30,958 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-11-01 16:30:31,457 - EmailAttachmentDownloader - INFO - 成功连接到邮箱: 23512221@qq.com
+2025-11-01 16:30:31,652 - EmailAttachmentDownloader - INFO - 搜索条件: (SINCE 01-Nov-2025 BEFORE 02-Nov-2025) ALL
+2025-11-01 16:30:31,734 - EmailAttachmentDownloader - INFO - 初步搜索找到 17 封邮件
+2025-11-01 16:30:31,734 - EmailAttachmentDownloader - INFO - 开始精准过滤 None 的邮件...
+2025-11-01 16:30:32,039 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'1' 的日期: Invalid date value or format "None"
+2025-11-01 16:30:32,116 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'2' 的日期: Invalid date value or format "None"
+2025-11-01 16:30:32,535 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'6' 的日期: Invalid date value or format "None"
+2025-11-01 16:30:32,622 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'7' 的日期: Invalid date value or format "None"
+2025-11-01 16:30:33,756 - EmailAttachmentDownloader - INFO - 精准过滤后找到 1 封 None 的邮件
+2025-11-01 16:30:33,924 - EmailAttachmentDownloader - INFO - 处理邮件: 智云发票 (ID: b'17')
+2025-11-01 16:30:33,925 - EmailAttachmentDownloader - INFO - 共下载 0 个附件
+2025-11-01 16:30:34,049 - EmailAttachmentDownloader - INFO - 处理邮件正文链接: 智云发票 (ID: b'17')
+2025-11-01 16:30:34,053 - EmailAttachmentDownloader - INFO - 共从邮件正文下载 0 个附件
+2025-11-01 16:30:34,176 - EmailAttachmentDownloader - INFO - 已断开与邮箱服务器的连接
+2025-11-01 16:30:52,371 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-01 16:30:52,373 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-11-01 16:30:52,374 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-11-01 16:30:52,374 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json
+2025-11-01 16:30:52,374 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: '/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json'
+2025-11-01 16:30:52,375 - EmailAttachmentDownloader - INFO - config.json get success: imap_server=None, username=None, save_dir=None
+2025-11-01 16:30:52,993 - EmailAttachmentDownloader - INFO - 成功连接到邮箱: 23512221@qq.com
+2025-11-01 16:30:53,113 - EmailAttachmentDownloader - INFO - 搜索条件: (SINCE 01-Nov-2025 BEFORE 02-Nov-2025) ALL
+2025-11-01 16:30:53,173 - EmailAttachmentDownloader - INFO - 初步搜索找到 17 封邮件
+2025-11-01 16:30:53,173 - EmailAttachmentDownloader - INFO - 开始精准过滤 None 的邮件...
+2025-11-01 16:30:53,254 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'1' 的日期: Invalid date value or format "None"
+2025-11-01 16:30:53,352 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'2' 的日期: Invalid date value or format "None"
+2025-11-01 16:30:53,883 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'6' 的日期: Invalid date value or format "None"
+2025-11-01 16:30:54,014 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'7' 的日期: Invalid date value or format "None"
+2025-11-01 16:30:55,004 - EmailAttachmentDownloader - INFO - 精准过滤后找到 1 封 None 的邮件
+2025-11-01 16:30:55,004 - EmailAttachmentDownloader - INFO - 读取邮件 1/1 (ID: b'17')
+2025-11-01 16:30:55,174 - EmailAttachmentDownloader - INFO - 成功读取 1 封邮件
+2025-11-01 16:30:55,348 - EmailAttachmentDownloader - INFO - 已断开与邮箱服务器的连接
+2025-11-01 16:31:12,705 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-01 16:31:12,708 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-11-01 16:31:20,450 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-01 16:31:20,454 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-11-01 16:31:21,002 - EmailAttachmentDownloader - INFO - 成功连接到邮箱: 23512221@qq.com
+2025-11-01 16:31:21,104 - EmailAttachmentDownloader - INFO - 搜索条件: (SINCE 01-Nov-2025 BEFORE 02-Nov-2025) ALL
+2025-11-01 16:31:21,190 - EmailAttachmentDownloader - INFO - 初步搜索找到 17 封邮件
+2025-11-01 16:31:21,190 - EmailAttachmentDownloader - INFO - 开始精准过滤 None 的邮件...
+2025-11-01 16:31:21,278 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'1' 的日期: Invalid date value or format "None"
+2025-11-01 16:31:21,381 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'2' 的日期: Invalid date value or format "None"
+2025-11-01 16:31:21,839 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'6' 的日期: Invalid date value or format "None"
+2025-11-01 16:31:21,939 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'7' 的日期: Invalid date value or format "None"
+2025-11-01 16:31:22,983 - EmailAttachmentDownloader - INFO - 精准过滤后找到 1 封 None 的邮件
+2025-11-01 16:31:23,144 - EmailAttachmentDownloader - INFO - 处理邮件: 智云发票 (ID: b'17')
+2025-11-01 16:31:23,144 - EmailAttachmentDownloader - INFO - 共下载 0 个附件
+2025-11-01 16:31:23,239 - EmailAttachmentDownloader - INFO - 处理邮件正文链接: 智云发票 (ID: b'17')
+2025-11-01 16:31:23,244 - EmailAttachmentDownloader - INFO - 共从邮件正文下载 0 个附件
+2025-11-01 16:31:23,374 - EmailAttachmentDownloader - INFO - 已断开与邮箱服务器的连接
+2025-11-01 16:38:20,187 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-01 16:38:20,191 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-11-01 16:38:20,751 - EmailAttachmentDownloader - INFO - 成功连接到邮箱: 23512221@qq.com
+2025-11-01 16:38:20,909 - EmailAttachmentDownloader - INFO - 搜索条件: (SINCE 01-Nov-2025 BEFORE 02-Nov-2025) ALL
+2025-11-01 16:38:20,990 - EmailAttachmentDownloader - INFO - 初步搜索找到 18 封邮件
+2025-11-01 16:38:20,990 - EmailAttachmentDownloader - INFO - 开始精准过滤 None 的邮件...
+2025-11-01 16:38:21,092 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'1' 的日期: Invalid date value or format "None"
+2025-11-01 16:38:21,214 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'2' 的日期: Invalid date value or format "None"
+2025-11-01 16:38:21,928 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'6' 的日期: Invalid date value or format "None"
+2025-11-01 16:38:22,056 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'7' 的日期: Invalid date value or format "None"
+2025-11-01 16:38:23,727 - EmailAttachmentDownloader - INFO - 精准过滤后找到 2 封 None 的邮件
+2025-11-01 16:38:23,733 - EmailAttachmentDownloader - INFO - 创建保存目录: /Volumes/SD_1.5T/github/AdminAssistant/temp/20251101_daily_retry
+2025-11-01 16:38:23,952 - EmailAttachmentDownloader - INFO - 处理邮件: 智云发票 (ID: b'17')
+2025-11-01 16:38:24,122 - EmailAttachmentDownloader - INFO - 处理邮件: 智云发票 (ID: b'18')
+2025-11-01 16:38:24,122 - EmailAttachmentDownloader - INFO - 共下载 0 个附件
+2025-11-01 16:38:24,244 - EmailAttachmentDownloader - INFO - 处理邮件正文链接: 智云发票 (ID: b'17')
+2025-11-01 16:38:24,428 - EmailAttachmentDownloader - INFO - 处理邮件正文链接: 智云发票 (ID: b'18')
+2025-11-01 16:38:24,434 - EmailAttachmentDownloader - INFO - 共从邮件正文下载 0 个附件
+2025-11-01 16:38:24,628 - EmailAttachmentDownloader - INFO - 已断开与邮箱服务器的连接
+2025-11-01 16:38:51,615 - mcp_tool_app_scanner - INFO - MCP工具 'app_scanner' 日志系统已启动
+2025-11-01 16:38:51,616 - mcp_tool_app_cache - INFO - MCP工具 'app_cache' 日志系统已启动
+2025-11-01 16:38:51,617 - mcp_tool_nlp_parser - INFO - MCP工具 'nlp_parser' 日志系统已启动
+2025-11-01 16:38:51,618 - mcp_tool_app_executor - INFO - MCP工具 'app_executor' 日志系统已启动
+2025-11-01 16:38:51,619 - mcp_tool_app_usage - INFO - MCP工具 'app_usage' 日志系统已启动
+2025-11-01 16:38:51,619 - mcp_tool_app_usage - INFO - [app_usage] 尝试加载使用记录文件: /Users/heguangzhong/.mcp/app_usage.json
+2025-11-01 16:38:51,619 - mcp_tool_app_usage - INFO - [app_usage] 成功加载使用记录，包含 17 个应用的使用记录
+2025-11-01 16:38:51,620 - mcp_tool_open_app_tool - INFO - MCP工具 'open_app_tool' 日志系统已启动
+2025-11-01 16:38:51,625 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-11-01 16:38:51,625 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json
+2025-11-01 16:38:51,625 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: '/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json'
+2025-11-01 16:38:51,625 - EmailAttachmentDownloader - INFO - config.json get success: imap_server=None, username=None, save_dir=None
+2025-11-01 16:38:51,625 - mcp_tool_open_app_tool - INFO - [open_app_tool] 开始初始化应用索引
+2025-11-01 16:38:51,625 - mcp_tool_app_cache - INFO - [app_cache] 尝试加载缓存文件: /Users/heguangzhong/.mcp/apps_cache.json
+2025-11-01 16:38:51,626 - mcp_tool_app_cache - INFO - [app_cache] 缓存加载成功，包含 386 个应用
+2025-11-01 16:38:51,626 - mcp_tool_open_app_tool - INFO - [open_app_tool] 应用索引初始化成功（从缓存加载），共 386 个应用，耗时 0.00 秒
+2025-11-01 16:38:51,634 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-01 16:49:56,772 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-01 16:49:56,777 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-11-01 16:49:56,780 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-11-01 16:49:56,780 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json
+2025-11-01 16:49:56,781 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: '/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json'
+2025-11-01 16:49:56,781 - EmailAttachmentDownloader - INFO - config.json get success: imap_server=None, username=None, save_dir=None
+2025-11-01 16:49:57,239 - EmailAttachmentDownloader - ERROR - 连接邮箱失败: b'Login fail. Account is abnormal, service is not open, password is incorrect, login frequency limited, or system is busy. More information at https://help.mail.qq.com/detail/108/1023'
+2025-11-01 16:50:03,099 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-01 16:50:03,100 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-11-01 16:50:03,548 - EmailAttachmentDownloader - ERROR - 连接邮箱失败: b'Login fail. Account is abnormal, service is not open, password is incorrect, login frequency limited, or system is busy. More information at https://help.mail.qq.com/detail/108/1023'
+2025-11-01 16:50:08,263 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-01 16:50:08,266 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-11-01 16:50:08,270 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-11-01 16:50:08,270 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json
+2025-11-01 16:50:08,270 - EmailAttachmentDownloader - INFO - self.imap_server=None, self.username=None, self.password=None, self.port=993, self.folder=INBOX, self.days_ago=None, self.save_dir=None, self.max_attachment_size=None
+2025-11-01 16:50:08,270 - EmailAttachmentDownloader - ERROR - IMAP server is not configured
+2025-11-01 16:50:08,270 - EmailAttachmentDownloader - ERROR - Invalid configuration, please check config.json
+2025-11-01 16:50:08,754 - EmailAttachmentDownloader - ERROR - 连接邮箱失败: b'Login fail. Account is abnormal, service is not open, password is incorrect, login frequency limited, or system is busy. More information at https://help.mail.qq.com/detail/108/1023'
+2025-11-01 16:52:01,717 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-01 16:52:01,720 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-11-01 16:52:02,183 - EmailAttachmentDownloader - ERROR - 连接邮箱失败: b'Login fail. Account is abnormal, service is not open, password is incorrect, login frequency limited, or system is busy. More information at https://help.mail.qq.com/detail/108/1023'
+2025-11-03 08:22:08,935 - mcp_tool_app_scanner - INFO - MCP工具 'app_scanner' 日志系统已启动
+2025-11-03 08:22:08,936 - mcp_tool_app_cache - INFO - MCP工具 'app_cache' 日志系统已启动
+2025-11-03 08:22:08,937 - mcp_tool_nlp_parser - INFO - MCP工具 'nlp_parser' 日志系统已启动
+2025-11-03 08:22:08,939 - mcp_tool_app_executor - INFO - MCP工具 'app_executor' 日志系统已启动
+2025-11-03 08:22:08,940 - mcp_tool_app_usage - INFO - MCP工具 'app_usage' 日志系统已启动
+2025-11-03 08:22:08,940 - mcp_tool_app_usage - INFO - [app_usage] 尝试加载使用记录文件: /Users/heguangzhong/.mcp/app_usage.json
+2025-11-03 08:22:08,940 - mcp_tool_app_usage - INFO - [app_usage] 成功加载使用记录，包含 17 个应用的使用记录
+2025-11-03 08:22:08,940 - mcp_tool_open_app_tool - INFO - MCP工具 'open_app_tool' 日志系统已启动
+2025-11-03 08:22:08,946 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-11-03 08:22:08,946 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json
+2025-11-03 08:22:08,946 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: '/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json'
+2025-11-03 08:22:08,946 - EmailAttachmentDownloader - INFO - config.json get success: imap_server=None, username=None, save_dir=None
+2025-11-03 08:22:08,946 - mcp_tool_open_app_tool - INFO - [open_app_tool] 开始初始化应用索引
+2025-11-03 08:22:08,946 - mcp_tool_app_cache - INFO - [app_cache] 尝试加载缓存文件: /Users/heguangzhong/.mcp/apps_cache.json
+2025-11-03 08:22:08,947 - mcp_tool_app_cache - INFO - [app_cache] 缓存已过期
+2025-11-03 08:22:08,947 - mcp_tool_open_app_tool - INFO - [open_app_tool] 缓存加载失败或应用数量不足，执行应用扫描
+2025-11-03 08:22:08,947 - mcp_tool_app_cache - INFO - [app_cache] 开始更新缓存
+2025-11-03 08:22:08,947 - mcp_tool_app_scanner - INFO - [app_scanner] 开始扫描系统已安装应用
+2025-11-03 08:22:09,003 - mcp_tool_app_scanner - INFO - [app_scanner] 扫描完成，共发现 386 个应用
+2025-11-03 08:22:09,003 - mcp_tool_app_cache - INFO - [app_cache] 尝试保存缓存到文件: /Users/heguangzhong/.mcp/apps_cache.json
+2025-11-03 08:22:09,005 - mcp_tool_app_cache - INFO - [app_cache] 缓存保存成功，共保存 386 个应用
+2025-11-03 08:22:09,005 - mcp_tool_open_app_tool - INFO - [open_app_tool] 应用索引初始化成功（执行扫描），共 386 个应用，耗时 0.06 秒
+2025-11-03 08:22:09,014 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-03 08:22:34,688 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-03 08:22:34,690 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-11-03 08:22:34,842 - base.worktime.worktime_processor - INFO - 成功加载Excel文件: /var/folders/nd/jvqr2d0j74b88ps394n25t7w0000gp/T/merged_worktime_20251103_082234.xlsx
+2025-11-03 08:22:34,842 - base.worktime.worktime_processor - INFO - 数据行数: 22
+2025-11-03 08:22:34,843 - base.worktime.worktime_processor - INFO - 列名: ['任务名称', '父级任务名称', '指派人名称', '计划开始日期', '计划结束日期', ' 计划工时数（h）', '任务描述', '项目名称']
+2025-11-03 08:22:34,850 - base.worktime.worktime_processor - INFO - 从文件加载人员名单，共 20 人
+2025-11-03 08:22:34,853 - base.worktime.worktime_processor - INFO - 日期范围: 2025-11-03 到 2025-11-07
+2025-11-03 08:22:34,855 - base.worktime.worktime_processor - INFO - 按项目分组的人员列表:
+2025-11-03 08:22:34,855 - base.worktime.worktime_processor - INFO - 项目 'HS业务支撑系统项目': 刘恩杰, 钱盼东, 王珊
+2025-11-03 08:22:34,855 - base.worktime.worktime_processor - INFO - 项目 'MX项目': 关晓灵, 李志鹏, 宫瑞丰
+2025-11-03 08:22:34,855 - base.worktime.worktime_processor - INFO - 项目 'SDFS项目': 鲍红建, 邓梦伟
+2025-11-03 08:22:34,855 - base.worktime.worktime_processor - INFO - 项目 'zz数据标准项目': 郝晓园, 亢宏毅, 彭星杰, 石清云, 王玉欣, 朱睿哲, 徐云飞
+2025-11-03 08:22:34,855 - base.worktime.worktime_processor - INFO - 项目 '南阳党建': 蒋智
+2025-11-03 08:22:34,855 - base.worktime.worktime_processor - INFO - 项目 '台州项目': 王磊东
+2025-11-03 08:22:34,855 - base.worktime.worktime_processor - INFO - 无项目人员: 贺光忠, 李玉民, 宋桂荣
+2025-11-03 08:22:34,859 - base.worktime.worktime_processor - INFO - 状态数据生成完成: 80 个已安排, 20 个未安排
+2025-11-03 08:22:36,711 - base.worktime.worktime_processor - INFO - 工时展示图片已保存到: /Volumes/SD_1.5T/github/AdminAssistant/temp/11月1周工时报告.png
+2025-11-03 08:22:36,711 - base.worktime.worktime_processor - INFO - 工时处理完成
+2025-11-07 15:10:42,119 - mcp_tool_app_scanner - INFO - MCP工具 'app_scanner' 日志系统已启动
+2025-11-07 15:10:42,121 - mcp_tool_app_cache - INFO - MCP工具 'app_cache' 日志系统已启动
+2025-11-07 15:10:42,123 - mcp_tool_nlp_parser - INFO - MCP工具 'nlp_parser' 日志系统已启动
+2025-11-07 15:10:42,124 - mcp_tool_app_executor - INFO - MCP工具 'app_executor' 日志系统已启动
+2025-11-07 15:10:42,125 - mcp_tool_app_usage - INFO - MCP工具 'app_usage' 日志系统已启动
+2025-11-07 15:10:42,125 - mcp_tool_app_usage - INFO - [app_usage] 尝试加载使用记录文件: /Users/heguangzhong/.mcp/app_usage.json
+2025-11-07 15:10:42,126 - mcp_tool_app_usage - INFO - [app_usage] 成功加载使用记录，包含 17 个应用的使用记录
+2025-11-07 15:10:42,126 - mcp_tool_open_app_tool - INFO - MCP工具 'open_app_tool' 日志系统已启动
+2025-11-07 15:10:42,131 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-11-07 15:10:42,131 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json
+2025-11-07 15:10:42,131 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: '/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json'
+2025-11-07 15:10:42,131 - EmailAttachmentDownloader - INFO - config.json get success: imap_server=None, username=None, save_dir=None
+2025-11-07 15:10:42,132 - mcp_tool_open_app_tool - INFO - [open_app_tool] 开始初始化应用索引
+2025-11-07 15:10:42,132 - mcp_tool_app_cache - INFO - [app_cache] 尝试加载缓存文件: /Users/heguangzhong/.mcp/apps_cache.json
+2025-11-07 15:10:42,133 - mcp_tool_app_cache - INFO - [app_cache] 缓存已过期
+2025-11-07 15:10:42,133 - mcp_tool_open_app_tool - INFO - [open_app_tool] 缓存加载失败或应用数量不足，执行应用扫描
+2025-11-07 15:10:42,133 - mcp_tool_app_cache - INFO - [app_cache] 开始更新缓存
+2025-11-07 15:10:42,133 - mcp_tool_app_scanner - INFO - [app_scanner] 开始扫描系统已安装应用
+2025-11-07 15:10:42,194 - mcp_tool_app_scanner - INFO - [app_scanner] 扫描完成，共发现 448 个应用
+2025-11-07 15:10:42,194 - mcp_tool_app_cache - INFO - [app_cache] 尝试保存缓存到文件: /Users/heguangzhong/.mcp/apps_cache.json
+2025-11-07 15:10:42,196 - mcp_tool_app_cache - INFO - [app_cache] 缓存保存成功，共保存 448 个应用
+2025-11-07 15:10:42,196 - mcp_tool_open_app_tool - INFO - [open_app_tool] 应用索引初始化成功（执行扫描），共 448 个应用，耗时 0.06 秒
+2025-11-07 15:10:42,207 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-13 09:18:26,560 - mcp_tool_app_scanner - INFO - MCP工具 'app_scanner' 日志系统已启动
+2025-11-13 09:18:26,562 - mcp_tool_app_cache - INFO - MCP工具 'app_cache' 日志系统已启动
+2025-11-13 09:18:26,563 - mcp_tool_nlp_parser - INFO - MCP工具 'nlp_parser' 日志系统已启动
+2025-11-13 09:18:26,564 - mcp_tool_app_executor - INFO - MCP工具 'app_executor' 日志系统已启动
+2025-11-13 09:18:26,565 - mcp_tool_app_usage - INFO - MCP工具 'app_usage' 日志系统已启动
+2025-11-13 09:18:26,565 - mcp_tool_app_usage - INFO - [app_usage] 尝试加载使用记录文件: /Users/heguangzhong/.mcp/app_usage.json
+2025-11-13 09:18:26,566 - mcp_tool_app_usage - INFO - [app_usage] 成功加载使用记录，包含 17 个应用的使用记录
+2025-11-13 09:18:26,566 - mcp_tool_open_app_tool - INFO - MCP工具 'open_app_tool' 日志系统已启动
+2025-11-13 09:18:26,571 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-11-13 09:18:26,571 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json
+2025-11-13 09:18:26,571 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: '/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json'
+2025-11-13 09:18:26,571 - EmailAttachmentDownloader - INFO - config.json get success: imap_server=None, username=None, save_dir=None
+2025-11-13 09:18:26,572 - mcp_tool_open_app_tool - INFO - [open_app_tool] 开始初始化应用索引
+2025-11-13 09:18:26,572 - mcp_tool_app_cache - INFO - [app_cache] 尝试加载缓存文件: /Users/heguangzhong/.mcp/apps_cache.json
+2025-11-13 09:18:26,573 - mcp_tool_app_cache - INFO - [app_cache] 缓存已过期
+2025-11-13 09:18:26,573 - mcp_tool_open_app_tool - INFO - [open_app_tool] 缓存加载失败或应用数量不足，执行应用扫描
+2025-11-13 09:18:26,573 - mcp_tool_app_cache - INFO - [app_cache] 开始更新缓存
+2025-11-13 09:18:26,573 - mcp_tool_app_scanner - INFO - [app_scanner] 开始扫描系统已安装应用
+2025-11-13 09:18:26,757 - mcp_tool_app_scanner - INFO - [app_scanner] 扫描完成，共发现 449 个应用
+2025-11-13 09:18:26,757 - mcp_tool_app_cache - INFO - [app_cache] 尝试保存缓存到文件: /Users/heguangzhong/.mcp/apps_cache.json
+2025-11-13 09:18:26,759 - mcp_tool_app_cache - INFO - [app_cache] 缓存保存成功，共保存 449 个应用
+2025-11-13 09:18:26,759 - mcp_tool_open_app_tool - INFO - [open_app_tool] 应用索引初始化成功（执行扫描），共 449 个应用，耗时 0.19 秒
+2025-11-13 09:18:26,771 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-13 09:18:33,735 - mcp_tool_app_scanner - INFO - MCP工具 'app_scanner' 日志系统已启动
+2025-11-13 09:18:33,737 - mcp_tool_app_cache - INFO - MCP工具 'app_cache' 日志系统已启动
+2025-11-13 09:18:33,738 - mcp_tool_nlp_parser - INFO - MCP工具 'nlp_parser' 日志系统已启动
+2025-11-13 09:18:33,739 - mcp_tool_app_executor - INFO - MCP工具 'app_executor' 日志系统已启动
+2025-11-13 09:18:33,740 - mcp_tool_app_usage - INFO - MCP工具 'app_usage' 日志系统已启动
+2025-11-13 09:18:33,740 - mcp_tool_app_usage - INFO - [app_usage] 尝试加载使用记录文件: /Users/heguangzhong/.mcp/app_usage.json
+2025-11-13 09:18:33,740 - mcp_tool_app_usage - INFO - [app_usage] 成功加载使用记录，包含 17 个应用的使用记录
+2025-11-13 09:18:33,740 - mcp_tool_open_app_tool - INFO - MCP工具 'open_app_tool' 日志系统已启动
+2025-11-13 09:18:33,745 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-11-13 09:18:33,745 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json
+2025-11-13 09:18:33,746 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: '/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json'
+2025-11-13 09:18:33,746 - EmailAttachmentDownloader - INFO - config.json get success: imap_server=None, username=None, save_dir=None
+2025-11-13 09:18:33,746 - mcp_tool_open_app_tool - INFO - [open_app_tool] 开始初始化应用索引
+2025-11-13 09:18:33,746 - mcp_tool_app_cache - INFO - [app_cache] 尝试加载缓存文件: /Users/heguangzhong/.mcp/apps_cache.json
+2025-11-13 09:18:33,747 - mcp_tool_app_cache - INFO - [app_cache] 缓存加载成功，包含 449 个应用
+2025-11-13 09:18:33,747 - mcp_tool_open_app_tool - INFO - [open_app_tool] 应用索引初始化成功（从缓存加载），共 449 个应用，耗时 0.00 秒
+2025-11-13 09:18:33,754 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-13 09:19:26,634 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-13 09:19:26,639 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-11-13 09:20:15,755 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-13 09:20:15,758 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-11-13 09:20:19,801 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-13 09:20:19,803 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-11-16 15:02:52,786 - mcp_tool_app_scanner - INFO - MCP工具 'app_scanner' 日志系统已启动
+2025-11-16 15:02:52,788 - mcp_tool_app_cache - INFO - MCP工具 'app_cache' 日志系统已启动
+2025-11-16 15:02:52,795 - mcp_tool_nlp_parser - INFO - MCP工具 'nlp_parser' 日志系统已启动
+2025-11-16 15:02:52,796 - mcp_tool_app_executor - INFO - MCP工具 'app_executor' 日志系统已启动
+2025-11-16 15:02:52,797 - mcp_tool_app_usage - INFO - MCP工具 'app_usage' 日志系统已启动
+2025-11-16 15:02:52,797 - mcp_tool_app_usage - INFO - [app_usage] 尝试加载使用记录文件: /Users/heguangzhong/.mcp/app_usage.json
+2025-11-16 15:02:52,798 - mcp_tool_app_usage - INFO - [app_usage] 成功加载使用记录，包含 17 个应用的使用记录
+2025-11-16 15:02:52,798 - mcp_tool_open_app_tool - INFO - MCP工具 'open_app_tool' 日志系统已启动
+2025-11-16 15:02:52,816 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-11-16 15:02:52,817 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json
+2025-11-16 15:02:52,817 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: '/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json'
+2025-11-16 15:02:52,817 - EmailAttachmentDownloader - INFO - config.json get success: imap_server=None, username=None, save_dir=None
+2025-11-16 15:02:52,817 - mcp_tool_open_app_tool - INFO - [open_app_tool] 开始初始化应用索引
+2025-11-16 15:02:52,817 - mcp_tool_app_cache - INFO - [app_cache] 尝试加载缓存文件: /Users/heguangzhong/.mcp/apps_cache.json
+2025-11-16 15:02:52,818 - mcp_tool_app_cache - INFO - [app_cache] 缓存已过期
+2025-11-16 15:02:52,818 - mcp_tool_open_app_tool - INFO - [open_app_tool] 缓存加载失败或应用数量不足，执行应用扫描
+2025-11-16 15:02:52,818 - mcp_tool_app_cache - INFO - [app_cache] 开始更新缓存
+2025-11-16 15:02:52,818 - mcp_tool_app_scanner - INFO - [app_scanner] 开始扫描系统已安装应用
+2025-11-16 15:02:52,868 - mcp_tool_app_scanner - INFO - [app_scanner] 扫描完成，共发现 387 个应用
+2025-11-16 15:02:52,869 - mcp_tool_app_cache - INFO - [app_cache] 尝试保存缓存到文件: /Users/heguangzhong/.mcp/apps_cache.json
+2025-11-16 15:02:52,870 - mcp_tool_app_cache - INFO - [app_cache] 缓存保存成功，共保存 387 个应用
+2025-11-16 15:02:52,870 - mcp_tool_open_app_tool - INFO - [open_app_tool] 应用索引初始化成功（执行扫描），共 387 个应用，耗时 0.05 秒
+2025-11-16 15:02:52,881 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-16 15:03:14,042 - mcp_tool_app_scanner - INFO - MCP工具 'app_scanner' 日志系统已启动
+2025-11-16 15:03:14,043 - mcp_tool_app_cache - INFO - MCP工具 'app_cache' 日志系统已启动
+2025-11-16 15:03:14,043 - mcp_tool_nlp_parser - INFO - MCP工具 'nlp_parser' 日志系统已启动
+2025-11-16 15:03:14,043 - mcp_tool_app_executor - INFO - MCP工具 'app_executor' 日志系统已启动
+2025-11-16 15:03:14,043 - mcp_tool_app_usage - INFO - MCP工具 'app_usage' 日志系统已启动
+2025-11-16 15:03:14,043 - mcp_tool_app_usage - INFO - [app_usage] 尝试加载使用记录文件: /Users/heguangzhong/.mcp/app_usage.json
+2025-11-16 15:03:14,044 - mcp_tool_app_usage - INFO - [app_usage] 成功加载使用记录，包含 17 个应用的使用记录
+2025-11-16 15:03:14,044 - mcp_tool_open_app_tool - INFO - MCP工具 'open_app_tool' 日志系统已启动
+2025-11-16 15:03:14,045 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-11-16 15:03:14,045 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json
+2025-11-16 15:03:14,045 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: '/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json'
+2025-11-16 15:03:14,045 - EmailAttachmentDownloader - INFO - config.json get success: imap_server=None, username=None, save_dir=None
+2025-11-16 15:03:14,045 - mcp_tool_open_app_tool - INFO - [open_app_tool] 开始初始化应用索引
+2025-11-16 15:03:14,045 - mcp_tool_app_cache - INFO - [app_cache] 尝试加载缓存文件: /Users/heguangzhong/.mcp/apps_cache.json
+2025-11-16 15:03:14,045 - mcp_tool_app_cache - INFO - [app_cache] 缓存加载成功，包含 387 个应用
+2025-11-16 15:03:14,045 - mcp_tool_open_app_tool - INFO - [open_app_tool] 应用索引初始化成功（从缓存加载），共 387 个应用，耗时 0.00 秒
+2025-11-16 15:03:14,052 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-16 17:55:53,688 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-16 17:55:53,692 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-11-17 08:46:52,340 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-17 08:46:52,344 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-11-17 08:47:03,906 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-17 08:47:03,909 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-11-17 08:47:14,659 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-17 08:47:14,663 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-11-17 08:47:23,640 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-17 08:47:23,642 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-11-17 08:47:31,402 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-17 08:47:31,405 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-11-17 09:00:47,094 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-17 09:00:47,097 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-11-17 09:00:47,273 - base.worktime.worktime_processor - INFO - 成功加载Excel文件: /var/folders/nd/jvqr2d0j74b88ps394n25t7w0000gp/T/merged_worktime_20251117_090047.xlsx
+2025-11-17 09:00:47,273 - base.worktime.worktime_processor - INFO - 数据行数: 19
+2025-11-17 09:00:47,273 - base.worktime.worktime_processor - INFO - 列名: ['任务名称', '父级任务名称', '指派人名称', '计划开始日期', '计划结束日期', ' 计划工时数（h）', '任务描述', '项目名称']
+2025-11-17 09:00:47,281 - base.worktime.worktime_processor - INFO - 从文件加载人员名单，共 20 人
+2025-11-17 09:00:47,284 - base.worktime.worktime_processor - INFO - 日期范围: 2025-11-17 到 2025-11-21
+2025-11-17 09:00:47,286 - base.worktime.worktime_processor - INFO - 按项目分组的人员列表:
+2025-11-17 09:00:47,286 - base.worktime.worktime_processor - INFO - 项目 'HS业务支撑系统项目': 刘恩杰, 钱盼东, 王珊
+2025-11-17 09:00:47,286 - base.worktime.worktime_processor - INFO - 项目 'MX项目周': 李志鹏, 王磊东, 宫瑞丰
+2025-11-17 09:00:47,286 - base.worktime.worktime_processor - INFO - 项目 'SDFS项目': 鲍红建, 邓梦伟
+2025-11-17 09:00:47,286 - base.worktime.worktime_processor - INFO - 项目 'zz数据标准项目': 郝晓园, 亢宏毅, 彭星杰, 王玉欣, 朱睿哲, 徐云飞
+2025-11-17 09:00:47,286 - base.worktime.worktime_processor - INFO - 项目 '南阳党建': 蒋智
+2025-11-17 09:00:47,287 - base.worktime.worktime_processor - INFO - 无项目人员: 关晓灵, 贺光忠, 李玉民, 石清云, 宋桂荣
+2025-11-17 09:00:47,290 - base.worktime.worktime_processor - INFO - 状态数据生成完成: 72 个已安排, 28 个未安排
+2025-11-17 09:00:49,176 - base.worktime.worktime_processor - INFO - 工时展示图片已保存到: /Volumes/SD_1.5T/github/AdminAssistant/temp/11月2周工时报告.png
+2025-11-17 09:00:49,177 - base.worktime.worktime_processor - INFO - 工时处理完成
+2025-11-17 09:02:18,176 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-17 09:02:18,179 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-11-17 09:02:18,247 - base.worktime.worktime_processor - INFO - 成功加载Excel文件: /var/folders/nd/jvqr2d0j74b88ps394n25t7w0000gp/T/merged_worktime_20251117_090218.xlsx
+2025-11-17 09:02:18,247 - base.worktime.worktime_processor - INFO - 数据行数: 19
+2025-11-17 09:02:18,247 - base.worktime.worktime_processor - INFO - 列名: ['任务名称', '父级任务名称', '指派人名称', '计划开始日期', '计划结束日期', ' 计划工时数（h）', '任务描述', '项目名称']
+2025-11-17 09:02:18,254 - base.worktime.worktime_processor - INFO - 从文件加载人员名单，共 19 人
+2025-11-17 09:02:18,255 - base.worktime.worktime_processor - INFO - 日期范围: 2025-11-17 到 2025-11-21
+2025-11-17 09:02:18,257 - base.worktime.worktime_processor - INFO - 按项目分组的人员列表:
+2025-11-17 09:02:18,257 - base.worktime.worktime_processor - INFO - 项目 'HS业务支撑系统项目': 刘恩杰, 钱盼东, 王珊
+2025-11-17 09:02:18,257 - base.worktime.worktime_processor - INFO - 项目 'MX项目周': 李志鹏, 王磊东, 宫瑞丰
+2025-11-17 09:02:18,257 - base.worktime.worktime_processor - INFO - 项目 'SDFS项目': 鲍红建, 邓梦伟
+2025-11-17 09:02:18,258 - base.worktime.worktime_processor - INFO - 项目 'zz数据标准项目': 郝晓园, 亢宏毅, 彭星杰, 王玉欣, 朱睿哲, 徐云飞
+2025-11-17 09:02:18,258 - base.worktime.worktime_processor - INFO - 项目 '南阳党建': 蒋智
+2025-11-17 09:02:18,258 - base.worktime.worktime_processor - INFO - 无项目人员: 关晓灵, 贺光忠, 李玉民, 宋桂荣
+2025-11-17 09:02:18,261 - base.worktime.worktime_processor - INFO - 状态数据生成完成: 72 个已安排, 23 个未安排
+2025-11-17 09:02:19,761 - base.worktime.worktime_processor - INFO - 工时展示图片已保存到: /Volumes/SD_1.5T/github/AdminAssistant/temp/11月2周工时报告.png
+2025-11-17 09:02:19,761 - base.worktime.worktime_processor - INFO - 工时处理完成
+2025-11-17 09:49:46,071 - mcp_tool_app_scanner - INFO - MCP工具 'app_scanner' 日志系统已启动
+2025-11-17 09:49:46,072 - mcp_tool_app_cache - INFO - MCP工具 'app_cache' 日志系统已启动
+2025-11-17 09:49:46,073 - mcp_tool_nlp_parser - INFO - MCP工具 'nlp_parser' 日志系统已启动
+2025-11-17 09:49:46,075 - mcp_tool_app_executor - INFO - MCP工具 'app_executor' 日志系统已启动
+2025-11-17 09:49:46,076 - mcp_tool_app_usage - INFO - MCP工具 'app_usage' 日志系统已启动
+2025-11-17 09:49:46,076 - mcp_tool_app_usage - INFO - [app_usage] 尝试加载使用记录文件: /Users/heguangzhong/.mcp/app_usage.json
+2025-11-17 09:49:46,076 - mcp_tool_app_usage - INFO - [app_usage] 成功加载使用记录，包含 17 个应用的使用记录
+2025-11-17 09:49:46,076 - mcp_tool_open_app_tool - INFO - MCP工具 'open_app_tool' 日志系统已启动
+2025-11-17 09:49:46,094 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-11-17 09:49:46,094 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json
+2025-11-17 09:49:46,094 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: '/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json'
+2025-11-17 09:49:46,094 - EmailAttachmentDownloader - INFO - config.json get success: imap_server=None, username=None, save_dir=None
+2025-11-17 09:49:46,094 - mcp_tool_open_app_tool - INFO - [open_app_tool] 开始初始化应用索引
+2025-11-17 09:49:46,094 - mcp_tool_app_cache - INFO - [app_cache] 尝试加载缓存文件: /Users/heguangzhong/.mcp/apps_cache.json
+2025-11-17 09:49:46,095 - mcp_tool_app_cache - INFO - [app_cache] 缓存加载成功，包含 387 个应用
+2025-11-17 09:49:46,095 - mcp_tool_open_app_tool - INFO - [open_app_tool] 应用索引初始化成功（从缓存加载），共 387 个应用，耗时 0.00 秒
+2025-11-17 09:49:46,103 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-17 09:52:18,742 - mcp_tool_app_scanner - INFO - MCP工具 'app_scanner' 日志系统已启动
+2025-11-17 09:52:18,742 - mcp_tool_app_cache - INFO - MCP工具 'app_cache' 日志系统已启动
+2025-11-17 09:52:18,743 - mcp_tool_nlp_parser - INFO - MCP工具 'nlp_parser' 日志系统已启动
+2025-11-17 09:52:18,743 - mcp_tool_app_executor - INFO - MCP工具 'app_executor' 日志系统已启动
+2025-11-17 09:52:18,743 - mcp_tool_app_usage - INFO - MCP工具 'app_usage' 日志系统已启动
+2025-11-17 09:52:18,743 - mcp_tool_app_usage - INFO - [app_usage] 尝试加载使用记录文件: /Users/heguangzhong/.mcp/app_usage.json
+2025-11-17 09:52:18,743 - mcp_tool_app_usage - INFO - [app_usage] 成功加载使用记录，包含 17 个应用的使用记录
+2025-11-17 09:52:18,744 - mcp_tool_open_app_tool - INFO - MCP工具 'open_app_tool' 日志系统已启动
+2025-11-17 09:52:18,744 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-11-17 09:52:18,745 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json
+2025-11-17 09:52:18,745 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: '/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json'
+2025-11-17 09:52:18,745 - EmailAttachmentDownloader - INFO - config.json get success: imap_server=None, username=None, save_dir=None
+2025-11-17 09:52:18,745 - mcp_tool_open_app_tool - INFO - [open_app_tool] 开始初始化应用索引
+2025-11-17 09:52:18,745 - mcp_tool_app_cache - INFO - [app_cache] 尝试加载缓存文件: /Users/heguangzhong/.mcp/apps_cache.json
+2025-11-17 09:52:18,745 - mcp_tool_app_cache - INFO - [app_cache] 缓存加载成功，包含 387 个应用
+2025-11-17 09:52:18,745 - mcp_tool_open_app_tool - INFO - [open_app_tool] 应用索引初始化成功（从缓存加载），共 387 个应用，耗时 0.00 秒
+2025-11-17 09:52:18,753 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-17 21:34:41,804 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-17 21:34:41,809 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-11-17 21:34:41,810 - mcp_tool_open_app_tool - INFO - [open_app_tool] 尝试打开应用: 微信
+2025-11-17 21:34:41,811 - mcp_tool_open_app_tool - INFO - [open_app_tool] 应用 '微信' 不存在于索引中，尝试搜索
+2025-11-17 21:34:41,811 - mcp_tool_open_app_tool - INFO - [open_app_tool] 搜索应用，查询: 微信，最大结果数: 1
+2025-11-17 21:34:41,811 - mcp_tool_nlp_parser - INFO - [nlp_parser] 解析查询: 微信
+2025-11-17 21:34:41,814 - mcp_tool_nlp_parser - DEBUG - [nlp_parser] 提取的关键词: ['微信']
+2025-11-17 21:34:41,818 - mcp_tool_nlp_parser - INFO - [nlp_parser] 解析结果: {'query': '微信', 'matched_app': '微信读书', 'confidence': 1.0, 'candidates': [('微信读书', 1.0), ('企业微信', 1.0), ('WeChat', 0.9)]}
+2025-11-17 21:34:41,895 - mcp_tool_open_app_tool - INFO - [open_app_tool] 搜索完成，找到 1 个匹配结果
+2025-11-17 21:34:41,896 - mcp_tool_open_app_tool - INFO - [open_app_tool] 找到模糊匹配: 微信读书
+2025-11-17 21:34:41,896 - mcp_tool_app_executor - INFO - [app_executor] 尝试执行应用: 微信读书
+2025-11-17 21:34:41,896 - mcp_tool_app_executor - DEBUG - [app_executor] 应用路径通过安全检查: /Applications/微信读书.app
+2025-11-17 21:34:41,989 - mcp_tool_app_executor - INFO - [app_executor] 成功执行应用: 微信读书 (路径: /Applications/微信读书.app)
+2025-11-17 21:34:41,989 - mcp_tool_app_usage - INFO - [app_usage] 记录应用使用: 微信读书, 已使用 2 次
+2025-11-17 21:34:41,990 - mcp_tool_app_usage - INFO - [app_usage] 尝试保存使用记录到文件: /Users/heguangzhong/.mcp/app_usage.json
+2025-11-17 21:34:41,991 - mcp_tool_app_usage - INFO - [app_usage] 使用记录保存成功
+2025-11-17 21:34:41,991 - mcp_tool_open_app_tool - INFO - [open_app_tool] 成功打开应用: 微信读书
+2025-11-17 21:34:48,993 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-17 21:34:48,997 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-11-17 21:34:48,999 - mcp_tool_open_app_tool - INFO - [open_app_tool] 搜索应用，查询: 微信聊天应用，最大结果数: 5
+2025-11-17 21:34:48,999 - mcp_tool_nlp_parser - INFO - [nlp_parser] 解析查询: 微信聊天应用
+2025-11-17 21:34:49,000 - mcp_tool_nlp_parser - DEBUG - [nlp_parser] 提取的关键词: ['天', '微信', '用', '聊', '应']
+2025-11-17 21:34:49,013 - mcp_tool_nlp_parser - INFO - [nlp_parser] 解析结果: {'query': '微信聊天应用', 'matched_app': 'WeChat', 'confidence': 0.9, 'candidates': [('WeChat', 0.9), ('wechatwebdevtools', 0.9)]}
+2025-11-17 21:34:49,108 - mcp_tool_open_app_tool - INFO - [open_app_tool] 搜索完成，找到 2 个匹配结果
+2025-11-17 21:36:25,589 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-17 21:36:25,592 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-11-17 21:36:25,593 - mcp_tool_open_app_tool - INFO - [open_app_tool] 尝试打开应用: 微信
+2025-11-17 21:36:25,593 - mcp_tool_open_app_tool - INFO - [open_app_tool] 应用 '微信' 不存在于索引中，尝试搜索
+2025-11-17 21:36:25,593 - mcp_tool_open_app_tool - INFO - [open_app_tool] 搜索应用，查询: 微信，最大结果数: 1
+2025-11-17 21:36:25,593 - mcp_tool_nlp_parser - INFO - [nlp_parser] 解析查询: 微信
+2025-11-17 21:36:25,593 - mcp_tool_nlp_parser - DEBUG - [nlp_parser] 提取的关键词: ['微信']
+2025-11-17 21:36:25,597 - mcp_tool_nlp_parser - INFO - [nlp_parser] 解析结果: {'query': '微信', 'matched_app': '微信读书', 'confidence': 1.0, 'candidates': [('微信读书', 1.0), ('企业微信', 1.0), ('WeChat', 0.9)]}
+2025-11-17 21:36:25,653 - mcp_tool_open_app_tool - INFO - [open_app_tool] 搜索完成，找到 1 个匹配结果
+2025-11-17 21:36:25,654 - mcp_tool_open_app_tool - INFO - [open_app_tool] 找到模糊匹配: 微信读书
+2025-11-17 21:36:25,654 - mcp_tool_app_executor - INFO - [app_executor] 尝试执行应用: 微信读书
+2025-11-17 21:36:25,654 - mcp_tool_app_executor - DEBUG - [app_executor] 应用路径通过安全检查: /Applications/微信读书.app
+2025-11-17 21:36:25,785 - mcp_tool_app_executor - INFO - [app_executor] 成功执行应用: 微信读书 (路径: /Applications/微信读书.app)
+2025-11-17 21:36:25,786 - mcp_tool_app_usage - INFO - [app_usage] 记录应用使用: 微信读书, 已使用 3 次
+2025-11-17 21:36:25,786 - mcp_tool_app_usage - INFO - [app_usage] 尝试保存使用记录到文件: /Users/heguangzhong/.mcp/app_usage.json
+2025-11-17 21:36:25,786 - mcp_tool_app_usage - INFO - [app_usage] 使用记录保存成功
+2025-11-17 21:36:25,786 - mcp_tool_open_app_tool - INFO - [open_app_tool] 成功打开应用: 微信读书
+2025-11-27 13:44:32,423 - mcp_tool_app_scanner - INFO - MCP工具 'app_scanner' 日志系统已启动
+2025-11-27 13:44:32,426 - mcp_tool_app_cache - INFO - MCP工具 'app_cache' 日志系统已启动
+2025-11-27 13:44:32,428 - mcp_tool_nlp_parser - INFO - MCP工具 'nlp_parser' 日志系统已启动
+2025-11-27 13:44:32,429 - mcp_tool_app_executor - INFO - MCP工具 'app_executor' 日志系统已启动
+2025-11-27 13:44:32,430 - mcp_tool_app_usage - INFO - MCP工具 'app_usage' 日志系统已启动
+2025-11-27 13:44:32,430 - mcp_tool_app_usage - INFO - [app_usage] 尝试加载使用记录文件: /Users/heguangzhong/.mcp/app_usage.json
+2025-11-27 13:44:32,430 - mcp_tool_app_usage - INFO - [app_usage] 成功加载使用记录，包含 17 个应用的使用记录
+2025-11-27 13:44:32,430 - mcp_tool_open_app_tool - INFO - MCP工具 'open_app_tool' 日志系统已启动
+2025-11-27 13:44:32,436 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-11-27 13:44:32,436 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json
+2025-11-27 13:44:32,436 - EmailAttachmentDownloader - ERROR - Error reading configuration file: [Errno 2] No such file or directory: '/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json'
+2025-11-27 13:44:32,436 - EmailAttachmentDownloader - INFO - config.json get success: imap_server=None, username=None, save_dir=None
+2025-11-27 13:44:32,436 - mcp_tool_open_app_tool - INFO - [open_app_tool] 开始初始化应用索引
+2025-11-27 13:44:32,436 - mcp_tool_app_cache - INFO - [app_cache] 尝试加载缓存文件: /Users/heguangzhong/.mcp/apps_cache.json
+2025-11-27 13:44:32,437 - mcp_tool_app_cache - INFO - [app_cache] 缓存已过期
+2025-11-27 13:44:32,437 - mcp_tool_open_app_tool - INFO - [open_app_tool] 缓存加载失败或应用数量不足，执行应用扫描
+2025-11-27 13:44:32,438 - mcp_tool_app_cache - INFO - [app_cache] 开始更新缓存
+2025-11-27 13:44:32,438 - mcp_tool_app_scanner - INFO - [app_scanner] 开始扫描系统已安装应用
+2025-11-27 13:44:32,575 - mcp_tool_app_scanner - INFO - [app_scanner] 扫描完成，共发现 450 个应用
+2025-11-27 13:44:32,575 - mcp_tool_app_cache - INFO - [app_cache] 尝试保存缓存到文件: /Users/heguangzhong/.mcp/apps_cache.json
+2025-11-27 13:44:32,578 - mcp_tool_app_cache - INFO - [app_cache] 缓存保存成功，共保存 450 个应用
+2025-11-27 13:44:32,578 - mcp_tool_open_app_tool - INFO - [open_app_tool] 应用索引初始化成功（执行扫描），共 450 个应用，耗时 0.14 秒
+2025-11-27 13:44:32,589 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-27 13:48:05,078 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-27 13:48:05,081 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-11-27 13:48:05,733 - EmailAttachmentDownloader - INFO - 成功连接到邮箱: 23512221@qq.com
+2025-11-27 13:48:05,891 - EmailAttachmentDownloader - INFO - 搜索条件: (SINCE 07-Nov-2025 BEFORE 14-Nov-2025) ALL
+2025-11-27 13:48:06,019 - EmailAttachmentDownloader - INFO - 初步搜索找到 11 封邮件
+2025-11-27 13:48:06,019 - EmailAttachmentDownloader - INFO - 开始精准过滤 None 的邮件...
+2025-11-27 13:48:07,020 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'6' 的日期: Invalid date value or format "None"
+2025-11-27 13:48:07,981 - EmailAttachmentDownloader - INFO - 精准过滤后找到 2 封 None 的邮件
+2025-11-27 13:48:08,479 - EmailAttachmentDownloader - INFO - 处理邮件: 您收到一张来自北京市农耕记餐饮有限公司龙德分公司的电子发票【发票金额：183.00】 (ID: b'4')
+2025-11-27 13:48:08,483 - EmailAttachmentDownloader - INFO - 已下载附件: 251120000002_43427660_宇动源（北京）信息技术有限公司.pdf 到 /Volumes/SD_1.5T/github/AdminAssistant/temp/251120000002_43427660_宇动源（北京）信息技术有限公司.pdf
+2025-11-27 13:48:08,484 - EmailAttachmentDownloader - INFO - 已下载附件: 251120000002_43427660_宇动源（北京）信息技术有限公司.xml 到 /Volumes/SD_1.5T/github/AdminAssistant/temp/251120000002_43427660_宇动源（北京）信息技术有限公司.xml
+2025-11-27 13:48:09,040 - EmailAttachmentDownloader - INFO - 处理邮件: 【京东安联】理赔通知书  被保险人：贺光忠   报案号：8611-0-P090002-25-B00210747 (ID: b'5')
+2025-11-27 13:48:09,046 - EmailAttachmentDownloader - INFO - 已下载附件: 理赔通知书.pdf 到 /Volumes/SD_1.5T/github/AdminAssistant/temp/理赔通知书.pdf
+2025-11-27 13:48:09,046 - EmailAttachmentDownloader - INFO - 共下载 3 个附件
+2025-11-27 13:48:09,535 - EmailAttachmentDownloader - INFO - 处理邮件正文链接: 您收到一张来自北京市农耕记餐饮有限公司龙德分公司的电子发票【发票金额：183.00】 (ID: b'4')
+2025-11-27 13:48:09,992 - EmailAttachmentDownloader - INFO - 处理邮件正文链接: 【京东安联】理赔通知书  被保险人：贺光忠   报案号：8611-0-P090002-25-B00210747 (ID: b'5')
+2025-11-27 13:48:09,992 - EmailAttachmentDownloader - INFO - 共从邮件正文下载 0 个附件
+2025-11-27 13:48:10,203 - EmailAttachmentDownloader - INFO - 已断开与邮箱服务器的连接
+2025-11-27 13:49:48,605 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-27 13:49:48,609 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-11-27 13:49:48,612 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-11-27 13:49:48,613 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json
+2025-11-27 13:49:48,613 - EmailAttachmentDownloader - INFO - self.imap_server=imap.qq.com, self.username=23512221@qq.com, self.password=ifqdmucfxotlbigc, self.port=993, self.folder=INBOX, self.days_ago=None, self.save_dir=/Volumes/SD_1.5T/github/AdminAssistant/temp, self.max_attachment_size=None
+2025-11-27 13:49:49,189 - EmailAttachmentDownloader - INFO - 成功连接到邮箱: 23512221@qq.com
+2025-11-27 13:49:49,347 - EmailAttachmentDownloader - INFO - 搜索条件: (SINCE 03-Nov-2025 BEFORE 14-Nov-2025) ALL
+2025-11-27 13:49:49,428 - EmailAttachmentDownloader - INFO - 初步搜索找到 11 封邮件
+2025-11-27 13:49:49,428 - EmailAttachmentDownloader - INFO - 开始精准过滤 None 的邮件...
+2025-11-27 13:49:50,316 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'6' 的日期: Invalid date value or format "None"
+2025-11-27 13:49:51,172 - EmailAttachmentDownloader - INFO - 精准过滤后找到 2 封 None 的邮件
+2025-11-27 13:49:51,172 - EmailAttachmentDownloader - INFO - 读取邮件 1/2 (ID: b'4')
+2025-11-27 13:49:51,785 - EmailAttachmentDownloader - INFO - 读取邮件 2/2 (ID: b'5')
+2025-11-27 13:49:52,230 - EmailAttachmentDownloader - INFO - 成功读取 2 封邮件
+2025-11-27 13:49:52,403 - EmailAttachmentDownloader - INFO - 已断开与邮箱服务器的连接
+2025-11-27 13:51:57,606 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-27 13:51:57,610 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-11-27 13:51:57,613 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-11-27 13:51:57,613 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json
+2025-11-27 13:51:57,614 - EmailAttachmentDownloader - INFO - self.imap_server=imap.qq.com, self.username=23512221@qq.com, self.password=ifqdmucfxotlbigc, self.port=993, self.folder=INBOX, self.days_ago=None, self.save_dir=/Volumes/SD_1.5T/github/AdminAssistant/temp, self.max_attachment_size=None
+2025-11-27 13:51:58,200 - EmailAttachmentDownloader - INFO - 成功连接到邮箱: 23512221@qq.com
+2025-11-27 13:51:58,364 - EmailAttachmentDownloader - INFO - 搜索条件: (SINCE 17-Nov-2025 BEFORE 28-Nov-2025) ALL
+2025-11-27 13:51:58,443 - EmailAttachmentDownloader - INFO - 初步搜索找到 11 封邮件
+2025-11-27 13:51:58,443 - EmailAttachmentDownloader - INFO - 开始精准过滤 None 的邮件...
+2025-11-27 13:51:59,014 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'6' 的日期: Invalid date value or format "None"
+2025-11-27 13:51:59,606 - EmailAttachmentDownloader - INFO - 精准过滤后找到 5 封 None 的邮件
+2025-11-27 13:51:59,607 - EmailAttachmentDownloader - INFO - 读取邮件 1/5 (ID: b'7')
+2025-11-27 13:52:00,477 - EmailAttachmentDownloader - INFO - 读取邮件 2/5 (ID: b'8')
+2025-11-27 13:52:00,860 - EmailAttachmentDownloader - INFO - 读取邮件 3/5 (ID: b'9')
+2025-11-27 13:52:01,592 - EmailAttachmentDownloader - INFO - 读取邮件 4/5 (ID: b'10')
+2025-11-27 13:52:02,212 - EmailAttachmentDownloader - INFO - 读取邮件 5/5 (ID: b'11')
+2025-11-27 13:52:02,541 - EmailAttachmentDownloader - INFO - 成功读取 5 封邮件
+2025-11-27 13:52:02,755 - EmailAttachmentDownloader - INFO - 已断开与邮箱服务器的连接
+2025-11-27 13:57:07,387 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-27 13:57:07,390 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-11-27 13:57:07,910 - EmailAttachmentDownloader - INFO - 成功连接到邮箱: 23512221@qq.com
+2025-11-27 13:57:08,006 - EmailAttachmentDownloader - INFO - 搜索条件: (SINCE 17-Nov-2025 BEFORE 28-Nov-2025) ALL
+2025-11-27 13:57:08,085 - EmailAttachmentDownloader - INFO - 初步搜索找到 11 封邮件
+2025-11-27 13:57:08,085 - EmailAttachmentDownloader - INFO - 开始精准过滤 None 的邮件...
+2025-11-27 13:57:08,869 - EmailAttachmentDownloader - WARNING - 无法解析邮件 b'6' 的日期: Invalid date value or format "None"
+2025-11-27 13:57:09,649 - EmailAttachmentDownloader - INFO - 精准过滤后找到 5 封 None 的邮件
+2025-11-27 13:57:11,275 - EmailAttachmentDownloader - INFO - 处理邮件: 高德打车电子发票 (ID: b'7')
+2025-11-27 13:57:11,278 - EmailAttachmentDownloader - INFO - 已下载附件: 【火箭出行-315.36元-7个行程】高德打车电子发票.pdf 到 /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/【火箭出行-315.36元-7个行程】高德打车电子发票.pdf
+2025-11-27 13:57:11,279 - EmailAttachmentDownloader - INFO - 已下载附件: 【阳光出行-99.10元-2个行程】高德打车电子发票.pdf 到 /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/【阳光出行-99.10元-2个行程】高德打车电子发票.pdf
+2025-11-27 13:57:11,279 - EmailAttachmentDownloader - INFO - 已下载附件: 【火箭出行-315.36元-7个行程】高德打车电子发票.xml 到 /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/【火箭出行-315.36元-7个行程】高德打车电子发票.xml
+2025-11-27 13:57:11,279 - EmailAttachmentDownloader - INFO - 已下载附件: 【阳光出行-99.10元-2个行程】高德打车电子发票.xml 到 /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/【阳光出行-99.10元-2个行程】高德打车电子发票.xml
+2025-11-27 13:57:11,285 - EmailAttachmentDownloader - INFO - 已下载附件: 【火箭出行-315.36元-7个行程】高德打车电子行程单.pdf 到 /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/【火箭出行-315.36元-7个行程】高德打车电子行程单.pdf
+2025-11-27 13:57:11,289 - EmailAttachmentDownloader - INFO - 已下载附件: 【阳光出行-99.10元-2个行程】高德打车电子行程单.pdf 到 /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/【阳光出行-99.10元-2个行程】高德打车电子行程单.pdf
+2025-11-27 13:57:11,890 - EmailAttachmentDownloader - INFO - 处理邮件: 高德打车电子发票 (ID: b'8')
+2025-11-27 13:57:11,891 - EmailAttachmentDownloader - INFO - 已下载附件: 【AA出行-44.62元-1个行程】高德打车电子发票.pdf 到 /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/【AA出行-44.62元-1个行程】高德打车电子发票.pdf
+2025-11-27 13:57:11,891 - EmailAttachmentDownloader - INFO - 已下载附件: 【AA出行-44.62元-1个行程】高德打车电子发票.xml 到 /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/【AA出行-44.62元-1个行程】高德打车电子发票.xml
+2025-11-27 13:57:11,895 - EmailAttachmentDownloader - INFO - 已下载附件: 【AA出行-44.62元-1个行程】高德打车电子行程单.pdf 到 /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/【AA出行-44.62元-1个行程】高德打车电子行程单.pdf
+2025-11-27 13:57:12,409 - EmailAttachmentDownloader - INFO - 处理邮件: 高德打车电子发票 (ID: b'9')
+2025-11-27 13:57:12,421 - EmailAttachmentDownloader - INFO - 已下载附件: 【星徽出行-33.50元-1个行程】高德打车电子发票.pdf 到 /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/【星徽出行-33.50元-1个行程】高德打车电子发票.pdf
+2025-11-27 13:57:12,421 - EmailAttachmentDownloader - INFO - 已下载附件: 【星徽出行-33.50元-1个行程】高德打车电子发票.xml 到 /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/【星徽出行-33.50元-1个行程】高德打车电子发票.xml
+2025-11-27 13:57:12,431 - EmailAttachmentDownloader - INFO - 已下载附件: 【星徽出行-33.50元-1个行程】高德打车电子行程单.pdf 到 /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/【星徽出行-33.50元-1个行程】高德打车电子行程单.pdf
+2025-11-27 13:57:13,097 - EmailAttachmentDownloader - INFO - 处理邮件: 高德打车电子发票 (ID: b'10')
+2025-11-27 13:57:13,099 - EmailAttachmentDownloader - INFO - 已下载附件: 【飞嘀打车-17.10元-1个行程】高德打车电子发票.pdf 到 /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/【飞嘀打车-17.10元-1个行程】高德打车电子发票.pdf
+2025-11-27 13:57:13,099 - EmailAttachmentDownloader - INFO - 已下载附件: 【飞嘀打车-17.10元-1个行程】高德打车电子发票.xml 到 /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/【飞嘀打车-17.10元-1个行程】高德打车电子发票.xml
+2025-11-27 13:57:13,105 - EmailAttachmentDownloader - INFO - 已下载附件: 【飞嘀打车-17.10元-1个行程】高德打车电子行程单.pdf 到 /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/【飞嘀打车-17.10元-1个行程】高德打车电子行程单.pdf
+2025-11-27 13:57:13,689 - EmailAttachmentDownloader - INFO - 处理邮件: 高德打车电子发票 (ID: b'11')
+2025-11-27 13:57:13,691 - EmailAttachmentDownloader - INFO - 已下载附件: 【旗妙出行-127.95元-2个行程】高德打车电子发票.pdf 到 /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/【旗妙出行-127.95元-2个行程】高德打车电子发票.pdf
+2025-11-27 13:57:13,691 - EmailAttachmentDownloader - INFO - 已下载附件: 【旗妙出行-127.95元-2个行程】高德打车电子发票.xml 到 /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/【旗妙出行-127.95元-2个行程】高德打车电子发票.xml
+2025-11-27 13:57:13,698 - EmailAttachmentDownloader - INFO - 已下载附件: 【旗妙出行-127.95元-2个行程】高德打车电子行程单.pdf 到 /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/【旗妙出行-127.95元-2个行程】高德打车电子行程单.pdf
+2025-11-27 13:57:13,698 - EmailAttachmentDownloader - INFO - 共下载 18 个附件
+2025-11-27 13:57:13,850 - EmailAttachmentDownloader - INFO - 已断开与邮箱服务器的连接
+2025-11-27 14:00:16,673 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-27 14:00:16,676 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-11-27 14:01:20,459 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-27 14:01:20,463 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-11-27 14:01:20,615 - base.image_to_pdf - INFO - 已添加第一张图片: 【AA出行-44.62元-1个行程】高德打车电子发票.png
+2025-11-27 14:01:20,828 - base.image_to_pdf - INFO - 已添加第二张图片: 【AA出行-44.62元-1个行程】高德打车电子行程单.png
+2025-11-27 14:01:20,958 - base.image_to_pdf - INFO - 已添加第一张图片: 【旗妙出行-127.95元-2个行程】高德打车电子发票.png
+2025-11-27 14:01:21,174 - base.image_to_pdf - INFO - 已添加第二张图片: 【旗妙出行-127.95元-2个行程】高德打车电子行程单.png
+2025-11-27 14:01:21,303 - base.image_to_pdf - INFO - 已添加第一张图片: 【星徽出行-33.50元-1个行程】高德打车电子发票.png
+2025-11-27 14:01:21,514 - base.image_to_pdf - INFO - 已添加第二张图片: 【星徽出行-33.50元-1个行程】高德打车电子行程单.png
+2025-11-27 14:01:21,629 - base.image_to_pdf - INFO - 已添加第一张图片: 【火箭出行-315.36元-7个行程】高德打车电子发票.png
+2025-11-27 14:01:21,852 - base.image_to_pdf - INFO - 已添加第二张图片: 【火箭出行-315.36元-7个行程】高德打车电子行程单.png
+2025-11-27 14:01:21,950 - base.image_to_pdf - INFO - 已添加第一张图片: 【阳光出行-99.10元-2个行程】高德打车电子发票.png
+2025-11-27 14:01:22,162 - base.image_to_pdf - INFO - 已添加第二张图片: 【阳光出行-99.10元-2个行程】高德打车电子行程单.png
+2025-11-27 14:01:22,291 - base.image_to_pdf - INFO - 已添加第一张图片: 【飞嘀打车-17.10元-1个行程】高德打车电子发票.png
+2025-11-27 14:01:22,503 - base.image_to_pdf - INFO - 已添加第二张图片: 【飞嘀打车-17.10元-1个行程】高德打车电子行程单.png
+2025-11-27 14:01:22,539 - base.image_to_pdf - INFO - 图片已成功合成为PDF文件 '/Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/合并图片文件.pdf'，共 12 张图片
+2025-11-27 14:05:36,163 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-27 14:05:36,167 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-11-27 14:05:36,169 - base.invoice_ocr - INFO - 处理目录: /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127
+2025-11-27 14:05:36,170 - base.invoice_ocr - INFO - 开始处理目录: /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127
+2025-11-27 14:05:36,170 - base.invoice_ocr - INFO - 已创建输出目录: /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/20251127_140536
+2025-11-27 14:05:36,170 - base.invoice_ocr - INFO - 找到 12 个文件
+2025-11-27 14:05:36,171 - base.invoice_ocr - INFO - 识别发票 (1/12): 【AA出行-44.62元-1个行程】高德打车电子发票.pdf
+2025-11-27 14:05:36,171 - base.invoice_ocr - INFO - Processing (1/12): 【AA出行-44.62元-1个行程】高德打车电子发票.pdf
+2025-11-27 14:05:36,211 - base.invoice_ocr - INFO - 发票识别完成: 【AA出行-44.62元-1个行程】高德打车电子发票.pdf
+2025-11-27 14:05:36,211 - base.invoice_ocr - INFO - 准备复制文件: /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/【AA出行-44.62元-1个行程】高德打车电子发票.pdf -> /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/20251127_140536/20251123_44.62_运输服务.pdf
+2025-11-27 14:05:36,212 - base.invoice_ocr - INFO - 已复制并重命名文件: /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/20251127_140536/20251123_44.62_运输服务.pdf
+2025-11-27 14:05:36,212 - base.invoice_ocr - INFO - 识别发票 (2/12): 【AA出行-44.62元-1个行程】高德打车电子行程单.pdf
+2025-11-27 14:05:36,212 - base.invoice_ocr - INFO - Processing (2/12): 【AA出行-44.62元-1个行程】高德打车电子行程单.pdf
+2025-11-27 14:05:36,224 - base.invoice_ocr - INFO - 发票识别完成: 【AA出行-44.62元-1个行程】高德打车电子行程单.pdf
+2025-11-27 14:05:36,224 - base.invoice_ocr - INFO - 准备复制文件: /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/【AA出行-44.62元-1个行程】高德打车电子行程单.pdf -> /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/20251127_140536/2025-11-23_44.62_高德地图—打车——行.pdf
+2025-11-27 14:05:36,224 - base.invoice_ocr - INFO - 已复制并重命名文件: /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/20251127_140536/2025-11-23_44.62_高德地图—打车——行.pdf
+2025-11-27 14:05:36,224 - base.invoice_ocr - INFO - 识别发票 (3/12): 【旗妙出行-127.95元-2个行程】高德打车电子发票.pdf
+2025-11-27 14:05:36,224 - base.invoice_ocr - INFO - Processing (3/12): 【旗妙出行-127.95元-2个行程】高德打车电子发票.pdf
+2025-11-27 14:05:36,238 - base.invoice_ocr - INFO - 发票识别完成: 【旗妙出行-127.95元-2个行程】高德打车电子发票.pdf
+2025-11-27 14:05:36,238 - base.invoice_ocr - INFO - 准备复制文件: /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/【旗妙出行-127.95元-2个行程】高德打车电子发票.pdf -> /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/20251127_140536/20251123_127.95_运输服务.pdf
+2025-11-27 14:05:36,239 - base.invoice_ocr - INFO - 已复制并重命名文件: /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/20251127_140536/20251123_127.95_运输服务.pdf
+2025-11-27 14:05:36,239 - base.invoice_ocr - INFO - 识别发票 (4/12): 【旗妙出行-127.95元-2个行程】高德打车电子行程单.pdf
+2025-11-27 14:05:36,239 - base.invoice_ocr - INFO - Processing (4/12): 【旗妙出行-127.95元-2个行程】高德打车电子行程单.pdf
+2025-11-27 14:05:36,252 - base.invoice_ocr - INFO - 发票识别完成: 【旗妙出行-127.95元-2个行程】高德打车电子行程单.pdf
+2025-11-27 14:05:36,252 - base.invoice_ocr - INFO - 准备复制文件: /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/【旗妙出行-127.95元-2个行程】高德打车电子行程单.pdf -> /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/20251127_140536/2025-11-23_127.95_高德地图—打车——行.pdf
+2025-11-27 14:05:36,253 - base.invoice_ocr - INFO - 已复制并重命名文件: /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/20251127_140536/2025-11-23_127.95_高德地图—打车——行.pdf
+2025-11-27 14:05:36,253 - base.invoice_ocr - INFO - 识别发票 (5/12): 【星徽出行-33.50元-1个行程】高德打车电子发票.pdf
+2025-11-27 14:05:36,253 - base.invoice_ocr - INFO - Processing (5/12): 【星徽出行-33.50元-1个行程】高德打车电子发票.pdf
+2025-11-27 14:05:36,266 - base.invoice_ocr - INFO - 发票识别完成: 【星徽出行-33.50元-1个行程】高德打车电子发票.pdf
+2025-11-27 14:05:36,266 - base.invoice_ocr - INFO - 准备复制文件: /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/【星徽出行-33.50元-1个行程】高德打车电子发票.pdf -> /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/20251127_140536/20251123_33.50_运输服务.pdf
+2025-11-27 14:05:36,266 - base.invoice_ocr - INFO - 已复制并重命名文件: /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/20251127_140536/20251123_33.50_运输服务.pdf
+2025-11-27 14:05:36,266 - base.invoice_ocr - INFO - 识别发票 (6/12): 【星徽出行-33.50元-1个行程】高德打车电子行程单.pdf
+2025-11-27 14:05:36,266 - base.invoice_ocr - INFO - Processing (6/12): 【星徽出行-33.50元-1个行程】高德打车电子行程单.pdf
+2025-11-27 14:05:36,276 - base.invoice_ocr - INFO - 发票识别完成: 【星徽出行-33.50元-1个行程】高德打车电子行程单.pdf
+2025-11-27 14:05:36,276 - base.invoice_ocr - INFO - 准备复制文件: /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/【星徽出行-33.50元-1个行程】高德打车电子行程单.pdf -> /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/20251127_140536/2025-11-23_33.50_高德地图—打车——行.pdf
+2025-11-27 14:05:36,281 - base.invoice_ocr - INFO - 已复制并重命名文件: /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/20251127_140536/2025-11-23_33.50_高德地图—打车——行.pdf
+2025-11-27 14:05:36,281 - base.invoice_ocr - INFO - 识别发票 (7/12): 【火箭出行-315.36元-7个行程】高德打车电子发票.pdf
+2025-11-27 14:05:36,281 - base.invoice_ocr - INFO - Processing (7/12): 【火箭出行-315.36元-7个行程】高德打车电子发票.pdf
+2025-11-27 14:05:36,296 - base.invoice_ocr - INFO - 发票识别完成: 【火箭出行-315.36元-7个行程】高德打车电子发票.pdf
+2025-11-27 14:05:36,296 - base.invoice_ocr - INFO - 准备复制文件: /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/【火箭出行-315.36元-7个行程】高德打车电子发票.pdf -> /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/20251127_140536/20251123_315.36_运输服务.pdf
+2025-11-27 14:05:36,297 - base.invoice_ocr - INFO - 已复制并重命名文件: /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/20251127_140536/20251123_315.36_运输服务.pdf
+2025-11-27 14:05:36,297 - base.invoice_ocr - INFO - 识别发票 (8/12): 【火箭出行-315.36元-7个行程】高德打车电子行程单.pdf
+2025-11-27 14:05:36,297 - base.invoice_ocr - INFO - Processing (8/12): 【火箭出行-315.36元-7个行程】高德打车电子行程单.pdf
+2025-11-27 14:05:36,322 - base.invoice_ocr - INFO - 发票识别完成: 【火箭出行-315.36元-7个行程】高德打车电子行程单.pdf
+2025-11-27 14:05:36,322 - base.invoice_ocr - INFO - 准备复制文件: /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/【火箭出行-315.36元-7个行程】高德打车电子行程单.pdf -> /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/20251127_140536/2025-11-23_315.36_高德地图—打车——行.pdf
+2025-11-27 14:05:36,323 - base.invoice_ocr - INFO - 已复制并重命名文件: /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/20251127_140536/2025-11-23_315.36_高德地图—打车——行.pdf
+2025-11-27 14:05:36,323 - base.invoice_ocr - INFO - 识别发票 (9/12): 【阳光出行-99.10元-2个行程】高德打车电子发票.pdf
+2025-11-27 14:05:36,323 - base.invoice_ocr - INFO - Processing (9/12): 【阳光出行-99.10元-2个行程】高德打车电子发票.pdf
+2025-11-27 14:05:36,337 - base.invoice_ocr - INFO - 发票识别完成: 【阳光出行-99.10元-2个行程】高德打车电子发票.pdf
+2025-11-27 14:05:36,337 - base.invoice_ocr - INFO - 准备复制文件: /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/【阳光出行-99.10元-2个行程】高德打车电子发票.pdf -> /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/20251127_140536/20251123_99.10_运输服务.pdf
+2025-11-27 14:05:36,337 - base.invoice_ocr - INFO - 已复制并重命名文件: /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/20251127_140536/20251123_99.10_运输服务.pdf
+2025-11-27 14:05:36,337 - base.invoice_ocr - INFO - 识别发票 (10/12): 【阳光出行-99.10元-2个行程】高德打车电子行程单.pdf
+2025-11-27 14:05:36,337 - base.invoice_ocr - INFO - Processing (10/12): 【阳光出行-99.10元-2个行程】高德打车电子行程单.pdf
+2025-11-27 14:05:36,351 - base.invoice_ocr - INFO - 发票识别完成: 【阳光出行-99.10元-2个行程】高德打车电子行程单.pdf
+2025-11-27 14:05:36,351 - base.invoice_ocr - INFO - 准备复制文件: /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/【阳光出行-99.10元-2个行程】高德打车电子行程单.pdf -> /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/20251127_140536/2025-11-23_99.10_高德地图—打车——行.pdf
+2025-11-27 14:05:36,351 - base.invoice_ocr - INFO - 已复制并重命名文件: /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/20251127_140536/2025-11-23_99.10_高德地图—打车——行.pdf
+2025-11-27 14:05:36,352 - base.invoice_ocr - INFO - 识别发票 (11/12): 【飞嘀打车-17.10元-1个行程】高德打车电子发票.pdf
+2025-11-27 14:05:36,352 - base.invoice_ocr - INFO - Processing (11/12): 【飞嘀打车-17.10元-1个行程】高德打车电子发票.pdf
+2025-11-27 14:05:36,365 - base.invoice_ocr - INFO - 发票识别完成: 【飞嘀打车-17.10元-1个行程】高德打车电子发票.pdf
+2025-11-27 14:05:36,365 - base.invoice_ocr - INFO - 准备复制文件: /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/【飞嘀打车-17.10元-1个行程】高德打车电子发票.pdf -> /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/20251127_140536/20251123_17.10_运输服务.pdf
+2025-11-27 14:05:36,365 - base.invoice_ocr - INFO - 已复制并重命名文件: /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/20251127_140536/20251123_17.10_运输服务.pdf
+2025-11-27 14:05:36,365 - base.invoice_ocr - INFO - 识别发票 (12/12): 【飞嘀打车-17.10元-1个行程】高德打车电子行程单.pdf
+2025-11-27 14:05:36,365 - base.invoice_ocr - INFO - Processing (12/12): 【飞嘀打车-17.10元-1个行程】高德打车电子行程单.pdf
+2025-11-27 14:05:36,375 - base.invoice_ocr - INFO - 发票识别完成: 【飞嘀打车-17.10元-1个行程】高德打车电子行程单.pdf
+2025-11-27 14:05:36,375 - base.invoice_ocr - INFO - 准备复制文件: /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/【飞嘀打车-17.10元-1个行程】高德打车电子行程单.pdf -> /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/20251127_140536/2025-11-23_17.10_高德地图—打车——行.pdf
+2025-11-27 14:05:36,375 - base.invoice_ocr - INFO - 已复制并重命名文件: /Volumes/SD_1.5T/github/AdminAssistant/temp/20251127/20251127_140536/2025-11-23_17.10_高德地图—打车——行.pdf
+2025-11-27 14:05:36,375 - base.invoice_ocr - INFO - 批量处理完成！共处理 12 张发票，成功 12 张，失败 0 张
+2025-11-27 14:05:36,375 - base.invoice_ocr - INFO - 批量处理完成！共处理 12 张发票，成功 12 张，失败 0 张
+2025-11-27 14:05:36,456 - base.invoice_ocr - ERROR - 生成Excel统计表时出错: 'Cell' object is not iterable
+2025-11-27 14:05:36,456 - base.invoice_ocr - WARNING - 无法生成发票统计Excel表
+2025-12-01 08:23:27,362 - mcp_tool_app_scanner - INFO - MCP工具 'app_scanner' 日志系统已启动
+2025-12-01 08:23:27,364 - mcp_tool_app_cache - INFO - MCP工具 'app_cache' 日志系统已启动
+2025-12-01 08:23:27,365 - mcp_tool_nlp_parser - INFO - MCP工具 'nlp_parser' 日志系统已启动
+2025-12-01 08:23:27,367 - mcp_tool_app_executor - INFO - MCP工具 'app_executor' 日志系统已启动
+2025-12-01 08:23:27,369 - mcp_tool_app_usage - INFO - MCP工具 'app_usage' 日志系统已启动
+2025-12-01 08:23:27,370 - mcp_tool_app_usage - INFO - [app_usage] 尝试加载使用记录文件: /Users/heguangzhong/.mcp/app_usage.json
+2025-12-01 08:23:27,370 - mcp_tool_app_usage - INFO - [app_usage] 成功加载使用记录，包含 17 个应用的使用记录
+2025-12-01 08:23:27,370 - mcp_tool_open_app_tool - INFO - MCP工具 'open_app_tool' 日志系统已启动
+2025-12-01 08:23:27,377 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-12-01 08:23:27,377 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json
+2025-12-01 08:23:27,378 - EmailAttachmentDownloader - INFO - self.imap_server=imap.qq.com, self.username=23512221@qq.com, self.password=ifqdmucfxotlbigc, self.port=993, self.folder=INBOX, self.days_ago=None, self.save_dir=/Volumes/SD_1.5T/github/AdminAssistant/temp, self.max_attachment_size=None
+2025-12-01 08:23:27,379 - mcp_tool_open_app_tool - INFO - [open_app_tool] 开始初始化应用索引
+2025-12-01 08:23:27,379 - mcp_tool_app_cache - INFO - [app_cache] 尝试加载缓存文件: /Users/heguangzhong/.mcp/apps_cache.json
+2025-12-01 08:23:27,380 - mcp_tool_app_cache - INFO - [app_cache] 缓存已过期
+2025-12-01 08:23:27,380 - mcp_tool_open_app_tool - INFO - [open_app_tool] 缓存加载失败或应用数量不足，执行应用扫描
+2025-12-01 08:23:27,380 - mcp_tool_app_cache - INFO - [app_cache] 开始更新缓存
+2025-12-01 08:23:27,380 - mcp_tool_app_scanner - INFO - [app_scanner] 开始扫描系统已安装应用
+2025-12-01 08:23:28,737 - mcp_tool_app_scanner - INFO - [app_scanner] 扫描完成，共发现 450 个应用
+2025-12-01 08:23:28,737 - mcp_tool_app_cache - INFO - [app_cache] 尝试保存缓存到文件: /Users/heguangzhong/.mcp/apps_cache.json
+2025-12-01 08:23:28,739 - mcp_tool_app_cache - INFO - [app_cache] 缓存保存成功，共保存 450 个应用
+2025-12-01 08:23:28,739 - mcp_tool_open_app_tool - INFO - [open_app_tool] 应用索引初始化成功（执行扫描），共 450 个应用，耗时 1.36 秒
+2025-12-01 08:23:28,754 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-01 08:28:36,909 - mcp_tool_app_scanner - INFO - MCP工具 'app_scanner' 日志系统已启动
+2025-12-01 08:28:36,910 - mcp_tool_app_cache - INFO - MCP工具 'app_cache' 日志系统已启动
+2025-12-01 08:28:36,911 - mcp_tool_nlp_parser - INFO - MCP工具 'nlp_parser' 日志系统已启动
+2025-12-01 08:28:36,912 - mcp_tool_app_executor - INFO - MCP工具 'app_executor' 日志系统已启动
+2025-12-01 08:28:36,914 - mcp_tool_app_usage - INFO - MCP工具 'app_usage' 日志系统已启动
+2025-12-01 08:28:36,914 - mcp_tool_app_usage - INFO - [app_usage] 尝试加载使用记录文件: /Users/heguangzhong/.mcp/app_usage.json
+2025-12-01 08:28:36,915 - mcp_tool_app_usage - INFO - [app_usage] 成功加载使用记录，包含 17 个应用的使用记录
+2025-12-01 08:28:36,915 - mcp_tool_open_app_tool - INFO - MCP工具 'open_app_tool' 日志系统已启动
+2025-12-01 08:28:36,920 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-12-01 08:28:36,920 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json
+2025-12-01 08:28:36,920 - EmailAttachmentDownloader - INFO - self.imap_server=imap.qq.com, self.username=23512221@qq.com, self.password=ifqdmucfxotlbigc, self.port=993, self.folder=INBOX, self.days_ago=None, self.save_dir=/Volumes/SD_1.5T/github/AdminAssistant/temp, self.max_attachment_size=None
+2025-12-01 08:28:36,920 - mcp_tool_open_app_tool - INFO - [open_app_tool] 开始初始化应用索引
+2025-12-01 08:28:36,920 - mcp_tool_app_cache - INFO - [app_cache] 尝试加载缓存文件: /Users/heguangzhong/.mcp/apps_cache.json
+2025-12-01 08:28:36,921 - mcp_tool_app_cache - INFO - [app_cache] 缓存加载成功，包含 450 个应用
+2025-12-01 08:28:36,921 - mcp_tool_open_app_tool - INFO - [open_app_tool] 应用索引初始化成功（从缓存加载），共 450 个应用，耗时 0.00 秒
+2025-12-01 08:28:36,946 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-01 08:30:28,756 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-01 08:30:28,759 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-12-01 08:30:28,915 - base.worktime.worktime_processor - INFO - 成功加载Excel文件: /var/folders/nd/jvqr2d0j74b88ps394n25t7w0000gp/T/merged_worktime_20251201_083028.xlsx
+2025-12-01 08:30:28,915 - base.worktime.worktime_processor - INFO - 数据行数: 24
+2025-12-01 08:30:28,915 - base.worktime.worktime_processor - INFO - 列名: ['任务名称', '父级任务名称', '指派人名称', '计划开始日期', '计划结束日期', ' 计划工时数（h）', '任务描述', '项目名称']
+2025-12-01 08:30:28,923 - base.worktime.worktime_processor - INFO - 从文件加载人员名单，共 19 人
+2025-12-01 08:30:28,926 - base.worktime.worktime_processor - INFO - 日期范围: 2025-12-01 到 2025-12-05
+2025-12-01 08:30:28,928 - base.worktime.worktime_processor - INFO - 按项目分组的人员列表:
+2025-12-01 08:30:28,928 - base.worktime.worktime_processor - INFO - 项目 'HS业务支撑系统项目': 刘恩杰
+2025-12-01 08:30:28,928 - base.worktime.worktime_processor - INFO - 项目 'MX项目': 李志鹏
+2025-12-01 08:30:28,928 - base.worktime.worktime_processor - INFO - 项目 'SDFS项目': 邓梦伟, 王珊
+2025-12-01 08:30:28,928 - base.worktime.worktime_processor - INFO - 项目 'zz数据标准项目': 鲍红建, 郝晓园, 蒋智, 亢宏毅, 李玉民, 彭星杰, 钱盼东, 宋桂荣, 王玉欣, 朱睿哲, 徐云飞, 宫瑞丰
+2025-12-01 08:30:28,928 - base.worktime.worktime_processor - INFO - 项目 '台州项目': 王磊东
+2025-12-01 08:30:28,928 - base.worktime.worktime_processor - INFO - 无项目人员: 关晓灵, 贺光忠
+2025-12-01 08:30:28,931 - base.worktime.worktime_processor - INFO - 状态数据生成完成: 85 个已安排, 10 个未安排
+2025-12-01 08:30:31,097 - base.worktime.worktime_processor - INFO - 工时展示图片已保存到: /Volumes/SD_1.5T/github/AdminAssistant/temp/12月1周工时报告.png
+2025-12-01 08:30:31,097 - base.worktime.worktime_processor - INFO - 工时处理完成
+2025-12-01 09:49:07,895 - mcp_tool_app_scanner - INFO - MCP工具 'app_scanner' 日志系统已启动
+2025-12-01 09:49:07,897 - mcp_tool_app_cache - INFO - MCP工具 'app_cache' 日志系统已启动
+2025-12-01 09:49:07,906 - mcp_tool_nlp_parser - INFO - MCP工具 'nlp_parser' 日志系统已启动
+2025-12-01 09:49:07,907 - mcp_tool_app_executor - INFO - MCP工具 'app_executor' 日志系统已启动
+2025-12-01 09:49:07,908 - mcp_tool_app_usage - INFO - MCP工具 'app_usage' 日志系统已启动
+2025-12-01 09:49:07,908 - mcp_tool_app_usage - INFO - [app_usage] 尝试加载使用记录文件: /Users/heguangzhong/.mcp/app_usage.json
+2025-12-01 09:49:07,908 - mcp_tool_app_usage - INFO - [app_usage] 成功加载使用记录，包含 17 个应用的使用记录
+2025-12-01 09:49:07,909 - mcp_tool_open_app_tool - INFO - MCP工具 'open_app_tool' 日志系统已启动
+2025-12-01 09:49:07,922 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-12-01 09:49:07,922 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json
+2025-12-01 09:49:07,923 - EmailAttachmentDownloader - INFO - self.imap_server=imap.qq.com, self.username=23512221@qq.com, self.password=ifqdmucfxotlbigc, self.port=993, self.folder=INBOX, self.days_ago=None, self.save_dir=/Volumes/SD_1.5T/github/AdminAssistant/temp, self.max_attachment_size=None
+2025-12-01 09:49:07,923 - mcp_tool_open_app_tool - INFO - [open_app_tool] 开始初始化应用索引
+2025-12-01 09:49:07,923 - mcp_tool_app_cache - INFO - [app_cache] 尝试加载缓存文件: /Users/heguangzhong/.mcp/apps_cache.json
+2025-12-01 09:49:07,924 - mcp_tool_app_cache - INFO - [app_cache] 缓存加载成功，包含 450 个应用
+2025-12-01 09:49:07,924 - mcp_tool_open_app_tool - INFO - [open_app_tool] 应用索引初始化成功（从缓存加载），共 450 个应用，耗时 0.00 秒
+2025-12-01 09:49:07,933 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-02 11:49:06,576 - mcp_tool_app_scanner - INFO - MCP工具 'app_scanner' 日志系统已启动
+2025-12-02 11:49:06,579 - mcp_tool_app_cache - INFO - MCP工具 'app_cache' 日志系统已启动
+2025-12-02 11:49:06,580 - mcp_tool_nlp_parser - INFO - MCP工具 'nlp_parser' 日志系统已启动
+2025-12-02 11:49:06,581 - mcp_tool_app_executor - INFO - MCP工具 'app_executor' 日志系统已启动
+2025-12-02 11:49:06,582 - mcp_tool_app_usage - INFO - MCP工具 'app_usage' 日志系统已启动
+2025-12-02 11:49:06,582 - mcp_tool_app_usage - INFO - [app_usage] 尝试加载使用记录文件: /Users/heguangzhong/.mcp/app_usage.json
+2025-12-02 11:49:06,582 - mcp_tool_app_usage - INFO - [app_usage] 成功加载使用记录，包含 17 个应用的使用记录
+2025-12-02 11:49:06,583 - mcp_tool_open_app_tool - INFO - MCP工具 'open_app_tool' 日志系统已启动
+2025-12-02 11:49:06,587 - EmailAttachmentDownloader - INFO - ./base/conf/qq-email.json
+2025-12-02 11:49:06,588 - EmailAttachmentDownloader - INFO - config_path=/Volumes/SD_1.5T/github/AdminAssistant/base/conf/qq-email.json
+2025-12-02 11:49:06,588 - EmailAttachmentDownloader - INFO - self.imap_server=imap.qq.com, self.username=23512221@qq.com, self.password=ifqdmucfxotlbigc, self.port=993, self.folder=INBOX, self.days_ago=None, self.save_dir=/Volumes/SD_1.5T/github/AdminAssistant/temp, self.max_attachment_size=None
+2025-12-02 11:49:06,588 - mcp_tool_open_app_tool - INFO - [open_app_tool] 开始初始化应用索引
+2025-12-02 11:49:06,588 - mcp_tool_app_cache - INFO - [app_cache] 尝试加载缓存文件: /Users/heguangzhong/.mcp/apps_cache.json
+2025-12-02 11:49:06,589 - mcp_tool_app_cache - INFO - [app_cache] 缓存已过期
+2025-12-02 11:49:06,589 - mcp_tool_open_app_tool - INFO - [open_app_tool] 缓存加载失败或应用数量不足，执行应用扫描
+2025-12-02 11:49:06,589 - mcp_tool_app_cache - INFO - [app_cache] 开始更新缓存
+2025-12-02 11:49:06,589 - mcp_tool_app_scanner - INFO - [app_scanner] 开始扫描系统已安装应用
+2025-12-02 11:49:10,084 - mcp_tool_app_scanner - INFO - [app_scanner] 扫描完成，共发现 450 个应用
+2025-12-02 11:49:10,085 - mcp_tool_app_cache - INFO - [app_cache] 尝试保存缓存到文件: /Users/heguangzhong/.mcp/apps_cache.json
+2025-12-02 11:49:10,087 - mcp_tool_app_cache - INFO - [app_cache] 缓存保存成功，共保存 450 个应用
+2025-12-02 11:49:10,087 - mcp_tool_open_app_tool - INFO - [open_app_tool] 应用索引初始化成功（执行扫描），共 450 个应用，耗时 3.50 秒
+2025-12-02 11:49:10,101 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
